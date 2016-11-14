@@ -27,7 +27,7 @@
     <datatype extension="bgzip" type="galaxy.datatypes.binary:Binary" subclass="True" />
     <datatype extension="xls" type="galaxy.datatypes.tabular:Tabular"/>
     <datatype extension="oauth" type="galaxy.datatypes.data:Text" display_in_upload="true" description="An OAuth2 token" subclass="True"/>
-    <datatype extension="gate" type="lappsgrid.datatypes.lapps:Gate" display_in_upload="true">
+    <datatype extension="gate" type="lappsgrid.datatypes.lapps:Gate" display_in_upload="true" description="GATE/XML payload inside a LAPPS Data object.">
       <converter file="gate_to_lif_converter.xml" target_datatype="lif"/>
     </datatype>
     <datatype extension="ldc" type="lappsgrid.datatypes.lapps:LDC" display_in_upload="True">
