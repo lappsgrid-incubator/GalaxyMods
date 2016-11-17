@@ -18,6 +18,6 @@
   -->
   <help>Retrieves a single document from English Gigaword 5th Ed.
   <p>Unlike the <em>get</em> tool, this tool expects the document key to be
-  store in the input file.
+  store in the input file.</p>
   </help>
 </tool>
