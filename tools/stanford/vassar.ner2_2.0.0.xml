@@ -2,7 +2,7 @@
   <description>Selectable Stanford Named Entity Recognizer (Vassar)</description>
   <command interpreter='lsd'>invoke_ner2.lsd $model $input $output</command>
   <inputs>
-    <param name='input' type='data' format='lif,json' label='input' />
+    <param name='input' type='data' format='lif' label='input' />
       <param name="model" type="select" label="Model">
           <option value="english.all.3class.distsim.crf.ser.gz">All 3</option>
           <option value="english.conll.4class.distsim.crf.ser.gz">CONLL 4</option>

@@ -2,7 +2,7 @@
   <description>Stanford Parser (Brandeis)</description>
   <command interpreter='lsd'>../common/invoke_brandeis.lsd stanfordnlp.dependencyparser_2.0.1 $input $output</command>
   <inputs>
-    <param name='input' type='data' format='txt,lif,json' label='input' />
+    <param name='input' type='data' format='txt,lif' label='input' />
   </inputs>
   <outputs>
     <data name='output' format='lif' />

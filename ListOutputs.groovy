@@ -7,11 +7,12 @@
  */
 import groovy.xml.*
 
-if (args.size() == 0) {
+if (args.size() != 1) {
 	usage()
 	return
 }
 
+/*
 boolean writeStylesheet = false
 String stylesheet = 'style.css'
 int filenameIndex = 0
@@ -24,8 +25,8 @@ if (args[0] == '-s' || args[0] == '--style') {
 	stylesheet = args[1]
 	filenameIndex = 2
 }
-
-File toolDir = new File(args[filenameIndex])
+*/
+File toolDir = new File(args[0])
 if (!toolDir.exists()) {
 	println "${toolDir.path} does not exist."
 	return
@@ -37,39 +38,38 @@ if (!toolDir.isDirectory()) {
 }
 
 String css = '''
-table {
-    border-collapse: collapse;
-}
+	table {
+		border-collapse: collapse;
+	}
 
-table, th, td {
-    border: 1px solid black;
-}
+	table, th, td {
+		border: 1px solid black;
+	}
 
-th {
-	color: white;
-	background-color: #222;
-}
-th, td {
-    padding: 5px;
-    text-align: left;
-}
-tr.even {
-	background-color: #f2f2f2
-}
-tr.odd { 
-	backgroud-color: white; 
-}
-.heading {
-	background-color: #808080;
-	color: white;
-}
+	th {
+		color: white;
+		background-color: #222;
+	}
+	th, td {
+		padding: 5px;
+		text-align: left;
+	}
+	tr.even {
+		background-color: #f2f2f2
+	}
+	tr.odd { 
+		backgroud-color: white; 
+	}
+	.heading {
+		background-color: #808080;
+		color: white;
+	}
 '''
 
 List<Section> sections = []
 XmlParser parser = new XmlParser()
 toolDir.eachDirRecurse { dir ->
 	Section section = new Section(name:dir.name)
-	sections << section
 	dir.eachFileMatch(~/.*\.xml$/) { file ->
 		StringWriter writer = new StringWriter()
 		Node xml = parser.parse(file)
@@ -79,6 +79,10 @@ toolDir.eachDirRecurse { dir ->
 		tool.output = xml.outputs.data.@format[0] ?: '-none-'
 		section.tools << tool
 	}
+	// Only add the section if it contains more than one tool.
+	if (section.tools.size() > 0) {
+		sections << section
+	}
 }
 
 StringWriter htmlWriter = new StringWriter()
@@ -86,7 +90,10 @@ MarkupBuilder html = new MarkupBuilder(htmlWriter)
 html.html {
 	head {
 		title 'LAPPS Tool I/O Requirements'
-		link(rel:'stylesheet', type:'text/css', href:stylesheet)
+		//link(rel:'stylesheet', type:'text/css', href:stylesheet)
+		style {
+			mkp.yield css
+		}
 	}
 	body {
 		table(align:'center') {
@@ -96,17 +103,16 @@ html.html {
 				th 'Output'
 			}
 			sections.sort{ it.name }.each { section ->
-			//toolDir.eachDirRecurse { dir ->
 				tr {
-					td(class:'heading',colspan:3, section.name)
+					td(class:'heading', colspan:3, section.name)
 				}
 				int i = 0
 				section.tools.sort{ it.name }.each { tool ->
 					String style = ((++i%2)==0) ? 'even' : 'odd'
 					tr(class:style)  {
-						td(tool.name)
-						td(tool.input)
-						td(tool.output)
+						td tool.name
+						td tool.input
+						td tool.output
 					}
 				}
 			}
@@ -114,9 +120,9 @@ html.html {
 	}
 }
 
-if (writeStylesheet) {
-	new File(stylesheet).text = css
-}
+//if (writeStylesheet) {
+//	new File(stylesheet).text = css
+//}
 println htmlWriter.toString()
 return
 
@@ -134,8 +140,12 @@ String extractName(File file) {
 	//file.parentFile.name + '/' + file.name
 	file.name
 }
+
+// Returns a comma delimited string of all the data formats accepted
+// as input by this tool.
 String extractInputs(Node tool) {
 	List list = []
+	// For all input <param> elements of @type 'data' add the @format to the list.
 	tool.inputs.param.findAll { it.@type == 'data' }.each { list << it.@format }
 	if (list.size() == 0) {
 		return '-none-'
@@ -143,6 +153,7 @@ String extractInputs(Node tool) {
 	return list.join(",")	
 }
 
+// The data model (sections and tools) parsed from the tool XML files.
 class Section {
 	String name
 	List tools = []
