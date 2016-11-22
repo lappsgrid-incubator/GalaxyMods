@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <datatypes>
   <registration converters_path="lib/lappsgrid/datatypes/converters" display_path="display_applications">
+    <datatype extension="tabular" type="galaxy.datatypes.tabular:Tabular" display_in_upload="true" description="Any data in tab delimited format (tabular)." description_url="https://wiki.galaxyproject.org/Learn/Datatypes#Tabular_.28tab_delimited.29"/>
     <datatype extension="liftxt" type="lappsgrid.datatypes.lapps:LifText" display_in_upload="true" description="Any text file." description_url="https://wiki.galaxyproject.org/Learn/Datatypes#Plain_text"/>
     <datatype extension="oauth" type="lappsgrid.datatypes.data:Text" display_in_upload="true" description="An OAuth2 token" subclass="True"/>
     <datatype extension="gate" type="lappsgrid.datatypes.lapps:Gate" display_in_upload="true" description="GATE/XML payload inside a LAPPS Data object.">
@@ -44,7 +45,6 @@
     <datatype extension="bgzip" type="galaxy.datatypes.binary:Binary" subclass="True" />
     <datatype extension="xls" type="galaxy.datatypes.tabular:Tabular"/>
     <datatype extension="xml" type="galaxy.datatypes.xml:GenericXml" mimetype="application/xml" display_in_upload="true"/>
-    <datatype extension="tabular" type="galaxy.datatypes.tabular:Tabular" display_in_upload="true" description="Any data in tab delimited format (tabular)." description_url="https://wiki.galaxyproject.org/Learn/Datatypes#Tabular_.28tab_delimited.29"/>
     <datatype extension="txt" type="galaxy.datatypes.data:Text" display_in_upload="true" description="Any text file." description_url="https://wiki.galaxyproject.org/Learn/Datatypes#Plain_text"/>
     <!-- graph datatypes -->
     <datatype extension="rdf" type="galaxy.datatypes.triples:Rdf" display_in_upload="true"/>
