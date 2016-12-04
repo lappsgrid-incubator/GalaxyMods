@@ -1,0 +1,10 @@
+<tool id='dkpro.opennlp.namedentityrecognizer' name='DKPro Core OpenNLP NamedEntityRecognizer v1.7.0' version='0.0.1'>
+  <description>DKPro Core OpenNLP NamedEntityRecognizer</description>
+  <command interpreter='lsd'>../lapps_common/invoke_brandeis.lsd uima.dkpro.opennlp.namedentityrecognizer_0.0.1 $input $output</command>
+  <inputs>
+    <param name='input' type='data' format='lif' label='input' />
+  </inputs>
+  <outputs>
+    <data name='output' format='lif' />
+  </outputs>
+</tool>
