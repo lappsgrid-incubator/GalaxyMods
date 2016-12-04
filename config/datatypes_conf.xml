@@ -8,7 +8,7 @@
       <converter file="gate_to_lif_converter.xml" target_datatype="lif"/>
     </datatype>
     <datatype extension="ldc" type="lappsgrid.datatypes.lapps:LDC" display_in_upload="True">
-      <converter file="ldc_to_lif.xml" target_datatype="lif"/>
+      <converter file="ldc_to_lif_converter.xml" target_datatype="lif"/>
     </datatype>
     <datatype extension="lif" type="lappsgrid.datatypes.lapps:Lif" display_in_upload="True">
       <converter file="lif_to_gate_converter.xml" target_datatype="gate"/>
