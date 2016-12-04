@@ -134,7 +134,7 @@
 		<tool file="lingpipe/vassar.ner_1.0.0.xml"/>
 		<tool file="lingpipe/cmu.dictionaryNER_1.0.0.xml"/>
     </section>
-    <section id="dkpro" name "DKPro Core">
+    <section id="dkpro" name="DKPro Core">
 		<tool file='dkpro/dkpro.opennlp.namedentityrecognizer.xml'/>
 		<tool file='dkpro/dkpro.opennlp.parser.xml'/>
 		<tool file='dkpro/dkpro.opennlp.postagger.xml'/>
