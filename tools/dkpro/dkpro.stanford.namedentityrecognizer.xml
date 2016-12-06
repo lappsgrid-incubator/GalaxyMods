@@ -1,6 +1,6 @@
 <tool id='dkpro.stanford.namedentityrecognizer' name='DKPro Core Stanford NamedEntityRecognizer v1.7.0' version='0.0.1'>
   <description>DKPro Core Stanford NamedEntityRecognizer</description>
-  <command interpreter='lsd'>../lapps_common/invoke_brandeis.lsd uima.dkpro.stanfordnlp.namedentityrecognizer_0.0.1 $input $output</command>
+  <command interpreter='lsd'>../common/invoke_brandeis.lsd uima.dkpro.stanfordnlp.namedentityrecognizer_0.0.1 $input $output</command>
   <inputs>
     <param name='input' type='data' format='lif' label='input' />
   </inputs>

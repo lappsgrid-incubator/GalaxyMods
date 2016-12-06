@@ -1,6 +1,6 @@
 import static org.lappsgrid.discriminator.Discriminators.Uri
 
-File annotations = new File(args[0])
+String annotations = args[0]
 File input = new File(args[1])
 File output = new File(args[2])
 
@@ -33,7 +33,7 @@ Container container = data.payload
 View view = container.newView()
 view.addContains(Uri.NE, "discovery.ner_span_annotator2", "")
 int id = 0
-annotations.text.tokenize('\n').each { line ->
+annotations.tokenize('\n').each { line ->
     def tuple = line.tokenize(',')*.trim()
     if (tuple.size != 3) {
 		return new Data(Uri.ERROR, "Invalid dictionary format").asPrettyJson();

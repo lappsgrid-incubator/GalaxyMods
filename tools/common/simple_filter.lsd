@@ -18,6 +18,9 @@ def test = shell.evaluate("{ view -> $condition }")
 
 println "Condition : $condition"
 Data data = Serializer.parse(input.text, Data)
+if (!data.payload['@context']) {
+	data.payload['@context'] = 'http://vocab.lappsgrid.org/context-1.0.0.jsonld'
+}
 Container container = new Container(data.payload)
 Container copy = new Container()
 copy.text = container.text

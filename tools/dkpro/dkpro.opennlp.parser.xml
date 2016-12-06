@@ -1,6 +1,6 @@
 <tool id='dkpro.opennlp.parser' name='DKPro Core OpenNLP Parser v1.7.0' version='0.0.1'>
   <description>DKPro Core OpenNLP Parser</description>
-  <command interpreter='lsd'>../lapps_common/invoke_brandeis.lsd uima.dkpro.opennlp.parser_0.0.1 $input $output</command>
+  <command interpreter='lsd'>../common/invoke_brandeis.lsd uima.dkpro.opennlp.parser_0.0.1 $input $output</command>
   <inputs>
     <param name='input' type='data' format='lif' label='input' />
   </inputs>
