@@ -51,8 +51,8 @@
 		<tool file="gate/gate.tagger_2.0.0.xml"/>
 		<tool file='opennlp/opennlp.postagger.xml' />
 		<tool file="lingpipe/vassar.tagger_1.0.0.xml"/>
-		<tool file='dkpro/dkpro.stanford.tagger.xml'/>
-		<tool file='dkpro/dkpro.opennlp.tagger.xml'/>
+		<tool file='dkpro/dkpro.stanford.postagger.xml'/>
+		<tool file='dkpro/dkpro.opennlp.postagger.xml'/>
 	</section>
 	<section id="ner" name="Named Entity Recognizers">
 		<tool file="stanford/vassar.ner_2.0.0.xml"/>
@@ -180,7 +180,7 @@
 	<section id="misc" name="Miscellaneous">
 		<!-- <tool file="common/filter.xml"/> -->
 		<tool file="common/simple_filter.xml"/>
-		<tool file="common/freeform_filter.xml"/>
+		<tool file="common/filter.xml"/>
 		<tool file="common/pretty_print.xml"/>
         <tool file="common/nerfix.xml"/>
 		<tool file="common/rename.xml"/>
