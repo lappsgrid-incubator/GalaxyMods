@@ -5,7 +5,7 @@
     <param name="key" type="text" label="Key" value="000"/>
   </inputs>
   <outputs>
-    <data name="output" format="lif" label="MASC Document"/>
+    <data name="output" format="lif" label="FDR Document"/>
   </outputs>
   <!--
   <tests>

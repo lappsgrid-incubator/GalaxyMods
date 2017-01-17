@@ -2,7 +2,7 @@
   <description>Lists all keys in the FDR corpus.</description>
   <command>lsd $__tool_directory__/list.lsd $output</command>
   <outputs>
-    <data name="output" format="txt"/>
+    <data name="output" format="txt" label="FDR Listing"/>
   </outputs>
   <help>Obtains a list of ID values for all documents in the FDR corpus.</help>
 </tool>
