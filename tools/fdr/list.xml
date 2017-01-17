@@ -1,0 +1,8 @@
+<tool id="fdr.list" name="List" version="1.0.0">
+  <description>Lists all keys in the FDR corpus.</description>
+  <command>lsd $__tool_directory__/list.lsd $output</command>
+  <outputs>
+    <data name="output" format="txt"/>
+  </outputs>
+  <help>Obtains a list of ID values for all documents in the FDR corpus.</help>
+</tool>
