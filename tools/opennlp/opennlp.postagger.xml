@@ -1,6 +1,6 @@
-<tool id='opennlp.postagger' name='OpenNLP POSTagger' version='2.0.0'>
+<tool id='opennlp.postagger' name='OpenNLP POSTagger' version='2.0.2'>
   <description>OpenNLP POSTagger</description>
-  <command interpreter='lsd'>../common/invoke_brandeis.lsd opennlp.postagger_2.0.1 $input $output</command>
+  <command interpreter='lsd'>../common/invoke_brandeis.lsd opennlp.postagger_2.0.2 $input $output</command>
   <inputs>
     <param name='input' type='data' format='json,lif' label='input' />
   </inputs>
