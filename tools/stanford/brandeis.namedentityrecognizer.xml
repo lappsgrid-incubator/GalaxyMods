@@ -1,6 +1,6 @@
-<tool id='stanfordnlp.namedentityrecognizer' name='Stanford NamedEntityRecognizer' version='2.0.0'>
-  <description>Stanford NamedEntityRecognizer  (Brandeis)</description>
-  <command interpreter='lsd'>../common/invoke_brandeis.lsd stanfordnlp.namedentityrecognizer_2.0.1 $input $output</command>
+<tool id='stanfordnlp.namedentityrecognizer' name='Stanford NamedEntityRecognizer' version='2.0.2'>
+  <description>Stanford NamedEntityRecognizer (Brandeis)</description>
+  <command interpreter='lsd'>../common/invoke_brandeis.lsd stanfordnlp.namedentityrecognizer_2.0.2 $input $output</command>
   <inputs>
     <param name='input' type='data' format='lif' label='input' />
   </inputs>
