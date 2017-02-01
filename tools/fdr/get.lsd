@@ -1,5 +1,3 @@
-#!/usr/bin/env lsd
-
 include 'Config'
 
 String key = args[0]
