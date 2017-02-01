@@ -1,6 +1,6 @@
 <tool id="fdr.get" name="Get Document" version="1.0.0">
   <description>Retrieves a single document from the FDR DataSource.</description>
-  <command>$__tool_directory__/get.lsd $key $output</command>
+  <command>lsd $__tool_directory__/get.lsd $key $output</command>
   <inputs>
     <param name="key" type="text" label="Key" value="000"/>
   </inputs>
