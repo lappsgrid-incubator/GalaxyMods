@@ -1,5 +1,3 @@
-#!/usr/bin/env lsd
-
 String type = args[0]
 int count = args[1] as int
 String query = args[2]
