@@ -21,7 +21,15 @@ if (views.size() > 1) {
 println "Found a view."
 
 def isaWord = { it ->
-	return (it.label == Uri.TOKEN || it.atType == Uri.TOKEN) && (it.features.tokenType == 'word')
+	if (it.label == Uri.TOKEN || it.atType == Uri.TOKEN) { //&& (it.features.tokenType == 'word')
+	   	String word = container.text.substring((int)it.start, (int)it.end)
+		for (int i = 0; i < word.length(); ++i) {
+		    if (Character.isLetter(word.charAt(i))) {
+	       	       return true;
+		    }					
+		}	   
+	}
+	return false
 }
 
 List<Annotation> annotations = views[0].annotations.findAll { isaWord(it) }

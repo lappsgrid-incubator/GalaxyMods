@@ -1,0 +1,18 @@
+<tool id="fdr.create.collection" name="Create Data Collection" version="1.0.0">
+  <command interpreter="lsd">create_collection.lsd $start $end</command>
+    <description>Create a data collection for select documents</description>
+  <inputs>
+      <param name="start" type="integer" value="0" min="0"/>
+      <param name="end" type="integer" value="106" max="106"/>
+  </inputs>
+  <outputs>
+    <collection name="list_output" type="list" label="FDR Collection" format="lif">
+        <discover_datasets pattern="__designation_and_ext__" directory="outputs" visible="false"/>
+    </collection>
+  </outputs>
+  <tests>
+  </tests>
+    <help>
+        <p>Creates a Data Collection with the selected range of documents.</p>
+    </help>
+</tool>
