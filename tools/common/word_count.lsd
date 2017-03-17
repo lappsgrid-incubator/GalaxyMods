@@ -18,12 +18,14 @@ if (views.size() > 1) {
 	println "More than one view contains tokens."
 	return
 }
+println "Found a view."
 
 def isaWord = { it ->
 	return (it.label == Uri.TOKEN || it.atType == Uri.TOKEN) && (it.features.tokenType == 'word')
 }
 
 List<Annotation> annotations = views[0].annotations.findAll { isaWord(it) }
+println "Found ${annotations.size()} words."
 
 def counts = [:]
 annotations.each { annotation ->
@@ -42,11 +44,13 @@ annotations.each { annotation ->
 	counter.increment()
 }
 
+println "Writing output file ${output.path}"
 output.withWriter { writer ->
 	counts.values().sort { it.count }.reverse().each { row ->
 		writer.println "${row.word}\t${row.count}"
 	}
 }
+println "Done"
 
 class Counter {
 	String word

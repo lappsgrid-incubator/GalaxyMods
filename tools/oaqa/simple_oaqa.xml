@@ -11,7 +11,7 @@
         </param>
     </inputs>
     <outputs>
-        <data name="output" format="html" label="HTML"/>
+        <data name="output" format="html" label="Evaluation"/>
     </outputs>
     <help>
         Performs evaluation comparing the test data to gold standard data.

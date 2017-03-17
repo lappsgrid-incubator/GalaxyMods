@@ -1,0 +1,10 @@
+<tool id='stanfordnlp.coref' name='Stanford Coreference Resolver' version='2.0.3'>
+  <description>Stanford Coreference Resolver (Brandeis)</description>
+  <command interpreter='lsd'>../common/invoke_brandeis.lsd stanfordnlp.coref.2.0.3 $input $output</command>
+  <inputs>
+    <param name='input' type='data' format='lif' label='input' />
+  </inputs>
+  <outputs>
+    <data name='output' format='lif' />
+  </outputs>
+</tool>

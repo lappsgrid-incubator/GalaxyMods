@@ -1,0 +1,10 @@
+<tool id='dkpro.opennlp.splitter' name='DKPro Core OpenNLP Splitter v1.7.0' version='0.0.1'>
+  <description>DKPro Core OpenNLP Splitter</description>
+  <command interpreter='lsd'>../common/invoke_brandeis.lsd uima.dkpro.opennlp.splitter_0.0.1 $input $output</command>
+  <inputs>
+    <param name='input' type='data' format='text' label='input' />
+  </inputs>
+  <outputs>
+    <data name='output' format='lif' />
+  </outputs>
+</tool>

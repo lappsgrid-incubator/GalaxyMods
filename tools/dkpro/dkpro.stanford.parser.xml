@@ -1,0 +1,10 @@
+<tool id='dkpro.stanford.parser' name='DKPro Core Stanford Parser v1.7.0' version='0.0.1'>
+  <description>DKPro Core Stanford Parser</description>
+  <command interpreter='lsd'>../common/invoke_brandeis.lsd uima.dkpro.stanfordnlp.parser_0.0.1 $input $output</command>
+  <inputs>
+    <param name='input' type='data' format='lif' label='input' />
+  </inputs>
+  <outputs>
+    <data name='output' format='lif' />
+  </outputs>
+</tool>
