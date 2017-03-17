@@ -86,11 +86,13 @@
 		<tool file="gate/gate.npchunker_2.1.0.xml"/>
 		<tool file="gate/gate.vpchunker_2.1.0.xml"/>
 	</section>
-    <!--
-	<section id="coref" name="Coreference">
-		<tool file="gate/gate.coref_2.0.0.xml"/>
+
+    <section id="coref" name="Coreference">
+		<tool file='stanford/brandeis.coref.xml' />
+		<tool file='dkpro/dkpro.stanford.coref.xml'/>
+		<!-- <tool file="gate/gate.coref_2.0.0.xml"/> -->
 	</section>
-	-->
+	
 	<section id="stanford" name="Stanford NLP">
 		<tool file="stanford/vassar.tokenizer_2.0.0.xml"/>
 		<tool file="stanford/vassar.splitter_2.0.0.xml"/>
@@ -103,6 +105,7 @@
 		<tool file='stanford/brandeis.namedentityrecognizer.xml' />
 		<tool file='stanford/brandeis.parser.xml' />
 		<tool file='stanford/brandeis.dependencyparser.xml' />
+		<tool file='stanford/brandeis.coref.xml' />
 		<tool file='dkpro/dkpro.stanford.coref.xml'/>
 		<tool file='dkpro/dkpro.stanford.namedentityrecognizer.xml'/>
 		<tool file='dkpro/dkpro.stanford.parser.xml'/>
