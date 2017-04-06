@@ -7,14 +7,6 @@
   <outputs>
     <data name="output" format="lif" label="FDR Document"/>
   </outputs>
-  <!--
-  <tests>
-    <test>
-      <param name="input" value="/Users/suderman/Projects/Galaxy/text.json"/>
-      <output name="output" file="/Users/suderman/Projects/Galaxy/tokens.json"/>
-    </test>
-  </tests>
-  -->
   <help>Retrieves a single document from the FDR corpus.
 
 There are 107 documents in the FDR corpus with id values in the range 000-106. No

@@ -1,0 +1,22 @@
+<tool id='gate.tokenizer_2.2.0' name='GATE Tokenizer v2.2.0' version='1.0.0'>
+  <description>GATE Tokenizer</description>
+  <command>lsd $__tool_directory__/invoke.lsd gate.tokenizer_2.2.0 $input $output</command>
+  <inputs>
+    <param name='input' type='data' format='text,xml,gate' />
+  </inputs>
+  <outputs>
+    <data name='output' format='gate' />
+  </outputs>
+  <help><![CDATA[
+HELP
+====
+
+GATE Tokenizer
+
+The following annotation types are produced:
+
+* http://vocab.lappsgrid.org/Token
+
+]]>
+</help>
+</tool>

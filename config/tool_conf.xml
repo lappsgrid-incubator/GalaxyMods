@@ -38,7 +38,7 @@
 	<section id="tokenizers" name="Tokenizers">
 		<tool file="stanford/vassar.tokenizer_2.0.0.xml"/>
 		<tool file='stanford/brandeis.tokenizer.xml' />
-		<tool file="gate/gate.tokenizer_2.1.0.xml"/>
+		<tool file="gate/gate.tokenizer_2.2.0.xml"/>
 		<tool file='opennlp/opennlp.tokenizer.xml' />
 		<tool file="lingpipe/vassar.tokenizer_1.0.0.xml"/>
 		<tool file='dkpro/dkpro.stanford.tokenizer.xml'/>
@@ -47,7 +47,7 @@
 	<section id="splitters" name="Sentence Splitters">
 		<tool file="stanford/vassar.splitter_2.0.0.xml"/>
 		<tool file='stanford/brandeis.splitter.xml' />
-		<tool file="gate/gate.splitter_2.1.0.xml"/>
+		<tool file="gate/gate.splitter_2.2.0.xml"/>
 		<tool file='opennlp/opennlp.splitter.xml' />
 		<tool file="lingpipe/vassar.splitter_1.0.0.xml"/>
 		<tool file='dkpro/dkpro.stanford.splitter.xml'/>
@@ -56,7 +56,7 @@
 	<section id="taggers" name="Taggers">
 		<tool file="stanford/vassar.tagger_2.0.0.xml"/>
 		<tool file='stanford/brandeis.postagger.xml' />
-		<tool file="gate/gate.tagger_2.1.0.xml"/>
+		<tool file="gate/gate.tagger_2.2.0.xml"/>
 		<tool file='opennlp/opennlp.postagger.xml' />
 		<tool file="lingpipe/vassar.tagger_1.0.0.xml"/>
 		<tool file='dkpro/dkpro.stanford.postagger.xml'/>
@@ -66,7 +66,7 @@
 		<tool file="stanford/vassar.ner_2.0.0.xml"/>
 		<tool file="stanford/vassar.ner2_2.0.0.xml"/>
 		<tool file='stanford/brandeis.namedentityrecognizer.xml' />
-		<tool file="gate/gate.ner_2.1.0.xml"/>
+		<tool file="gate/gate.ner_2.2.0.xml"/>
 		<tool file='opennlp/opennlp.namedentityrecognizer.xml' />
 		<tool file="lingpipe/cmu.dictionaryNER_1.0.0.xml"/>
 		<tool file="lingpipe/vassar.ner_1.0.0.xml"/>
@@ -83,8 +83,8 @@
 		<tool file='dkpro/dkpro.opennlp.parser.xml'/>
 	</section>
 	<section id="chunkers" name="Chunkers">
-		<tool file="gate/gate.npchunker_2.1.0.xml"/>
-		<tool file="gate/gate.vpchunker_2.1.0.xml"/>
+		<tool file="gate/gate.npchunker_2.2.0.xml"/>
+		<tool file="gate/gate.vpchunker_2.2.0.xml"/>
 	</section>
     <!--
 	<section id="coref" name="Coreference">
@@ -111,14 +111,14 @@
 		<tool file='dkpro/dkpro.stanford.tokenizer.xml'/>
 	</section>
 	<section id="gate" name="GATE">
-		<tool file="gate/gate.tokenizer_2.1.0.xml"/>
-		<tool file="gate/gate.splitter_2.1.0.xml"/>
-		<tool file="gate/gate.tagger_2.1.0.xml"/>
-		<tool file="gate/gate.ner_2.1.0.xml"/>
-		<tool file="gate/gate.npchunker_2.1.0.xml"/>
-		<tool file="gate/gate.vpchunker_2.1.0.xml"/>
+		<tool file="gate/gate.tokenizer_2.2.0.xml"/>
+		<tool file="gate/gate.splitter_2.2.0.xml"/>
+		<tool file="gate/gate.tagger_2.2.0.xml"/>
+		<tool file="gate/gate.ner_2.2.0.xml"/>
+		<tool file="gate/gate.npchunker_2.2.0.xml"/>
+		<tool file="gate/gate.vpchunker_2.2.0.xml"/>
 		<!-- <tool file="gate/gate.coref_2.0.0.xml"/> -->
-		<tool file="gate/gate.gazetteer_2.1.0.xml"/>
+		<tool file="gate/gate.gazetteer_2.2.0.xml"/>
 		<!-- <tool file="gate/gate.ortho_2.0.0.xml"/> -->
 		<tool file="converters/convert.gate2json_2.0.0.xml"/>
 		<tool file="converters/convert.json2gate_2.0.0.xml"/>

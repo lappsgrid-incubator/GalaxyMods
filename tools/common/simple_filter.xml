@@ -10,6 +10,7 @@
            <option value="ne">Named Entities</option>
            <option value="nc">Noun Chunks</option>
            <option value="vc">Verb Chunks</option>
+           <option value="none">None</option>
         </param>
         <param name="pretty" type="boolean" label="Pretty print result"/>
     </inputs>
