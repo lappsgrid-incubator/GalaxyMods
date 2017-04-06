@@ -1,0 +1,27 @@
+<tool id='gate.vpchunker_2.2.0' name='GATE VerbPhraseChunker v2.2.0' version='1.0.0'>
+  <description>GATE Verb Phrase Chunker</description>
+  <command>lsd $__tool_directory__/invoke.lsd gate.vpchunker_2.2.0 $input $output</command>
+  <inputs>
+    <param name='input' type='data' format='gate' />
+  </inputs>
+  <outputs>
+    <data name='output' format='gate' />
+  </outputs>
+  <help><![CDATA[
+HELP
+====
+
+GATE Verb Phrase Chunker
+
+The following annotation types are required:
+
+* http://vocab.lappsgrid.org/Token
+* http://vocab.lappsgrid.org/Token#pos
+
+The following annotation types are produced:
+
+* http://vocab.lappsgrid.org/VerbChunk
+
+]]>
+</help>
+</tool>

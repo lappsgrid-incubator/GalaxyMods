@@ -7,14 +7,23 @@ boolean prettyPrint = args[3] as Boolean
 
 if (type == 'tok') type = Uri.TOKEN
 else if (type == 'pos') type = Uri.POS
+else if (type == 'none') type = null
 else if (type == 's') type = Uri.SENTENCE
 else if (type == 'ne') type = Uri.NE
 else if (type == 'nc') type = Uri.NCHUNK
 else if (type == 'vc') type = Uri.VCHUNK
 
 def shell = new GroovyShell()
-String condition = "view.metadata.contains['$type']"
-def test = shell.evaluate("{ view -> $condition }")
+String condition
+if (type) {
+	condition = "{ view -> view.metadata.contains['$type'] }"
+}
+else { 
+	condition = "{ false }"
+}
+
+
+def test = shell.evaluate(condition)
 
 println "Condition : $condition"
 Data data = Serializer.parse(input.text, Data)
