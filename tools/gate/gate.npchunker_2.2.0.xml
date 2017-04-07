@@ -1,27 +1,30 @@
-<tool id='gate.npchunker_2.2.0' name='GATE NounPhraseChunker v2.2.0' version='1.0.0'>
-  <description>GATE NP Chunker</description>
-  <command>lsd $__tool_directory__/invoke.lsd gate.npchunker_2.2.0 $input $output</command>
-  <inputs>
-    <param name='input' type='data' format='gate' />
-  </inputs>
-  <outputs>
-    <data name='output' format='gate' />
-  </outputs>
-  <help><![CDATA[
+<tool id="anc_gate.npchunker_2.2.0" name="GATE NounPhraseChunker v2.2.0" version="1.0.1">
+    <description>GATE NP Chunker</description>
+    <command>lsd $__tool_directory__/invoke.ld gate.npchunker_2.2.0 $input $output</command>
+    <inputs>
+        <param name="input" type="data" format="gate"/>
+    </inputs>
+    <output>
+        <data name="output" format="gate"/>
+    </output>
+    <help><![CDATA[
 HELP
 ====
-
 GATE NP Chunker
 
-The following annotation types are required:
+Required Annotations
+--------------------
 
 * http://vocab.lappsgrid.org/Token
+
 * http://vocab.lappsgrid.org/Token#pos
 
-The following annotation types are produced:
+
+Generated Annotations
+---------------------
 
 * http://vocab.lappsgrid.org/NounChunk
 
 ]]>
-</help>
+    </help>
 </tool>

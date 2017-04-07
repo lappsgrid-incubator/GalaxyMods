@@ -1,26 +1,28 @@
-<tool id='gate.splitter_2.2.0' name='GATE SentenceSplitter v2.2.0' version='1.0.0'>
-  <description>GATE SentenceSplitter</description>
-  <command>lsd $__tool_directory__/invoke.lsd gate.splitter_2.2.0 $input $output</command>
-  <inputs>
-    <param name='input' type='data' format='gate' />
-  </inputs>
-  <outputs>
-    <data name='output' format='gate' />
-  </outputs>
-  <help><![CDATA[
+<tool id="anc_gate.splitter_2.2.0" name="GATE SentenceSplitter v2.2.0" version="1.0.1">
+    <description>GATE SentenceSplitter</description>
+    <command>lsd $__tool_directory__/invoke.ld gate.splitter_2.2.0 $input $output</command>
+    <inputs>
+        <param name="input" type="data" format="gate"/>
+    </inputs>
+    <output>
+        <data name="output" format="gate"/>
+    </output>
+    <help><![CDATA[
 HELP
 ====
-
 GATE SentenceSplitter
 
-The following annotation types are required:
+Required Annotations
+--------------------
 
 * http://vocab.lappsgrid.org/Token
 
-The following annotation types are produced:
+
+Generated Annotations
+---------------------
 
 * http://vocab.lappsgrid.org/Sentence
 
 ]]>
-</help>
+    </help>
 </tool>

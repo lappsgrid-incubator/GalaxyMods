@@ -1,26 +1,28 @@
-<tool id='gate.coref_2.2.0' name='GATE Coreferencer v2.2.0' version='1.0.0'>
-  <description>GATE Coreferencer</description>
-  <command>lsd $__tool_directory__/invoke.lsd gate.coref_2.2.0 $input $output</command>
-  <inputs>
-    <param name='input' type='data' format='gate' />
-  </inputs>
-  <outputs>
-    <data name='output' format='gate' />
-  </outputs>
-  <help><![CDATA[
+<tool id="anc_gate.coref_2.2.0" name="GATE Coreferencer v2.2.0" version="1.0.1">
+    <description>GATE Coreferencer</description>
+    <command>lsd $__tool_directory__/invoke.ld gate.coref_2.2.0 $input $output</command>
+    <inputs>
+        <param name="input" type="data" format="gate"/>
+    </inputs>
+    <output>
+        <data name="output" format="gate"/>
+    </output>
+    <help><![CDATA[
 HELP
 ====
-
 GATE Coreferencer
 
-The following annotation types are required:
+Required Annotations
+--------------------
 
 * http://vocab.lappsgrid.org/Person
 
-The following annotation types are produced:
+
+Generated Annotations
+---------------------
 
 * http://vocab.lappsgrid.org/NamedEntity#matches
 
 ]]>
-</help>
+    </help>
 </tool>
