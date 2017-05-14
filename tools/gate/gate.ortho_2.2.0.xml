@@ -5,7 +5,7 @@
         <param name="input" type="data" format="gate"/>
     </inputs>
     <outputs>
-        <data name="output" format="gate"/>
+        <data name="output" format="gate" label="GATE Labels"/>
     </outputs>
     <help><![CDATA[
 HELP

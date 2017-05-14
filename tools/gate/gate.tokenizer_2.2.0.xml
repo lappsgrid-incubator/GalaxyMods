@@ -5,7 +5,7 @@
         <param name="input" type="data" format="txt,xml,gate"/>
     </inputs>
     <outputs>
-        <data name="output" format="gate"/>
+        <data name="output" format="gate" label="GATE Tokens"/>
     </outputs>
     <help><![CDATA[
 HELP

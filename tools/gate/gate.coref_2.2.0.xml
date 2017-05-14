@@ -4,9 +4,9 @@
     <inputs>
         <param name="input" type="data" format="gate"/>
     </inputs>
-    <outputs>
-        <data name="output" format="gate"/>
-    </outputs>
+	<outputs>
+		<data name="output" format="gate" label="GATE Coref"/>
+	</outputs>
     <help><![CDATA[
 HELP
 ====
