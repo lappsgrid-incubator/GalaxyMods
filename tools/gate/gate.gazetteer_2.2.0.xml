@@ -1,6 +1,6 @@
 <tool id="anc_gate.gazetteer_2.2.0" name="GATE Gazetteer v2.2.0" version="1.0.1">
     <description>GATE Gazetteer</description>
-    <command>lsd $__tool_directory__/invoke.ld gate.gazetteer_2.2.0 $input $output</command>
+    <command>lsd $__tool_directory__/invoke.lsd gate.gazetteer_2.2.0 $input $output</command>
     <inputs>
         <param name="input" type="data" format="gate"/>
     </inputs>

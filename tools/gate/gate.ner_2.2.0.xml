@@ -1,6 +1,6 @@
 <tool id="anc_gate.ner_2.2.0" name="GATE NamedEntityRecognizer v2.2.0" version="1.0.1">
     <description>GATE Named Entity Recognizer</description>
-    <command>lsd $__tool_directory__/invoke.ld gate.ner_2.2.0 $input $output</command>
+    <command>lsd $__tool_directory__/invoke.lsd gate.ner_2.2.0 $input $output</command>
     <inputs>
         <param name="input" type="data" format="gate"/>
     </inputs>
