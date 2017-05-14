@@ -5,8 +5,15 @@ File input = new File(args[1])
 File output = new File(args[2])
 
 String type = Uri.TEXT
+def payload = input.text
+
 if (format == 'txt') {
     type = Uri.TEXT
+}
+else if (format == 'lif') {
+	type = Uri.LIF
+	def container = new Container()
+	container.text = payload
 }
 else if (format == 'xml') {
     type = Uri.XML

@@ -4,9 +4,9 @@
     <inputs>
         <param name="input" type="data" format="txt,xml,gate"/>
     </inputs>
-    <output>
+    <outputs>
         <data name="output" format="gate"/>
-    </output>
+    </outputs>
     <help><![CDATA[
 HELP
 ====

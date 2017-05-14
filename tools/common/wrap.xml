@@ -5,6 +5,7 @@
         <param name="input" type="data" format="txt"/>
         <param name="format" type="select" label="LIF Format">
             <option value="txt">Plain Text (UTF-8)</option>
+            <option value="lif">Lapps Interchange Format</option>
             <option value="ldc">Gigaword/XML</option>
             <option value="gate">Gate/XML</option>
             <option value="xml">Generic XML</option>
