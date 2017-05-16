@@ -2,7 +2,7 @@
   <description>(Vassar)</description>
   <command interpreter='lsd'>invoke.lsd LingpipeSentenceSplitter $input $output</command>
   <inputs>
-    <param name='input' type='data' format='lif,json' label='input' />
+    <param name='input' type='data' format='lif' label='input' />
   </inputs>
   <outputs>
     <data name='output' format='lif' />

@@ -2,7 +2,7 @@
   <description>(Vassar)</description>
   <command interpreter='lsd'>invoke.lsd LingpipeTokenizer $input $output</command>
   <inputs>
-    <param name='input' type='data' format='txt,lif,json' label='input' />
+    <param name='input' type='data' format='txt,lif' label='input' />
   </inputs>
   <outputs>
     <data name='output' format='lif' />
