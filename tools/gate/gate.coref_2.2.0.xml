@@ -1,12 +1,12 @@
 <tool id="anc_gate.coref_2.2.0" name="GATE Coreferencer v2.2.0" version="1.0.1">
     <description>GATE Coreferencer</description>
-    <command>lsd $__tool_directory__/invoke.ld gate.coref_2.2.0 $input $output</command>
+    <command>lsd $__tool_directory__/invoke.lsd gate.coref_2.2.0 $input $output</command>
     <inputs>
         <param name="input" type="data" format="gate"/>
     </inputs>
-    <outputs>
-        <data name="output" format="gate"/>
-    </outputs>
+	<outputs>
+		<data name="output" format="gate" label="GATE Coref"/>
+	</outputs>
     <help><![CDATA[
 HELP
 ====

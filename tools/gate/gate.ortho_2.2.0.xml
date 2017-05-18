@@ -1,11 +1,11 @@
 <tool id="anc_gate.ortho_2.2.0" name="GATE OrthoMatcher v2.2.0" version="1.0.1">
     <description>GATE OrthoMatcher</description>
-    <command>lsd $__tool_directory__/invoke.ld gate.ortho_2.2.0 $input $output</command>
+    <command>lsd $__tool_directory__/invoke.lsd gate.ortho_2.2.0 $input $output</command>
     <inputs>
         <param name="input" type="data" format="gate"/>
     </inputs>
     <outputs>
-        <data name="output" format="gate"/>
+        <data name="output" format="gate" label="GATE Labels"/>
     </outputs>
     <help><![CDATA[
 HELP
