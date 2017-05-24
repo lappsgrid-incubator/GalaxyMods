@@ -1,17 +1,27 @@
 <tool id="masc.query" name="Query" version="1.0.0">
-  <description>Lists all keys that match the query.</description>
-  <command interpreter="lsd">query.lsd $query $type $output</command>
-    <inputs>
-        <param name="query" type="text" label="Query"/>
-      <param name="type" type="select">
-          <option value="anc:masc.text_2.2.0">Text</option>
-          <option value="anc:masc.json_2.2.0">Gold Annotations</option>
-      </param>
-    </inputs>
-  <outputs>
-    <data name="output" format="txt"/>
-  </outputs>
-  <!--
+ <description>
+  Lists all keys that match the query.
+ </description>
+ <command interpreter="lsd">
+  query.lsd $query $type $output
+ </command>
+ <inputs>
+  <param label="Query" name="query" type="text">
+  </param>
+  <param name="type" type="select">
+  </param>
+  <option value="anc:masc.text_2.2.0">
+   Text
+  </option>
+  <option value="anc:masc.json_2.2.0">
+   Gold Annotations
+  </option>
+ </inputs>
+ <outputs>
+  <data format="txt" name="output">
+  </data>
+ </outputs>
+ <!--
   <tests>
     <test>
       <param name="input" value="/Users/suderman/Projects/Galaxy/text.json"/>
@@ -19,7 +29,8 @@
     </test>
   </tests>
   -->
-  <help>Obtains a list of ID values for documents in MASC that match the specified query.
+ <help>
+  <![CDATA[Obtains a list of ID values for documents in MASC that match the specified query.
 
 Only simple queries based on simple path matching is available at the moment. The following terms may be used:
 
@@ -56,5 +67,10 @@ Only simple queries based on simple path matching is available at the moment. Th
 
 Queries do **not** support wildcards.
 
-  </help>
+  
+License
+-------
+
+`CC-BY <https://creativecommons.org/licenses/by/2.0/>`_]]>
+ </help>
 </tool>

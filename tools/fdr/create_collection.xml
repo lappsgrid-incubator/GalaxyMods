@@ -1,18 +1,31 @@
 <tool id="fdr.create.collection" name="Create Data Collection" version="1.0.0">
-  <command>lsd $__tool_directory__/create_collection.lsd $start $end</command>
-    <description>Create a data collection for select documents</description>
-  <inputs>
-      <param name="start" type="integer" value="0" min="0"/>
-      <param name="end" type="integer" value="106" max="106"/>
-  </inputs>
-  <outputs>
-    <collection name="list_output" type="list" label="FDR Collection" format="lif">
-        <discover_datasets pattern="__designation_and_ext__" directory="outputs" visible="false"/>
-    </collection>
-  </outputs>
-  <tests>
-  </tests>
-    <help>
-        <p>Creates a Data Collection with the selected range of documents.</p>
-    </help>
+ <command>
+  lsd $__tool_directory__/create_collection.lsd $start $end
+ </command>
+ <description>
+  Create a data collection for select documents
+ </description>
+ <inputs>
+  <param min="0" name="start" type="integer" value="0">
+  </param>
+  <param max="106" name="end" type="integer" value="106">
+  </param>
+ </inputs>
+ <outputs>
+  <collection format="lif" label="FDR Collection" name="list_output" type="list">
+   <discover_datasets directory="outputs" pattern="__designation_and_ext__" visible="false">
+   </discover_datasets>
+  </collection>
+ </outputs>
+ <tests>
+ </tests>
+ <help>
+  <![CDATA[
+ <p>Creates a Data Collection with the selected range of documents.</p> 
+
+License
+-------
+
+FDR is in `the public domain <https://copyright.gov/pr/pdomain.html>`_]]>
+ </help>
 </tool>
