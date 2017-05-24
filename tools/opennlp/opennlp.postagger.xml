@@ -2,7 +2,7 @@
   <description>OpenNLP POSTagger</description>
   <command interpreter='lsd'>../common/invoke_brandeis.lsd opennlp.postagger_2.0.2 $input $output</command>
   <inputs>
-    <param name='input' type='data' format='json,lif' label='input' />
+    <param name='input' type='data' format='lif' label='input' />
   </inputs>
   <outputs>
     <data name='output' format='lif' />
