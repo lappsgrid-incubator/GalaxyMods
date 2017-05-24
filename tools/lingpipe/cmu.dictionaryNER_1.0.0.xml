@@ -1,12 +1,25 @@
-<tool id='cmu.lingpipe.dictionarybased.ner_1.0.0' name='Lingpipe Dictionary Based NER v1.0.0' version='1.0.0'>
-  <description>(Vassar)</description>
-  <command interpreter='lsd'>cmu.dictionaryNER.lsd $dictionary $input $output</command>
-  <inputs>
-    <param name='dictionary' type='data' format='txt' label='dictionary' />
-    <param name='input' type='data' format='lif' label='input' />
-  </inputs>
-  <outputs>
-    <data name='output' format='lif' />
-  </outputs>
-  <help>Dictionary basaed Lingpipe Named Entity Recognizer</help>
+<tool id="cmu.lingpipe.dictionarybased.ner_1.0.0" name="Lingpipe Dictionary Based NER v1.0.0" version="1.0.0">
+ <description>
+  (Vassar)
+ </description>
+ <command interpreter="lsd">
+  cmu.dictionaryNER.lsd $dictionary $input $output
+ </command>
+ <inputs>
+  <param format="txt" label="dictionary" name="dictionary" type="data">
+  </param>
+  <param format="lif" label="input" name="input" type="data">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="lif" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[Dictionary basaed Lingpipe Named Entity Recognizer
+License
+-------
+
+The lingpipe 4 website is dead.]]>
+ </help>
 </tool>

@@ -1,0 +1,23 @@
+<tool id="reverb.rel-ext" name="ReVerb Relation Extractor" version="1.0.1">
+ <description>
+  ReVerb Relation Extractor
+ </description>
+ <command interpreter="lsd">
+  ../common/invoke_brandeis.lsd reverb.relationextractor_1.0.1 $input $output
+ </command>
+ <inputs>
+  <param format="lif" label="input" name="input" type="data">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="lif" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[
+License
+-------
+
+The ReVerb tool is licensed under `ReVerb Software License Agreement <http://reverb.cs.washington.edu/LICENSE.txt>`_]]>
+ </help>
+</tool>
