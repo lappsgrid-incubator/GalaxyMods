@@ -1,6 +1,0 @@
-server = [
-	url: 'http://grid.anc.org:9080/FDRDataSource/1.0.0/services/DataSource',
-
-	username:'tester',
-	password:'tester'
-]
