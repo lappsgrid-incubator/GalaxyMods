@@ -1,34 +1,44 @@
-<tool id='gigaword.get' name='Get' version='1.0.0'>
-    <description>Retreive a single document from the Gigaword Datasource.</description>
-    <command interpreter='lsd'>get.lsd $token $key $service $output</command>
-    <inputs>
-      <param name="token" type="data" format="oauth" label="OAuth Token"/>
-        <param name="key" type="text" label="Document ID" value="AFP_ENG_19940512.0001"/>
-        <param name="service" type="select" label="Language">
-            <option value="GWENDataSource">English</option>
-            <option value="GWZHDataSource">Chinese</option>
-            <option value="GWESDataSource">Spanish</option>
-            <option value="GWARDataSource">Arabic</option>
-          </param>
-    </inputs>
-    <outputs>
-        <data name='output' format='ldc'/>
-    </outputs>
-    <help><![CDATA[
-
-Retrieves a single document from Gigaword.  Use the *Gigaword List* tool to obtain a list of valid
-document ID values.
-
-.. class:: infomark
-
-To obtain documents from Gigaword you **must**:
-
-1. Be an LDC licensee
-2. `Obtain an OAuth Token <https://grid.anc.org:9443/ldc-authorize/>`_
+<tool id="gigaword.get" name="Get" version="1.0.0">
+ <description>
+  Retreive a single document from the Gigaword Datasource.
+ </description>
+ <command interpreter="lsd">
+  get.lsd $token $key $service $output
+ </command>
+ <inputs>
+  <param format="oauth" label="OAuth Token" name="token" type="data">
+  </param>
+  <param label="Document ID" name="key" type="text" value="AFP_ENG_19940512.0001">
+  </param>
+  <param label="Language" name="service" type="select">
+  </param>
+  <option value="GWENDataSource">
+   English
+  </option>
+  <option value="GWZHDataSource">
+   Chinese
+  </option>
+  <option value="GWESDataSource">
+   Spanish
+  </option>
+  <option value="GWARDataSource">
+   Arabic
+  </option>
+ </inputs>
+ <outputs>
+  <data format="ldc" name="output">
+  </data>
+ </outputs>
+ <help>
+  `_
 
 To obtain an OAuth token visit the link above and log in with your LDC id and password. Then paste
 the OAuth token into the above field.
 
-]]>
-    </help>
+]]&gt;
+  License
+-------
+
+ask Chris
+ </help>
 </tool>

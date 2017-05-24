@@ -1,10 +1,22 @@
-<tool id='opennlp.splitter' name='OpenNLP Splitter' version='2.0.3'>
-  <description>OpenNLP Splitter</description>
-  <command interpreter='lsd'>../common/invoke_brandeis.lsd opennlp.splitter_2.0.3 $input $output</command>
-  <inputs>
-    <param name='input' type='data' format='lif' label='input' />
-  </inputs>
-  <outputs>
-    <data name='output' format='lif' />
-  </outputs>
+<tool id="opennlp.splitter" name="OpenNLP Splitter" version="2.0.3">
+ <description>
+  OpenNLP Splitter
+ </description>
+ <command interpreter="lsd">
+  ../common/invoke_brandeis.lsd opennlp.splitter_2.0.3 $input $output
+ </command>
+ <inputs>
+  <param format="lif" label="input" name="input" type="data">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="lif" name="output">
+  </data>
+ </outputs>
+ <help>
+  License
+-------
+
+Apache OpenNLP is licensed under the Apache License, Version 2.0
+ </help>
 </tool>

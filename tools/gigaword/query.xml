@@ -1,37 +1,48 @@
 <tool id="gigaword.query" name="Query" version="1.0.0">
-  <description>Retrieves documents from Gigaword based on a Solr query.</description>
-  <command interpreter="lsd">query.lsd $token "$query" $size $service</command>
-    <inputs>
-        <param name="token" type="data" format="oauth" label="OAuth Token"/>
-        <param name="query" type="text" label="Query" value="text:clinton OR title:trump"/>
-        <param name="size" type="integer" label="Sample Size" value="20" min="0" max="100"/>
-        <param name="service" type="select" label="Language">
-            <option value="GWENDataSource">English</option>
-            <option value="GWZHDataSource">Chinese</option>
-            <option value="GWESDataSource">Spanish</option>
-            <option value="GWARDataSource">Arabic</option>
-          </param>
-    </inputs>
-      <outputs>
-        <collection name="list_output" type="list" label="Output List" format="lif">
-            <discover_datasets pattern="__designation_and_ext__" directory="outputs" visible="false"/>
-        </collection>
-      </outputs>
-    <help><![CDATA[
-
-Creates a Data Collection from all Gigaword documents that match the given Solr
-query.
-
-.. class:: infomark
-
-To obtain documents from Gigaword you **must**:
-
-1. Be an LDC licensee
-2. `Obtain an OAuth Token <https://grid.anc.org:9443/ldc-authorize/>`_
+ <description>
+  Retrieves documents from Gigaword based on a Solr query.
+ </description>
+ <command interpreter="lsd">
+  query.lsd $token "$query" $size $service
+ </command>
+ <inputs>
+  <param format="oauth" label="OAuth Token" name="token" type="data">
+  </param>
+  <param label="Query" name="query" type="text" value="text:clinton OR title:trump">
+  </param>
+  <param label="Sample Size" max="100" min="0" name="size" type="integer" value="20">
+  </param>
+  <param label="Language" name="service" type="select">
+  </param>
+  <option value="GWENDataSource">
+   English
+  </option>
+  <option value="GWZHDataSource">
+   Chinese
+  </option>
+  <option value="GWESDataSource">
+   Spanish
+  </option>
+  <option value="GWARDataSource">
+   Arabic
+  </option>
+ </inputs>
+ <outputs>
+  <collection format="lif" label="Output List" name="list_output" type="list">
+   <discover_datasets directory="outputs" pattern="__designation_and_ext__" visible="false">
+   </discover_datasets>
+  </collection>
+ </outputs>
+ <help>
+  `_
 
 To obtain an OAuth token visit the link above and log in with your LDC id and password. Then paste
 the OAuth token into the above field.
 
-]]>
-    </help>
+]]&gt;
+  License
+-------
+
+ask Chris
+ </help>
 </tool>

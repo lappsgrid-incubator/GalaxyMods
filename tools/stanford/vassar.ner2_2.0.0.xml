@@ -1,17 +1,37 @@
-<tool id='stanford.ner2_2.0.0' name='Selectable Stanford NER v2.1.0' version='1.0.0'>
-  <description>Selectable Stanford Named Entity Recognizer (Vassar)</description>
-  <command interpreter='lsd'>invoke_ner2.lsd $model $input $output</command>
-  <inputs>
-    <param name='input' type='data' format='lif' label='input' />
-      <param name="model" type="select" label="Model">
-          <option value="english.all.3class.distsim.crf.ser.gz">All 3</option>
-          <option value="english.conll.4class.distsim.crf.ser.gz">CONLL 4</option>
-          <option value="english.muc.7class.distsim.crf.ser.gz">MUC 7</option>
-          <option value="english.nowiki.3class.distsim.crf.ser.gz">Nowiki 3</option>
-      </param>
-  </inputs>
-  <outputs>
-    <data name='output' format='lif' />
-  </outputs>
-  <help>Stanford Named Entity Recognizer</help>
+<tool id="stanford.ner2_2.0.0" name="Selectable Stanford NER v2.1.0" version="1.0.0">
+ <description>
+  Selectable Stanford Named Entity Recognizer (Vassar)
+ </description>
+ <command interpreter="lsd">
+  invoke_ner2.lsd $model $input $output
+ </command>
+ <inputs>
+  <param format="lif" label="input" name="input" type="data">
+  </param>
+  <param label="Model" name="model" type="select">
+  </param>
+  <option value="english.all.3class.distsim.crf.ser.gz">
+   All 3
+  </option>
+  <option value="english.conll.4class.distsim.crf.ser.gz">
+   CONLL 4
+  </option>
+  <option value="english.muc.7class.distsim.crf.ser.gz">
+   MUC 7
+  </option>
+  <option value="english.nowiki.3class.distsim.crf.ser.gz">
+   Nowiki 3
+  </option>
+ </inputs>
+ <outputs>
+  <data format="lif" name="output">
+  </data>
+ </outputs>
+ <help>
+  Stanford Named Entity Recognizer
+  License
+-------
+
+Stanford CoreNLP is licensed under the GNU General Public License. Find more details [here](https://stanfordnlp.github.io/CoreNLP/#license)
+ </help>
 </tool>

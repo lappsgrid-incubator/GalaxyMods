@@ -1,10 +1,22 @@
-<tool id='stanfordnlp.tokenizer' name='Stanford Tokenizer' version='2.0.4'>
-  <description>Stanford Tokenizer (Brandeis)</description>
-  <command interpreter='lsd'>../common/invoke_brandeis.lsd stanfordnlp.tokenizer_2.0.4 $input $output</command>
-  <inputs>
-    <param name='input' type='data' format='lif' label='input' />
-  </inputs>
-  <outputs>
-    <data name='output' format='lif' />
-  </outputs>
+<tool id="stanfordnlp.tokenizer" name="Stanford Tokenizer" version="2.0.4">
+ <description>
+  Stanford Tokenizer (Brandeis)
+ </description>
+ <command interpreter="lsd">
+  ../common/invoke_brandeis.lsd stanfordnlp.tokenizer_2.0.4 $input $output
+ </command>
+ <inputs>
+  <param format="lif" label="input" name="input" type="data">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="lif" name="output">
+  </data>
+ </outputs>
+ <help>
+  License
+-------
+
+Stanford CoreNLP is licensed under the GNU General Public License. Find more details [here](https://stanfordnlp.github.io/CoreNLP/#license)
+ </help>
 </tool>

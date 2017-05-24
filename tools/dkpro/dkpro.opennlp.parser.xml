@@ -1,10 +1,22 @@
-<tool id='dkpro.opennlp.parser' name='DKPro Core OpenNLP Parser v1.7.0' version='0.0.1'>
-  <description>DKPro Core OpenNLP Parser</description>
-  <command interpreter='lsd'>../common/invoke_brandeis.lsd uima.dkpro.opennlp.parser_0.0.1 $input $output</command>
-  <inputs>
-    <param name='input' type='data' format='lif' label='input' />
-  </inputs>
-  <outputs>
-    <data name='output' format='lif' />
-  </outputs>
+<tool id="dkpro.opennlp.parser" name="DKPro Core OpenNLP Parser v1.7.0" version="0.0.1">
+ <description>
+  DKPro Core OpenNLP Parser
+ </description>
+ <command interpreter="lsd">
+  ../common/invoke_brandeis.lsd uima.dkpro.opennlp.parser_0.0.1 $input $output
+ </command>
+ <inputs>
+  <param format="lif" label="input" name="input" type="data">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="lif" name="output">
+  </data>
+ </outputs>
+ <help>
+  License
+-------
+
+All components in DKPro Core are licensed under the Apache Software License (ASL) version 2 or where necessary under GPL - but their dependencies may not be: Find more details [here](https://dkpro.github.io/dkpro-core/#license)
+ </help>
 </tool>
