@@ -12,7 +12,7 @@
         <tool file="masc/query_collection.xml"/>
 	</section>
 	<section id="twitter" name="Twitter">
-		<tool file="twitter-datasource.xml"/>
+        <tool file="twitter/twitter-datasource.xml"/>
 	</section>
 	<section id="fdr" name="FDR">
 		<tool file="fdr/list.xml"/>
