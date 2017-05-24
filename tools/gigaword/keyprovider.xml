@@ -1,22 +1,20 @@
-<tool id='gigaword.key.provider' name='OAuth Key Provider' version='1.0.0'>
-    <description>Provides an OAuth token to tools that require one.</description>
-    <command interpreter='lsd'>keyprovider.lsd $token $output</command>
-    <inputs>
-        <param name="token" type="text" label="OAuth Token"/>
-    </inputs>
-    <outputs>
-        <data name='output' format='oauth'/>
-    </outputs>
-    <help><![CDATA[
-
-Provides an OAuth2 token to Gigaword services.
-
-.. class:: infomark
-
-To obtain documents from Gigaword you **must**:
-
-1. Be an LDC licensee.
-2. `Obtain an OAuth Token <https://grid.anc.org:9443/ldc-authorize/>`_
+<tool id="gigaword.key.provider" name="OAuth Key Provider" version="1.0.0">
+ <description>
+  Provides an OAuth token to tools that require one.
+ </description>
+ <command interpreter="lsd">
+  keyprovider.lsd $token $output
+ </command>
+ <inputs>
+  <param label="OAuth Token" name="token" type="text">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="oauth" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[`_
 
 To obtain an OAuth token visit the link above and log in with your LDC id and password. Then paste
 the OAuth token into the above field and click `execute`.  This will add an item to your
@@ -24,5 +22,10 @@ history that can be used to supply the OAuth token to other Gigaword services th
 require it.
 
 ]]>
-    </help>
+    
+License
+-------
+
+Gigaword corpus is distributed under `LDC Membership Agreement <www.ldc.upenn.edu/members/agreements>`_ or `User Agreement for Non-Members <catalog.ldc.upenn.edu/license/ldc-non-members-agreement.pdf>`_]]>
+ </help>
 </tool>
