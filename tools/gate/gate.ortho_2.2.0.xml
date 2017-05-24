@@ -1,28 +1,32 @@
-<tool id="anc_gate.ortho_2.2.0" name="GATE OrthoMatcher v2.2.0" version="1.0.1">
-    <description>GATE OrthoMatcher</description>
-    <command>lsd $__tool_directory__/invoke.lsd gate.ortho_2.2.0 $input $output</command>
-    <inputs>
-        <param name="input" type="data" format="gate"/>
-    </inputs>
-    <outputs>
-        <data name="output" format="gate" label="GATE Labels"/>
-    </outputs>
-    <help><![CDATA[
+<tool id='anc_gate.ortho_2.2.0' name='GATE OrthoMatcher v2.2.0' version='1.0.0'>
+  <description>GATE OrthoMatcher</description>
+  <command>lsd $__tool_directory__/invoke.lsd gate.ortho_2.2.0 $input $output</command>
+  <inputs>
+    <param name='input' type='data' format='gate' />
+  </inputs>
+  <outputs>
+    <data name='output' format='gate' />
+  </outputs>
+  <help><![CDATA[
 HELP
 ====
+
 GATE OrthoMatcher
 
 Required Annotations
 --------------------
-
 * http://vocab.lappsgrid.org/Person
-
 
 Generated Annotations
 ---------------------
-
 * 	http://vocab.lappsgrid.org/NamedEntity#matches
 
+Licensing Information
+---------------------
+
+Gate Developer is released under the GNU Lesser General Public License 3.0 (https://www.gnu.org/licenses/lgpl-3.0.html)
+
+
 ]]>
-    </help>
+</help>
 </tool>
