@@ -33,9 +33,11 @@
  <tests>
  </tests>
  <help>
-  License
+  <![CDATA[
+
+License
 -------
 
-ask Nancy
+`CC-BY <https://creativecommons.org/licenses/by/2.0/>`_]]>
  </help>
 </tool>

@@ -34,15 +34,16 @@
   </collection>
  </outputs>
  <help>
-  `_
+  <![CDATA[`_
 
 To obtain an OAuth token visit the link above and log in with your LDC id and password. Then paste
 the OAuth token into the above field.
 
-]]&gt;
-  License
+]]>
+    
+License
 -------
 
-ask Chris
+Gigaword corpus is distributed under `LDC Membership Agreement <www.ldc.upenn.edu/members/agreements>`_ or `User Agreement for Non-Members <catalog.ldc.upenn.edu/license/ldc-non-members-agreement.pdf>`_]]>
  </help>
 </tool>

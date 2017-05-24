@@ -20,12 +20,12 @@
  <tests>
  </tests>
  <help>
-  <p>
-   Creates a Data Collection with the selected range of documents.
-  </p>
-  License
+  <![CDATA[
+ <p>Creates a Data Collection with the selected range of documents.</p> 
+
+License
 -------
 
-FDR is in public domain
+FDR is in `the public domain <https://copyright.gov/pr/pdomain.html>`_]]>
  </help>
 </tool>

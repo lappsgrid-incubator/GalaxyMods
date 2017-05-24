@@ -30,7 +30,7 @@
   </tests>
   -->
  <help>
-  Obtains a list of ID values for documents in MASC that match the specified query.
+  <![CDATA[Obtains a list of ID values for documents in MASC that match the specified query.
 
 Only simple queries based on simple path matching is available at the moment. The following terms may be used:
 
@@ -66,9 +66,11 @@ Only simple queries based on simple path matching is available at the moment. Th
 30. twitter
 
 Queries do **not** support wildcards.
-  License
+
+  
+License
 -------
 
-ask Nancy
+`CC-BY <https://creativecommons.org/licenses/by/2.0/>`_]]>
  </help>
 </tool>

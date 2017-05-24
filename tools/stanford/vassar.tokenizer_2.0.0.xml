@@ -14,10 +14,10 @@
   </data>
  </outputs>
  <help>
-  Stanford Tokenizer
-  License
+  <![CDATA[Stanford Tokenizer
+License
 -------
 
-Stanford CoreNLP is licensed under the GNU General Public License. Find more details [here](https://stanfordnlp.github.io/CoreNLP/#license)
+Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.]]>
  </help>
 </tool>

@@ -10,10 +10,10 @@
   </data>
  </outputs>
  <help>
-  Obtains a list of ID values for all documents in the FDR corpus.
-  License
+  <![CDATA[Obtains a list of ID values for all documents in the FDR corpus.
+License
 -------
 
-FDR is in public domain
+FDR is in `the public domain <https://copyright.gov/pr/pdomain.html>`_]]>
  </help>
 </tool>
