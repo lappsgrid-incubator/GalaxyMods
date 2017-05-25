@@ -1,0 +1,15 @@
+//include '../Config'
+
+String service = args[0]
+File input = new File(args[1])
+File output = new File(args[2])
+
+//def server = Servers.vassar
+//String url = "${server.url}:$service"
+
+String url = "http://grid.anc.org:9080/LingpipeServices/1.0.0-SNAPSHOT/services/$service"
+
+
+WebService client = new ServiceClient(url)
+output.text = client.execute(input.text)
+

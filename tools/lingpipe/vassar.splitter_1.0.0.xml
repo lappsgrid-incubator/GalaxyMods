@@ -1,0 +1,23 @@
+<tool id="vassar.lingpipe.splitter_1.0.0" name="Lingpipe SentenceSplitter v1.0.0" version="1.0.0">
+ <description>
+  (Vassar)
+ </description>
+ <command interpreter="lsd">
+  invoke.lsd LingpipeSentenceSplitter $input $output
+ </command>
+ <inputs>
+  <param format="lif" label="input" name="input" type="data">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="lif" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[Lingpipe Sentence Splitter
+License
+-------
+
+The lingpipe 4 website is dead.]]>
+ </help>
+</tool>

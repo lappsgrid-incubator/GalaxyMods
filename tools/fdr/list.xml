@@ -1,0 +1,19 @@
+<tool id="fdr.list" name="List" version="1.0.0">
+ <description>
+  Lists all keys in the FDR corpus.
+ </description>
+ <command>
+  lsd $__tool_directory__/list.lsd $output
+ </command>
+ <outputs>
+  <data format="txt" label="FDR Listing" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[Obtains a list of ID values for all documents in the FDR corpus.
+License
+-------
+
+FDR is in `the public domain <https://copyright.gov/pr/pdomain.html>`_]]>
+ </help>
+</tool>

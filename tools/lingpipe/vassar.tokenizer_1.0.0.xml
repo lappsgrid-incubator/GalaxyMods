@@ -1,0 +1,23 @@
+<tool id="vassar.lingpipe.tokenizer_1.0.0" name="Lingpipe Tokenizer v1.0.0" version="1.0.0">
+ <description>
+  (Vassar)
+ </description>
+ <command interpreter="lsd">
+  invoke.lsd LingpipeTokenizer $input $output
+ </command>
+ <inputs>
+  <param format="txt,lif" label="input" name="input" type="data">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="lif" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[Lingpipe Tokenizer
+License
+-------
+
+The lingpipe 4 website is dead.]]>
+ </help>
+</tool>

@@ -1,0 +1,43 @@
+<tool id="masc.query.collection" name="Query Data Collection" version="1.0.0">
+ <command interpreter="lsd">
+  query_collection.lsd $query $type $start $end
+ </command>
+ <description>
+  Create a data collection from documents that match the query.
+ </description>
+ <inputs>
+  <!--
+    <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />
+  -->
+  <param label="Query" name="query" type="text">
+  </param>
+  <param min="0" name="start" type="integer" value="0">
+  </param>
+  <param max="392" name="end" type="integer" value="392">
+  </param>
+  <param name="type" type="select">
+  </param>
+  <option value="anc:masc.text_2.2.0">
+   Text
+  </option>
+  <option value="anc:masc.json_2.2.0">
+   Gold Annotations
+  </option>
+ </inputs>
+ <outputs>
+  <collection format="lif" label="Output List" name="list_output" type="list">
+   <discover_datasets directory="outputs" pattern="__designation_and_ext__" visible="false">
+   </discover_datasets>
+  </collection>
+ </outputs>
+ <tests>
+ </tests>
+ <help>
+  <![CDATA[
+
+License
+-------
+
+`CC-BY <https://creativecommons.org/licenses/by/2.0/>`_]]>
+ </help>
+</tool>

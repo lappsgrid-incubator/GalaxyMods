@@ -1,0 +1,23 @@
+<tool id="vassar.lingpipe.ner_1.0.0" name="Lingpipe NER v1.0.0" version="1.0.0">
+ <description>
+  (Vassar)
+ </description>
+ <command interpreter="lsd">
+  invoke.lsd LingpipeNER $input $output
+ </command>
+ <inputs>
+  <param format="lif" label="input" name="input" type="data">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="lif" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[Lingpipe Named Entity Recognizer
+License
+-------
+
+The lingpipe 4 website is dead.]]>
+ </help>
+</tool>

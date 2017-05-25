@@ -1,0 +1,23 @@
+<tool id="opennlp.tokenizer" name="OpenNLP Tokenizer" version="2.0.3">
+ <description>
+  OpenNLP Tokenizer
+ </description>
+ <command interpreter="lsd">
+  ../common/invoke_brandeis.lsd opennlp.tokenizer_2.0.3 $input $output
+ </command>
+ <inputs>
+  <param format="lif,json" label="input" name="input" type="data">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="lif" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[
+License
+-------
+
+Apache OpenNLP is licensed under `the Apache License, Version 2.0 <https://www.apache.org/licenses/LICENSE-2.0>`_]]>
+ </help>
+</tool>

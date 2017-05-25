@@ -1,0 +1,48 @@
+<tool id="gigaword.collection" name="Create Data Collection" version="1.0.0">
+ <command interpreter="lsd">
+  create_collection.lsd $token $start $end $service
+ </command>
+ <inputs>
+  <param format="oauth" label="OAuth Token" name="token" type="data">
+  </param>
+  <param min="0" name="start" type="integer" value="0">
+  </param>
+  <param max="392" name="end" type="integer" value="392">
+  </param>
+  <param label="Language" name="service" type="select">
+  </param>
+  <option value="GWENDataSource">
+   English
+  </option>
+  <option value="GWZHDataSource">
+   Chinese
+  </option>
+  <option value="GWESDataSource">
+   Spanish
+  </option>
+  <option value="GWARDataSource">
+   Arabic
+  </option>
+ </inputs>
+ <outputs>
+  <collection format="ldc" label="Output List" name="list_output" type="list">
+   <discover_datasets directory="outputs" pattern="__designation_and_ext__" visible="false">
+   </discover_datasets>
+  </collection>
+ </outputs>
+ <tests>
+ </tests>
+ <help>
+  <![CDATA[`_
+
+To obtain an OAuth token visit the link above and log in with your LDC id and password. Then paste
+the OAuth token into the above field.
+
+]]>
+    
+License
+-------
+
+Gigaword corpus is distributed under `LDC Membership Agreement <www.ldc.upenn.edu/members/agreements>`_ or `User Agreement for Non-Members <catalog.ldc.upenn.edu/license/ldc-non-members-agreement.pdf>`_]]>
+ </help>
+</tool>
