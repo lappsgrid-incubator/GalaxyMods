@@ -14,7 +14,7 @@
   </data>
  </outputs>
  <help>
-  <![CDATA[`_
+  <![CDATA[
 
 To obtain an OAuth token visit the link above and log in with your LDC id and password. Then paste
 the OAuth token into the above field and click `execute`.  This will add an item to your
@@ -22,10 +22,6 @@ history that can be used to supply the OAuth token to other Gigaword services th
 require it.
 
 ]]>
-    
-License
--------
 
-Gigaword corpus is distributed under `LDC Membership Agreement <www.ldc.upenn.edu/members/agreements>`_ or `User Agreement for Non-Members <catalog.ldc.upenn.edu/license/ldc-non-members-agreement.pdf>`_]]>
  </help>
 </tool>

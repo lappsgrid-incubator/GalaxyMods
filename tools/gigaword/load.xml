@@ -16,8 +16,18 @@
     </test>
   </tests>
   -->
-  <help>Retrieves a single document from English Gigaword 5th Ed.
-  <p>Unlike the <em>get</em> tool, this tool expects the document key to be
-  store in the input file.</p>
+  <help><![CDATA[
+  
+Retrieves a single document from English Gigaword 5th Ed.
+  
+Unlike the *get* tool, this tool expects the document key to be
+store in the input file.
+       
+License
+-------
+
+Gigaword corpus is distributed under `LDC Membership Agreement <www.ldc.upenn.edu/members/agreements>`_ or `User Agreement for Non-Members <catalog.ldc.upenn.edu/license/ldc-non-members-agreement.pdf>`_
+
+]]>
   </help>
 </tool>
