@@ -78,7 +78,7 @@ and the `Twitter Display Requirments <https://about.twitter.com/en-gb/company/di
     	title = {Twitter DataSource},
     	publisher = {The Language Application Grid},
     	journal = {GitHub Repository},
-    	url = {https://github.com/oanc/org.anc.lapps.datasource.twitter}
+    	url = {https://github.com/lappsgrid-services/org.lappsgrid.datasource.twitter}
     	}
     	</citation>
     </citations>
