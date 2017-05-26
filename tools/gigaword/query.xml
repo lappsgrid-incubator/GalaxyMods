@@ -34,7 +34,7 @@
   </collection>
  </outputs>
  <help>
-  <![CDATA[`_
+  <![CDATA[
 
 To obtain an OAuth token visit the link above and log in with your LDC id and password. Then paste
 the OAuth token into the above field.

@@ -63,6 +63,11 @@ Some of the available operators are:
 | traffic ?    | containing "traffic" and asking a question.                         |
 +--------------+---------------------------------------------------------------------+
 
+License
+-------
+
+Data provided by the Twitter DataSource are covered by the `Twitter Developer Agreement <https://dev.twitter.com/overview/terms/agreement>`_
+and the `Twitter Display Requirments <https://about.twitter.com/en-gb/company/display-requirements>`_
 
     ]]></help>    
     <citations>
@@ -74,6 +79,7 @@ Some of the available operators are:
     	publisher = {The Language Application Grid},
     	journal = {GitHub Repository},
     	url = {https://github.com/oanc/org.anc.lapps.datasource.twitter}
+    	}
     	</citation>
     </citations>
 </tool>
