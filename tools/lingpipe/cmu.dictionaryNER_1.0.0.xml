@@ -16,10 +16,14 @@
   </data>
  </outputs>
  <help>
-  <![CDATA[Dictionary basaed Lingpipe Named Entity Recognizer
+  <![CDATA[
+Dictionary basaed Lingpipe Named Entity Recognizer
+
 License
 -------
 
-Lingpipe is released under the `GNU Affero General Public License version 3.0 <https://www.gnu.org/licenses/agpl-3.0.en.html>`_]]>
+Lingpipe is released under the `GNU Affero General Public License version 3.0 <https://www.gnu.org/licenses/agpl-3.0.en.html>`_
+
+]]>
  </help>
 </tool>

@@ -21,11 +21,13 @@
  </tests>
  <help>
   <![CDATA[
- <p>Creates a Data Collection with the selected range of documents.</p> 
+Creates a Data Collection with the selected range of documents.
 
 License
 -------
 
-FDR is in `the public domain <https://copyright.gov/pr/pdomain.html>`_]]>
+FDR is in `the public domain <https://copyright.gov/pr/pdomain.html>`_
+
+]]>
  </help>
 </tool>

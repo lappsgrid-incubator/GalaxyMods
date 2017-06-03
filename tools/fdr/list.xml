@@ -10,7 +10,9 @@
   </data>
  </outputs>
  <help>
-  <![CDATA[Obtains a list of ID values for all documents in the FDR corpus.
+  <![CDATA[
+Obtains a list of ID values for all documents in the FDR corpus.
+
 License
 -------
 

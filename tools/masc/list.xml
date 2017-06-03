@@ -18,10 +18,13 @@
   </tests>
   -->
  <help>
-  <![CDATA[Obtains a list of ID values for all documents in MASC.
+  <![CDATA[
+Obtains a list of ID values for all documents in MASC.
+
 License
 -------
 
-`CC-BY <https://creativecommons.org/licenses/by/2.0/>`_]]>
+`CC-BY <https://creativecommons.org/licenses/by/2.0/>`_
+]]>
  </help>
 </tool>
