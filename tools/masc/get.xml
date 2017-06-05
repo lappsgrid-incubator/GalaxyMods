@@ -9,13 +9,13 @@
   <param label="Key" name="key" type="text" value="MASC3-0203">
   </param>
   <param name="type" type="select">
-  </param>
   <option value="anc:masc.text_2.1.0">
    Text
   </option>
   <option value="anc:masc.json_2.1.0">
    Gold Annotations
   </option>
+  </param>
  </inputs>
  <outputs>
   <data format="lif" label="MASC Document" name="output">
