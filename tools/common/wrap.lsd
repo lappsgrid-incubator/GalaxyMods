@@ -14,6 +14,7 @@ else if (format == 'lif') {
 	type = Uri.LIF
 	def container = new Container()
 	container.text = payload
+	payload = container
 }
 else if (format == 'xml') {
     type = Uri.XML
@@ -24,6 +25,6 @@ else if (format == 'gate') {
 
 Data data = new Data()
 data.discriminator = type
-data.payload = input.text
+data.payload = payload
 
 output.text = data.asJson()
