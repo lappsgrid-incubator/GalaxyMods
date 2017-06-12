@@ -15,6 +15,6 @@
     <outputs>
         <data name="output" format="lif" label="Output"/>
     </outputs>
-    <help>Any text files uploaded will typically need to be wrapped in a LIF container before
+    <help>Any text files uploaded will typically need to be wrapped in a LAPPS container before
         they can be using in a LAPPS processing pipeline.</help>
 </tool>
