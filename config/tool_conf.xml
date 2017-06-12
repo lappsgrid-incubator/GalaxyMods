@@ -4,6 +4,8 @@
 		<tool file="data_source/upload.xml"/>
 		<tool file="common/wrap.xml"/>
     </section>
+    <!--
+    
 	<section id="datasource" name="MASC">
 		<tool file="masc/get.xml"/>
 		<tool file="masc/list.xml"/>
@@ -90,7 +92,6 @@
     <section id="coref" name="Coreference">
 		<tool file='stanford/brandeis.coref.xml' />
 		<tool file='dkpro/dkpro.stanford.coref.xml'/>
-		<!-- <tool file="gate/gate.coref_2.0.0.xml"/> -->
 	</section>
 	
     <section id="rel-ext" name="Relation Extraction">
@@ -124,9 +125,7 @@
 		<tool file="gate/gate.ner_2.2.0.xml"/>
 		<tool file="gate/gate.npchunker_2.2.0.xml"/>
 		<tool file="gate/gate.vpchunker_2.2.0.xml"/>
-		<!-- <tool file="gate/gate.coref_2.0.0.xml"/> -->
 		<tool file="gate/gate.gazetteer_2.2.0.xml"/>
-		<!-- <tool file="gate/gate.ortho_2.0.0.xml"/> -->
 		<tool file="converters/convert.gate2json_2.0.0.xml"/>
 		<tool file="converters/convert.json2gate_2.0.0.xml"/>
 	</section>
@@ -165,6 +164,7 @@
     <section id="dbpedia" name="DBpedia">
         <tool file="dbpedia/spotlight.xml"/>
     </section>
+    -->
 	<!--
 	<section id="kyoto.grid" name="Kyoto Node">
 		<tool file='kyoto/opennlp_postagger.xml'/>
