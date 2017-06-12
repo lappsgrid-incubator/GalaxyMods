@@ -48,6 +48,7 @@
     defined format first, followed by next-most rigidly defined,
     and so on.
     -->
+    <sniffer type="lappsgrid.datatypes.lapps:TCF"/>
     <sniffer type="lappsgrid.datatypes.lapps:LDC"/>
     <sniffer type="lappsgrid.datatypes.lapps:Gate"/>
     <sniffer type="lappsgrid.datatypes.lapps:Lif"/>
