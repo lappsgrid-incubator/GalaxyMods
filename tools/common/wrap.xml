@@ -1,5 +1,5 @@
 <tool id="wrap.text" name="Wrap data" version="1.0.0">
-    <description>in a LIF container.</description>
+    <description>in a LAPPS Data object.</description>
     <command interpreter="lsd">wrap.lsd $format $input $output</command>
     <inputs>
         <param name="input" type="data" format="txt"/>
@@ -13,7 +13,11 @@
         </param>
     </inputs>
     <outputs>
-        <data name="output" format="lif" label="Output"/>
+        <data name="output" format="lif" label="Output">
+			<change_format>
+				<when input="format" value="tcf" format="tcf" />
+			</change_format>
+        </data>
     </outputs>
     <help>Any text files uploaded will typically need to be wrapped in a LAPPS container before
         they can be using in a LAPPS processing pipeline.</help>

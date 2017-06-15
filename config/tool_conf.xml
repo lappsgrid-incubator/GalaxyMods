@@ -4,8 +4,6 @@
 		<tool file="data_source/upload.xml"/>
 		<tool file="common/wrap.xml"/>
     </section>
-    <!--
-    
 	<section id="datasource" name="MASC">
 		<tool file="masc/get.xml"/>
 		<tool file="masc/list.xml"/>
@@ -164,7 +162,13 @@
     <section id="dbpedia" name="DBpedia">
         <tool file="dbpedia/spotlight.xml"/>
     </section>
-    -->
+    <section id="weblicht.stanford" name="Weblicht">
+    	<tool file="weblicht/stanford.tokenizer_1.0.0.xml"/>
+    	<tool file="weblicht/stanford.tagger_1.0.0.xml"/>
+    	<tool file="weblicht/stanford.ner_1.0.0.xml"/>
+    	<tool file="weblicht/stanford.parser_1.0.0.xml"/>
+		<tool file="common/wrap.xml"/>
+    </section>
 	<!--
 	<section id="kyoto.grid" name="Kyoto Node">
 		<tool file='kyoto/opennlp_postagger.xml'/>

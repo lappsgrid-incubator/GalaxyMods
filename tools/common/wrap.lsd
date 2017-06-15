@@ -28,7 +28,7 @@ else if (format == 'tcf') {
     <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="en">
         <tc:text xmlns:tc="http://www.dspin.de/data/textcorpus">$payload</tc:text>
     </TextCorpus>
-</D-Spin>"""
+</D-Spin>""".toString()
 }
 else {
 	type = Uri.ERROR
