@@ -1,0 +1,23 @@
+<tool id="deiis.example.Tokenizer" name="Tokenizer" version="1.0.0">
+    <description>A simple whitespace tokenizer</description>
+    <command>lsd $__tool_directory__/invoke.lsd Tokenizer $input $output</command>
+    <inputs>
+        <param name="input" type="data" format="lif"/>
+    </inputs>
+    <outputs>
+        <data name="output" format="lif" label="Tokens"/>
+    </outputs>
+    <help><![CDATA[
+HELP
+====
+
+A basic tokenizer that splits tokens on whitespace boundaries.
+
+Generated Annotations
+---------------------
+
+* http://vocab.lappsgrid.org/Token
+
+]]>
+    </help>
+</tool>

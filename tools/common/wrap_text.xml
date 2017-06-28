@@ -1,6 +1,6 @@
 <tool id="wrap.text.service" name="Wrap text" version="1.0.0">
     <description>in a LAPPS Data object.</description>
-    <command>lsd __tool_directory__/wrap_text.lsd $format $input $output</command>
+    <command>lsd $__tool_directory__/wrap_text.lsd $format $input $output</command>
     <inputs>
         <param name="input" type="data" format="txt"/>
         <param name="format" type="select" label="LIF Format">
