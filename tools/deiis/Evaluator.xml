@@ -2,7 +2,7 @@
     <description>Calculates precision, recall, and F1 score.</description>
     <command>lsd $__tool_directory__/invoke.lsd Evaluator $input $output</command>
     <inputs>
-        <param name="input" type="data" format="txt"/>
+        <param name="input" type="data" format="lapps"/>
     </inputs>
     <outputs>
         <data name="output" format="txt" label="Evaluated"/>

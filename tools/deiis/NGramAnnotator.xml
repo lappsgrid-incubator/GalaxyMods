@@ -4,9 +4,9 @@
     <inputs>
         <param name="input" type="data" format="lif"/>
         <param name="size" type="select">
-            <option value="1">Unigrams</option>
-            <option value="2">Bigrams</option>
-            <option value="3">Trigrams</option>
+            <option value="UNIGRAM">Unigrams</option>
+            <option value="BIGRAM">Bigrams</option>
+            <option value="TRIGRAM">Trigrams</option>
         </param>
     </inputs>
     <outputs>

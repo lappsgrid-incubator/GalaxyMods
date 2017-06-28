@@ -5,18 +5,9 @@
         <param name="input" type="data" format="lif"/>
     </inputs>
     <outputs>
-        <data name="output" format="txt" label="Ranked"/>
+        <data name="output" format="lapps" label="Ranked"/>
     </outputs>
     <help><![CDATA[
-HELP
-====
-
-Required Annotations
---------------------
-
-
-Generated Annotations
----------------------
 
 ]]>
     </help>

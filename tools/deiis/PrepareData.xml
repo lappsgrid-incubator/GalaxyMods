@@ -8,14 +8,12 @@
         <data name="output" format="lif" label="Data"/>
     </outputs>
     <help><![CDATA[
-HELP
-====
 
 Reads a Question/Answer file and generates *Question* and *Answer* annotations inside a `LIF Container <http://wiki.lappsgrid.org/org.lappsgrid.serialization/groovydoc/org/lappsgrid/serialization/lif/Container.html>`_. This implementation expects only one question and a set of candidate answers for the question.
 
 The question should appear on the first line of the file with the candidate answers on subsequent lines::
 
-    Q Who shot Lincoln?
+    Q Booth shot Lincoln?
     A 1 Booth shot Lincoln.
     A 0 Lincoln shot Booth.
     ...
