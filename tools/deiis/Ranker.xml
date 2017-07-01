@@ -5,7 +5,7 @@
         <param name="input" type="data" format="lif"/>
     </inputs>
     <outputs>
-        <data name="output" format="lapps" label="Ranked"/>
+        <data name="output" format="lif" label="Ranked"/>
     </outputs>
     <help><![CDATA[
 
