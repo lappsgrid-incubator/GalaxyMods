@@ -33,6 +33,9 @@
     	<tool file="deiis/NGramScorer.xml"/>
     	<tool file="deiis/Ranker.xml"/>
     	<tool file="deiis/Evaluator.xml"/>
+    	<tool file="deiis/DataExtractor.xml"/>
+    	<tool file="deiis/RankingExtractor.xml"/>
+    	<
     </section>
 	<section id="discovery" name="Discovery 2020">
 		<tool file="discovery/multi_annotator.xml"/>
