@@ -1,0 +1,13 @@
+<tool id="deiis.data.provider" name="Data Provider" version="1.0.0">
+    <description>Galaxy tool that generated data sets with test data</description>
+    <command>lsd $__tool_directory__/data-provider.lsd $output</command>
+    <outputs>
+        <data name="output" format="txt" label="Example Data"/>
+    </outputs>
+    <help><![CDATA[
+
+Creates a data set with example test data. Currently only the ``Booth shot Lincoln.`` example data set is available.
+
+]]>
+    </help>
+</tool>

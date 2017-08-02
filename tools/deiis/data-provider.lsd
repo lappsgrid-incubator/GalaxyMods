@@ -1,0 +1,10 @@
+new File(args[0]).text = '''Q Booth shot Lincoln?
+A 0 Lincoln shot Booth.
+A 1 Lincoln was shot by Booth.
+A 1 Booth shot Lincoln.
+A 0 Booth was shot by Lincoln.
+A 1 Booth assassinated Lincoln.
+A 0 Lincoln assassinated Booth.
+A 1 Lincoln was assassinated by Booth.
+A 0 Booth was assassinated by Lincoln.
+'''

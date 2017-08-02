@@ -1,0 +1,16 @@
+<tool id="deiis.extractor.data" name="Data Extractor" version="1.0.0">
+    <description>writes precision, recall, and F-Score to a CSV file.</description>
+    <command>lsd $__tool_directory__/invoke.lsd DataExtractor $input $output</command>
+    <inputs>
+        <param name="input" type="data" format="lif"/>
+    </inputs>
+    <outputs>
+        <data name="output" format="csv" label="Extracted PRF"/>
+    </outputs>
+    <help><![CDATA[
+
+Extracts the precision, recall, and F-Score from a previously scored data set and writes the values to a CSV file.
+
+]]>
+    </help>
+</tool>

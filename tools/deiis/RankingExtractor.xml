@@ -1,0 +1,15 @@
+<tool id="deiis.extractor.ranking" name="Ranking Extractor" version="1.0.0">
+    <description>write the candidates sentences and their scores to a text file.</description>
+    <command>lsd $__tool_directory__/invoke.lsd RankingExtractor $input $output</command>
+    <inputs>
+        <param name="input" type="data" format="lif"/>
+    </inputs>
+    <outputs>
+        <data name="output" format="txt" label="Tokens"/>
+    </outputs>
+    <help><![CDATA[
+Writes the scored and ranked candidate sentences to a *text/plain* file. Use this tool to extract the raw data to be consumed by other services and processors.
+
+]]>
+    </help>
+</tool>

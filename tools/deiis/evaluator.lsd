@@ -1,0 +1,17 @@
+int n = args[0] as int
+File input = new File(args[1])
+File output = new File(args[2])
+
+String json = input.text
+if (n > 0) {
+	Data data = Serializer.parse(json, Data)
+	if (!data.parameters) {
+		data.parameters = [:]
+	}
+	data.parameters.n = n
+	json = data.asJson()
+}
+
+String url = "http://grid.anc.org:9080/DEIISPipeline/services/Evaluator"
+ServiceClient service = new ServiceClient(url, 'tester', 'tester')
+output.text = service.execute(json)
