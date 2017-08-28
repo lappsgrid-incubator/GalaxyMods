@@ -1,0 +1,18 @@
+<tool id="bionlp.list" name="List" version="1.0.0">
+ <description>
+  Lists all keys in the BIONLP 2016 corpus.
+ </description>
+ <command>lsd $__tool_directory__/list.lsd $output
+ </command>
+ <outputs>
+  <data format="txt" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[
+  
+Obtains a list of ID values for all documents in the BioNLP corpus.
+
+]]>
+ </help>
+</tool>

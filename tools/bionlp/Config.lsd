@@ -1,0 +1,5 @@
+server = [
+	url: 'http://149.165.157.216:8080/GenericDatasource/1.1.0/services/GenericDatasource',
+	username:'tester',
+	password:'tester'
+]
