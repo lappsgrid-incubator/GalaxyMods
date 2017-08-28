@@ -11,6 +11,13 @@
         <tool file="masc/create_collection.xml"/>
         <tool file="masc/query_collection.xml"/>
 	</section>
+	<section id="bionlp" name="BioNLP 2016">
+		<tool file="bionlp/get.xml"/>
+		<tool file="bionlp/list.xml"/>
+        <tool file="bionlp/query.xml"/>
+        <tool file="bionlp/create_collection.xml"/>
+        <tool file="bionlp/query_collection.xml"/>
+	</section>
 	<section id="twitter" name="Twitter">
         <tool file="twitter/twitter-datasource.xml"/>
 	</section>
