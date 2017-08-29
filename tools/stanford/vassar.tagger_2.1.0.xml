@@ -3,7 +3,7 @@
   Stanford Tagger (Vassar)
  </description>
  <command interpreter="lsd">
-  ../common/invoke_vassar.lsd stanford.tagger_2.1.0 $input $output
+  ../common/invoke_vassar.lsd stanford.tagger_2.1.0-SNAPSHOT $input $output
  </command>
  <inputs>
   <param format="lif" label="input" name="input" type="data">
@@ -21,6 +21,8 @@ Stanford Part of Speech Tagger
 License
 -------
 
-Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.]]>
+Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.
+
+]]>
  </help>
 </tool>
