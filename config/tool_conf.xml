@@ -11,12 +11,32 @@
         <tool file="masc/create_collection.xml"/>
         <tool file="masc/query_collection.xml"/>
 	</section>
-	<section id="bionlp" name="BioNLP 2016">
-		<tool file="bionlp/get.xml"/>
-		<tool file="bionlp/list.xml"/>
-        <tool file="bionlp/query.xml"/>
+	<section id="bionlp-coref" name="BioNLP 2016 (Coref)">
+		<tool file="bionlp-coref/get.xml"/>
+		<tool file="bionlp-coref/list.xml"/>
+        <tool file="bionlp-coref/query.xml"/>
+        <!--
+        <tool file="bionlp-coref/create_collection.xml"/>
+        <tool file="bionlp-coref/query_collection.xml"/>
+        -->
+	</section>
+	<section id="bionlp-proteins" name="BioNLP 2016 (Proteins)">
+		<tool file="bionlp-proteins/get.xml"/>
+		<tool file="bionlp-proteins/list.xml"/>
+        <tool file="bionlp-proteins/query.xml"/>
+        <!--
+        <tool file="bionlp-proteins/create_collection.xml"/>
+        <tool file="bionlp-proteins/query_collection.xml"/>
+        -->
+	</section>
+	<section id="bionlp-reference" name="BioNLP 2016 (Reference)">
+		<tool file="bionlp-reference/get.xml"/>
+		<tool file="bionlp-reference/list.xml"/>
+        <tool file="bionlp-reference/query.xml"/>
+        <!--
         <tool file="bionlp/create_collection.xml"/>
         <tool file="bionlp/query_collection.xml"/>
+        -->
 	</section>
 	<section id="eurolan2017" name="Eurolan 2017">
 		<tool file="eurolan2017/DCTParser.xml"/>

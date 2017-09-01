@@ -2,7 +2,7 @@
   <description>export the payload from a LIF Data object</description>
   <command>lsd $__tool_directory__/export.lsd $input $output</command>
   <inputs>
-    <param name='input' type='data' format='gate' />
+    <param name='input' type='data' format='gate,lif' />
   </inputs>
   <outputs>
     <data name='output' format='txt'/>
