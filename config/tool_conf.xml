@@ -21,6 +21,10 @@
 	<section id="eurolan2017" name="Eurolan 2017">
 		<tool file="eurolan2017/DCTParser.xml"/>
 		<tool file="eurolan2017/HeidelTime.xml"/>
+		<tool file="eurolan2017/BioTokenizer.xml"/>
+		<tool file="eurolan2017/GeneTagger.xml"/>
+		<tool file="eurolan2017/MalignancyTagger.xml"/>
+		<tool file="eurolan2017/VariationTagger.xml"/>
 	</section>
 	<section id="twitter" name="Twitter">
         <tool file="twitter/twitter-datasource.xml"/>
