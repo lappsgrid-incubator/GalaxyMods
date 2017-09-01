@@ -1,0 +1,22 @@
+<tool id="bionlp.coref.query" name="Query" version="1.0.0">
+ <description>
+  Lists all keys that match the query.
+ </description>
+ <command>lsd $__tool_directory__/query.lsd $query $output
+ </command>
+ <inputs>
+  <param label="Query" name="query" type="text">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="txt" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[
+  
+ *TODO* Need some help. 
+ 
+  ]]>
+ </help>
+</tool>

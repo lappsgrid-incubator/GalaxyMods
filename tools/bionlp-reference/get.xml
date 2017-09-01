@@ -1,0 +1,23 @@
+<tool id="bionlp.reference.get" name="Get Document" version="2.0.0">
+ <description>
+  Retrieves a single document from a BioNLP corpus.
+ </description>
+ <command>
+  $__tool_directory__/get.lsd $key $output
+ </command>
+ <inputs>
+  <param label="Key" name="key" type="text" value="PMC-3589482-5-Experimental_Procedures.lif">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="lif" label="BioNLP Document" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[  
+
+*TODO*: this.
+
+]]>
+ </help>
+</tool>

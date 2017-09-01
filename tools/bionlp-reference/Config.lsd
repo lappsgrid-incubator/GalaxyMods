@@ -1,0 +1,7 @@
+// Reference datasource
+port=8081
+server = [
+	url: "http://149.165.157.216:$port/GenericDatasource/1.1.0/services/GenericDatasource",
+	username:'tester',
+	password:'tester'
+]
