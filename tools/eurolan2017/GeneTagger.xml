@@ -1,0 +1,19 @@
+<tool id='pennbio.gene_1.0.0' name='Gene Tagger' version='1.0.0'>
+  <description>add gene annotations</description>
+  <command>lsd $__tool_directory__/call.lsd GeneTagger $input $output</command>
+  <inputs>
+    <param name='input' type='data' format='gate' />
+  </inputs>
+  <outputs>
+    <data name='output' format='gate' />
+  </outputs>
+  <help><![CDATA[
+  
+HELP
+====
+
+Gate Developer is released under the `GNU Lesser General Public License 3.0 <https://www.gnu.org/licenses/lgpl-3.0.html>`_
+
+]]>
+</help>
+</tool>
