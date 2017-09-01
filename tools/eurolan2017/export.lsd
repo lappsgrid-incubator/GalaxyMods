@@ -3,7 +3,7 @@ File output = new File(args[1])
 
 Data data = Serializer.parse(input.text, Data)
 if (data.discriminator == Uri.LIF) {
-	output.text = Serializer.asPrettyJson(data.payload)
+	output.text = Serializer.toPrettyJson(data.payload)
 }
 else {
 	output.text = data.payload.toString()
