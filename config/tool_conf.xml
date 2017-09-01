@@ -25,6 +25,7 @@
 		<tool file="eurolan2017/GeneTagger.xml"/>
 		<tool file="eurolan2017/MalignancyTagger.xml"/>
 		<tool file="eurolan2017/VariationTagger.xml"/>
+		<tool file="eurolan2017/Export.xml"/>
 	</section>
 	<section id="twitter" name="Twitter">
         <tool file="twitter/twitter-datasource.xml"/>

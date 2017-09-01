@@ -1,0 +1,11 @@
+File input = new File(args[1])
+File output = new File(args[2])
+
+Data data = Serializer.parse(input.text, Data)
+if (data.discriminator == Uri.LIF) {
+	output.text = Serializer.asPrettyJson(data.payload)
+}
+else {
+	output.text = data.payload.toString()
+}
+
