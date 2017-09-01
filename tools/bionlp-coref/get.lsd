@@ -5,8 +5,6 @@ include 'Config'
 String key = args[0]
 File output = new File(args[1])
 
-//def url = "${server.url}"
-
 //def service = new DataSourceClient(url, server.username, server.password)
 //def service = new DataSourceClient(url, 'tester', 'tester')
 //new File(output).text = service.get(key)
