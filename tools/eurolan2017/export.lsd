@@ -9,4 +9,3 @@ if (data.discriminator != Uri.LIF) {
 
 data.payload.views = []
 output.text = data.asPrettyJson()
-println "Wrote ${output.path}"
