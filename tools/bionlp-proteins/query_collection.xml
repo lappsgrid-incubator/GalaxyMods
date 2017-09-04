@@ -1,5 +1,5 @@
 <tool id="bionlp.proteins.query.collection" name="Query Data Collection" version="1.0.0">
- <command>lsd $__tool_directory__/query_collection.lsd $query $type $start $end
+ <command>lsd $__tool_directory__/query_collection.lsd $query $start $end
  </command>
  <description>
   Create a data collection from documents that match the query.

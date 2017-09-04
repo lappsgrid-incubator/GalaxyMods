@@ -17,8 +17,8 @@
         <tool file="bionlp-coref/query.xml"/>
         <!--
         <tool file="bionlp-coref/create_collection.xml"/>
-        <tool file="bionlp-coref/query_collection.xml"/>
         -->
+        <tool file="bionlp-coref/query_collection.xml"/>
 	</section>
 	<section id="bionlp-proteins" name="BioNLP 2016 (Proteins)">
 		<tool file="bionlp-proteins/get.xml"/>
@@ -26,8 +26,8 @@
         <tool file="bionlp-proteins/query.xml"/>
         <!--
         <tool file="bionlp-proteins/create_collection.xml"/>
-        <tool file="bionlp-proteins/query_collection.xml"/>
         -->
+        <tool file="bionlp-proteins/query_collection.xml"/>
 	</section>
 	<section id="bionlp-reference" name="BioNLP 2016 (Reference)">
 		<tool file="bionlp-reference/get.xml"/>
@@ -35,17 +35,19 @@
         <tool file="bionlp-reference/query.xml"/>
         <!--
         <tool file="bionlp/create_collection.xml"/>
-        <tool file="bionlp/query_collection.xml"/>
         -->
+        <tool file="bionlp/query_collection.xml"/>
 	</section>
 	<section id="eurolan2017" name="Eurolan 2017">
+		<tool file="eurolan2017/TimeML.xml"/>
 		<tool file="eurolan2017/DCTParser.xml"/>
 		<tool file="eurolan2017/HeidelTime.xml"/>
 		<tool file="eurolan2017/BioTokenizer.xml"/>
 		<tool file="eurolan2017/GeneTagger.xml"/>
 		<tool file="eurolan2017/MalignancyTagger.xml"/>
 		<tool file="eurolan2017/VariationTagger.xml"/>
-		<tool file="eurolan2017/Export.xml"/>
+		<tool file="eurolan2017/ExportLif.xml"/>
+		<tool file="eurolan2017/ExportGate.xml"/>
 	</section>
 	<section id="twitter" name="Twitter">
         <tool file="twitter/twitter-datasource.xml"/>

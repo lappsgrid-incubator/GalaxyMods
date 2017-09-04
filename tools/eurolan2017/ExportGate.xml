@@ -1,11 +1,11 @@
-<tool id='export_1.0.0' name='Text Export' version='1.0.0'>
-  <description>export the payload from a LIF Data object</description>
+<tool id='export.gate_1.0.0' name='Export GATE/XML' version='1.0.0'>
+  <description>export GATE/XML from a Data object</description>
   <command>lsd $__tool_directory__/export.lsd $input $output</command>
   <inputs>
-    <param name='input' type='data' format='gate,lif' />
+    <param name='input' type='data' format='gate' />
   </inputs>
   <outputs>
-    <data name='output' format='txt'/>
+    <data name='output' format='xml'/>
   </outputs>
   <help><![CDATA[
   

@@ -1,5 +1,5 @@
 <tool id="bionlp.coref.query.collection" name="Query Data Collection" version="1.0.0">
- <command>lsd $__tool_directory__/query_collection.lsd $query $type $start $end
+ <command>lsd $__tool_directory__/query_collection.lsd $query $start $end
  </command>
  <description>
   Create a data collection from documents that match the query.
@@ -12,7 +12,7 @@
   </param>
   <param min="0" name="start" type="integer" value="0">
   </param>
-  <param max="776" name="end" type="integer" value="776">
+  <param max="141" name="end" type="integer" value="141">
   </param>
  </inputs>
  <outputs>

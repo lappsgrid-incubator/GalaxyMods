@@ -26,12 +26,10 @@ return
 
 List<String> query(String pattern) {
 	Data data = new Data(Uri.QUERY, pattern)
-	String json = data.asPrettyJson()
-	println json
-	json = datasource.execute(json)
+	String json = datasource.execute(data.asJson())
 	data = Serializer.parse(json, Data)
-	println data.payload.class
-	println data.payload
+	//println data.payload.class
+	//println data.payload
 	return data.payload
 }
 

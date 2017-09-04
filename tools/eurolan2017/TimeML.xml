@@ -1,0 +1,22 @@
+<tool id='gate.timeml_1.0.0' name='TimeML Events' version='1.0.0'>
+  <description>TimeML annotations</description>
+  <command>lsd $__tool_directory__/time.lsd TimeMLEvents $input $output</command>
+  <inputs>
+    <param name='input' type='data' format='gate,liftxt' />
+  </inputs>
+  <outputs>
+    <data name='output' format='gate' />
+  </outputs>
+  <help><![CDATA[
+  
+HELP
+====
+
+TimeML Event annotator pipeline.
+
+Gate Developer is released under the `GNU Lesser General Public License 3.0 <https://www.gnu.org/licenses/lgpl-3.0.html>`_
+
+
+]]>
+</help>
+</tool>
