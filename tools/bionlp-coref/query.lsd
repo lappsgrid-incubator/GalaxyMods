@@ -10,16 +10,16 @@ def client = new ServiceClient(url, server.username, server.password)
 Data q = new Data()
 q.discriminator = Uri.QUERY
 q.payload = pattern
-println client.execute(q.asJson())
-//Data data = Serializer.parse(json, Data)
-//println data.discriminator
-//println data.payload
-return
+String json = client.execute(q.asJson())
+Data data = Serializer.parse(json, Data)
 
-//List<String> lines = query(pattern)
-
-output.withWriter { writer ->
-    lines.each { writer.println it }
+if (data.payload instanceof Collection) {
+	output.withWriter { writer ->
+		lines.each { writer.println it }
+	}
+}
+else {
+	output.text = data.payload.toString()
 }
 
 return
