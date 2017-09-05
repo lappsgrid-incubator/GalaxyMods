@@ -13,5 +13,12 @@ File output = new File(args[2])
 //new File(output).text = service.get(key)
 
 def service = new ServiceClient(server.url)
-output.text = service.execute(new Data(Uri.GET, key).asJson())
+String json = service.execute(new Data(Uri.GET, key).asJson())
+if (type == 'txt') {
+	Data data = Serializer.parse(json, Data)
+	data.payload.views = []
+	json = data.asPrettyJson()
+}
+
+output.text = json
 
