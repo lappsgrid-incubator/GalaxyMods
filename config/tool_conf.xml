@@ -39,6 +39,15 @@
     	<tool file="deiis/DataExtractor.xml"/>
     	<tool file="deiis/RankingExtractor.xml"/>
     </section>
+    <section id="team1" name="Team One">
+    	<tool file="team1/CoreNLP.xml"/>
+    	<tool file="team1/QuestionType.xml"/>
+    	<tool file="team1/SentenceRanker.xml"/>
+    	<tool file="team1/AnswerExtractor.xml"/>
+    	<tool file="team1/HeuristicAnswerScorers.xml"/>
+    	<tool file="team1/OverallAnswerScorer.xml"/>
+    	<tool file="team1/AnswerRanker2.xml"/>
+    </section>
     <!--
 	<section id="discovery" name="Discovery 2020">
 		<tool file="discovery/multi_annotator.xml"/>
