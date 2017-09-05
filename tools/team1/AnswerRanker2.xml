@@ -1,0 +1,18 @@
+<tool id="team1.answer.ranker2" name="Answer Ranker (2)" version="1.0.0">
+    <description></description>
+    <command>lsd $__tool_directory__/run.lsd AnswerRanker2 $input $output</command>
+    <inputs>
+        <param name="input" type="data" format="lif"/>
+    </inputs>
+    <outputs>
+        <data name="output" format="lif" label="CoreNLP"/>
+    </outputs>
+    <help><![CDATA[
+HELP
+====
+
+Include a meaningful help message here.
+
+]]>
+    </help>
+</tool>

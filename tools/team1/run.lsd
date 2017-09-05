@@ -1,0 +1,8 @@
+
+String name = args[0]
+File input = new File(args[1])
+File output = new File(args[2])
+
+String url = "http://149.165.157.216:8085/team-one/services/$name"
+def service = new ServiceClient(url)
+output.text = service.execute(input.text)

@@ -1,0 +1,18 @@
+<tool id="team1.question.type" name="Question Type" version="1.0.0">
+    <description></description>
+    <command>lsd $__tool_directory__/run.lsd QuestionTypeAnnotation $input $output</command>
+    <inputs>
+        <param name="input" type="data" format="lif"/>
+    </inputs>
+    <outputs>
+        <data name="output" format="lif" label="Question Type"/>
+    </outputs>
+    <help><![CDATA[
+HELP
+====
+
+Include a meaningful help message here.
+
+]]>
+    </help>
+</tool>

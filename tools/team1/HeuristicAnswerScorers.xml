@@ -1,0 +1,18 @@
+<tool id="team1.heuristic" name="Heuristic Answer Scorers" version="1.0.0">
+    <description></description>
+    <command>lsd $__tool_directory__/run.lsd HeuristicAnswerScorers $input $output</command>
+    <inputs>
+        <param name="input" type="data" format="lif"/>
+    </inputs>
+    <outputs>
+        <data name="output" format="lif" label="Scored Answers (Heuristic)"/>
+    </outputs>
+    <help><![CDATA[
+HELP
+====
+
+Include a meaningful help message here.
+
+]]>
+    </help>
+</tool>
