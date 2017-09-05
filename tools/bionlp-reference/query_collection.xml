@@ -1,4 +1,4 @@
-<tool id="bionlp.reference.query.collection" name="Query Data Collection" version="1.0.0">
+<tool id="bionlp.reference.query.collection" name="Query Reference Collection" version="1.0.0">
  <command>lsd $__tool_directory__/query_collection.lsd $query $type $start $end
  </command>
  <description>
@@ -26,11 +26,6 @@
  <help>
   <![CDATA[
 
-License
--------
-
-MASC data is free to use for any purpose, including commercial uses, under
-the Creative Commons `CC-BY <https://creativecommons.org/licenses/by/2.0/>`_ license.
 ]]>
  </help>
 </tool>

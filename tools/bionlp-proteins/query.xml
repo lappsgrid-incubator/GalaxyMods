@@ -1,4 +1,4 @@
-<tool id="bionlp.proteins.query" name="Query" version="1.0.0">
+<tool id="bionlp.proteins.query" name="Query Proteins" version="1.0.0">
  <description>
   Lists all keys that match the query.
  </description>
@@ -15,7 +15,8 @@
  <help>
   <![CDATA[
   
- *TODO* Need some help. 
+ Returns a list of the documents whose key (document ID) contains the given query string. 
+ 
  
   ]]>
  </help>

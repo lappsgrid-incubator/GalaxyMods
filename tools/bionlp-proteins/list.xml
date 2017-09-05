@@ -1,6 +1,6 @@
-<tool id="bionlp.proteins.list" name="List" version="1.0.0">
+<tool id="bionlp.proteins.list" name="List Protein Documents" version="1.0.0">
  <description>
-  Lists all keys in a BIONLP 2016 corpus.
+  Lists all keys in the BIONLP2016 protein corpus.
  </description>
  <command>lsd $__tool_directory__/list.lsd $output
  </command>
@@ -11,7 +11,7 @@
  <help>
   <![CDATA[
   
-Obtains a list of ID values for all documents in the BioNLP corpus.
+Obtains a list of ID values for all documents in the BioNLP protein corpus.
 
 ]]>
  </help>
