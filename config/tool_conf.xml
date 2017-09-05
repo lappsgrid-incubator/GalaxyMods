@@ -26,8 +26,6 @@
         <tool file="gigaword/create_collection.xml"/>
         <tool file="gigaword/query.xml"/>
     </section>
-<<<<<<< Updated upstream
-=======
     <section id="deiis" name="DEIIS 2017">
     	<tool file="deiis/DataProvider.xml"/>
     	<tool file="deiis/PrepareData.xml"/>
@@ -39,7 +37,6 @@
     	<tool file="deiis/DataExtractor.xml"/>
     	<tool file="deiis/RankingExtractor.xml"/>
     </section>
->>>>>>> Stashed changes
 	<section id="discovery" name="Discovery 2020">
 		<tool file="discovery/multi_annotator.xml"/>
 		<tool file="discovery/multi_annotator2.xml"/>
