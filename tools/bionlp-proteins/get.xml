@@ -3,10 +3,14 @@
   Retrieves a single document from the BioNLP Protein corpus.
  </description>
  <command>
-  $__tool_directory__/get.lsd $key $output
+  $__tool_directory__/get.lsd $key $type $output
  </command>
  <inputs>
   <param label="Key" name="key" type="text" value="PMC-3589482-6-Experimental_Procedures.lif">
+  </param>
+  <param name="type" type="select">
+  	<option value="lif">Annotated</option>
+  	<option value="txt">Text only</option>
   </param>
  </inputs>
  <outputs>

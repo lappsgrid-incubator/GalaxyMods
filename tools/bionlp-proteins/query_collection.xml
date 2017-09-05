@@ -1,5 +1,5 @@
 <tool id="bionlp.proteins.query.collection" name="Query Protein Collection" version="1.0.0">
- <command>lsd $__tool_directory__/query_collection.lsd $query $start $end
+ <command>lsd $__tool_directory__/query_collection.lsd $query $type $start $end
  </command>
  <description>
   Create a data collection from documents that match the query.
@@ -9,6 +9,10 @@
     <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />
   -->
   <param label="Query" name="query" type="text">
+  </param>
+  <param name="type" type="select">
+  	<option value="lif">Annotated</option>
+  	<option value="txt">Text only</option>
   </param>
   <param min="0" name="start" type="integer" value="0">
   </param>
