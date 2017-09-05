@@ -46,6 +46,8 @@
 		<tool file="eurolan2017/GeneTagger.xml"/>
 		<tool file="eurolan2017/MalignancyTagger.xml"/>
 		<tool file="eurolan2017/VariationTagger.xml"/>
+		<tool file="eurolan2017/BadRex.xml"/>
+		<tool file="eurolan2017/AbnerTagger.xml"/>
 		<tool file="eurolan2017/ExportLif.xml"/>
 		<tool file="eurolan2017/ExportGate.xml"/>
 	</section>
