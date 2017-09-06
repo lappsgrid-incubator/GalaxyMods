@@ -1,0 +1,31 @@
+<tool id="bionlp.reference.query.collection" name="Query Reference Collection" version="1.0.0">
+ <command>lsd $__tool_directory__/query_collection.lsd $query $type $start $end
+ </command>
+ <description>
+  Create a data collection from documents that match the query.
+ </description>
+ <inputs>
+  <!--
+    <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />
+  -->
+  <param label="Query" name="query" type="text">
+  </param>
+  <param min="0" name="start" type="integer" value="0">
+  </param>
+  <param max="776" name="end" type="integer" value="776">
+  </param>
+ </inputs>
+ <outputs>
+  <collection format="lif" label="Output List" name="list_output" type="list">
+   <discover_datasets directory="outputs" pattern="__designation_and_ext__" visible="false">
+   </discover_datasets>
+  </collection>
+ </outputs>
+ <tests>
+ </tests>
+ <help>
+  <![CDATA[
+
+]]>
+ </help>
+</tool>
