@@ -1,0 +1,21 @@
+<tool id="deiis.khyathi.bioasq" name="BioASQ Pipeline Example" version="1.0.0">
+    <description>Khyathis example pipeline</description>
+    <command>curl -H "Accept: application/json" -o $output http://149.165.157.250?expansion=$expand</command>
+    <inputs>
+        <param name="input" type="data" format="lif"/>
+        <param name="expand" type="select" label="Expansion">
+        	<option type="NONE">NONE</option>
+        	<option type="UMLS">UMLS</option>
+        	<option type="SNOMEDCT">SNOMEDCT</option>
+        </param>
+    </inputs>
+    <outputs>
+        <data name="output" format="json" label="BioASQ Answer"/>
+    </outputs>
+    <help><![CDATA[
+
+Khyathi's BioASQ pipeline that answers one question selected at random.
+
+]]>
+    </help>
+</tool>
