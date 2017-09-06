@@ -48,6 +48,9 @@
     	<tool file="team1/OverallAnswerScorer.xml"/>
     	<tool file="team1/AnswerRanker2.xml"/>
     </section>
+    <section id="bioasq" name="BioASQ">
+    	<tool file="deiis/Bioasq.xml"/>
+    </section>
     <!--
 	<section id="discovery" name="Discovery 2020">
 		<tool file="discovery/multi_annotator.xml"/>
