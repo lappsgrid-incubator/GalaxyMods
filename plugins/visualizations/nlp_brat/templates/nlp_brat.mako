@@ -340,6 +340,6 @@ root = h.url_for( '/' )
     </p>
     -->
 </footer>
-<p style="text-align:center">Copyright &copy; 2017 Lapps Grid - All Rights Reserved</p>
+<p style="text-align:center">Copyright &copy; 2017 The Language Applications Grid - All Rights Reserved</p>
 </body>
 </html>
