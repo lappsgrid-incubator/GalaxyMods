@@ -332,12 +332,14 @@ root = h.url_for( '/' )
 
 <footer>
     <hr />
+    <!--
     <p style="text-align:center">
         Contacts:
         <br/>&nbsp; &nbsp; <a target="_blank" class="nolink" href="http://www.cs.brandeis.edu/~jamesp/"> James Pustejovsky</a>
         (<nonsense>jame</nonsense>sp@<nonsense>cs.</nonsense>brandeis.<nonsense></nonsense>edu)
     </p>
+    -->
 </footer>
-<p style="text-align:center">Copyright &copy; 2015 Lapps Grid - All Rights Reserved</p>
+<p style="text-align:center">Copyright &copy; 2017 The Language Applications Grid - All Rights Reserved</p>
 </body>
 </html>
