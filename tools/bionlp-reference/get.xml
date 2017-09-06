@@ -8,6 +8,10 @@
  <inputs>
   <param label="Key" name="key" type="text" value="PMC-1134658-16-Methods.lif">
   </param>
+  <param name="type" type="select">
+  	<option value="lif">Annotated</option>
+  	<option value="txt">Text only</option>
+  </param>
  </inputs>
  <outputs>
   <data format="lif" label="BioNLP Reference Document" name="output">

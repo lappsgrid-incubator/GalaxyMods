@@ -20,8 +20,8 @@ if (!dir.exists()) {
     }
 }
 
-String url = "${server.url}/${type}"
-datasource = new ServiceClient(url, server.username, server.password)
+//String url = "${server.url}/${type}"
+datasource = new ServiceClient(server.url, server.username, server.password)
 
 int size = end - start
 if (size > 100) {

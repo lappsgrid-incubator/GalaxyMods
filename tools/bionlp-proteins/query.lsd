@@ -15,7 +15,7 @@ Data data = Serializer.parse(json, Data)
 
 if (data.payload instanceof Collection) {
 	output.withWriter { writer ->
-		lines.each { writer.println it }
+		data.payload.each { writer.println it }
 	}
 }
 else {

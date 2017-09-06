@@ -16,7 +16,7 @@
   </param>
   <param min="0" name="start" type="integer" value="0">
   </param>
-  <param max="776" name="end" type="integer" value="776">
+  <param max="254" name="end" type="integer" value="254">
   </param>
  </inputs>
  <outputs>

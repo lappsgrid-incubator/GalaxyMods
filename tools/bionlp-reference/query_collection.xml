@@ -10,9 +10,13 @@
   -->
   <param label="Query" name="query" type="text">
   </param>
+  <param name="type" type="select">
+  	<option value="lif">Annotated</option>
+  	<option value="txt">Text only</option>
+  </param>  
   <param min="0" name="start" type="integer" value="0">
   </param>
-  <param max="776" name="end" type="integer" value="776">
+  <param max="389" name="end" type="integer" value="389">
   </param>
  </inputs>
  <outputs>

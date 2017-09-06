@@ -76,6 +76,9 @@ String isNamedEntity(Annotation a) {
         case Uri.DATE:
         	return 'DATE'
         	break
+        case 'Tagger':
+        	return a.features.type ?: 'Unknown'
+        	break
     }
     return null
 }
