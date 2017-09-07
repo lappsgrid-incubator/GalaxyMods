@@ -5,7 +5,7 @@
  <command>lsd $__tool_directory__/list.lsd $output
  </command>
  <outputs>
-  <data format="txt" name="output">
+  <data format="txt" name="output" label="Protein Document List">
   </data>
  </outputs>
  <help>

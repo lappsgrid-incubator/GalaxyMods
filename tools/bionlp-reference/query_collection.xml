@@ -1,13 +1,9 @@
 <tool id="bionlp.reference.query.collection" name="Query Reference Collection" version="1.0.1">
- <command>lsd $__tool_directory__/query_collection.lsd $query $type $start $end
- </command>
+ <command>lsd $__tool_directory__/query_collection.lsd $query $type $start $end</command>
  <description>
   Create a data collection from documents that match the query.
  </description>
  <inputs>
-  <!--
-    <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />
-  -->
   <param label="Query" name="query" type="text"/>
   <param name="type" type="select">
   	<option value="lif">Annotated</option>
@@ -17,7 +13,7 @@
   <param max="389" name="end" type="integer" value="389"/>
  </inputs>
  <outputs>
-  <collection format="lif" label="Output List" name="list_output" type="list">
+  <collection format="lif" label="Reference Query List" name="list_output" type="list">
    <discover_datasets directory="outputs" pattern="__designation_and_ext__" visible="false">
    </discover_datasets>
   </collection>
@@ -26,6 +22,8 @@
  </tests>
  <help>
   <![CDATA[
+
+Creates a dataset collection of all documents that contain the "query" string as part of their document id.
 
 ]]>
  </help>
