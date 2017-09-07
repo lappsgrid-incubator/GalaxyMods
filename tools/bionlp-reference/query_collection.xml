@@ -8,16 +8,13 @@
   <!--
     <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />
   -->
-  <param label="Query" name="query" type="text">
-  </param>
+  <param label="Query" name="query" type="text"/>
   <param name="type" type="select">
   	<option value="lif">Annotated</option>
   	<option value="txt">Text only</option>
   </param>  
-  <param min="0" name="start" type="integer" value="0">
-  </param>
-  <param max="389" name="end" type="integer" value="389">
-  </param>
+  <param min="0" name="start" type="integer" value="0"/>
+  <param max="389" name="end" type="integer" value="389"/>
  </inputs>
  <outputs>
   <collection format="lif" label="Output List" name="list_output" type="list">
