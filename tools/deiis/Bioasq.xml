@@ -3,9 +3,9 @@
     <command>curl -H "Accept: application/json" -o $output http://149.165.157.250?expansion=$expand</command>
     <inputs>
         <param name="expand" type="select" label="Expansion">
-        	<option type="NONE">NONE</option>
-        	<option type="UMLS">UMLS</option>
-        	<option type="SNOMEDCT">SNOMEDCT</option>
+        	<option value="NONE">NONE</option>
+        	<option value="UMLS">UMLS</option>
+        	<option value="SNOMEDCT">SNOMEDCT</option>
         </param>
     </inputs>
     <outputs>
