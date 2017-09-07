@@ -7,7 +7,7 @@ reload(sys);
 sys.setdefaultencoding('utf8')
 lappsjson = hda.get_raw_data()
 lappsjsonfil = hda.dataset.file_name
-lsdpath = os.path.join(os.getcwd(),'config/plugins/visualizations/nlp_brat/json2json.lsd')
+lsdpath = os.path.join(os.getcwd(),'../mods/plugins/visualizations/nlp_brat/json2json.lsd')
 bratjson = """{
     "text" : "Unknown Text ..."
 }"""
