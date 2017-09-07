@@ -70,8 +70,9 @@ bratdsl = """{
     }
 
     if (isNer) {
-           targetEntities += lastViewAnns.select{ %.hasAny(&."@type", "Date", "Person", "Location", "Organization" )}.unique{ &.start + " " + &.end }.foreach {
-                [&.id, %.toUpper(%.lastWord(&."@type")), [[&.start.toInteger(), &.end.toInteger()]]]
+           targetEntities += lastViewAnns.select{ %.has(&."@type", "NamedEntity")}
+           .unique{ &.start + " " + &.end }.foreach {
+                            [&.id, %.toUpper(&."label"), [[&.start.toInteger(), &.end.toInteger()]]]
            }
     }
 
