@@ -1,4 +1,4 @@
-<tool id="bionlp.reference.query.collection" name="Query Reference Collection" version="1.0.1">
+<tool id="bionlp.reference.query.collection.2" name="Query Reference Collection" version="1.0.1">
  <command>lsd $__tool_directory__/query_collection.lsd $query $type $start $end</command>
  <description>
   Create a data collection from documents that match the query.
