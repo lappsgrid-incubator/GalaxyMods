@@ -79,7 +79,6 @@
 		<tool file="discovery/summarize.xml"/>
 	</section>
 	<section id="tokenizers" name="Tokenizers">
-		<tool file="stanford/vassar.tokenizer_2.0.0.xml"/>
 		<tool file="stanford/vassar.tokenizer_2.1.0.xml"/>
 		<tool file='stanford/brandeis.tokenizer.xml' />
 		<tool file="gate/gate.tokenizer_2.2.0.xml"/>
@@ -89,7 +88,6 @@
 		<tool file='dkpro/dkpro.opennlp.tokenizer.xml'/>
 	</section>
 	<section id="splitters" name="Sentence Splitters">
-		<tool file="stanford/vassar.splitter_2.0.0.xml"/>
 		<tool file="stanford/vassar.splitter_2.1.0.xml"/>
 		<tool file='stanford/brandeis.splitter.xml' />
 		<tool file="gate/gate.splitter_2.2.0.xml"/>
@@ -99,7 +97,6 @@
 		<tool file='dkpro/dkpro.opennlp.splitter.xml'/>
 	</section>
 	<section id="taggers" name="Taggers">
-		<tool file="stanford/vassar.tagger_2.0.0.xml"/>
 		<tool file="stanford/vassar.tagger_2.1.0.xml"/>
 		<tool file='stanford/brandeis.postagger.xml' />
 		<tool file="gate/gate.tagger_2.2.0.xml"/>
@@ -109,9 +106,7 @@
 		<tool file='dkpro/dkpro.opennlp.postagger.xml'/>
 	</section>
 	<section id="ner" name="Named Entity Recognizers">
-		<tool file="stanford/vassar.ner_2.0.0.xml"/>
 		<tool file="stanford/vassar.ner_2.1.0.xml"/>
-		<tool file="stanford/vassar.ner2_2.0.0.xml"/>
 		<tool file='stanford/brandeis.namedentityrecognizer.xml' />
 		<tool file="gate/gate.ner_2.2.0.xml"/>
 		<tool file='opennlp/opennlp.namedentityrecognizer.xml' />
@@ -145,15 +140,10 @@
 	</section>
 	
 	<section id="stanford" name="Stanford NLP">
-		<tool file="stanford/vassar.tokenizer_2.0.0.xml"/>
 		<tool file="stanford/vassar.tokenizer_2.1.0.xml"/>
-		<tool file="stanford/vassar.splitter_2.0.0.xml"/>
 		<tool file="stanford/vassar.splitter_2.1.0.xml"/>
-		<tool file="stanford/vassar.tagger_2.0.0.xml"/>
 		<tool file="stanford/vassar.tagger_2.1.0.xml"/>
-		<tool file="stanford/vassar.ner_2.0.0.xml"/>
 		<tool file="stanford/vassar.ner_2.1.0.xml"/>
-		<tool file="stanford/vassar.ner2_2.0.0.xml"/>
 		<tool file='stanford/brandeis.tokenizer.xml' />
 		<tool file='stanford/brandeis.splitter.xml' />
 		<tool file='stanford/brandeis.postagger.xml' />
