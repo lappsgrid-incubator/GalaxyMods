@@ -1,16 +1,20 @@
-<tool id='lapps.tools.filter' name='Filter Annotations w/ Expr' version='1.0.0'>
+<tool id='lapps.tools.filter' name='Filter Annotations' version='2.0.0'>
   <description>Select views with the specified annotation type.</description>
-  <command interpreter='lsd'>filter.lsd $input $output "$cond" $pretty</command>
+  <command>lsd $__tool_directory__/filter.lsd $input $type $include $output</command>
   <inputs>
-    <param name='input' type='data' format='json,lif' label='Input' />
-    <param name="cond" type="text" size="5x40" area="true" label="Condition">
-        <sanitizer sanitize="False"/>
-    </param>
-    <param name="pretty" type="boolean" label="Pretty print result"/>
+    <param name='input' type='data' format='lif' label='Input' />
+    <param name="type" label="Type" type="text" value="http://vocab.lappsgrid.org/Token"/>
+    <param name="include" label="Include" type="boolean" label="Include "/>
+    <param name="pretty" type="boolean" label="Pretty print"/>
   </inputs>
   <outputs>
-    <data name='output' format='lif'/>
+    <data name='output' format='lif' label="Filtered documents"/>
   </outputs>
-  <help>Copies the view(s) with the selected annotation types to the end of the list of views.
+  <help>
+  
+  Copies the view(s) with the selected annotation types to the end of the list of views.
+  
+  If Include is set to true then only the selected annotation types will be copied to a new view.  If Include is set to false then all annotations except the selected annotation will be copied.
+  
   </help>
 </tool>

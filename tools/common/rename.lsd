@@ -20,8 +20,13 @@ DC data = Serializer.parse(input.text, DC)
 Container container = data.payload
 View view = container.views[-1]
 List<Annotation> annotations = view.annotations.findAll { it.atType == oldName }
-println "Found ${annotations.size()} annotations that matched ${oldName}"
+//println "Found ${annotations.size()} annotations that matched ${oldName}"
 
-annotations.each { it.atType = newName }
+if (annotations.size() > 0) {
+	view.metadata.contains[newName] = view.metadata.contains[oldName]
+	//view.metadata.contains[oldName] = null
+	view.metadata.contains.remove(oldName)
+	annotations.each { it.atType = newName }
+}
 
 output.text = data.asPrettyJson()

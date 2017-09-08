@@ -2,8 +2,7 @@
  <description>
   Retrieves a single document from the BioNLP reference corpus.
  </description>
- <command>
-  $__tool_directory__/get.lsd $key $output
+ <command>lsd $__tool_directory__/get.lsd $key $output
  </command>
  <inputs>
   <param label="Key" name="key" type="text" value="PMC-1134658-16-Methods.lif">
