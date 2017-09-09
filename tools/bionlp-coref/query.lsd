@@ -15,7 +15,7 @@ Data data = Serializer.parse(json, Data)
 
 if (data.payload instanceof Collection) {
 	output.withWriter { writer ->
-		lines.each { writer.println it }
+		data.payload.each { writer.println it }
 	}
 }
 else {
@@ -23,13 +23,3 @@ else {
 }
 
 return
-
-List<String> query(String pattern) {
-	Data data = new Data(Uri.QUERY, pattern)
-	String json = datasource.execute(data.asJson())
-	data = Serializer.parse(json, Data)
-	//println data.payload.class
-	//println data.payload
-	return data.payload
-}
-

@@ -1,5 +1,5 @@
-<tool id="bionlp.coref.query.collection" name="Query Data Collection" version="1.0.0">
- <command>lsd $__tool_directory__/query_collection.lsd $query $start $end
+<tool id="bionlp.coref.query.collection" name="Query Coref Collection" version="1.0.0">
+ <command>lsd $__tool_directory__/query_collection.lsd $query $type $start $end
  </command>
  <description>
   Create a data collection from documents that match the query.
@@ -10,13 +10,17 @@
   -->
   <param label="Query" name="query" type="text">
   </param>
+  <param name="type" type="select">
+  	<option value="lif">Annotated</option>
+  	<option value="txt">Text only</option>
+  </param>
   <param min="0" name="start" type="integer" value="0">
   </param>
-  <param max="141" name="end" type="integer" value="141">
+  <param max="142" name="end" type="integer" value="142">
   </param>
  </inputs>
  <outputs>
-  <collection format="lif" label="Output List" name="list_output" type="list">
+  <collection format="lif" label="BioNLP Coref Collection" name="list_output" type="list">
    <discover_datasets directory="outputs" pattern="__designation_and_ext__" visible="false">
    </discover_datasets>
   </collection>
@@ -26,8 +30,6 @@
  <help>
   <![CDATA[
 
-License
--------
 
 
 ]]>

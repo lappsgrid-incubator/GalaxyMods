@@ -1,16 +1,18 @@
-<tool id="bionlp.coref.get" name="Get Coref Document" version="2.0.0">
+<tool id="bionlp.c0ref.get" name="Get Document" version="2.0.0">
  <description>
-  Retrieves a single document from a BioNLP corpus.
+  Retrieves a single document from the BioNLP Coreference corpus.
  </description>
- <command>
-  $__tool_directory__/get.lsd $key $output
- </command>
+ <command>lsd $__tool_directory__/get.lsd $key $type $output</command>
  <inputs>
-  <param label="Key" name="key" type="text" value="PMC-3589482-5-Experimental_Procedures.lif">
+  <param label="Key" name="key" type="text" value="PMC-3589482-6-Experimental_Procedures.lif">
+  </param>
+  <param name="type" type="select">
+  	<option value="lif">Annotated</option>
+  	<option value="txt">Text only</option>
   </param>
  </inputs>
  <outputs>
-  <data format="lif" label="BioNLP Coref Document" name="output">
+  <data format="lif" label="BioNLP Protein Document" name="output">
   </data>
  </outputs>
  <help>

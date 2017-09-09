@@ -1,4 +1,4 @@
-<tool id="bionlp.coref.query" name="Query" version="1.0.0">
+<tool id="bionlp.coref.query" name="Query Coref" version="1.0.0">
  <description>
   Lists all keys that match the query.
  </description>
@@ -9,13 +9,14 @@
   </param>
  </inputs>
  <outputs>
-  <data format="txt" name="output">
+  <data format="txt" name="output" label="Coref Document List">
   </data>
  </outputs>
  <help>
   <![CDATA[
   
- *TODO* Need some help. 
+ Returns a list of the documents whose key (document ID) contains the given query string. 
+ 
  
   ]]>
  </help>
