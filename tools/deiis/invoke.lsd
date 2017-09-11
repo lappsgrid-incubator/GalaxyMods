@@ -1,4 +1,5 @@
-include "config"
+//include "config"
+SERVER='http://129.114.104.36:8080/example-pipeline/services'
 
 String name = args[0]
 File input = new File(args[1])

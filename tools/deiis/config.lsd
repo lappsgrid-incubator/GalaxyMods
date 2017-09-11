@@ -1,2 +1,1 @@
-SERVER_IP="129.114.104.36:8080"
-SERVER="http://$SERVER_IP/example-pipeline/services"
+SERVER="http://129.114.104.36:8080/example-pipeline/services"

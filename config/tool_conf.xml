@@ -28,7 +28,7 @@
         <tool file="gigaword/query.xml"/>
     </section>
     -->
-    <section id="deiis" name="DEIIS 2017">
+    <section id="deiis" name="Example: Booth/Lincoln">
     	<tool file="deiis/DataProvider.xml"/>
     	<tool file="deiis/PrepareData.xml"/>
     	<tool file="deiis/Tokenizer.xml"/>
