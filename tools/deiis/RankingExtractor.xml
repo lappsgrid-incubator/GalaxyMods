@@ -8,6 +8,7 @@
         <data name="output" format="txt" label="Tokens"/>
     </outputs>
     <help><![CDATA[
+    
 Writes the scored and ranked candidate sentences to a *text/plain* file. Use this tool to extract the raw data to be consumed by other services and processors.
 
 ]]>

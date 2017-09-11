@@ -1,11 +1,11 @@
-<tool id="deiis.ranker" name="Ranker" version="1.0.0">
-    <description>Ranks scored candidate answers</description>
-    <command>lsd $__tool_directory__/invoke.lsd Ranker $input $output</command>
+<tool id="deiis.tokenizer" name="Tokenizer" version="1.0.0">
+    <description>tokenize an input document</description>
+    <command>lsd $__tool_directory__/invoke.lsd Tokenizer $input $output</command>
     <inputs>
         <param name="input" type="data" format="lif"/>
     </inputs>
     <outputs>
-        <data name="output" format="lif" label="Ranked Data"/>
+        <data name="output" format="lif" label="Tokenized"/>
     </outputs>
     <help><![CDATA[
 HELP
@@ -16,12 +16,12 @@ Assign a ranking to each scored candidate answer.  The assigned rank is stored i
 Required Annotations
 --------------------
 
-* http://deiis.lti.cs.cmu.edu/Answer#score
+* None
 
 Generated Annotations
 ---------------------
 
-* http://deiis.lti.cs.cmu.edu/Answer#rank
+* http://deiis.lti.cs.cmu.edu/Token
 
 ]]>
     </help>
