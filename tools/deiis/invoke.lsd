@@ -1,0 +1,8 @@
+include "config"
+
+String name = args[0]
+File input = new File(args[1])
+File output = new File(args[1])
+
+def service = new ServiceClient("$SERVER/$name")
+output.text = service.execute(input.text)

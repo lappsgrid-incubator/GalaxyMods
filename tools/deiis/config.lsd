@@ -1,0 +1,2 @@
+SERVER_IP="129.114.104.36"
+SERVER="http://$SERVER_IP/DEIISPipeline/services"

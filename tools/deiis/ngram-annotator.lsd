@@ -1,8 +1,10 @@
+include "config"
+
 String n = args[0] 
 File input = new File(args[1])
 File output = new File(args[2])
 
-String url = "http://grid.anc.org:9080/DEIISPipeline/services/NGramAnnotator"
+String url = "$SERVER/NGramAnnotator"
 ServiceClient service = new ServiceClient(url, 'tester', 'tester')
 
 Data data = Serializer.parse(input.text, Data)
