@@ -1,6 +1,6 @@
 <tool id="deiis.annotator.ngram" name="NGram Annotator" version="1.0.0">
     <description>Genererates NGrams from sequences of Tokens.</description>
-    <command>lsd $__tool_directory__/ngram.lsd $size $input $output</command>
+    <command>lsd $__tool_directory__/ngram.lsd Annotator $size $input $output</command>
     <inputs>
         <param name="input" type="data" format="lif"/>
         <param name="size" type="select">

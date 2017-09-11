@@ -1,6 +1,6 @@
 <tool id="deiis.scorer.ngram" name="NGram Scorer" version="1.0.0">
     <description>assigns a score to an n-gram.</description>
-    <command>lsd $__tool_directory__/ngram-scorer.lsd $type $input $output</command>
+    <command>lsd $__tool_directory__/ngram.lsd Scorer $type $input $output</command>
     <inputs>
         <param name="input" type="data" format="lif"/>
         <param name="type" type="select">
@@ -13,6 +13,7 @@
         <data name="output" format="lif" label="Scored NGrams"/>
     </outputs>
     <help><![CDATA[
+    
 Assigns a score to a candidate sentence based on the number of NGrams the candidate has with the question.  The scores will be added to a ``score`` feature of the ``Answer`` annotation.
 
 Required Annotations
