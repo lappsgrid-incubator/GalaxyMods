@@ -5,7 +5,7 @@
         <param name="input" type="data" format="lif"/>
     </inputs>
     <outputs>
-        <data name="output" format="txt" label="Tokens"/>
+        <data name="output" format="txt" label="Ranked Answers"/>
     </outputs>
     <help><![CDATA[
     
