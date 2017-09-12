@@ -42,7 +42,7 @@ if (view.metadata == null) {
 if (view.metadata.contains == null) {
 	view.metadata.contains = [:]
 }
-newView.metadata.contains[type] = contains
+view.metadata.contains[type] = contains
 
 data = new DataContainer(container)
 if (prettyPrint) {
