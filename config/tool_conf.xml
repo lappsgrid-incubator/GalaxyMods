@@ -45,12 +45,15 @@
 		<tool file="eurolan2017/GeneTagger.xml"/>
 		<tool file="eurolan2017/MalignancyTagger.xml"/>
 		<tool file="eurolan2017/VariationTagger.xml"/>
-		<tool file="eurolan2017/BadRex.xml"/>
+		<!-- <tool file="eurolan2017/BadRex.xml"/> -->
 		<tool file="eurolan2017/AbnerTagger.xml"/>
 		<tool file="eurolan2017/ExportLif.xml"/>
 		<tool file="eurolan2017/ExportGate.xml"/>
 		<tool file="converters/convert.gate2json_2.0.0.xml"/>
 		<tool file="converters/convert.json2gate_2.0.0.xml"/>
+	</section>
+	<section id="example-pipelines" name="Example Pipelines">
+		<tool file="eurolan2017/BioASQ.xml"/>
 	</section>
 	<section id="twitter" name="Twitter">
         <tool file="twitter/twitter-datasource.xml"/>
