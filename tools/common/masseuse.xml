@@ -7,6 +7,7 @@
     <param name="type" type="text" size="50" value="http://vocab.lappsgrid.org/" label="Type"/>
     <param name='first' type='boolean' value='False' label="Use the first view found"/>
     <param name="view" type="boolean" value='True' label="Create a new view"/>
+    <param name="pretty" type="boolean" value='True' label="Pretty print the output"/>
   </inputs>
   <outputs>
     <data name='output' format='lif' />
@@ -72,7 +73,7 @@ Example
   
   count = 0
   void annotation(Annotation source, Annotation target) {
-      target.id = "ID-${++count}"
+      target.id = "ID-" + (++count)
       target.atType = Uri.NE
       target.features.category = source.label
   }
