@@ -2,16 +2,41 @@ import static org.lappsgrid.discriminator.Discriminators.Uri
 
 File input = new File(args[0])
 String type = args[1]
-boolean prettyPrint = args[3] as Boolean
+boolean first = args[2] as boolean
+boolean pretty = args[3] as Boolean
 File output = new File(args[4])
 
 Data data = Serializer.parse(input.text, Data)
 Container container = new Container(data.payload)
-View view = container.views.find { it.metadata.contains[type] }
-if (view != null) {
-	View newView = container.newView()
-	newView.annotations.addAll(view.annotations.findAll { it.atType == type })
+List<View> views = container.views.findAll { it.metadata.contains[type] }
+if (view == null || views.size() == 0) {
+	if (pretty) {
+		output.text = data.asPrettyJson()
+	}
+	else {
+		output.text = data.asJson()
+	}
+	return
 }
+
+
+// Use the last view by default
+View source = views[-1]
+if (first) {
+	// Unless the user wants the first view.
+	source = views[0]
+}
+
+View newView = container.newView()
+newView.annotations.addAll(view.annotations.findAll { it.atType == type })
+Map contains = view.metadata.contains[type]
+if (contains == null) {
+	contains = [
+		producer: 'Filter Annotations Galaxy Tool',
+		type: 'unknown'
+	]
+}
+newView.metadata.contains[type] = contains
 
 data = new DataContainer(container)
 if (prettyPrint) {
