@@ -1,5 +1,5 @@
 <tool id='lapps.tools.filter' name='Filter Annotations' version='2.0.0'>
-  <description>Select views with the specified annotation type.</description>
+  <description>copy annotations to a new view</description>
   <command>lsd $__tool_directory__/filter.lsd $input $type $first $pretty $output</command>
   <inputs>
     <param name='input' type='data' format='lif' label='Input' />

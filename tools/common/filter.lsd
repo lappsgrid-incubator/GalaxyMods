@@ -28,8 +28,8 @@ if (first) {
 }
 
 View newView = container.newView()
-newView.annotations.addAll(view.annotations.findAll { it.atType == type })
-Map contains = view.metadata.contains[type]
+newView.annotations.addAll(source.annotations.findAll { it.atType == type })
+Map contains = source.metadata.contains[type]
 if (contains == null) {
 	contains = [
 		producer: 'Filter Annotations Galaxy Tool',
