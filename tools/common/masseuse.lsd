@@ -1,3 +1,6 @@
+import org.codehaus.groovy.control.CompilerConfiguration
+import org.codehaus.groovy.control.customizers.ImportCustomizer
+
 File input = new File(args[0])
 String scriptText = new File(args[1]).text
 String type = args[2]
