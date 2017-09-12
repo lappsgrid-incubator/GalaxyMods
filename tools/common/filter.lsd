@@ -45,7 +45,7 @@ if (view.metadata.contains == null) {
 view.metadata.contains[type] = contains
 
 data = new DataContainer(container)
-if (prettyPrint) {
+if (pretty) {
 	output.text = data.asPrettyJson()
 }
 else {
