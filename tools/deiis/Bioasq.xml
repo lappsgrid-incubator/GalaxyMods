@@ -1,6 +1,6 @@
 <tool id="deiis.khyathi.bioasq" name="BioASQ Pipeline Example" version="1.0.0">
     <description>Khyathis example pipeline</description>
-    <command>curl -s -H "Accept: application/json" -o $output http://149.165.157.250?expansion=$expand</command>
+    <command>curl -s -H "Accept: application/json" -o $output http://129.114.17.237?expansion=$expand</command>
     <inputs>
         <param name="expand" type="select" label="Expansion">
         	<option value="NONE">NONE</option>
