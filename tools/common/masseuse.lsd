@@ -59,9 +59,14 @@ source.findByAtType(type).each { Annotation ann ->
 script.invokeMethod('update', [source, target] as Object[])
 
 if (pretty) {
+	output.text = data.asPrettyJson()
 }
 else {
+	output.text = data.asJson()
 }
+return
+
+/******************************************/
 
 CompilerConfiguration getConfiguration() {
 	ImportCustomizer customizer = new ImportCustomizer()
