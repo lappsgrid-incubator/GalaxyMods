@@ -4,7 +4,7 @@ String input = new File(args[0]).text
 File output = new File(args[1])
 
 Data data = Serializer.parse(input, Data)
-id (data.discriminator == Uri.ERROR) {
+if (data.discriminator == Uri.ERROR) {
 	output.text = input
 	return
 }
