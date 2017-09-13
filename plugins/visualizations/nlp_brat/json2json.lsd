@@ -43,7 +43,7 @@ bratdsl = """{
     def isNer = %.has(lastView.metadata.contains,  "NamedEntity")
     def isTagger = %.has(lastView.metadata.contains,  "Token#pos")
     def isRelation = %.has(lastView.metadata.contains,  "Relation")
-    def isEvent = %.has(lastView.metadata.contains,  "Event")
+    def isEvent = %.has(lastView.metadata.contains,  "Event") || %.has(lastView.metadata.contains,  "event")
 
     def lastViewAnns = lastView.annotations
     if (lastViewAnns == null) return
@@ -79,7 +79,7 @@ bratdsl = """{
     }
 
     if (isEvent) {
-           targetEntities += lastViewAnns.select{ %.has(&."@type", "Event")}
+           targetEntities += lastViewAnns.select{ %.has(&."@type", "Event") || %.has(&."@type", "event") }
            .unique{ &.start + " " + &.end }.foreach {
                     def label = it.features.containsKey('type') ? it.features.type : it.features.class
                             [&.id, label, [[&.start.toInteger(), &.end.toInteger()]]]
