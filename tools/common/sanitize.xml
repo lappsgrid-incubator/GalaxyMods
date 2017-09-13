@@ -1,6 +1,6 @@
 <tool id="lapps.tools.sanitize" name="Sanitize LIF" version="1.0.0">
     <description>cleanup output from older tools</description>
-    <command>curl -s -H "Accept: application/json" -o $output http://129.114.17.237?expansion=$expand</command>
+    <command>lsd $__tool_directory__/sanitize.lsd $input $output</command>
     <inputs>
     	<param name="input" type="data" format="lif" label="Input"/>
     </inputs>
