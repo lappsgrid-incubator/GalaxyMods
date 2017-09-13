@@ -17,7 +17,11 @@
   
  Returns a list of the documents whose key (document ID) contains the given query string. 
  
- 
+Description
+-----------
+
+Includes Token, Token+pos, enju dependency parses annotated as Relation (with categories modOf, arg1Of, arg2Of, and arg3Of) in one view; Proteins in another.
+
   ]]>
  </help>
 </tool>

@@ -23,6 +23,11 @@
   
 Creates a Data Collection with the selected range of documents.  Use the *Query Data Collection* to create a Data Collection with documents of a specific genre.
 
+Description
+-----------
+
+Includes Token, Token+pos, enju dependency parses annotated as Relation (with categories modOf, arg1Of, arg2Of, and arg3Of) in one view; Proteins in another.
+
 ]]>
  </help>
 </tool>
