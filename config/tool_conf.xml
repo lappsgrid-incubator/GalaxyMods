@@ -52,7 +52,7 @@
 		<tool file="converters/convert.gate2json_2.0.0.xml"/>
 		<tool file="converters/convert.json2gate_2.0.0.xml"/>
 	</section>
-	<section id="example-pipelines" name="Example Pipelines">
+	<section id="example-pipelines" name="Example Applications">
 		<tool file="eurolan2017/BioASQ.xml"/>
 	</section>
 	<section id="twitter" name="Twitter">

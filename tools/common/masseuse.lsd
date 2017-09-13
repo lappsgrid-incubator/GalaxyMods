@@ -50,7 +50,7 @@ else {
 
 CompilerConfiguration configuration = getConfiguration()
 Binding binding = new Binding()
-GroovyShell shell = new GroovyShell(DataMasseuse.class.classLoader, binding, configuration)
+GroovyShell shell = new GroovyShell(this.class.classLoader, binding, configuration)
 Script script = shell.parse(scriptText)
 script.run()
 source.findByAtType(type).each { Annotation ann ->

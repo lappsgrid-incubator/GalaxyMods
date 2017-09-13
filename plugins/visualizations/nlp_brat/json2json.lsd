@@ -43,7 +43,7 @@ bratdsl = """{
     def isNer = %.has(lastView.metadata.contains,  "NamedEntity")
     def isTagger = %.has(lastView.metadata.contains,  "Token#pos")
     def isRelation = %.has(lastView.metadata.contains,  "Relation")
-    def isEvent = %.has(lastView.metadata.contains,  "Event")
+    def isEvent = %.has(lastView.metadata.contains,  "Event") || %.has(lastView.metadata.contains,  "EVENT")
 
     def lastViewAnns = lastView.annotations
     if (lastViewAnns == null) return
