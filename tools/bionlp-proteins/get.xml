@@ -14,7 +14,7 @@
   </param>
  </inputs>
  <outputs>
-  <data format="lif" label="BioNLP Reference Document" name="output">
+  <data format="lif" label="BioNLP Protein Document" name="output">
   </data>
  </outputs>
  <help>

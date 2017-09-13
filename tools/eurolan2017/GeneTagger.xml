@@ -12,6 +12,17 @@
 HELP
 ====
 
+Requires
+--------
+
+1. http://vocab.lappsgrid.org/Token
+
+Produces
+--------
+
+1. gene
+
+
 Gate Developer is released under the `GNU Lesser General Public License 3.0 <https://www.gnu.org/licenses/lgpl-3.0.html>`_
 
 ]]>
