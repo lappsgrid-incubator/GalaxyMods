@@ -51,6 +51,8 @@ bratdsl = """{
     if (isText) targetText = &:payload
     if (isLifTex) targetText = &:payload.text."@value"
 
+    def foundAnyHigherLevelAnn = false
+
     if (isParser) {
         targetText +=  "\\n~~~~\\n" + lastViewAnns.select{ %.has(&."@type", "PhraseStructure") }.features.penntree[0]
     }
@@ -60,6 +62,7 @@ bratdsl = """{
         targetRelations = lastViewAnns.select{ &.id in dependencies}.foreach {
             [&.id, %.toUpper(&.label), [["Governor", &.features.governor], ["Dependent", &.features.dependent]]]
         }
+        foundAnyHigherLevelAnn = true
     }
 
     if (isCoref) {
@@ -69,6 +72,7 @@ bratdsl = """{
         targetEntities += lastViewAnns.select{%.has(&."@type", "Markable") && (&.id in corefFeatures.mentions.flatten())}.unique{&.start+" "+&.end}.foreach{
                               [&.id, "MENTION", [[&.start.toInteger(), &.end.toInteger()]]]
         }
+        foundAnyHigherLevelAnn = true
     }
 
     if (isNer) {
@@ -76,6 +80,7 @@ bratdsl = """{
            .unique{ &.start + " " + &.end }.foreach {
                             [&.id, %.toUpper(&.features.category), [[&.start.toInteger(), &.end.toInteger()]]]
            }
+        foundAnyHigherLevelAnn = true
     }
 
     if (isEvent) {
@@ -84,6 +89,7 @@ bratdsl = """{
                     def label = it.features.containsKey('type') ? it.features.type : it.features.class
                             [&.id, label, [[&.start.toInteger(), &.end.toInteger()]]]
            }
+        foundAnyHigherLevelAnn = true
     }
 
 
@@ -92,13 +98,15 @@ bratdsl = """{
             def arguments = &.features.findAll{it.key != "pred"}.collect{[it.key, it.value]}
             return [&.id, %.toUpper(&.label), arguments]
         }
+        foundAnyHigherLevelAnn = true
     }
 
+    if (!foundAnyHigherLevelAnn) {
     //if (isTagger) {
         targetEntities += lastViewAnns.select{&.features != null && &.features.pos != null}.unique{ &.start + " " + &.end }.foreach {
             [&.id, %.toUpper(&.features.pos), [[&.start.toInteger(), &.end.toInteger()]]]
         }
-    //}
+    }
 
     text  targetText
 
