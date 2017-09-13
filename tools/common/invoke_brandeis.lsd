@@ -4,8 +4,8 @@
 //String base = 'http://manager:8080/service_manager/invoker/vassar'
 
 String service = args[0]
-String input = args[1]
-String output = args[2]
+File input = new File(args[1])
+File output = new File(args[2])
 String username = args[3] ?: 'tester'
 String password = args[4] ?: 'tester'
 
@@ -26,6 +26,6 @@ if (data.discriminator == Uri.LIF) {
 	json = data.asJson()
 }
 
-new File(output).text = client.execute(json)
+output.text = client.execute(json)
 
 
