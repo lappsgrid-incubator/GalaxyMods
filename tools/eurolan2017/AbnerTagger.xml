@@ -15,16 +15,16 @@ HELP
 Required Annotations
 --------------------
 
-None
+1. None
 
 Generated Annotations
 ---------------------
 
 1. Protein
-2. DNA
-3. RNA
-4. CellLine
-5. CellType
+#. DNA
+#. RNA
+#. CellLine
+#. CellType
 
 
 License

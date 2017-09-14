@@ -15,6 +15,20 @@
  </outputs>
  <help>
   <![CDATA[
+
+Required Annotations
+--------------------
+
+1. None
+
+Generated Annotations
+--------------------
+
+1. http://vocab.lappsgrid.org/Token#pos
+#. http://vocab.lappsgrid.org/Sentence
+#. http://vocab.lappsgrid.org/PhraseStructure
+#. http://vocab.lappsgrid.org/Constituent
+
 License
 -------
 

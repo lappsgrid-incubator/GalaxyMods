@@ -60,6 +60,8 @@ Container container = new Container()
 container.text = goldContainer.text
 container.language = goldContainer.language
 
+goldView.id = 'gold'
+testView.id = 'test'
 container.addView(goldView)
 container.addView(testView)
 

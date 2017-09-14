@@ -14,6 +14,9 @@ HELP
 
 Tries to determine the Document Creation Time (DCT) as this will be required to resolve relative times such as "tomorrow" or "last week".
 
+License
+-------
+
 Gate Developer is released under the `GNU Lesser General Public License 3.0 <https://www.gnu.org/licenses/lgpl-3.0.html>`_
 
 

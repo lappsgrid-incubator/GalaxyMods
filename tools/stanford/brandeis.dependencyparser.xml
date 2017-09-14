@@ -15,6 +15,19 @@
  </outputs>
  <help>
   <![CDATA[
+  
+Required Annotations
+--------------------
+
+1. None
+
+Generated Annotations
+--------------------
+
+1. http://vocab.lappsgrid.org/Token
+#. http://vocab.lappsgrid.org/DependencyStructure
+#. http://vocab.lappsgrid.org/Dependency
+
 License
 -------
 

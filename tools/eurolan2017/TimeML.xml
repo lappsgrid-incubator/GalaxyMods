@@ -12,7 +12,23 @@
 HELP
 ====
 
-TimeML Event annotator pipeline.
+This is the TimeML Event annotator application from GATE packaged as a single LAPPS Grid service.
+
+Required Annotations
+--------------------
+
+1. None
+
+Generated Annotations
+---------------------
+
+1. http://vocab.lappsgrid.org/Token
+1. http://vocab.lappsgrid.org/Token#pos
+1. http://vocab.lappsgrid.org/Sentence
+1. http://vocab.lappsgrid.org/Event
+
+License
+-------
 
 Gate Developer is released under the `GNU Lesser General Public License 3.0 <https://www.gnu.org/licenses/lgpl-3.0.html>`_
 
