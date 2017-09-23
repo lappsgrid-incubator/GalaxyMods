@@ -35,11 +35,11 @@ Data goldData = Serializer.parse(gold.text, Data)
 
 Container goldContainer = null
 if (goldData.payload instanceof String) {
-    println "Payload is a string."
+    //println "Payload is a string."
     goldContainer = Serializer.parse(goldData.payload.toString(), Container)
 }
 else {
-    println "Gold container payload is a ${goldData.payload}"
+    //println "Gold container payload is a ${goldData.payload}"
     goldContainer = new Container(goldData.payload)
 }
 //Container goldContainer = new Container(goldData.payload)

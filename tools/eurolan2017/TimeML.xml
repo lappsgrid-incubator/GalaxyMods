@@ -23,9 +23,9 @@ Generated Annotations
 ---------------------
 
 1. http://vocab.lappsgrid.org/Token
-1. http://vocab.lappsgrid.org/Token#pos
-1. http://vocab.lappsgrid.org/Sentence
-1. http://vocab.lappsgrid.org/Event
+#. http://vocab.lappsgrid.org/Token#pos
+#. http://vocab.lappsgrid.org/Sentence
+#. http://vocab.lappsgrid.org/Event
 
 License
 -------

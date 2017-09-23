@@ -1,0 +1,18 @@
+<tool id='local.convert.tcf2lif' name='TCF to LIF' version='1.0.0'>
+  <description>converts TCF to LIF.</description>
+  <command>lsd $__tool_directory__/tcf2lif.lsd $input $output</command>
+  <inputs>
+    <param name='input' type='data' format='tcf' label='TCF Document' />
+  </inputs>
+  <outputs>
+    <data name='output' format='lif' label="Converted from TCF"/>
+  </outputs>
+  <help><![CDATA[
+  
+HELP
+====
+
+Converts a `TCF (Text Corpus Format) <https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/The_TCF_Format>`_  document into LIF. Each annotation layer in the TCF document will be converted into a separate view in the LIF document.
+
+  ]]></help>
+</tool>

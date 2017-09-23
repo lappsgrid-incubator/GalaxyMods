@@ -1,0 +1,9 @@
+#!/usr/bin/env lsd
+
+File input = new File(args[0])
+File output = new File(args[1])
+
+String url = "http://vassar.lappsgrid.org/invoker/anc:tcf-converter_1.0.0"
+ServiceClient service = new ServiceClient(url, "tester", "tester")
+
+output.text = service.execute(input.text)
