@@ -7,7 +7,7 @@ reload(sys);
 sys.setdefaultencoding('utf8')
 lappsjson = hda.get_raw_data()
 lappsjsonfil = hda.dataset.file_name
-lsdpath = os.path.join(os.getcwd(),'config/plugins/visualizations/nlp_brat/json2json.lsd')
+lsdpath = os.path.join(os.getcwd(),'../mods/plugins/visualizations/nlp_brat/json2json.lsd')
 bratjson = """{
     "text" : "Unknown Text ..."
 }"""
@@ -332,12 +332,14 @@ root = h.url_for( '/' )
 
 <footer>
     <hr />
+    <!--
     <p style="text-align:center">
         Contacts:
         <br/>&nbsp; &nbsp; <a target="_blank" class="nolink" href="http://www.cs.brandeis.edu/~jamesp/"> James Pustejovsky</a>
         (<nonsense>jame</nonsense>sp@<nonsense>cs.</nonsense>brandeis.<nonsense></nonsense>edu)
     </p>
+    -->
 </footer>
-<p style="text-align:center">Copyright &copy; 2015 Lapps Grid - All Rights Reserved</p>
+<p style="text-align:center">Copyright &copy; 2017 The Language Applications Grid - All Rights Reserved</p>
 </body>
 </html>

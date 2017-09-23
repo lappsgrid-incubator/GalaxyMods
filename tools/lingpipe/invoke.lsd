@@ -11,5 +11,20 @@ String url = "http://grid.anc.org:9080/LingpipeServices/1.0.0-SNAPSHOT/services/
 
 
 WebService client = new ServiceClient(url)
-output.text = client.execute(input.text)
+
+Data data = Serializer.parse(input.text, Data)
+String json = input.text
+if (data.discriminator == Uri.LIF) {
+	Container container = new Container(data.payload)
+	container.views.each { v ->
+		v.annotations.each { a ->
+			if (!a.features) a.features = [:]
+			if (!a.metadata) a.metadata = [:]
+		}
+	}
+	data.payload = container
+	json = data.asJson()
+}
+
+output.text = client.execute(json)
 

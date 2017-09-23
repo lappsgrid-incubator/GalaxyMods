@@ -28,7 +28,9 @@
   </data>
  </outputs>
  <help>
-  <![CDATA[Stanford Named Entity Recognizer
+  <![
+CDATA[Stanford Named Entity Recognizer
+
 License
 -------
 

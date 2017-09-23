@@ -1,0 +1,20 @@
+<tool id='pennbio.tokenizer_1.0.0' name='PennBIO Tokenizer (GATE 8.4.1)' version='1.0.0'>
+  <description>tokenizer for BioNLP</description>
+  <command>lsd $__tool_directory__/call.lsd Tokenizer $input $output</command>
+  <inputs>
+    <param name='input' type='data' format='gate' />
+  </inputs>
+  <outputs>
+    <data name='output' format='gate' />
+  </outputs>
+  <help><![CDATA[
+  
+HELP
+====
+
+Gate Developer is released under the `GNU Lesser General Public License 3.0 <https://www.gnu.org/licenses/lgpl-3.0.html>`_
+
+
+]]>
+</help>
+</tool>

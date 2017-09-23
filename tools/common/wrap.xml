@@ -1,6 +1,6 @@
 <tool id="wrap.text" name="Wrap data" version="1.0.0">
-    <description>in a LAPPS Data object.</description>
-    <command interpreter="lsd">wrap.lsd $format $input $output</command>
+    <description>in a Data container.</description>
+    <command>lsd $__tool_directory__/wrap.lsd $format $input $output</command>
     <inputs>
         <param name="input" type="data" format="txt"/>
         <param name="format" type="select" label="LIF Format">
@@ -19,6 +19,9 @@
 			</change_format>
         </data>
     </outputs>
-    <help>Any text files uploaded will typically need to be wrapped in a LAPPS container before
-        they can be using in a LAPPS processing pipeline.</help>
+    <help><![CDATA[
+    Any text files uploaded will typically need to be wrapped in a Data container before
+        they can be using in a LAPPS processing pipeline.
+    ]]>
+    </help>
 </tool>
