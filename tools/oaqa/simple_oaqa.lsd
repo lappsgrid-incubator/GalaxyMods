@@ -6,7 +6,8 @@ String type = args[2]
 //String testAnnotation = args.testannotation
 //String goldFeature = args.gf
 //String testFeature = args.tf
-File output = new File(args[3])
+String format = args[3]
+File output = new File(args[4])
 
 //String url = "http://gold.lti.cs.cmu.edu:4040/services/AnnotationEvaluator"
 //String url = "http://evaluation:8080/EvaluationServices/services/AnnotationEvaluator"
@@ -74,6 +75,8 @@ config.goldAnnotationFeature = goldFeature
 config.testAnnotationType = testAnnotation
 config.testAnnotationProducer = testProducer
 config.testAnnotationFeature = testFeature
+
+config.outputFormat = format
 
 container.metadata['evaluation-configuration'] = config
 def eval = new ServiceClient(url, null, null)

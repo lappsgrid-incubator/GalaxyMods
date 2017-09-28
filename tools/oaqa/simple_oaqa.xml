@@ -1,6 +1,6 @@
 <tool id="simple_oaqa_evaluation" name="Simple OAQA Evaluation" version="2.1.0">
     <description>Run the OAQA evaluation service at CMU</description>
-    <command interpreter="lsd">simple_oaqa.lsd $gold $test $type $output</command>
+    <command interpreter="lsd">simple_oaqa.lsd $gold $test $type $format $output</command>
     <inputs>
         <param name="gold" type="data" format="lif" label="Gold Data"/>
         <param name="test" type="data" format="lif" label="Test Data"/>
@@ -8,6 +8,10 @@
             <option value="tok">Tokens</option>
             <option value="pos">Tokens + pos</option>
             <option value="ne">Named Entities</option>
+        </param>
+        <param name="format" type="select" label="Output Format">
+        	<option value="html" selected="true">HTML</option>
+        	<option value="json">JSON</option>
         </param>
     </inputs>
     <outputs>
