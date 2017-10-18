@@ -1,0 +1,96 @@
+#!/usr/bin/env lsd
+
+class Json2Brat {
+
+    File file
+    Container container
+    Brat brat
+
+    void run() {
+        Data data = Serializer.parse(file.text)
+        if (data.discriminator != Uri.LIF) {
+            println "Invalid discriminator type. ${data.discriminator}"
+            return
+        }
+
+        container = new Container((Map) data.payload)
+        brat = new Brat()
+        brat.text = container.text
+
+        addEntities(Uri.POS) { a -> [a.id, a.features.pos, [[a.start, a.end]]] }
+        addEntities(Uri.NE) { a -> [a.id, a.features.category, [[a.start, a.end]]] }
+        addRelation(Uri.DEPENDENCY) { a -> [a.id, a.label, [["Governor", a.features.governor], ["Dependent", a.features.dependent]]] }
+        addCoref()
+        addGenericRelations()
+
+        println Serializer.toPrettyJson(brat)
+    }
+
+    void addRelation(String type, Closure factory) {
+        find(type).each { a ->
+            brat.relations.add(factory(a))
+        }
+    }
+
+    void addEntities(String type, Closure factory) {
+        find(type).each { a ->
+            brat.entities.add(factory(a))
+        }
+    }
+
+    void addGenericRelations() {
+        find(Uri.GENERIC_RELATION).each { a ->
+            brat.relations << [ a.id, a.label, [['Arg0', a.features.arguments[0]],['Arg1', a.features.arguments[1]]]]
+
+        }
+        find(Uri.MARKABLE).each { a ->
+            brat.entities << [a.id, 'Markable', [[a.start, a.end]]]
+        }
+    }
+
+    List<Annotation> find(String type) {
+        // `subtype` is a hack-around for services that do not return
+        // the full URI.
+        int index = type.lastIndexOf('/')
+        String subtype = null
+        if (index > 0) {
+            subtype = type.substring(index + 1)
+        }
+        // Assume any annotations we are interested in are contained
+        // in the last view.
+        View last = container.views[-1]
+        if (!last.contains(type) && !last.contains(subtype)) {
+            return []
+        }
+
+        List<Annotation> annotations = last.findByAtType(type)
+        if (annotations.size() == 0) {
+            annotations = last.findByAtType(subtype)
+        }
+        return annotations
+    }
+
+    void addCoref() {
+        find(Uri.COREF).each { a ->
+            // TODO I do not think this is not correct as I believe the LAPPS 
+            // coreference services return a list of 'mentions'.
+            brat.equivs << [ a.id, 'Coreference', a.features.mentions[0], a.features.mentions[1]]
+        }
+        find(Uri.MARKABLE).each { a ->
+            brat.entities >> [a.id, 'Mention', [[a.start, a.end]]]
+        }
+    }
+
+    static void main(String[] args) {
+        Json2Brat app = new Json2Brat()
+        app.file = new File("/Users/suderman/Downloads/deps.lif")
+        app.run()
+    }
+}
+
+class Brat {
+    String text
+    List equivs = []
+    List entities = []
+    List relations = []
+}
