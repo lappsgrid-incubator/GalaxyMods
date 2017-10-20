@@ -3,20 +3,28 @@
 ########################################################################################################################
 #----------------------------------------------------------------------------------------------------------------------#
 import commands, sys, os, json, subprocess
+#from lapps.lif import Data, Serializer, Container, View, Annotation
+#from lapps.discriminators import Uri
+
 reload(sys);
 sys.setdefaultencoding('utf8')
 lappsjson = hda.get_raw_data()
-lappsjsonfil = hda.dataset.file_name
+filename = hda.dataset.file_name
 lsdpath = os.path.join(os.getcwd(),'../mods/plugins/visualizations/brat/json2brat.lsd')
-bratjson = """{
-    "text" : "Unknown Text ..."
-}"""
-output = subprocess.Popen([lsdpath, lappsjsonfil], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+
+bratjson = '{"text":' + lsdpath + '}'
+#bratjson = """{
+#    "text" : lappsjsonfil
+#}"""
+
+#output = subprocess.Popen([lsdpath, filename], stdout=subprocess.PIPE)
+#bratjson = output.stdout.read()
+
+#output = subprocess.Popen([lsdpath, filename], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 #outputjson = output.stdout.read()
 #if ("payload" in outputjson) and ("targets" in outputjson) and (not "http://vocab.lappsgrid.org/ns/error" in outputjson):
 #    bratjson = json.loads(outputjson)["payload"]["targets"][0]
-bratjson = output.stdout.read()
-json2jsonexp = output.stderr
+#json2jsonexp = output.stderr
 %>
 
 

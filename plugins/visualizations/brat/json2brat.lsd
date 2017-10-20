@@ -1,91 +1,139 @@
 #!/usr/bin/env lsd
 
-class Json2Brat {
+// The object we will be outputting.
+brat = new Brat()
+logger = new Logger()
 
-    File file
-    Container container
-    Brat brat
+if (args.size() == 0) {
+    error "No file name provided."
+    return
+}
+file = new File(args[0])
 
-    void run() {
-        Data data = Serializer.parse(file.text)
-        if (data.discriminator != Uri.LIF) {
-            println "Invalid discriminator type. ${data.discriminator}"
-            return
-        }
+Data data = Serializer.parse(file.text)
+if (data.discriminator != Uri.LIF && data.discriminator != Uri.LAPPS) {
+    error "Invalid discriminator type. ${data.discriminator}"
+    return
+}
 
-        container = new Container((Map) data.payload)
-        brat = new Brat()
-        brat.text = container.text
+container = new Container((Map) data.payload)
+brat.text = container.text
 
-        addEntities(Uri.POS) { a -> [a.id, a.features.pos, [[a.start, a.end]]] }
-        addEntities(Uri.NE) { a -> [a.id, a.features.category, [[a.start, a.end]]] }
-        addRelation(Uri.DEPENDENCY) { a -> [a.id, a.label, [["Governor", a.features.governor], ["Dependent", a.features.dependent]]] }
-        addCoref()
-        addGenericRelations()
+//addEntities(Uri.POS) { a -> [a.id, a.features.pos, [[a.start, a.end]]] }
+addTokens()
+addEntities(Uri.NE) { a -> [a.id, a.features.category, [[a.start, a.end]]] }
+addRelation(Uri.DEPENDENCY) { a -> [a.id, a.label, [["Governor", a.features.governor], ["Dependent", a.features.dependent]]] }
+addCoref()
+addGenericRelations()
 
-        println Serializer.toPrettyJson(brat)
+logger.log "writing output"
+println Serializer.toPrettyJson(brat)
+logger.log "Done"
+logger.close()
+
+
+void error(String message) {
+    logger.log("Error: $message")
+    brat.text = "Error: $message"
+    logger.close()
+    println Serializer.toPrettyJson(brat)
+}
+
+void addRelation(String type, Closure factory) {
+    logger.log('Adding relations' + type)
+    int count = 0
+    find(type).each { a ->
+        ++count
+        brat.relations.add(factory(a))
+    }
+    logger.log("relations $count")
+}
+
+void addEntities(String type, Closure factory) {
+    logger.log("Adding entities $type")
+    int count = 0
+    find(type).each { a ->
+        ++count
+        brat.entities.add(factory(a))
+    }
+    logger.log("entities: $count")
+}
+
+void addTokens() {
+    logger.log "Adding tokens+pos"
+    //List<View> views = container.findViewsThatContain(Uri.POS)
+    //if (views.size() == 0) {
+    //    logger.log "No POS annotations found."
+    //    return
+    //}
+    View view = container.views[-1]
+    if (!view.contains(Uri.POS)) {
+        logger.log "No POS annotations found."
+        return
+    }
+    int count = 0
+    view.annotations.findAll { it.atType == Uri.TOKEN }.each { a ->
+        ++count
+        brat.entities << [a.id, a.features.pos, [[a.start, a.end]]]
+    }
+    logger.log "Tokens: $count"
+}
+
+void addGenericRelations() {
+    logger.log("Adding generic relations")
+    int relations = 0
+    int markables = 0
+    find(Uri.GENERIC_RELATION).each { a ->
+        ++relations
+        brat.relations << [ a.id, a.label, [['Arg0', a.features.arguments[0]],['Arg1', a.features.arguments[1]]]]
+
+    }
+    find(Uri.MARKABLE).each { a ->
+        ++markable
+        brat.entities << [a.id, 'Markable', [[a.start, a.end]]]
+    }
+    logger.log "relations: $relations"
+    logger.log "markables: $markables"
+}
+
+List<Annotation> find(String type) {
+    // `subtype` is a hack-around for services that don't return
+    // the full URI.
+    int index = type.lastIndexOf('/')
+    String subtype = null
+    if (index > 0) {
+        subtype = type.substring(index + 1)
+    }
+    // Assume any annotations we are interested in are contained
+    // in the last view.
+    View last = container.views[-1]
+    if (!last.contains(type) && !last.contains(subtype)) {
+        return []
     }
 
-    void addRelation(String type, Closure factory) {
-        find(type).each { a ->
-            brat.relations.add(factory(a))
-        }
+    List<Annotation> annotations = last.findByAtType(type)
+    if (annotations.size() == 0) {
+        annotations = last.findByAtType(subtype)
     }
+    return annotations
+}
 
-    void addEntities(String type, Closure factory) {
-        find(type).each { a ->
-            brat.entities.add(factory(a))
-        }
+void addCoref() {
+    logger.log "Adding coref"
+    int coref = 0
+    int markables = 0
+    find(Uri.COREF).each { a ->
+        // TODO I believe this is not correct as I believe the LAPPS coreference services
+        // return a list of 'mentions'.
+        ++coref
+        brat.equivs << [ a.id, 'Coreference', a.features.mentions[0], a.features.mentions[1]]
     }
-
-    void addGenericRelations() {
-        find(Uri.GENERIC_RELATION).each { a ->
-            brat.relations << [ a.id, a.label, [['Arg0', a.features.arguments[0]],['Arg1', a.features.arguments[1]]]]
-
-        }
-        find(Uri.MARKABLE).each { a ->
-            brat.entities << [a.id, 'Markable', [[a.start, a.end]]]
-        }
+    find(Uri.MARKABLE).each { a ->
+        ++markables
+        brat.entities << [a.id, 'Mention', [[a.start, a.end]]]
     }
-
-    List<Annotation> find(String type) {
-        // `subtype` is a hack-around for services that do not return
-        // the full URI.
-        int index = type.lastIndexOf('/')
-        String subtype = null
-        if (index > 0) {
-            subtype = type.substring(index + 1)
-        }
-        // Assume any annotations we are interested in are contained
-        // in the last view.
-        View last = container.views[-1]
-        if (!last.contains(type) && !last.contains(subtype)) {
-            return []
-        }
-
-        List<Annotation> annotations = last.findByAtType(type)
-        if (annotations.size() == 0) {
-            annotations = last.findByAtType(subtype)
-        }
-        return annotations
-    }
-
-    void addCoref() {
-        find(Uri.COREF).each { a ->
-            // TODO I do not think this is not correct as I believe the LAPPS 
-            // coreference services return a list of 'mentions'.
-            brat.equivs << [ a.id, 'Coreference', a.features.mentions[0], a.features.mentions[1]]
-        }
-        find(Uri.MARKABLE).each { a ->
-            brat.entities >> [a.id, 'Mention', [[a.start, a.end]]]
-        }
-    }
-
-    static void main(String[] args) {
-        Json2Brat app = new Json2Brat()
-        app.file = new File("/Users/suderman/Downloads/deps.lif")
-        app.run()
-    }
+    logger.log "coref: $coref"
+    logger.log "markables: $markables"
 }
 
 class Brat {
@@ -93,4 +141,23 @@ class Brat {
     List equivs = []
     List entities = []
     List relations = []
+}
+
+class Logger {
+    List<String> lines = []
+
+    void log(String line) {
+        lines << line
+    }
+
+    void leftShift(String line) {
+        log(line)
+    }
+
+    void close() {
+        File logfile = new File('/tmp/json2brat.log')
+        logfile.withWriter { writer ->
+            lines.each { writer.writeLine(it) }
+        }
+    }
 }

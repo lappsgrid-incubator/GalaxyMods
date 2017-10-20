@@ -4,14 +4,14 @@ File input = new File(args[0])
 File output = new File(args[1])
 
 String json = input.text
-DataContainer data = Serializer.parse(json, DataContainer)
+Data data = Serializer.parse(json)
 if (data.discriminator == Uri.ERROR) {
     output.text = json
     return
 }
 
 //println "Creating the container"
-Container container = data.payload
+Container container = new Container(data.payload)
 View view = container.views[-1]
 View newView = container.newView()
 int id = -1;
@@ -37,7 +37,7 @@ view.annotations.each { Annotation a ->
     }
 }
 
-data = new DataContainer(container)
+data = new Data(Uri.LIF, container)
 output.text = data.asPrettyJson()
 return
 
