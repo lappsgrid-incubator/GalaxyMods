@@ -1,20 +1,25 @@
 #!/usr/bin/env lsd
 
-// The object we will be outputting.
-brat = new Brat()
-logger = new Logger()
-
 if (args.size() == 0) {
     error "No file name provided."
     return
 }
+
+// The object we will be outputting.
+brat = new Brat()
+logger = new Logger()
+
+// Flag used to prevent Markable annotations from being included
+// multiple times.
+includeMarkables = true
+
 file = new File(args[0])
 
 Data data = Serializer.parse(file.text)
-if (data.discriminator != Uri.LIF && data.discriminator != Uri.LAPPS) {
-    error "Invalid discriminator type. ${data.discriminator}"
-    return
-}
+//if (data.discriminator != Uri.LIF && data.discriminator != Uri.LAPPS) {
+//    error "Invalid discriminator type. ${data.discriminator}"
+//    return
+//}
 
 container = new Container((Map) data.payload)
 brat.text = container.text
@@ -46,7 +51,7 @@ void addRelation(String type, Closure factory) {
         ++count
         brat.relations.add(factory(a))
     }
-    logger.log("relations $count")
+    logger.log("relations: $count")
 }
 
 void addEntities(String type, Closure factory) {
@@ -88,9 +93,12 @@ void addGenericRelations() {
         brat.relations << [ a.id, a.label, [['Arg0', a.features.arguments[0]],['Arg1', a.features.arguments[1]]]]
 
     }
-    find(Uri.MARKABLE).each { a ->
-        ++markable
-        brat.entities << [a.id, 'Markable', [[a.start, a.end]]]
+    if (includeMarkables) {
+        find(Uri.MARKABLE).each { a ->
+            ++markables
+            brat.entities << [a.id, 'Markable', [[a.start, a.end]]]
+        }
+        includeMarkables = false
     }
     logger.log "relations: $relations"
     logger.log "markables: $markables"
@@ -126,11 +134,14 @@ void addCoref() {
         // TODO I believe this is not correct as I believe the LAPPS coreference services
         // return a list of 'mentions'.
         ++coref
-        brat.equivs << [ a.id, 'Coreference', a.features.mentions[0], a.features.mentions[1]]
+        brat.equivs << [ '*', 'Coreference', a.features.mentions[0], a.features.mentions[1]]
     }
-    find(Uri.MARKABLE).each { a ->
-        ++markables
-        brat.entities << [a.id, 'Mention', [[a.start, a.end]]]
+    if (includeMarkables) {
+        find(Uri.MARKABLE).each { a ->
+            ++markables
+            brat.entities << [a.id, 'Mention', [[a.start, a.end]]]
+        }
+        includeMarkables = false
     }
     logger.log "coref: $coref"
     logger.log "markables: $markables"
