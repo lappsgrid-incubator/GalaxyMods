@@ -2,7 +2,7 @@
  <description>
   Posts an annotated document to the PubAnnotation server
  </description>
- <command>curl -d @$input -H 'Content-type: application/json' -u "suderman@cs.vassar.edu:4p+ZoXZ1n(bjgell" http://pubannotation.org/projects/LappsTest/docs/sourcedb/PubMed/sourceid/$id/annotations.json &gt; $output ; exit 0</command>
+ <command>curl -s -d @$input -H 'Content-type: application/json' -u "suderman@cs.vassar.edu:4p+ZoXZ1n(bjgell" http://pubannotation.org/projects/LappsTest/docs/sourcedb/PubMed/sourceid/$id/annotations.json &gt; $output</command>
  <inputs>
   <param format="json" label="PubAnnotation JSON" name="input" type="data"/>
   <param type="text" label="ID" name="id"/>
