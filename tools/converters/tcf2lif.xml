@@ -1,8 +1,9 @@
 <tool id='local.convert.tcf2lif' name='TCF to LIF' version='1.0.0'>
   <description>converts TCF to LIF.</description>
-  <command>lsd $__tool_directory__/tcf2lif.lsd $input $output</command>
+  <command>lsd $__tool_directory__/tcf2lif.lsd $input $output $pretty</command>
   <inputs>
     <param name='input' type='data' format='tcf' label='TCF Document' />
+    <param name='pretty' type='boolean' value='False' label='Pretty print'/>
   </inputs>
   <outputs>
     <data name='output' format='lif' label="Converted from TCF"/>
