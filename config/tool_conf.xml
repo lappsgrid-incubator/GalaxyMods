@@ -11,6 +11,7 @@
         <tool file="masc/create_collection.xml"/>
         <tool file="masc/query_collection.xml"/>
 	</section>
+	<!--
 	<section id="bionlp-coref" name="BioNLP 2016 (Coref)">
 		<tool file="bionlp-coref/get.xml"/>
 		<tool file="bionlp-coref/list.xml"/>
@@ -21,20 +22,15 @@
 		<tool file="bionlp-proteins/get.xml"/>
 		<tool file="bionlp-proteins/list.xml"/>
         <tool file="bionlp-proteins/query.xml"/>
-        <!--
-        <tool file="bionlp-proteins/create_collection.xml"/>
-        -->
         <tool file="bionlp-proteins/query_collection.xml"/>
 	</section>
 	<section id="bionlp-reference" name="BioNLP 2016 (Reference)">
 		<tool file="bionlp-reference/get.xml"/>
 		<tool file="bionlp-reference/list.xml"/>
         <tool file="bionlp-reference/query.xml"/>
-        <!--
-        <tool file="bionlp/create_collection.xml"/>
-        -->
         <tool file="bionlp-reference/query_collection.xml"/>
 	</section>
+	-->
 	<section id="eurolan2017" name="Eurolan 2017">
 		<tool file="eurolan2017/TimeML.xml"/>
 		<!--
@@ -60,8 +56,15 @@
 		<tool file="common/wrap_text.xml"/>
 		<tool file="converters/tcf2lif.xml"/>
     </section>
+	<!--
 	<section id="example-pipelines" name="Example Applications">
 		<tool file="eurolan2017/BioASQ.xml"/>
+	</section>
+	-->
+	<section id="pubannotation" name="PubAnnotation">
+		<tool file="pubannotation/get.xml"/>
+		<tool file="pubannotation/convert.xml"/>
+		<tool file="pubannotation/post.xml"/>
 	</section>
 	<section id="twitter" name="Twitter">
         <tool file="twitter/twitter-datasource.xml"/>

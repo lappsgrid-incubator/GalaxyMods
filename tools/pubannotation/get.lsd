@@ -1,0 +1,12 @@
+String id = args[0]
+File output = new File(args[1])
+
+String path = "http://pubannotation.org/docs/sourcedb/PubMed/sourceid/${id}.txt"
+URL url = new URL(path)
+
+Container container = new Container()
+container.metadata.id = id
+container.text = url.text
+
+Data data = new Data(Uri.LIF, container)
+output.text = data.asPrettyJson()
