@@ -1,0 +1,27 @@
+<tool id="pubannotation.save" name="Save (POST) Document" version="1.0.0">
+ <description>
+  Retrieves the text for a single document from the Pubannotation PubMed corpus.
+ </description>
+ <command>$__tool_directory__/convert.sh $input $output $id</command>
+ <inputs>
+  <param format="lif" label="input" name="input" type="data"/>
+  <param type="text" label="ID" name="id"/>
+ </inputs>
+ <outputs>
+  <data format="lif" label="Pubannotation PubMed Document" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[
+
+Retrieves a single document from the Pubannotation PubMed corpus
+
+Description
+-----------
+
+**NOTE** This is a development version and only the text for 20 largest documents is available for download.  Support for all PubMed documents and annotations will be added at a later time.
+
+
+]]>
+ </help>
+</tool>

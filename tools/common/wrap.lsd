@@ -22,6 +22,18 @@ else if (format == 'xml') {
 else if (format == 'gate') {
     type = Uri.GATE
 }
+else if (format == 'tcf') {
+	type = "http://vocab.lappsgrid.org/ns/media/xml#tcf"
+	payload = """<D-Spin xmlns="http://www.dspin.de/data" version="0.4">
+    <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="en">
+        <tc:text xmlns:tc="http://www.dspin.de/data/textcorpus">$payload</tc:text>
+    </TextCorpus>
+</D-Spin>""".toString()
+}
+else {
+	type = Uri.ERROR
+	payload "Invalid format selected ${format}. This is an error in the Galaxy tool wrapper XML file."
+}
 
 Data data = new Data()
 data.discriminator = type
