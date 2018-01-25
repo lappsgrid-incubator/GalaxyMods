@@ -1,4 +1,7 @@
-<tool id="twitter-datasource" name="Twitter DataSource" version="1.0.0">
+<tool id="twitter-datasource" name="Twitter" version="1.0.0">
+  <description>
+data based on specific queries.    	
+  </description>
     <requirements>
         <requirement type="package" version="1.0.0">lapps</requirement>
     </requirements>
@@ -34,6 +37,13 @@
     	</test>
     </tests>
     <help><![CDATA[
+    
+**What it does**
+
+Retrieves tweets from Twitter based on specific queries.
+    
+.. class:: infomark
+    
 Refer to the `Twitter API help page <https://dev.twitter.com/rest/public/search>` for
 a full description of the the Twitter query syntax.
 
@@ -63,8 +73,7 @@ Some of the available operators are:
 | traffic ?    | containing "traffic" and asking a question.                         |
 +--------------+---------------------------------------------------------------------+
 
-License
--------
+**License**
 
 Data provided by the Twitter DataSource are covered by the `Twitter Developer Agreement <https://dev.twitter.com/overview/terms/agreement>`_
 and the `Twitter Display Requirments <https://about.twitter.com/en-gb/company/display-requirements>`_

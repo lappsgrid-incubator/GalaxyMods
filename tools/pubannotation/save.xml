@@ -1,6 +1,6 @@
-<tool id="pubannotation.save" name="Save (POST) Document" version="1.0.0">
+<tool id="pubannotation.save" name="PubAnnotation: " version="1.0.0">
  <description>
-  Retrieves the text for a single document from the Pubannotation PubMed corpus.
+  Save (POST)  a single document to the PubAnnotation database.
  </description>
  <command>$__tool_directory__/convert.sh $input $output $id</command>
  <inputs>
@@ -14,10 +14,12 @@
  <help>
   <![CDATA[
 
-Retrieves a single document from the Pubannotation PubMed corpus
+**What it does**
 
-Description
------------
+Saves (POSTs)  a single document to the PubAnnotation database
+
+
+.. class:: warningmark
 
 **NOTE** This is a development version and only the text for 20 largest documents is available for download.  Support for all PubMed documents and annotations will be added at a later time.
 

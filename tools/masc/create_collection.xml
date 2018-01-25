@@ -1,4 +1,4 @@
-<tool id="masc.create.collection" name="Create Data Collection" version="1.0.0">
+<tool id="masc.create.collection" name="MASC:" version="1.0.0">
  <command interpreter="lsd">
   create_collection.lsd $type $start $end
  </command>
@@ -32,10 +32,15 @@
  </tests>
  <help>
   <![CDATA[
-Creates a Data Collection with the selected range of documents.  Use the *Query Data Collection* to create a Data Collection with documents of a specific genre.
+**What it Does**
 
-License
--------
+Creates a Data Collection with the selected range of documents from the `Manually Annotated Sub-Corpus <http://www.anc.org/data/masc/>`_.  
+
+.. class:: infomark
+
+**TIP**: Use  *Get Data->MASC:List all document ids* to see the list of possible document IDs.
+
+**License**
 
 MASC data is free to use for any purpose, including commercial uses, under
 the Creative Commons `CC-BY <https://creativecommons.org/licenses/by/2.0/>`_ license.

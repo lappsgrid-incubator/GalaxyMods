@@ -1,6 +1,6 @@
 <tool id="stanfordnlp.parser" name="Stanford Parser" version="2.0.4">
  <description>
-  Stanford Parser (Brandeis)
+  (complete pipeline)
  </description>
  <command interpreter="lsd">
   ../common/invoke_brandeis.lsd stanfordnlp.parser_2.0.4 $input $output
@@ -15,8 +15,28 @@
  </outputs>
  <help>
   <![CDATA[
-License
--------
+
+**What it does**
+
+Performs a constituency parse of a text in a LIF container
+
+**Required annotations**
+
+* None
+
+**Generated Annotations**
+
+A LIF document containing:  
+  
+1. `Token <http://vocab.lappsgrid.org/Token.html>`_ annotations
+#. `PhraseStructure <http://vocab.lappsgrid.org/PhraseStructure.html>`_ annotations
+#. `Constituent <http://vocab.lappsgrid.org/Constituent.html>`_ annotations)
+
+.. class:: infomark
+
+The parse tree can be visualized with the Brat visualizer tool.
+
+**License**
 
 Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.]]>
  </help>

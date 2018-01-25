@@ -9,8 +9,8 @@
     </outputs>
     <help><![CDATA[
 
-HELP
-====
+**What it does**
+
 
 Earlier version of the LAPPS Serialization API had a bug that produced ``null`` values for some fields.  Typically this would not be a problem, except for another bug that resulted in ``AmbiguousMethodCall`` exceptions in the ``org.lappsgrid.serialization.lif.Annotation`` constructor when it encountered these ``null`` values.
 

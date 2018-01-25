@@ -1,6 +1,6 @@
-<tool id="masc.get" name="Get Document" version="2.0.0">
+<tool id="masc.get" name="MASC:" version="2.0.0">
  <description>
-  Retrieves a single document from MASC.
+  Get document
  </description>
  <command>
   $__tool_directory__/get.lsd $key $type $output
@@ -30,13 +30,20 @@
   </tests>
   -->
  <help>
-  <![CDATA[  
-Retrieves a single document from MASC 3.0.0.
+  <![CDATA[
+
+**What it does**  
+    
+Retrieves a single document from the `Manually Annotated Sub-Corpus <http://www.anc.org/data/masc/>`_ (MASC 3.0.0). 
   
-Use the *List MASC* tool to obtain a list of valid document ID values.
+.. class:: infomark
+
+**TIPS**
+
+* Use the *Get Data->MASC: List all document IDs* tool to obtain a list of valid document ID values.
+* Use *Convert Formats->Wrap data as LIF object* to input MASC documents to tools requiring LIF.
   
-License
--------
+**License**
 
 MASC data is free to use for any purpose, including commercial uses, under
 the Creative Commons `CC-BY <https://creativecommons.org/licenses/by/2.0/>`_ license.

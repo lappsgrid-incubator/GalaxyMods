@@ -1,6 +1,6 @@
 <tool id="stanford.splitter_2.1.0" name="Stanford SentenceSplitter v2.1.0" version="1.0.0">
  <description>
-  Stanford Sentence Splitter (Vassar)
+  Stanford Sentence Splitter 
  </description>
  <command interpreter="lsd">
   ../common/invoke_vassar.lsd stanford.splitter_2.1.0-SNAPSHOT $input $output
@@ -16,12 +16,29 @@
  <help>
   <![CDATA[
 
-Stanford Sentence Splitter
+**What it does**  
+  
+Adds annotations for sentence boundaries using the `Stanford Part of Speech Tagger <https://nlp.stanford.edu/software/tagger.shtml>`_.
 
-License
--------
+**Required annotations**
 
-Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.
+`Token <http://vocab.lappsgrid.org/Token.html>`_ (LIF) 
+
+.. class:: infomark
+
+NOTE: This sentence splitter also processes plain text in a LIF container with no Token annotations.
+
+.. class:: infomark
+
+**TIP**: If you want to input plain text and it is not not wrapped in a LIF container, use *Convert Formats->Wrap text*
+
+**Generated annotations**
+
+A new view containing `Sentence <http://vocab.lappsgrid.org/Sentence.html>`_  annotations. (LIF) 
+
+**License**
+
+Stanford NLP tools are licensed under the `GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.
 
 ]]>
  </help>

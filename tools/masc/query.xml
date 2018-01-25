@@ -1,6 +1,6 @@
-<tool id="masc.query" name="Query" version="1.0.0">
+<tool id="masc.query" name="MASC:" version="1.0.0">
  <description>
-  Lists all keys that match the query.
+  Lists all Document IDs that match the query
  </description>
  <command interpreter="lsd">
   query.lsd $query $type $output
@@ -30,9 +30,12 @@
   </tests>
   -->
  <help>
-  <![CDATA[Obtains a list of ID values for documents in MASC that match the specified query.
+  <![CDATA[
+**What it does**
 
-Only simple queries based on simple path matching is available at the moment. The following terms may be used:
+Obtains a list of ID values for documents in the `Manually Annotated Sub-Corpus <http://www.anc.org/data/masc/>`_ (MASC 3.0.0) that match the specified query.
+
+Only simple queries based on simple path matching can be used at the moment. The following terms may be used:
 
 1. data
 2. spoken
@@ -65,11 +68,10 @@ Only simple queries based on simple path matching is available at the moment. Th
 29. travel-guides
 30. twitter
 
-Queries do **not** support wildcards.
+There is currently no support for wildcards.
 
   
-License
--------
+**License**
 
 MASC data is free to use for any purpose, including commercial uses, under
 the Creative Commons `CC-BY <https://creativecommons.org/licenses/by/2.0/>`_ license.

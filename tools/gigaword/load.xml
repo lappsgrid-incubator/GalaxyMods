@@ -1,5 +1,5 @@
-<tool id="gigaword.load" name="Load Document" version="1.0.0">
-  <description>Retrieves a single document from English Gigaword.</description>
+<tool id="gigaword.load" name="Gigaword:" version="1.0.0">
+  <description>Load a single document from English Gigaword.</description>
   <command interpreter="lsd">load.lsd $token $input $output</command>
   <inputs>
     <param name="input" type="data" format="txt"/>
@@ -21,12 +21,11 @@
 Retrieves a single document from English Gigaword 5th Ed.
   
 Unlike the *get* tool, this tool expects the document key to be
-store in the input file.
+stored in the input file.
        
-License
--------
+**License**
 
-Gigaword corpus is distributed under `LDC Membership Agreement <www.ldc.upenn.edu/members/agreements>`_ or `User Agreement for Non-Members <catalog.ldc.upenn.edu/license/ldc-non-members-agreement.pdf>`_
+The `English Gigaword corpus <https://catalog.ldc.upenn.edu/ldc2003t05>`_  is distributed under `LDC Membership Agreement <www.ldc.upenn.edu/members/agreements>`_ or `User Agreement for Non-Members <catalog.ldc.upenn.edu/license/ldc-non-members-agreement.pdf>`_
 
 ]]>
   </help>

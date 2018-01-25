@@ -1,5 +1,5 @@
-<tool id="deiis.prepare.data" name="Prepare Data" version="1.0.0">
-    <description>Parses a Q/A file, creates the Answer annotations</description>
+<tool id="deiis.prepare.data" name="Parse Question/Answer Data" version="1.0.0">
+    <description>, create Answer annotations</description>
     <command>lsd $__tool_directory__/invoke.lsd PrepareData $input $output</command>
     <inputs>
         <param name="input" type="data" format="txt,liftxt"/>

@@ -73,6 +73,7 @@ plot '${input_file}' using ${xcol}:${q1col}:${lwcol}:${rwcol}:${q3col} with cand
 
 **What it does**
 
+
 Creates a boxplot graph. Its main purpose is to display a distribution of quality scores produced by *NGS: QC and maniupulation -> FASTQ Summary Statistics* tool.
 
 .. class:: warningmark
@@ -91,6 +92,7 @@ Creates a boxplot graph. Its main purpose is to display a distribution of qualit
 
 **Output Example**
 
+
 * Black horizontal lines are medians
 * Rectangular red boxes show the Inter-quartile Range (IQR) (top value is Q3, bottom value is Q1)
 * Whiskers show outliers at max. 1.5*IQR
@@ -100,6 +102,7 @@ Creates a boxplot graph. Its main purpose is to display a distribution of qualit
 ------
 
 **Citation**
+
 
 If you use this tool, please cite `Blankenberg D, Gordon A, Von Kuster G, Coraor N, Taylor J, Nekrutenko A; Galaxy Team. Manipulation of FASTQ data with Galaxy. Bioinformatics. 2010 Jul 15;26(14):1783-5. &lt;http://www.ncbi.nlm.nih.gov/pubmed/20562416&gt;`_
 

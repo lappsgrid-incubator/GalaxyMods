@@ -1,6 +1,6 @@
 <tool id="stanford.tagger_2.1.0" name="Stanford Tagger v2.1.0" version="1.0.0">
  <description>
-  Stanford Tagger (Vassar)
+  Stanford Tagger
  </description>
  <command interpreter="lsd">
   ../common/invoke_vassar.lsd stanford.tagger_2.1.0-SNAPSHOT $input $output
@@ -16,12 +16,25 @@
  <help>
   <![CDATA[
   
-Stanford Part of Speech Tagger
+**What it does**  
+  
+Adds Penn part-of-speech tags to tokens using the `Stanford Part of Speech Tagger <https://nlp.stanford.edu/software/tagger.shtml>`_.
 
-License
--------
+**Required annotations**
 
-Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.
+* `Token <http://vocab.lappsgrid.org/Token.html>`_  (LIF) 
+
+**Generated Annotations**
+
+A LIF document with a new view containing `Token <http://vocab.lappsgrid.org/Token.html>`_ annotations to which a "pos" feature has been added indicating the token's part of speech (`Penn tagset <https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html>`_) 
+
+.. class:: infomark
+
+**NOTE**: This tool adds a new view that duplicates existing Token annotations, but with an added "pos" feature.
+ 
+**License**
+
+Stanford NLP tools are licensed under the `GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.
 
 ]]>
  </help>

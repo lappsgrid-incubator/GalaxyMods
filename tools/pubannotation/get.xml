@@ -1,6 +1,6 @@
-<tool id="pubannotation.get" name="Get Document" version="1.0.0">
+<tool id="pubannotation.get" name="PubAnnotation:" version="1.0.0">
  <description>
-  Retrieves the text for a single document from the PubAnnotation PubMed corpus.
+  Get a single document from the PubAnnotation PubMed corpus.
  </description>
  <command>lsd $__tool_directory__/get.lsd $id $output</command>
  <inputs>
@@ -40,12 +40,14 @@
  <help>
   <![CDATA[  
 
+**What it does**  
+  
 Retrieves a single document from the PubAnnotation PubMed corpus
 
-Description
------------
+.. class:: infomark
 
-**NOTE** This is a development version and only the text for 20 largest documents is available for download.  Support for all PubMed documents and annotations will be added at a later time.
+**NOTE:** This is a development version and only the text for 20 largest documents is available for download.  
+Support for all PubMed documents and annotations will be added at a later time.
 
 
 ]]>

@@ -9,21 +9,29 @@
   </outputs>
   <help><![CDATA[
   
-HELP
-====
+**What it does**
 
-Requires
---------
+Adds annotations for gene names to a tokenized document.
 
-1. http://vocab.lappsgrid.org/Token
+**Required annotations**
 
-Produces
---------
+* Tokens with `Penn part of speech tags <https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html>`_ in GATE XML format (will automatically convert from LIF)
+* Sentences in GATE XML format (will automatically convert from LIF)
 
-1. gene
+**Generated annotations**
+
+* **Gene** annotations in `GATE XML format <https://gate.ac.uk/sale/tao/splitch5.html#x8-1000005.5.2>`_ 
+
+.. class:: warningmark
+
+The output of all GATE tools is in the `GATE XML format <https://gate.ac.uk/sale/tao/splitch5.html#x8-1000005.5.2>`_. This output can be input directly into other GATE tools. To input GATE XML format to  tools requiring LIF, 
+use *Convert formats->GateToLif* 
 
 
-Gate Developer is released under the `GNU Lesser General Public License 3.0 <https://www.gnu.org/licenses/lgpl-3.0.html>`_
+
+**License**
+
+This tool is adapted from the `General Architecture for Text Engineering (GATE) platform <http:gate.ac.uk>`_, which is released under the `GNU Lesser General Public License 3.0 <https://www.gnu.org/licenses/lgpl-3.0.html>`_
 
 ]]>
 </help>
