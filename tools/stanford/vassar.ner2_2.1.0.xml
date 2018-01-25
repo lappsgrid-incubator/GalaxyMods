@@ -7,7 +7,6 @@
  </command>
  <inputs>
   <param format="lif" label="input" name="input" type="data">
-  </param>
   <param label="Model" name="model" type="select">
   </param>
   <option value="english.all.3class.distsim.crf.ser.gz">
@@ -22,15 +21,14 @@
   <option value="english.nowiki.3class.distsim.crf.ser.gz">
    Nowiki 3
   </option>
+  </param>
  </inputs>
  <outputs>
   <data format="lif" name="output">
   </data>
  </outputs>
  <help>
-  <![
-  
-CDATA[
+  <![CDATA[
 
 **What it does**  
   
@@ -50,5 +48,6 @@ A LIF document with a new view containing `NamedEntity <http://vocab.lappsgrid.o
 Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.
 
 ]]>
+  
  </help>
 </tool>
