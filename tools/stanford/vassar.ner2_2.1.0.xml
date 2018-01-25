@@ -6,7 +6,7 @@
   invoke_ner2.lsd $model $input $output
  </command>
  <inputs>
-  <param format="lif" label="input" name="input" type="data">
+  <param format="lif" label="input" name="input" type="data"/>
   <param label="Model" name="model" type="select">
    <option value="english.all.3class.distsim.crf.ser.gz">All 3</option>
    <option value="english.conll.4class.distsim.crf.ser.gz">CONLL 4</option>
