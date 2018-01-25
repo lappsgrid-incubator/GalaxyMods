@@ -15,14 +15,22 @@
  </outputs>
  <help>
   <![CDATA[
+  
+**What it does**
 
-Required Annotations
---------------------
+Identifies and extracts binary relations from English text. 
 
-1. None
+.. class:: infomark
 
-Generated Annotations
----------------------
+Full Documentation at `http://reverb.cs.washington.edu <http://reverb.cs.washington.edu>`_. 
+
+**Required Annotations**
+
+* None
+
+**Generated Annotations**
+
+A LIF document containing:
 
 1. http://vocab.lappsgrid.org/Token
 #. http://vocab.lappsgrid.org/Markable

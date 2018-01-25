@@ -4,9 +4,9 @@
     <inputs>
         <param name="input" type="data" format="txt"/>
         <param name="format" type="select" label="New format">
-            <option value="txt">Plain Text (UTF-8)</option>
             <option value="lif">Lapps Interchange Format (LIF)</option>
             <option value="tcf">Text Corpus Format (TCF)</option>
+            <option value="txt">Plain Text (UTF-8)</option>
             <option value="ldc">Gigaword/XML</option>
             <option value="gate">Gate/XML</option>
             <option value="xml">Generic XML</option>

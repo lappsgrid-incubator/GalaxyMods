@@ -18,7 +18,7 @@
   
 **What it does**
 
-Adds Tokens with Penn part-of-speech tags to a text in a LIF container
+Adds Tokens with Penn part-of-speech tags to a text in a LIF container using the `Stanford Core NLP tools <https://stanfordnlp.github.io/CoreNLP/>`_.
 
 **Required annotations**
 

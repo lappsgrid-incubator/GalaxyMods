@@ -18,7 +18,7 @@
   
   **What it does**
 
- Adds named entity annotations to text in a LIF container
+ Adds named entity annotations to text in a LIF container using the `Stanford Core NLP tools <https://stanfordnlp.github.io/CoreNLP/>`_.
 
 **Required annotations**
 

@@ -161,12 +161,14 @@
 		<tool file='stanford/brandeis.parser.xml' />
 		<tool file='stanford/brandeis.dependencyparser.xml' />
 		<tool file='stanford/brandeis.coref.xml' />
+		<!--
 		<tool file='dkpro/dkpro.stanford.coref.xml'/>
 		<tool file='dkpro/dkpro.stanford.namedentityrecognizer.xml'/>
 		<tool file='dkpro/dkpro.stanford.parser.xml'/>
 		<tool file='dkpro/dkpro.stanford.postagger.xml'/>
 		<tool file='dkpro/dkpro.stanford.splitter.xml'/>
 		<tool file='dkpro/dkpro.stanford.tokenizer.xml'/>
+		-->
 	</section>
 	<section id="gate" name="GATE Tools">
 		<tool file="gate/gate.tokenizer_2.3.0.xml"/>
@@ -185,11 +187,13 @@
 	  <tool file='opennlp/opennlp.postagger.xml' />
 	  <tool file='opennlp/opennlp.namedentityrecognizer.xml' />
 	  <tool file='opennlp/opennlp.parser.xml' />
+	  <!--
 		<tool file='dkpro/dkpro.opennlp.namedentityrecognizer.xml'/>
 		<tool file='dkpro/dkpro.opennlp.parser.xml'/>
 		<tool file='dkpro/dkpro.opennlp.postagger.xml'/>
 		<tool file='dkpro/dkpro.opennlp.splitter.xml'/>
 		<tool file='dkpro/dkpro.opennlp.tokenizer.xml'/>
+		-->
 	</section>
     <section id="lingpipe.tools" name="Lingpipe Tools">
 		<tool file="lingpipe/vassar.tokenizer_1.0.0.xml"/>

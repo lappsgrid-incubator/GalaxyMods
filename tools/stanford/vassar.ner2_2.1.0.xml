@@ -1,6 +1,6 @@
-<tool id="stanford.ner2_2.1.0" name="Selectable Stanford NER v2.1.0" version="1.0.0">
+<tool id="stanford.ner2_2.1.0" name="Stanford Named eEntity Recognizer" version="1.0.0">
  <description>
-  Stanford Named Entity Recognizer
+  (standalone)
  </description>
  <command interpreter="lsd">
   invoke_ner2.lsd $model $input $output
@@ -34,7 +34,7 @@ CDATA[
 
 **What it does**  
   
-Generates named entity annotations (Person, Organization, Location).
+Generates named entity annotations (Person, Organization, Location) using the `Stanford Named Entity Recognizer <https://nlp.stanford.edu/software/CRF-NER.shtml>`_
 
 **Required annotations**
 
