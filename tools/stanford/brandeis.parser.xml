@@ -28,7 +28,7 @@ Performs a constituency parse of a text in a LIF container
 
 A LIF document containing:  
   
-1. `Token <http://vocab.lappsgrid.org/Token.html>`_ annotations
+1. `Token <http://vocab.lappsgrid.org/Token.html>`_ annotations (with part of speech)
 #. `PhraseStructure <http://vocab.lappsgrid.org/PhraseStructure.html>`_ annotations
 #. `Constituent <http://vocab.lappsgrid.org/Constituent.html>`_ annotations)
 

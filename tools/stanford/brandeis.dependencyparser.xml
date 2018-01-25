@@ -29,7 +29,7 @@ Generates a dependency parse of text in a LIF container
 
 A LIF document containing: 
 
-1. `Token <http://vocab.lappsgrid.org/Token>`_ annotations
+1. `Token <http://vocab.lappsgrid.org/Token>`_ annotations (with part of speech)
 #. `DependencyStructure <http://vocab.lappsgrid.org/DependencyStructure> annotations
 #. `Dependency <http://vocab.lappsgrid.org/Dependency`_ annotations
 
