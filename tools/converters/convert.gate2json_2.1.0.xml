@@ -11,5 +11,10 @@
   <outputs>
     <data name='output' format='lif' />
   </outputs>
-  <help>Converts GATE documents to the LAPPS JSON/LD format.</help>
+  <help>
+**What it does**  
+  
+Converts  documents in `General Architecture for Text Engineering (GATE) <https://gate.ac.uk/sale/tao/splitch5.html#x8-1000005.5.2>`_ format to `LIF <http://wiki.lappsgrid.org/org.lappsgrid.serialization/groovydoc/org/lappsgrid/serialization/lif/Container.html>`_.
+
+</help>
 </tool>

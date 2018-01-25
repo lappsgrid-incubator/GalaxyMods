@@ -69,11 +69,13 @@
   
 **Auto-detect**
 
+
 The system will attempt to detect Axt, Fasta, Fastqsolexa, Gff, Gff3, Html, Lav, Maf, Tabular, Wiggle, Bed and Interval (Bed with headers) formats. If your file is not detected properly as one of the known formats, it most likely means that it has some format problems (e.g., different number of columns on different rows). You can still coerce the system to set your data to the format you think it should be.  You can also upload compressed files, which will automatically be decompressed. 
 
 -----
 
 **Ab1**
+
 
 A binary sequence file in 'ab1' format with a '.ab1' file extension.  You must manually select this 'File Format' when uploading the file.
 
@@ -81,17 +83,20 @@ A binary sequence file in 'ab1' format with a '.ab1' file extension.  You must m
 
 **Axt**
 
+
 blastz pairwise alignment format.  Each alignment block in an axt file contains three lines: a summary line and 2 sequence lines.  Blocks are separated from one another by blank lines.  The summary line contains chromosomal position and size information about the alignment. It consists of 9 required fields.
 
 -----
 
 **Bam**
 
+
 A binary file compressed in the BGZF format with a '.bam' file extension.
 
 -----
 
 **Bed**
+
 
 * Tab delimited format (tabular)
 * Does not require header line
@@ -122,6 +127,7 @@ A binary file compressed in the BGZF format with a '.bam' file extension.
 
 **Fasta**
 
+
 A sequence in FASTA format consists of a single-line description, followed by lines of sequence data.  The first character of the description line is a greater-than (">") symbol in the first column.  All lines should be shorter than 80 characters::
 
     >sequence1
@@ -134,6 +140,7 @@ A sequence in FASTA format consists of a single-line description, followed by li
 -----
 
 **FastqSolexa**
+
 
 FastqSolexa is the Illumina (Solexa) variant of the Fastq format, which stores sequences and quality scores in a single file::
 
@@ -161,17 +168,20 @@ Or::
 
 **Gff**
 
+
 GFF lines have nine required fields that must be tab-separated.
 
 -----
 
 **Gff3**
 
+
 The GFF3 format addresses the most common extensions to GFF, while preserving backward compatibility with previous formats.
 
 -----
 
 **Interval (Genomic Intervals)**
+
 
 - Tab delimited format (tabular)
 - File must start with definition line in the following format (columns may be in any order).::
@@ -193,11 +203,13 @@ The GFF3 format addresses the most common extensions to GFF, while preserving ba
 
 **Lav**
 
+
 Lav is the primary output format for BLASTZ.  The first line of a .lav file begins with #:lav..
 
 -----
 
 **MAF**
+
 
 TBA and multiz multiple alignment format.  The first line of a .maf file begins with ##maf. This word is followed by white-space-separated "variable=value" pairs. There should be no white space surrounding the "=".
 
@@ -205,11 +217,13 @@ TBA and multiz multiple alignment format.  The first line of a .maf file begins 
 
 **Scf**
 
+
 A binary sequence file in 'scf' format with a '.scf' file extension.  You must manually select this 'File Format' when uploading the file.
 
 -----
 
 **Sff**
+
 
 A binary file in 'Standard Flowgram Format' with a '.sff' file extension.
 
@@ -217,11 +231,13 @@ A binary file in 'Standard Flowgram Format' with a '.sff' file extension.
 
 **Tabular (tab delimited)**
 
+
 Any data in tab delimited format (tabular)
 
 -----
 
 **Table (delimiter-separated)**
+
 
 Any delimiter-separated tabular data (CSV or TSV).
 
@@ -229,11 +245,13 @@ Any delimiter-separated tabular data (CSV or TSV).
 
 **Wig**
 
+
 The wiggle format is line-oriented.  Wiggle data is preceded by a track definition line, which adds a number of options for controlling the default display of this track.
 
 -----
 
 **Other text type**
+
 
 Any text file
 

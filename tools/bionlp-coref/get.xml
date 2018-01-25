@@ -20,9 +20,7 @@
 
 Retrieves a single document from the BioNLP 2016 Coreference corpus.
 
-Description
------------
- 
+**Description** 
 Includes annotations for anaphors bound by protein or event references, produced semi-automatically. 338 anaphora structures are annotated for 218 anaphor expressions, which are bound by 320 antecedents.
 
 

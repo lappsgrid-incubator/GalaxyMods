@@ -1,6 +1,6 @@
-<tool id="gigaword.list" name="List" version="1.0.0">
+<tool id="gigaword.list" name="Gigaword:" version="1.0.0">
  <description>
-  Obtain a list of document ID values available from the Gigaword Datasource.
+  List all document IDs in the Gigaword corpus.
  </description>
  <command interpreter="lsd">
   list.lsd $token $start $end $service $output
@@ -33,14 +33,32 @@
  </outputs>
  <help>
   <![CDATA[
+**What it does**
+  
+Lists all document IDs in the `English Gigaword corpus <https://catalog.ldc.upenn.edu/ldc2003t05>`_ 
+housed at the `Linguistic Data Consortium <https://ldc.upenn.edu/>`_. 
 
-To obtain an OAuth token visit the link above and log in with your LDC id and password. Then paste
-the OAuth token into the above field.
+.. class:: warningmark
+
+ 
+To obtain Gigaword documents you **must**:
+
+1. Be an LDC licensee
+2. Obtain an OAuth Token 
+
+
+You can obtain an OAuth token by visting `THIS LINK <https://grid.anc.org:9443/ldc-authorize/>`_
+and logging in with your LDC id and password. 
+Then paste the OAuth token into the above field and click `execute`.  This will add an item to your
+history that supplies the OAuth token to LDC datasource services that 
+require it.
+
+
+     
     
-License
--------
+**License**
 
-Gigaword corpus is distributed under `LDC Membership Agreement <www.ldc.upenn.edu/members/agreements>`_ or `User Agreement for Non-Members <catalog.ldc.upenn.edu/license/ldc-non-members-agreement.pdf>`_
+The `English Gigaword corpus <https://catalog.ldc.upenn.edu/ldc2003t05>`_  is distributed under `LDC Membership Agreement <www.ldc.upenn.edu/members/agreements>`_ or `User Agreement for Non-Members <catalog.ldc.upenn.edu/license/ldc-non-members-agreement.pdf>`_
 
 ]]>
  </help>

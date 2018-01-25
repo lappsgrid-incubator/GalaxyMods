@@ -1,6 +1,6 @@
 <tool id="stanford.ner2_2.1.0" name="Selectable Stanford NER v2.1.0" version="1.0.0">
  <description>
-  Selectable Stanford Named Entity Recognizer (Vassar)
+  Stanford Named Entity Recognizer
  </description>
  <command interpreter="lsd">
   invoke_ner2.lsd $model $input $output
@@ -30,10 +30,22 @@
  <help>
   <![
   
-CDATA[Stanford Named Entity Recognizer
+CDATA[
 
-License
--------
+**What it does**  
+  
+Generates named entity annotations (Person, Organization, Location).
+
+**Required annotations**
+
+* `Token <http://vocab.lappsgrid.org/Token.html>`_  (LIF)
+* `Sentence <http://vocab.lappsgrid.org/Sentence.html>`_ (LIF) 
+
+**Generated Annotations**
+
+A LIF document with a new view containing `NamedEntity <http://vocab.lappsgrid.org/NamedEntity.html>`_ annotations
+
+**License**
 
 Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.
 

@@ -1,6 +1,6 @@
-<tool id="fdr.get" name="Get Document" version="1.0.0">
+<tool id="fdr.get" name="FDR:" version="1.0.0">
  <description>
-  Retrieves a single document from the FDR DataSource.
+  Get a single document from the FDR DataSource.
  </description>
  <command>
   lsd $__tool_directory__/get.lsd $key $output
@@ -15,17 +15,19 @@
  </outputs>
  <help>
   <![CDATA[
+
+**What it does**  
+  
 Retrieves a single document from the FDR corpus.
 
 There are 107 documents in the FDR corpus with id values in the range 000-106. No
 document titles are available at this time.
   
-You can also use the *List* tool to obtain a list of valid document ID values.
+You can also use the *Get Data->FDR: List* tool to obtain a list of valid document ID values.
   
-License
--------
+**License**
 
-FDR is in `the public domain <https://copyright.gov/pr/pdomain.html>`_
+All documents in the FDR corpus are in `the public domain <https://copyright.gov/pr/pdomain.html>`_
 ]]>
  </help>
 </tool>

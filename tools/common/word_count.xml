@@ -11,6 +11,7 @@
 Calculates the word counts in a document.
   
 At the moment the *Word Count* tool only works on documents that have been run through the **GATE**
+
 tokenizer as it requires Token annotations with the
 **tokenType** feature set.
     ]]></help>

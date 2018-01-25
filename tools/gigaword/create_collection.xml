@@ -1,4 +1,6 @@
-<tool id="gigaword.collection" name="Create Data Collection" version="1.0.0">
+<tool id="gigaword.collection" name="Gigaword:" version="1.0.0">
+<description>
+Create a data collection consisting of documents from the English Gigaword corpus.
  <command interpreter="lsd">
   create_collection.lsd $token $start $end $service
  </command>
@@ -34,12 +36,30 @@
  </tests>
  <help>
   <![CDATA[
+**What it does**
+  
+Retrieves a collection of specified documents from the `English Gigaword corpus <https://catalog.ldc.upenn.edu/ldc2003t05>`_ 
+housed at the `Linguistic Data Consortium <https://ldc.upenn.edu/>`_. 
 
-To obtain an OAuth token visit the link above and log in with your LDC id and password. Then paste
-the OAuth token into the above field.
+.. class:: infomark
 
-License
--------
+**TIP**: To see a list of documents IDs in Gigaword, use *Get Data->Gigaword List*
+
+.. class:: warningmark
+
+ 
+To obtain Gigaword documents you **must**:
+
+1. Be an LDC licensee
+2. Obtain an OAuth Token by visting `this link <https://grid.anc.org:9443/ldc-authorize/>`_
+and logging in with your LDC id and password. 
+Then paste
+the OAuth token into the above field and click `execute`.  This will add an item to your
+history that supplies the OAuth token to LDC datasource services that 
+require it.
+
+
+**License**
 
 Gigaword corpus is distributed under `LDC Membership Agreement <www.ldc.upenn.edu/members/agreements>`_ or `User Agreement for Non-Members <catalog.ldc.upenn.edu/license/ldc-non-members-agreement.pdf>`_
 

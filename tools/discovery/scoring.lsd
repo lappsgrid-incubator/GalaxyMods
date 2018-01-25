@@ -123,6 +123,7 @@ class CompositeScorer implements WindowScorerI {
     }
     
 	/**
+
      * initiates an instance with specific configuration for each scorers
      * @param configuration - needs to be formatted
      *  "scorer1Name : weight, scorer2Name : weight, ..."
@@ -145,6 +146,7 @@ class CompositeScorer implements WindowScorerI {
     }
 
     /**
+
      * this is default, uniform distribution lambda
      * to customize these lambdas, user should provide a parameter
      */

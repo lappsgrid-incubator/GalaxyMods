@@ -1,6 +1,6 @@
 <tool id="stanfordnlp.namedentityrecognizer" name="Stanford NamedEntityRecognizer" version="2.0.4">
  <description>
-  Stanford NamedEntityRecognizer (Brandeis)
+  (complete pipeline)
  </description>
  <command interpreter="lsd">
   ../common/invoke_brandeis.lsd stanfordnlp.namedentityrecognizer_2.0.4 $input $output
@@ -15,8 +15,21 @@
  </outputs>
  <help>
   <![CDATA[
-License
--------
+  
+  **What it does**
+
+ Adds named entity annotations to text in a LIF container
+
+**Required annotations**
+
+* None
+
+**Generated Annotations**
+
+* A LIF document with a single view containing `NamedEntity <http://vocab.lappsgrid.org/NamedEntity.html>`_ annotations
+
+
+**License**
 
 Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.]]>
  </help>

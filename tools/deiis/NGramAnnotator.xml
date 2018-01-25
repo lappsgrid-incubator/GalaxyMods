@@ -13,8 +13,8 @@
         <data name="output" format="lif" label="NGrams"/>
     </outputs>
     <help><![CDATA[
-HELP
-====
+**What it does**
+
 
 Required Annotations
 --------------------
