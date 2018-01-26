@@ -22,11 +22,12 @@ Adds annotations for sentence boundaries using the `Stanford Part of Speech Tagg
 
 **Required annotations**
 
-* `Token <http://vocab.lappsgrid.org/Token.html>`_ (LIF) 
+* None
 
 .. class:: infomark
 
-NOTE: This sentence splitter also processes plain text in a LIF container with no Token annotations.
+NOTE: This sentence splitter processes plain text in a LIF container. It can also process 
+a LIF document containing  `Token <http://vocab.lappsgrid.org/Token.html>`_ annotations.
 
 .. class:: infomark
 

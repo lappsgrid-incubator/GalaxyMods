@@ -26,7 +26,8 @@
 
 **Generated Annotations**
 
-* A LIF document with a single view containing `NamedEntity <http://vocab.lappsgrid.org/NamedEntity.html>`_ annotations
+* A LIF document with a single view containing `NamedEntity <http://vocab.lappsgrid.org/NamedEntity.html>`_ annotations,
+with the type (e.g., Person, Location) as the value of the *category* feature.
 
 
 **License**

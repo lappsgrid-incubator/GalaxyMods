@@ -90,8 +90,8 @@
 		<tool file="gate/gate.tokenizer_2.3.0.xml"/>
 		<tool file='opennlp/opennlp.tokenizer.xml' />
 		<tool file="lingpipe/vassar.tokenizer_1.0.0.xml"/>
-		<tool file='dkpro/dkpro.stanford.tokenizer.xml'/>
-		<tool file='dkpro/dkpro.opennlp.tokenizer.xml'/>
+		<!-- <tool file='dkpro/dkpro.stanford.tokenizer.xml'/>
+		<tool file='dkpro/dkpro.opennlp.tokenizer.xml'/> -->
 		<tool file="deiis/Tokenizer.xml"/>
 	</section>
 	<section id="splitters" name="Sentence Splitters">
@@ -102,8 +102,8 @@
 		<tool file="gate/gate.splitter_2.3.0.xml"/>
 		<tool file='opennlp/opennlp.splitter.xml' />
 		<tool file="lingpipe/vassar.splitter_1.0.0.xml"/>
-		<tool file='dkpro/dkpro.stanford.splitter.xml'/>
-		<tool file='dkpro/dkpro.opennlp.splitter.xml'/>
+		<!-- <tool file='dkpro/dkpro.stanford.splitter.xml'/>
+		<tool file='dkpro/dkpro.opennlp.splitter.xml'/> -->
 	</section>
 	<section id="taggers" name="Taggers">
 		<tool file="stanford/vassar.tagger_2.1.0.xml"/>
@@ -111,8 +111,8 @@
 		<tool file="gate/gate.tagger_2.3.0.xml"/>
 		<tool file='opennlp/opennlp.postagger.xml' />
 		<tool file="lingpipe/vassar.tagger_1.0.0.xml"/>
-		<tool file='dkpro/dkpro.stanford.postagger.xml'/>
-		<tool file='dkpro/dkpro.opennlp.postagger.xml'/>
+		<!--<tool file='dkpro/dkpro.stanford.postagger.xml'/>
+		<tool file='dkpro/dkpro.opennlp.postagger.xml'/>-->
 	</section>
 	<section id="ner" name="Named Entity Recognizers">
 		<tool file="stanford/vassar.ner_2.1.0.xml"/>
@@ -124,17 +124,17 @@
 		<tool file='opennlp/opennlp.namedentityrecognizer.xml' />
 		<tool file="lingpipe/cmu.dictionaryNER_1.0.0.xml"/>
 		<tool file="lingpipe/vassar.ner_1.0.0.xml"/>
-		<tool file='dkpro/dkpro.stanford.namedentityrecognizer.xml'/>
+		<!-- tool file='dkpro/dkpro.stanford.namedentityrecognizer.xml'/>
 		<tool file='dkpro/dkpro.opennlp.namedentityrecognizer.xml'/>
         <tool file="dbpedia/spotlight.xml"/>
-        <tool file="common/nerfix.xml"/>
+        <tool file="common/nerfix.xml"/>-->
 	</section>
 	<section id="parsers" name="Parsers">
 		<tool file='stanford/brandeis.parser.xml' />
 		<tool file='stanford/brandeis.dependencyparser.xml' />
 		<tool file='opennlp/opennlp.parser.xml' />
-		<tool file='dkpro/dkpro.stanford.parser.xml'/>
-		<tool file='dkpro/dkpro.opennlp.parser.xml'/>
+		<!-- <tool file='dkpro/dkpro.stanford.parser.xml'/>
+		<tool file='dkpro/dkpro.opennlp.parser.xml'/>-->
 	</section>
 	<section id="chunkers" name="NP and VP Chunkers">
 		<tool file="gate/gate.npchunker_2.3.0.xml"/>
