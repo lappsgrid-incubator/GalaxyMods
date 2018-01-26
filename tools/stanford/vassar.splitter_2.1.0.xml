@@ -1,6 +1,6 @@
-<tool id="stanford.splitter_2.1.0" name="Stanford SentenceSplitter v2.1.0" version="1.0.0">
+<tool id="stanford.splitter_2.1.0" name="Stanford SentenceSplitter" version="1.0.0">
  <description>
-  Stanford Sentence Splitter 
+    (standalone) 
  </description>
  <command interpreter="lsd">
   ../common/invoke_vassar.lsd stanford.splitter_2.1.0-SNAPSHOT $input $output

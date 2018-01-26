@@ -1,6 +1,6 @@
-<tool id="stanford.ner_2.1.0" name="Stanford NamedEntityRecognizer v2.1.0" version="1.0.0">
+<tool id="stanford.ner_2.1.0" name="Stanford NamedEntityRecognizer" version="1.0.0">
  <description>
-  Stanford Named Entity Recognizer (Vassar)
+  (standalone)
  </description>
  <command interpreter="lsd">
   ../common/invoke_vassar.lsd stanford.ner_2.1.0-SNAPSHOT $input $output
@@ -15,12 +15,22 @@
  </outputs>
  <help>
   <![CDATA[
+**What it does**  
   
-Stanford Named Entity Recognizer
+Generates named entity annotations (Person, Organization, Location) using the `Stanford Named Entity Recognizer <https://nlp.stanford.edu/software/CRF-NER.shtml>`_
+
+**Required annotations**
+
+* `Token <http://vocab.lappsgrid.org/Token.html>`_ with `Penn part of speech tags <https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html>`_ (LIF)
+* `Sentence <http://vocab.lappsgrid.org/Sentence.html>`_ (LIF) 
+
+**Generated Annotations**
+
+A LIF document with a new view containing `NamedEntity <http://vocab.lappsgrid.org/NamedEntity.html>`_ annotations
 
 **License**
 
-Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.]]>
-
+Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.
+]]>
  </help>
 </tool>

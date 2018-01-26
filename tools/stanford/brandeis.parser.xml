@@ -18,7 +18,7 @@
 
 **What it does**
 
-Performs a constituency parse of a text in a LIF container
+Performs a constituency parse of a text in a LIF container using the `Stanford Core NLP tools <https://stanfordnlp.github.io/CoreNLP/>`_.
 
 **Required annotations**
 

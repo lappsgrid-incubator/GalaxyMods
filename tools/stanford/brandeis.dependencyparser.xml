@@ -18,7 +18,7 @@
   
 **What it does**
 
-Generates a dependency parse of text in a LIF container
+Generates a dependency parse of text in a LIF container using the `Stanford Core NLP tools <https://stanfordnlp.github.io/CoreNLP/>`_.
   
 **Required Annotations**
 
@@ -30,8 +30,8 @@ Generates a dependency parse of text in a LIF container
 A LIF document containing: 
 
 1. `Token <http://vocab.lappsgrid.org/Token>`_ annotations (with part of speech)
-#. `DependencyStructure <http://vocab.lappsgrid.org/DependencyStructure> annotations
-#. `Dependency <http://vocab.lappsgrid.org/Dependency`_ annotations
+#. `DependencyStructure <http://vocab.lappsgrid.org/DependencyStructure>`_ annotations
+#. `Dependency <http://vocab.lappsgrid.org/Dependency>`_ annotations
 
 **License**
 

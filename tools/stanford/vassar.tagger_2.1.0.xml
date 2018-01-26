@@ -1,6 +1,6 @@
-<tool id="stanford.tagger_2.1.0" name="Stanford Tagger v2.1.0" version="1.0.0">
+<tool id="stanford.tagger_2.1.0" name="Stanford POSTagger" version="1.0.0">
  <description>
-  Stanford Tagger
+  (standalone)
  </description>
  <command interpreter="lsd">
   ../common/invoke_vassar.lsd stanford.tagger_2.1.0-SNAPSHOT $input $output
