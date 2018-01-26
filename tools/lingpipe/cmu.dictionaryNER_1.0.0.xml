@@ -1,9 +1,9 @@
-<tool id="cmu.lingpipe.dictionarybased.ner_1.0.0" name="Lingpipe Dictionary Based NER v1.0.0" version="1.0.0">
+<tool id="cmu.lingpipe.dictionarybased.ner_1.1.1" name="Lingpipe Dictionary Based NER v1.0.0" version="0.9.0">
  <description>
   (Vassar)
  </description>
  <command interpreter="lsd">
-  cmu.dictionaryNER.lsd $dictionary $input $output
+  cmu.dictionaryNER.lsd $dictionary 1.1.1-SNAPSHOT $input $output
  </command>
  <inputs>
   <param format="txt" label="dictionary" name="dictionary" type="data">
@@ -17,8 +17,9 @@
  </outputs>
  <help>
   <![CDATA[
-Dictionary basaed Lingpipe Named Entity Recognizer
+Dictionary based Lingpipe Named Entity Recognizer
 
+Performs named entity recognition using a user supplied gazetteer list
 **License**
 
 Lingpipe is released under the `GNU Affero General Public License version 3.0 <https://www.gnu.org/licenses/agpl-3.0.en.html>`_
