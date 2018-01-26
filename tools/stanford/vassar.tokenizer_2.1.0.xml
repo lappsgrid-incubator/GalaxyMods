@@ -22,11 +22,13 @@ Splits text into simple tokens such as numbers, punctuation, and words using the
 
 **Required annotations**
 
-* `Sentence <http://vocab.lappsgrid.org/Sentence.html>`_ (LIF)
+* None
+
+
 
 .. class:: infomark
 
-NOTE: This tokenizer also processes plain text in a LIF container with no Sentence annotations.
+NOTE: This tokenizer processes plain text in a LIF container. It can also process a LIF document containing  `Sentence <http://vocab.lappsgrid.org/Sentence.html>`_ annotations.
 
 .. class:: infomark
 

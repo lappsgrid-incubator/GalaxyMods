@@ -4,7 +4,7 @@
     <inputs>
         <param name="input" type="data" format="txt"/>
         <param name="format" type="select" label="New Format">
-            <option value="wrap.lif_1.0.0">Lapps Interchange Format (LIF)</option>
+            <option value="wrap.lif_1.0.0" selected="True">Lapps Interchange Format (LIF)</option>
             <option value="wrap.tcf_1.0.0">Text Corpus Format (TCF)</option>
             <option value="wrap.text_1.0.0">Plain Text (UTF-8)</option>
         </param>
