@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 <tool id="cmu.lingpipe.dictionarybased.ner_1.0.0" name="Lingpipe Dictionary Based Named Entity Recognition" version="1.0.0">
+=======
+<tool id="cmu.lingpipe.dictionarybased.ner_1.1.1" name="Lingpipe Dictionary Based NER v1.0.0" version="0.9.0">
+ <description>
+  (Vassar)
+ </description>
+>>>>>>> 1962c236cd52f0108cfbaef8c1b0ce4129096c15
  <command interpreter="lsd">
-  cmu.dictionaryNER.lsd $dictionary $input $output
+  cmu.dictionaryNER.lsd $dictionary 1.1.1-SNAPSHOT $input $output
  </command>
  <inputs>
   <param format="txt" label="dictionary" name="dictionary" type="data">
