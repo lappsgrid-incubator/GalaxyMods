@@ -1,7 +1,4 @@
 <tool id="opennlp.tokenizer" name="OpenNLP Tokenizer" version="2.0.3">
- <description>
-  OpenNLP Tokenizer
- </description>
  <command interpreter="lsd">
   ../common/invoke_brandeis.lsd opennlp.tokenizer_2.0.3 $input $output
  </command>

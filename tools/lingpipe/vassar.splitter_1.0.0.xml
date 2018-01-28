@@ -1,8 +1,5 @@
-<tool id="vassar.lingpipe.splitter_1.0.0" name="Lingpipe SentenceSplitter v1.0.0" version="1.0.0">
- <description>
-  (Vassar)
- </description>
- <command interpreter="lsd">
+<tool id="vassar.lingpipe.splitter_1.0.0" name="Lingpipe Sentence Splitter" version="1.0.0">
+  <command interpreter="lsd">
   invoke.lsd LingpipeSentenceSplitter $input $output
  </command>
  <inputs>
@@ -15,7 +12,21 @@
  </outputs>
  <help>
   <![CDATA[
-Lingpipe Sentence Splitter
+  
+  
+**What it does**  
+  
+Adds annotations for sentence boundaries using the `LingPipe <http://alias-i.com/lingpipe-3.9.3/>`_ sentence splitter .
+
+**Required annotations**
+
+* `Token <http://vocab.lappsgrid.org/Token.html>`_
+
+**Generated annotations**
+
+* A new view containing `Sentence <http://vocab.lappsgrid.org/Sentence.html>`_  annotations. (LIF) 
+
+
 
 **License**
 

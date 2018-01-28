@@ -1,4 +1,4 @@
-<tool id='anc_gate.ner_2.3.0' name='GATE NamedEntityRecognizer' version='1.0.1'>
+<tool id='anc_gate.ner_2.3.0' name='GATE Named Entity Recognizer' version='1.0.1'>
   <command>lsd $__tool_directory__/invoke.lsd gate.ner_2.3.0 $input $output</command>
   <inputs>
     <param name='input' type='data' format='gate' />

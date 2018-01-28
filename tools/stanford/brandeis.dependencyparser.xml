@@ -1,6 +1,6 @@
 <tool id="stanfordnlp.dependencyparser" name="Stanford Dependency Parser" version="2.0.4">
  <description>
-  (complete pipeline)
+   (standalone) Generate a dependency parse of unannotated text
  </description>
  <command interpreter="lsd">
   ../common/invoke_brandeis.lsd stanfordnlp.dependencyparser_2.0.4 $input $output

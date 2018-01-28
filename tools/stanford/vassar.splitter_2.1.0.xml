@@ -1,7 +1,5 @@
-<tool id="stanford.splitter_2.1.0" name="Stanford SentenceSplitter" version="1.0.0">
- <description>
-    (standalone) 
- </description>
+<tool id="stanford.splitter_2.1.0" name="Stanford Sentence Splitter" version="1.0.0">
+ 
  <command interpreter="lsd">
   ../common/invoke_vassar.lsd stanford.splitter_2.1.0-SNAPSHOT $input $output
  </command>
@@ -18,16 +16,16 @@
 
 **What it does**  
   
-Adds annotations for sentence boundaries using the `Stanford Part of Speech Tagger <https://nlp.stanford.edu/software/tagger.shtml>`_.
+Adds annotations for sentence boundaries using the `Stanford sentence splitter <https://stanfordnlp.github.io/CoreNLP/ssplit.html>`_.
 
 **Required annotations**
 
-* None
+* `Token <http://vocab.lappsgrid.org/Token.html>`_
 
 .. class:: infomark
 
-NOTE: This sentence splitter processes plain text in a LIF container. It can also process 
-a LIF document containing  `Token <http://vocab.lappsgrid.org/Token.html>`_ annotations.
+NOTE: This sentence splitter can also process plain text in a LIF container,
+but performs better if the input also contains  `Token <http://vocab.lappsgrid.org/Token.html>`_ annotations.
 
 .. class:: infomark
 

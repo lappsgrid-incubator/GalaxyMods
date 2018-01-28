@@ -1,5 +1,5 @@
-<tool id='gate.tagger.abner_1.0.0' name='Biomedical NER' version='1.0.0'>
-  <description>identifies bio-medical named entities in the input text.</description>
+<tool id='gate.tagger.abner_1.0.0' name='Biomedical Named Entity Recognizer' version='1.0.0'>
+  <description>(standalone) Identify bio-medical named entities in unannotated text</description>
   <command>lsd $__tool_directory__/abner.lsd $input $output</command>
   <inputs>
     <param name='input' type='data' format='gate' />
