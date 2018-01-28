@@ -15,15 +15,15 @@
     <help><![CDATA[
 **What it does**
 
+Generates ngrams (unigrams, bigrams, or trigrams) from a text.
 
-Required Annotations
---------------------
+**Required Annotations**
 
-* http://vocab.lappsgrid.org/Token
+* `Token <http://vocab.lappsgrid.org/Token>`_ (LIF)
 
 
-Generated Annotations
----------------------
+**Generated Annotations**
+
 
 * http://deiis.lti.cs.cmu.edu/Unigram
 * http://deiis.lti.cs.cmu.edu/Bigram
