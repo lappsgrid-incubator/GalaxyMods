@@ -7,9 +7,9 @@ String format = args[3]
 File output = new File(args[4])
 String version = args[5]
 
-String url = "http://grid.anc.org:9080/EvaluationServices/services/AnnotationEvaluator"
+String url = "http://localhost:8080/EvaluationServices/services/AnnotationEvaluator"
 if (version != '0') {
-    url = "http://grid.anc.org:9080/EvaluationServices/$version/services/AnnotationEvaluator"
+    url = "http://http://localhost:8080/EvaluationServices/$version/services/AnnotationEvaluator"
 }
 
 if (type == "ne") {
