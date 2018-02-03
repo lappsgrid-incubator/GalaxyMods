@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <toolbox>
     <section id="getext" name="Get Data">
-		<label text="Manually Annotated SubCorpus" id="masc_label"/>
 		<tool file="data_source/upload.xml"/>
+
+		<label text="Manually Annotated SubCorpus" id="masc_label"/>
 		<tool file="masc/get.xml"/>
 		<tool file="masc/list.xml"/>
         <tool file="masc/query.xml"/>
