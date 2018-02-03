@@ -1,6 +1,5 @@
-<tool id="weblicht.lif.converter" name="Weblicht LIF Converter" version="1.0.0">
+<tool id="weblicht.lif.converter" name="LIF to TCF" version="1.0.0">
  <description>
-  convert LIF to TCF
  </description>
  <command interpreter="lsd">
   ../common/invoke_vassar.lsd weblicht.lif.converter_1.0.0 $input $output

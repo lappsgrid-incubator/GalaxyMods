@@ -49,6 +49,7 @@
     <section id="convert" name="Convert Formats">
 		<tool file="common/wrap_text.xml"/>
 		<tool file="converters/tcf2lif.xml"/>
+    	<tool file="weblicht/lif2tcf.xml"/>
 		<tool file="converters/convert.gate2json_2.1.0.xml"/>
 		<tool file="converters/convert.json2gate_2.1.0.xml"/>
 		<tool file="converters/gigaword2lif.xml"/>
