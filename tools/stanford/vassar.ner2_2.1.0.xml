@@ -1,7 +1,5 @@
 <tool id="stanford.ner2_2.1.0" name="Stanford Selectable Named Entity Recognizer" version="1.0.0">
- <description>
-  (standalone)
- </description>
+ 
  <command interpreter="lsd">
   invoke_ner2.lsd $model $input $output
  </command>

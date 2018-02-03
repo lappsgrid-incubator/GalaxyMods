@@ -1,6 +1,6 @@
-<tool id="stanfordnlp.postagger" name="Stanford POSTagger" version="2.0.4">
+<tool id="stanfordnlp.postagger" name="Stanford Standalone Part-of-Speech Tagger" version="2.0.4">
  <description>
-  (complete pipeline)
+  (standalone) Tokenize and add POS tags to unannotated text
  </description>
  <command interpreter="lsd">
   ../common/invoke_brandeis.lsd stanfordnlp.postagger_2.0.4 $input $output

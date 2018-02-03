@@ -1,7 +1,5 @@
-<tool id="stanford.tagger_2.1.0" name="Stanford POSTagger" version="1.0.0">
- <description>
-  (standalone)
- </description>
+<tool id="stanford.tagger_2.1.0" name="Stanford Part-of-Speech Tagger" version="1.0.0">
+ 
  <command interpreter="lsd">
   ../common/invoke_vassar.lsd stanford.tagger_2.1.0-SNAPSHOT $input $output
  </command>

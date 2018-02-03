@@ -1,5 +1,5 @@
-<tool id='pennbio.tokenizer_1.0.0' name='PennBIO Tokenizer (GATE 8.4.1)' version='1.0.0'>
-  <description>tokenizer for BioNLP</description>
+<tool id='pennbio.tokenizer_1.0.0' name='Penn BIO Tokenizer' version='1.0.0'>
+  <description>(standalone) Tokenize unannotated biomedical text </description>
   <command>lsd $__tool_directory__/call.lsd Tokenizer $input $output</command>
   <inputs>
     <param name='input' type='data' format='gate' />
@@ -11,7 +11,7 @@
   
 **What it does**
 
-Tokenizes text, with tuning for for gene entities, genomic variations entities, and malignancy type entities. 
+Tokenizes text, with tuning for for gene entities, genomic variations entities, and malignancy type entities 
 
 **Required Annotations**
 
@@ -30,7 +30,7 @@ use *Convert formats->GateToLif*
 
 **License**
 
-This tool is adapted from the `General Architecture for Text Engineering (GATE) platform <http:gate.ac.uk>`_, which is released under the `GNU Lesser General Public License 3.0 <https://www.gnu.org/licenses/lgpl-3.0.html>`_
+This tool is adapted from the `General Architecture for Text Engineering (GATE 8.4.1) platform <http:gate.ac.uk>`_, which is released under the `GNU Lesser General Public License 3.0 <https://www.gnu.org/licenses/lgpl-3.0.html>`_
 
 
 

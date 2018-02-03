@@ -1,7 +1,4 @@
-<tool id="opennlp.postagger" name="OpenNLP POSTagger" version="2.0.3">
- <description>
-  OpenNLP POSTagger
- </description>
+<tool id="opennlp.postagger" name="OpenNLP Part-of-Speech Tagger" version="2.0.3">
  <command interpreter="lsd">
   ../common/invoke_brandeis.lsd opennlp.postagger_2.0.3 $input $output
  </command>

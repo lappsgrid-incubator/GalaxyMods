@@ -1,5 +1,5 @@
-<tool id='gate.heidel_1.0.0' name='Heidel Time' version='1.0.0'>
-  <description>time annotations</description>
+<tool id='gate.heidel_1.0.0' name='HeidelTime' version='1.0.0'>
+  <description>Generate time annotations</description>
   <command>lsd $__tool_directory__/time.lsd HeidelTime $input $output</command>
   <inputs>
     <param name='input' type='data' format='gate' />

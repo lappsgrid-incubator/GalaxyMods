@@ -1,6 +1,6 @@
 <tool id="stanfordnlp.parser" name="Stanford Parser" version="2.0.4">
  <description>
-  (complete pipeline)
+   (standalone) Generate a constituency parse of unannotated text
  </description>
  <command interpreter="lsd">
   ../common/invoke_brandeis.lsd stanfordnlp.parser_2.0.4 $input $output

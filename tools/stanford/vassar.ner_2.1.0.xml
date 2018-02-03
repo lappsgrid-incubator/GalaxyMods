@@ -1,7 +1,5 @@
-<tool id="stanford.ner_2.1.0" name="Stanford NamedEntityRecognizer" version="1.0.0">
- <description>
-  (standalone)
- </description>
+<tool id="stanford.ner_2.1.0" name="Stanford Named Entity Recognizer" version="1.0.0">
+
  <command interpreter="lsd">
   ../common/invoke_vassar.lsd stanford.ner_2.1.0-SNAPSHOT $input $output
  </command>

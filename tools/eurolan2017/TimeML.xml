@@ -1,5 +1,6 @@
 <tool id='gate.timeml_1.0.0' name='TimeML Events' version='1.0.0'>
-  <description>TimeML annotations</description>
+  <description> (standalone) Add tokens, sentences, and event annotations to unannotated text
+  </description>
   <command>lsd $__tool_directory__/time.lsd TimeMLEvents $input $output</command>
   <inputs>
     <param name='input' type='data' format='gate,liftxt' />
