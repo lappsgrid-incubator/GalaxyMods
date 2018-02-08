@@ -1,0 +1,24 @@
+<tool id="pubannotation.collection" name="Create collection" version="1.0.0">
+ <command>lsd $__tool_directory__/collection.lsd</command>
+ <outputs>
+  <collection format="lif" label="PubAnnotation Corpus" name="list_output" type="list">
+   <discover_datasets directory="outputs" pattern="__designation_and_ext__" visible="false">
+   </discover_datasets>
+  </collection>
+ </outputs>
+ <tests>
+ </tests>
+ <help>
+  <![CDATA[
+**What it Does**
+
+Creates a Data Collection with a selection of documents from the `PubAnnotation Corpus <http://pubannotation.org>`_.
+
+.. class:: infomark
+
+
+**License**
+
+]]>
+ </help>
+</tool>

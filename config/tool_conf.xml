@@ -12,6 +12,7 @@
 
 		<label text="PubAnnotation" id="pubannotation_label"/>
 		<tool file="pubannotation/get.xml"/>
+		<tool file="pubannotation/collection.xml"/>
 
 		<label text="FDR" id="fdr_label"/>
 		<tool file="fdr/list.xml"/>
@@ -295,8 +296,14 @@
 		<tool file="common/masseuse.xml"/>
 		<tool file="common/sanitize.xml"/>
 		<tool file="common/wrap.xml"/>
-
 	</section>
+	<section id="develop" name="Development">
+		<tool file="develop/collect.xml"/>
+		<tool file="develop/WordFrequency.xml"/>
+		<tool file="develop/stopwords.xml"/>
+		<tool file="develop/FilterStopwords.xml"/>
+	</section>
+
   <section id="plots" name="Graph/Display Data">
 		<tool file="common/pretty_print.xml"/>
     <tool file="plotting/bar_chart.xml" />
