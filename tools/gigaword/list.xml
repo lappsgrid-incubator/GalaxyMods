@@ -13,7 +13,6 @@
   <param label="End" name="end" type="text" value="99">
   </param>
   <param label="Language" name="service" type="select">
-  </param>
   <option value="GWENDataSource">
    English
   </option>
@@ -26,6 +25,7 @@
   <option value="GWARDataSource">
    Arabic
   </option>
+  </param>
  </inputs>
  <outputs>
   <data format="txt" name="output">
