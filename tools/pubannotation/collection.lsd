@@ -1,4 +1,18 @@
+
+String repo = args[0]
+String keywords = args[1].replaceAll(' ', '+')
+
 File output = new File('outputs')
+
+URL url = new URL("http://pubannotation.org/docs/sourcedb/${repo}.json?keywords=${keywords}")
+String json
+try {
+    json = url.text
+}
+catch (Throwable e) {
+    println e.message
+    return
+}
 
 if (!output.exists()) {
     if (!output.mkdirs()) {
@@ -7,16 +21,20 @@ if (!output.exists()) {
     }
 }
 
-ID_LIST = [ 10022392, 10025722, 10024663, 10024661, 10024662, 10022882, 10025864, 10022664, 10025862, 10025748, 10025641, 10027455, 1000280, 10025474, 10025785, 10025422, 10024664, 10025429, 10025431, 10027417 ]
-ID_LIST.each { id ->
-
-    String path = "http://pubannotation.org/docs/sourcedb/PubMed/sourceid/${id}.txt"
-    URL url = new URL(path)
-
-    Container container = new Container()
-    container.metadata.id = id
-    container.text = url.text
-
-    Data data = new Data(Uri.LIF, container)
-    new File(output, "${id}.lif").text = data.asPrettyJson()
+List list = Serializer.parse(json, ArrayList)
+list.each { record ->
+    try {
+        println "Fetching ${record.url}.json"
+        Data data = new Data()
+        data.discriminator = Uri.JSON
+        data.payload = new URL(record.url + ".json").text
+        String filename = "${record.sourcedb}${record.sourceid}.json"
+        File file = new File(output, filename)
+        file.text = data.asPrettyJson()
+        //println "Wrote ${file.path}"
+    }
+    catch (Throwable e) {
+        println e.message
+    }
 }
+
