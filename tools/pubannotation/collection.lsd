@@ -1,6 +1,7 @@
 
 String repo = args[0]
-String keywords = args[1].replaceAll(' ', '+')
+String format = args[1]
+String keywords = args[2].replaceAll(' ', '+')
 
 File output = new File('outputs')
 
@@ -24,14 +25,25 @@ if (!output.exists()) {
 List list = Serializer.parse(json, ArrayList)
 list.each { record ->
     try {
-        println "Fetching ${record.url}.json"
+        //println "Fetching ${record.url}.json"
+        String content = new URL(record.url + '.' + format).text
         Data data = new Data()
-        data.discriminator = Uri.JSON
-        data.payload = new URL(record.url + ".json").text
+        if (format == 'txt') {
+            Container container = new Container()
+            container.metadata.sourceid = record.sourceid
+            container.metadata.sourcedb = record.sourcedb
+            container.metadata.url = record.url
+            container.text = content
+            data.discriminator = Uri.LIF
+            data.payload = container
+        }
+        else {
+            data.discriminator = Uri.JSON
+            data.payload = content
+        }
         String filename = "${record.sourcedb}${record.sourceid}.json"
         File file = new File(output, filename)
         file.text = data.asPrettyJson()
-        //println "Wrote ${file.path}"
     }
     catch (Throwable e) {
         println e.message
