@@ -34,7 +34,7 @@
    <option value="PMC">PubMed Central</option>
   </param>
   <param name="type" label="Type" type="select">
-  	<option value="json">With annotated</option>
+  	<option value="json">With annotations</option>
   	<option value="txt">Text only</option>
   </param>
  </inputs>
@@ -51,10 +51,7 @@ Retrieves a single document from the PubAnnotation PubMed corpus
 
 .. class:: infomark
 
-**NOTE:** This is a development version and only the text for 20 largest documents is available for download.  
-Support for all PubMed documents and annotations will be added at a later time.
-
-You can find a list of the PubMed documents available via PubAnnotation `here <http://pubannotation.org/docs/sourcedb/PubMed>`_
+**NOTE:** You can find a list of the PubMed documents available via PubAnnotation `here <http://pubannotation.org/docs/sourcedb/PubMed>`_
 
 The 10 largest PubMed documents are:
 

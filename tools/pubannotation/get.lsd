@@ -6,12 +6,19 @@ File output = new File(args[3])
 String path = "http://pubannotation.org/docs/sourcedb/${repo}/sourceid/${id}.${type}"
 Data data
 try {
-    URL url = new URL(path)
-    Container container = new Container()
-    container.metadata.id = id
-    container.text = url.text
+    String content = new URL(path).text
+    if (type == 'json') {
+        data = new Data(Uri.JSON, content)
+    }
+    else {
+        Container container = new Container()
+        container.metadata.sourceid = id
+        container.metadata.sourcedb = repo
+        container.text = content
 
-    data = new Data(Uri.LIF, container)
+        data = new Data(Uri.LIF, container)
+    }
+
 }
 catch (Throwable e) {
     data = new Data(Uri.ERROR, e.message)
