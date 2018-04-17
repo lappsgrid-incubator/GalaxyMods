@@ -21,7 +21,7 @@
  </tests>
  <help>
   <![CDATA[
-  
+
 **What it Does**
 
 Creates a Data Collection with a selection of documents from the `PubAnnotation Corpus <http://pubannotation.org>`_.
