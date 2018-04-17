@@ -12,7 +12,6 @@ Create a data collection consisting of documents from the English Gigaword corpu
   <param max="392" name="end" type="integer" value="392">
   </param>
   <param label="Language" name="service" type="select">
-  </param>
   <option value="GWENDataSource">
    English
   </option>
@@ -25,6 +24,7 @@ Create a data collection consisting of documents from the English Gigaword corpu
   <option value="GWARDataSource">
    Arabic
   </option>
+  </param>
  </inputs>
  <outputs>
   <collection format="ldc" label="Output List" name="list_output" type="list">

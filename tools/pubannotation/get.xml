@@ -1,7 +1,10 @@
+
 <tool id="pubannotation.get" name="Get a document from the PubAnnotation PubMed corpus" version="1.0.0">
 
- <command>lsd $__tool_directory__/get.lsd $id $output</command>
+ <command>lsd $__tool_directory__/get.lsd $id $repo $type $output</command>
+
  <inputs>
+  <!--
   <param label="ID" name="id" type="select">
    <option value="10022392">10022392</option>
    <option value="10025722">10025722</option>
@@ -24,15 +27,19 @@
    <option value="10025431">10025431</option>
    <option value="10027417">10027417</option>
   </param>
-  <!--
-  <param name="type" type="select">
-  	<option value="lif">Annotated</option>
+  -->
+  <param name="id" label="ID" type="text"/>
+  <param name="repo" label="Repository" type="select">
+    <option value="PubMed">PubMed</option>
+   <option value="PMC">PubMed Central</option>
+  </param>
+  <param name="type" label="Type" type="select">
+  	<option value="json">With annotations</option>
   	<option value="txt">Text only</option>
   </param>
-  -->
  </inputs>
  <outputs>
-  <data format="lif" label="PubAnnotation PubMed Document" name="output">
+  <data format="lif" label="PubAnnotation Document" name="output">
   </data>
  </outputs>
  <help>
@@ -44,10 +51,22 @@ Retrieves a single document from the PubAnnotation PubMed corpus
 
 .. class:: infomark
 
-**NOTE:** This is a development version and only the text for 20 largest documents is available for download.  
-Support for all PubMed documents and annotations will be added at a later time.
+**NOTE:** You can find a list of the PubMed documents available via PubAnnotation `here <http://pubannotation.org/docs/sourcedb/PubMed>`_
 
+The 10 largest PubMed documents are:
+
+* 10022392
+* 0025722
+* 10024663
+* 10024661
+* 10024662
+* 10022882
+* 10025864
+* 10022664
+* 10025862
+* 10025748
 
 ]]>
+  
  </help>
 </tool>

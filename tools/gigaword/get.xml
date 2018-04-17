@@ -8,7 +8,6 @@
   <param label="Document ID" name="key" type="text" value="AFP_ENG_19940512.0001">
   </param>
   <param label="Language" name="service" type="select">
-  </param>
   <option value="GWENDataSource">
    English
   </option>
@@ -21,6 +20,7 @@
   <option value="GWARDataSource">
    Arabic
   </option>
+  </param>
  </inputs>
  <outputs>
   <data format="ldc" name="output">

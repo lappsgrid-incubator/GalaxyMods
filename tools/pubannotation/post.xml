@@ -17,7 +17,7 @@
   
 **What it does** 
 
-This tool accepts a PubAnnotation JSON document and uploads (HTTP POST) it to the LAppsTest project on the PubAnnotation server. 
+This tool accepts a PubAnnotation JSON document and uploads (HTTP POST) it to the LappsTest project on the PubAnnotation server.
 A copy of the uploaded file (as returned by the Pubannotation server) is also written to disk for Galaxy to use.
 
 .. class:: infomark
