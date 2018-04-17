@@ -1,10 +1,8 @@
-<tool id="fdr.create.collection" name="FDR:" version="1.0.0">
+<tool id="fdr.create.collection" name="Create a data collection of select documents" version="1.0.0">
  <command>
   lsd $__tool_directory__/create_collection.lsd $start $end
  </command>
- <description>
-  Create a data collection comprised of select documents from the FDR corpus
- </description>
+
  <inputs>
   <param min="0" name="start" type="integer" value="0">
   </param>

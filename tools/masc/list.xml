@@ -1,7 +1,5 @@
-<tool id="masc.list" name="MASC:" version="2.0.0">
- <description>
-  List all document IDs
- </description>
+<tool id="masc.list" name="List document IDs" version="2.0.0">
+
  <command interpreter="lsd">
   list.lsd $output
  </command>

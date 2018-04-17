@@ -1,7 +1,7 @@
-<tool id="masc.get" name="MASC:" version="2.0.0">
- <description>
-  Get document
- </description>
+<tool id="masc.get" name=" Get document" version="2.0.0">
+ <!--<description>
+ 
+ </description>-->
  <command>
   $__tool_directory__/get.lsd $key $type $output
  </command>

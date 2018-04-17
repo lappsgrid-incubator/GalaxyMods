@@ -1,7 +1,4 @@
-<tool id="fdr.get" name="FDR:" version="1.0.0">
- <description>
-  Get a single document from the FDR DataSource.
- </description>
+<tool id="fdr.get" name="Get a document" version="1.0.0">
  <command>
   lsd $__tool_directory__/get.lsd $key $output
  </command>

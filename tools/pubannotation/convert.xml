@@ -1,6 +1,5 @@
-<tool id="pubannotation.convert" name="LIFtoPubAnnotation" version="1.0.0">
- <description>Convert a LIF document to the PubAnnotation JSON format.
- </description>
+<tool id="pubannotation.convert" name="Convert a LIF document to PubAnnotation JSON format" version="1.0.0">
+
  <command>lsd $__tool_directory__/convert.lsd $input $output</command>
  <inputs>
   <param type="data" format="lif" label="LIF Document" name="input"/>

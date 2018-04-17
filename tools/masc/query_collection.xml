@@ -1,10 +1,8 @@
-<tool id="masc.query.collection" name="MASC:" version="1.0.0">
+<tool id="masc.query.collection" name="Data collection from query" version="1.0.0">
  <command interpreter="lsd">
   query_collection.lsd $query $type $start $end
  </command>
- <description>
-  Create a data collection from documents that match the query
- </description>
+ 
  <inputs>
   <!--
     <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />

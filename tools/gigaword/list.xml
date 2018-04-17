@@ -1,7 +1,4 @@
-<tool id="gigaword.list" name="Gigaword:" version="1.0.0">
- <description>
-  List all document IDs in the Gigaword corpus.
- </description>
+<tool id="gigaword.list" name="List all document IDs" version="1.0.0">
  <command interpreter="lsd">
   list.lsd $token $start $end $service $output
  </command>

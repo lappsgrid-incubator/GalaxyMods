@@ -1,6 +1,6 @@
-<tool id="gigaword.key.provider" name="LDC Key Provider" version="1.0.0">
+<tool id="gigaword.key.provider" name="Get an OAuth token to access LDC data" version="1.0.0">
  <description>
-  provides an OAuth token to LDC members for access to LDC data.
+(for LDC members)
  </description>
  <command interpreter="lsd">
   keyprovider.lsd $token $output

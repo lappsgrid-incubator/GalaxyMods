@@ -1,7 +1,5 @@
-<tool id="pubannotation.get" name="PubAnnotation:" version="1.0.0">
- <description>
-  Get a single document from the PubAnnotation PubMed corpus.
- </description>
+<tool id="pubannotation.get" name="Get a document from the PubAnnotation PubMed corpus" version="1.0.0">
+
  <command>lsd $__tool_directory__/get.lsd $id $output</command>
  <inputs>
   <param label="ID" name="id" type="select">

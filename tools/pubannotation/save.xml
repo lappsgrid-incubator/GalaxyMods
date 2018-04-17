@@ -1,7 +1,5 @@
-<tool id="pubannotation.save" name="PubAnnotation: " version="1.0.0">
- <description>
-  Save (POST)  a single document to the PubAnnotation database.
- </description>
+<tool id="pubannotation.save" name="Save (POST)  a single document to the PubAnnotation database" version="1.0.0">
+
  <command>$__tool_directory__/convert.sh $input $output $id</command>
  <inputs>
   <param format="lif" label="input" name="input" type="data"/>

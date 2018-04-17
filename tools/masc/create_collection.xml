@@ -1,8 +1,8 @@
-<tool id="masc.create.collection" name="MASC:" version="1.0.0">
+<tool id="masc.create.collection" name="Create a data collection" version="1.0.0">
  <command interpreter="lsd">
   create_collection.lsd $type $start $end
  </command>
- <description>
+<!--> <description>
   Create a data collection for select documents
  </description>
  <inputs>

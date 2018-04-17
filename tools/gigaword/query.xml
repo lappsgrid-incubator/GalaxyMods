@@ -1,7 +1,4 @@
-<tool id="gigaword.query" name="Gigaword:" version="1.0.0">
- <description>
-  Retrieve documents from Gigaword based on a Solr query
- </description>
+<tool id="gigaword.query" name="Retrieve documents based on a Solr query" version="1.0.0">
  <command interpreter="lsd">
   query.lsd $token "$query" $size $service
  </command>

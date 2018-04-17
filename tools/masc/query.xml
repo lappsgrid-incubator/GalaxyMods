@@ -1,7 +1,5 @@
-<tool id="masc.query" name="MASC:" version="1.0.0">
- <description>
-  Lists all Document IDs that match the query
- </description>
+<tool id="masc.query" name="Lists document IDs matching a query" version="1.0.0">
+ 
  <command interpreter="lsd">
   query.lsd $query $type $output
  </command>
