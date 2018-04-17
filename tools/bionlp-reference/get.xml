@@ -1,7 +1,4 @@
-<tool id="bionlp.reference.get" name="Get Document" version="2.0.0">
- <description>
-  Retrieves a single document from the BioNLP reference corpus.
- </description>
+<tool id="bionlp.reference.get" name="Get a Reference Corpus document" version="2.0.0">
  <command>lsd $__tool_directory__/get.lsd $key $type $output
  </command>
  <inputs>

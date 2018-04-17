@@ -1,4 +1,4 @@
-<tool id="gigaword.get" name="Get a single document" version="1.0.0">
+<tool id="gigaword.get" name="Get a document" version="1.0.0">
  <command interpreter="lsd">
   get.lsd $token $key $service $output
  </command>

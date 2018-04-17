@@ -1,6 +1,5 @@
 
-<tool id="pubannotation.get" name="Get a document from the PubAnnotation PubMed corpus" version="1.0.0">
-
+<tool id="pubannotation.get" name="Get a PubMed document" version="1.0.0">
  <command>lsd $__tool_directory__/get.lsd $id $repo $type $output</command>
 
  <inputs>

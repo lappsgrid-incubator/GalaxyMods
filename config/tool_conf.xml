@@ -13,19 +13,7 @@
 		<label text="PubAnnotation" id="pubannotation_label"/>
 		<tool file="pubannotation/get.xml"/>
 		<tool file="pubannotation/collection.xml"/>
-
-		<label text="FDR" id="fdr_label"/>
-		<tool file="fdr/list.xml"/>
-		<tool file="fdr/get.xml"/>
-		<tool file="fdr/create_collection.xml"/>
-
-		<label text="Gigaword" id="gigaword_label"/>
-        <tool file="gigaword/keyprovider.xml"/>
-        <tool file="gigaword/list.xml"/>
-        <tool file="gigaword/get.xml"/>
-        <tool file="gigaword/create_collection.xml"/>
-        <tool file="gigaword/query.xml"/>
-
+		
 		<label text="BioNLP" id="bionlp_label"/>
 		<tool file="bionlp-coref/get.xml"/>
 		<tool file="bionlp-coref/list.xml"/>
@@ -41,6 +29,18 @@
 		<tool file="bionlp-reference/list.xml"/>
         <tool file="bionlp-reference/query.xml"/>
         <tool file="bionlp-reference/query_collection.xml"/>
+
+		<label text="FDR" id="fdr_label"/>
+		<tool file="fdr/list.xml"/>
+		<tool file="fdr/get.xml"/>
+		<tool file="fdr/create_collection.xml"/>
+
+		<label text="Gigaword" id="gigaword_label"/>
+        <tool file="gigaword/list.xml"/>
+        <tool file="gigaword/get.xml"/>
+        <tool file="gigaword/create_collection.xml"/>
+        <tool file="gigaword/query.xml"/>
+        <tool file="gigaword/keyprovider.xml"/>
 
 		<label text="MISC" id="misc_label"/>
         <tool file="twitter/twitter-datasource.xml"/>

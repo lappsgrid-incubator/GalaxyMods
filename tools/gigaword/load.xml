@@ -1,4 +1,4 @@
-<tool id="gigaword.load" name="Load a single document" version="1.0.0">
+<tool id="gigaword.load" name="Get a document" version="1.0.0">
   <command interpreter="lsd">load.lsd $token $input $output</command>
   <inputs>
     <param name="input" type="data" format="txt"/>

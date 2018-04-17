@@ -1,7 +1,4 @@
-<tool id="twitter-datasource" name="Twitter" version="1.0.0">
-  <description>
-data based on specific queries.    	
-  </description>
+<tool id="twitter-datasource" name="Get Twitter data based on a query" version="1.0.0">
     <requirements>
         <requirement type="package" version="1.0.0">lapps</requirement>
     </requirements>

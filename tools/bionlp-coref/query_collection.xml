@@ -1,9 +1,6 @@
-<tool id="bionlp.coref.query.collection" name="Query Coref Collection" version="1.0.0">
+<tool id="bionlp.coref.query.collection" name="Create a data collection of CoRef documents matching a query" version="1.0.0">
  <command>lsd $__tool_directory__/query_collection.lsd $query $type $start $end
  </command>
- <description>
-  Create a data collection from documents that match the query.
- </description>
  <inputs>
   <!--
     <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />

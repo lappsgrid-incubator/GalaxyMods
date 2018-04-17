@@ -1,6 +1,4 @@
-<tool id="gigaword.collection" name="Gigaword:" version="1.0.0">
-<description>
-Create a data collection consisting of documents from the English Gigaword corpus.
+<tool id="gigaword.collection" name="Create a data collection of select documents" version="1.0.0">
  <command interpreter="lsd">
   create_collection.lsd $token $start $end $service
  </command>

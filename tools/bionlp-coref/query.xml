@@ -1,7 +1,4 @@
-<tool id="bionlp.coref.query" name="Query Coref" version="1.0.0">
- <description>
-  Lists all keys that match the query.
- </description>
+<tool id="bionlp.coref.query" name="List CoRef Corpus keys matching a query" version="1.0.0">
  <command>lsd $__tool_directory__/query.lsd $query $output
  </command>
  <inputs>
