@@ -61,6 +61,8 @@
 		<tool file="converters/convert.json2gate_2.1.0.xml"/>
 		<tool file="converters/gigaword2lif.xml"/>
 		<tool file="pubannotation/convert.xml"/>
+        <tool file="cdc/convert-lif.xml"/>
+        <tool file="cdc/convert-xcas.xml"/>
 		<tool file="args/translate.xml"/>
 	</section>
 	
@@ -238,10 +240,18 @@
 		<tool file="common/wrap_text.xml"/>
     </section>
 
-   <section id="deiis" name="Text Statistics">
-    	<tool file="deiis/NGramAnnotator.xml"/>
+    <section id="cdc.fda" name="CDC/FDA">
+        <tool file="cdc/vaers.xml"/>
+        <tool file="cdc/ctakes.xml"/>
+        <tool file="cdc/convert-lif.xml"/>
+        <tool file="cdc/convert-xcas.xml"/>
+    </section>
+
+
+    <section id="deiis" name="Text Statistics">
+     	<tool file="deiis/NGramAnnotator.xml"/>
     	<tool file="common/word_count.xml"/>
-   </section>
+    </section>
    
 	<!--
     <section id="dbpedia" name="DBpedia Spotlight">
@@ -298,6 +308,7 @@
 		<tool file="common/masseuse.xml"/>
 		<tool file="common/sanitize.xml"/>
 		<tool file="common/wrap.xml"/>
+        <tool file="common/history.xml"/>
 	</section>
 	<section id="develop" name="Development">
 		<tool file="develop/collect.xml"/>
