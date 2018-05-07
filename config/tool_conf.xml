@@ -247,6 +247,12 @@
         <tool file="cdc/convert-xcas.xml"/>
     </section>
 
+    <section id="weka" name="WEKA Tools">
+        <tool file="weka/weka_classifier_smo.xml" />
+        <tool file="weka/weka_classifier_naivebayes.xml" />
+        <tool file="weka/weka_classifier_logistic.xml" />
+        <tool file="weka/weka_classifier_j48.xml" />
+    </section>
 
     <section id="deiis" name="Text Statistics">
      	<tool file="deiis/NGramAnnotator.xml"/>
