@@ -2,7 +2,7 @@
 
 //String base="http://172.16.5.75:9081/vaersWS/services/VaersAnnotatorService"
 
-String url="149.165.157.51:8086/vaersWS/services/VaersAnnotatorService"
+String url="http://149.165.157.51:8086/vaersWS/services/VaersAnnotatorService"
 
 String input = args[0]
 String output = args[1]
