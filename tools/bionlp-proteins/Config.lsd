@@ -2,7 +2,7 @@
 port=8082
 server = [
 	//url: "http://149.165.157.216:$port/GenericDatasource/1.2.0/services/GenericDatasource",
-	url: "http://149.165.157.51:$port/GenericDatasource/1.3.0-SNAPSHOT/services/GenericDatasource",
+	url: "http://149.165.157.51:$port/GenericDatasource/1.2.0/services/GenericDatasource",
 	username:'tester',
 	password:'tester'
 ]
