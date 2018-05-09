@@ -9,8 +9,8 @@
     <help><![CDATA[
 **What it does**
 
-Converts UIMA XCAS to LIF. At this time only the VAERS and cTakes type systems
-are supported.
+Converts UIMA XCAS to LIF. At this time only the VAERS type systems
+is supported.
 
 ]]>
     </help>

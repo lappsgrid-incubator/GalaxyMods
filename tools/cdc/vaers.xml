@@ -6,6 +6,6 @@
         <param format="lif" label="input" name="input" type="data"></param>
     </inputs>
     <outputs>
-        <data format="lif" name="output"></data>
+        <data format="xcas" name="output"></data>
     </outputs>
  </tool>

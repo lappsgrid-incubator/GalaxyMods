@@ -22,10 +22,11 @@ else {
     path = "${server}/docs/sourcedb/${repo}/sourceid/${id}.${type}"
 }
 
+String content
 Data data
 try {
     println "Fetching $path"
-    String content = new URL(path).text
+    content = new URL(path).text
     if (type == 'json') {
         data = new Data(Uri.JSON, content)
     }
@@ -46,5 +47,6 @@ if (outputFormat == 'lif') {
     output.text = data.asPrettyJson()
 }
 else {
-    output.text = data.payload
+    //output.text = data.payload
+    output.text = content
 }

@@ -51,6 +51,7 @@
 		<tool file="eurolan2017/ExportLif.xml"/>
 		<tool file="eurolan2017/ExportGate.xml"/>
 		<tool file="pubannotation/post.xml"/>
+        <tool file="pubannotation/extract.xml"/>
     </section>
     
     <section id="convert" name="Convert Formats">
@@ -61,6 +62,7 @@
 		<tool file="converters/convert.json2gate_2.1.0.xml"/>
 		<tool file="converters/gigaword2lif.xml"/>
 		<tool file="pubannotation/convert.xml"/>
+        <tool file="pubannotation/convert-json.xml"/>
         <tool file="cdc/convert-lif.xml"/>
         <tool file="cdc/convert-xcas.xml"/>
 		<tool file="args/translate.xml"/>

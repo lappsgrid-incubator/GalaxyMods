@@ -37,7 +37,7 @@
             <option value="txt">Text only</option>
         </param>
         <param name="outputFormat" label="Output Format" type="select">
-            <option value="lif" selected="true">LIF/JSON</option>
+            <option value="lif" selected="true">LAPPS/JSON</option>
             <option value="json">PubAnnotation JSON</option>
         </param>
 
