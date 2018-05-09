@@ -1,5 +1,5 @@
 <tool id="pubannotation.extract" name="Extract JSON" version="1.0.0">
- <description>from a LIF Data object</description>
+ <description>payload from a LIF Data object</description>
  <command>lsd $__tool_directory__/extract.lsd $input $output</command>
  <inputs>
   <param type="data" format="lif,pubann" label="Input Document" name="input"/>

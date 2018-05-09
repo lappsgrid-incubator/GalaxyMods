@@ -1,8 +1,12 @@
 <tool id="pubannotation.post" name="POST an annotated document to the PubAnnotation server" version="1.0.0">
  
- <command>curl -s -d @$input -H 'Content-type: application/json' -u '$email:$password' http://pubannotation.org/projects/LappsTest/docs/sourcedb/PubMed/sourceid/$id/annotations.json &gt; $output</command>
+ <command>curl -s -d @$input -H 'Content-type: application/json' -u '$email:$password' http://pubannotation.org/projects/LappsTest/docs/sourcedb/$repo/sourceid/$id/annotations.json &gt; $output</command>
  <inputs>
   <param format="json" label="PubAnnotation JSON" name="input" type="data"/>
+  <param type="select" label="Repository" name="repo">
+      <option value="PubMed" selected="true">PubMed</option>
+      <option value="PMC">PubMed Central</option>
+  </param>
   <param type="text" label="ID" name="id"/>
   <param type="text" label="Project" name="project" value="LappsTest"/>
   <param type="text" label="User Email" name="email"/>
