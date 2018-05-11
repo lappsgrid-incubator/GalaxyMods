@@ -1,0 +1,18 @@
+<tool id="gost.semantic.tagger" name="GOST" version="1.0.0">
+ <description>Gene Ontology Semantic Tagger</description>
+ <command>groovy semtagger.groovy $output</command>
+ <inputs>
+  <param format="lif" label="Input Document" name="input" type="data"/>
+ </inputs>
+ <outputs>
+  <data format="txt" label="Tagged Text" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[
+
+Gene Ontology Semantic Tagger
+
+]]>
+ </help>
+</tool>
