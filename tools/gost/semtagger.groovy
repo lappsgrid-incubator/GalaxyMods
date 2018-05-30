@@ -1,3 +1,7 @@
+@Grab("org.lappsgrid:serialization:2.5.0")
+@Grab("org.lappsgrid:api:2.0.1")
+@Grab("org.lappsgrid:discriminator:2.3.2")
+
 import ac.uk.lancs.ucrel.semtaggers.web.clients.SemanticTaggerClient;
 import groovy.json.*
 
