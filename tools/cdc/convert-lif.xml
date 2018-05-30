@@ -4,7 +4,7 @@
         <param name='input' type='data' format='lif' />
     </inputs>
     <outputs>
-        <data name='output' format='xcas' />
+        <data name='output' format='uima' />
     </outputs>
     <help><![CDATA[
 **What it does**
