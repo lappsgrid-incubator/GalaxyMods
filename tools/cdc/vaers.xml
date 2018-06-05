@@ -3,9 +3,9 @@
     <command>lsd $__tool_directory__/vaers.lsd $input $output
     </command>
     <inputs>
-        <param format="lif" label="input" name="input" type="data"></param>
+        <param format="lif,txt,uima" label="input" name="input" type="data"></param>
     </inputs>
     <outputs>
-        <data format="xcas" name="output"></data>
+        <data format="uima" name="output"></data>
     </outputs>
  </tool>
