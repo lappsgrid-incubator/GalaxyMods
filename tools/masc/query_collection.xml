@@ -2,7 +2,7 @@
  <command interpreter="lsd">
   query_collection.lsd $query $type $start $end
  </command>
- 
+
  <inputs>
   <!--
     <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />
@@ -14,13 +14,13 @@
   <param max="392" name="end" type="integer" value="392">
   </param>
   <param name="type" type="select">
+   <option value="anc:masc.text_2.2.0">
+    Text
+   </option>
+   <option value="anc:masc.json_2.2.0">
+    Gold Annotations
+   </option>
   </param>
-  <option value="anc:masc.text_2.2.0">
-   Text
-  </option>
-  <option value="anc:masc.json_2.2.0">
-   Gold Annotations
-  </option>
  </inputs>
  <outputs>
   <collection format="lif" label="Output List" name="list_output" type="list">
