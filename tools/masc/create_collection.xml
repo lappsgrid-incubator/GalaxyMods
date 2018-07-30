@@ -2,8 +2,11 @@
  <command interpreter="lsd">
   create_collection.lsd $type $start $end
  </command>
+ <!--
+<description>
  Create a data collection for select documents
 </description>
+-->
 <inputs>
  <!--
     <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />
