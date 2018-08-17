@@ -14,10 +14,14 @@
   </data>
  </outputs>
  <help>
-  <![CDATA[Stanford Named Entity Recognizer
-License
--------
+  <![CDATA[
+  
+Stanford Named Entity Recognizer
 
-Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.]]>
+**License**
+
+Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.
+
+]]>
  </help>
 </tool>

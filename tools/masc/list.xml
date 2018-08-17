@@ -1,7 +1,5 @@
-<tool id="masc.list" name="List" version="2.0.0">
- <description>
-  Lists all keys in MASC.
- </description>
+<tool id="masc.list" name="List document IDs" version="2.0.0">
+
  <command interpreter="lsd">
   list.lsd $output
  </command>
@@ -19,12 +17,14 @@
   -->
  <help>
   <![CDATA[
-Obtains a list of ID values for all documents in MASC.
+  
+**What it does**  
+  
+Obtains a list of IDs for all documents in MASC.
 
-License
--------
+**License**
 
-MASC data is free to use for any purpose, including commercial uses, under
+MASC data is free to use for any purpose, including commercial use, under
 the Creative Commons `CC-BY <https://creativecommons.org/licenses/by/2.0/>`_ license.
 ]]>
  </help>

@@ -8,10 +8,25 @@
     <data name='output' format='tsv' />
   </outputs>
   <help><![CDATA[
-Calculates the word counts in a document.
   
-At the moment the *Word Count* tool only works on documents that have been run through the **GATE**
-tokenizer as it requires Token annotations with the
-**tokenType** feature set.
+  
+**What it does**
+  
+Produces a chart with the word counts for a document
+  
+**Required annotations**
+
+* `Token <http://vocab.lappsgrid.org/Token.html>`_  (LIF) 
+
+**Generated Annotations**
+
+* None
+
+.. class:: infomark
+
+**NOTE**: This tool produces a list of words and their counts from the input document. Can be saved as a file by clicking the file (download) icon in the tool's history window.'
+
+
+
     ]]></help>
 </tool>

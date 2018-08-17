@@ -6,8 +6,8 @@ String service = args[0]
 String input = args[1]
 boolean prettyPrint = args[2] as Boolean
 String output = args[3]
-String username = args[4] ?: server.username ?: "operator"
-String password = args[5] ?: server.password ?: "operator"
+String username = args[4] ?: server.username ?: "tester"
+String password = args[5] ?: server.password ?: "tester"
 
 String url = "${server.url}/anc:${service}"
 ServiceClient client = new ServiceClient(url, username, password)

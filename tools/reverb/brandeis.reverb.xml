@@ -1,6 +1,6 @@
 <tool id="reverb.rel-ext" name="ReVerb Relation Extractor" version="1.0.1">
- <description>
-  ReVerb Relation Extractor
+<description>
+  (standalone) Identify and extract binary relations from unannotated text
  </description>
  <command interpreter="lsd">
   ../common/invoke_brandeis.lsd reverb.relationextractor_1.0.1 $input $output
@@ -15,10 +15,31 @@
  </outputs>
  <help>
   <![CDATA[
-License
--------
+  
+**What it does**
 
-The ReVerb tool is licensed under `ReVerb Software License Agreement <http://reverb.cs.washington.edu/LICENSE.txt>`_
+Identifies and extracts binary relations from English text. 
+
+.. class:: infomark
+
+Full Documentation at `http://reverb.cs.washington.edu <http://reverb.cs.washington.edu>`_. 
+
+**Required Annotations**
+
+* None
+
+**Generated Annotations**
+
+A LIF document containing:
+
+1. http://vocab.lappsgrid.org/Token
+#. http://vocab.lappsgrid.org/Markable
+#. http://vocab.lappsgrid.org/GenericRelation
+
+
+**License**
+
+The ReVerb tool is licensed under the `ReVerb Software License Agreement <http://reverb.cs.washington.edu/LICENSE.txt>`_
 
 ]]>
  </help>
