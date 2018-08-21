@@ -2,7 +2,7 @@
     <command>lsd $__tool_directory__/ctakes.lsd $input $output
     </command>
     <inputs>
-        <param format="lif,uima,txt" label="input" name="input" type="data"></param>
+        <param format="uima,txt" label="input" name="input" type="data"></param>
     </inputs>
     <outputs>
         <data format="uima" name="output"></data>
