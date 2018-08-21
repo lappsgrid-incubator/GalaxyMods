@@ -72,6 +72,7 @@
         <tool file="cdc/ctakes-clinical.xml"/>
         <tool file="cdc/ctakes-temporal.xml"/>
         <tool file="cdc/ncbo-coding.xml"/>
+        
         <!--
         <tool file="cdc/vaers.xml"/>
         <tool file="cdc/ctakes.xml"/>
