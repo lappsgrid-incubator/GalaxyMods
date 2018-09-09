@@ -68,15 +68,11 @@
 		<tool file="args/translate.xml"/>
 	</section>
 
+    <!--
     <section id="cdc.fda" name="CDC/FDA">
         <tool file="cdc/ctakes-clinical.xml"/>
         <tool file="cdc/ctakes-temporal.xml"/>
         <tool file="cdc/ncbo-coding.xml"/>
-
-        <!--
-        <tool file="cdc/vaers.xml"/>
-        <tool file="cdc/ctakes.xml"/>
-        -->
         <tool file="cdc/convert-lif.xml"/>
         <tool file="cdc/convert-xcas.xml"/>
     </section>
@@ -84,29 +80,24 @@
 
     <section id="getbiotools" name="Biomed tools">
 
-		<!--
-		<tool file="eurolan2017/DCTParser.xml"/>
-
-		-->
 		<tool file="eurolan2017/BioTokenizer.xml"/>
 		<tool file="eurolan2017/GeneTagger.xml"/>
-		<!-- <tool file="eurolan2017/MalignancyTagger.xml"/>
-		<tool file="eurolan2017/VariationTagger.xml"/>
-		<tool file="eurolan2017/BadRex.xml"/> -->
-		<tool file="eurolan2017/AbnerTagger.xml"/>		
+		<tool file="eurolan2017/AbnerTagger.xml"/>
 		<tool file="eurolan2017/TimeML.xml"/>
-		<!--
-		<tool file="eurolan2017/HeidelTime.xml"/>	
-		-->
-				
+	</section>
+    -->
 
-	</section>
-    
-	<!--
-	<section id="example-pipelines" name="Example Applications">
-		<tool file="eurolan2017/BioASQ.xml"/>
-	</section>
-	-->
+    <section id="weblicht.stanford" name="Weblicht Tools">
+    	<tool file="weblicht/stanford.tokenizer_1.0.0.xml"/>
+    	<tool file="weblicht/stanford.tagger_1.0.0.xml"/>
+    	<tool file="weblicht/stanford.ner_1.0.0.xml"/>
+    	<tool file="weblicht/stanford.parser_1.0.0.xml"/>
+		<tool file="weblicht/morph.adorner.xml"/>
+    	<tool file="weblicht/lif2tcf.xml"/>
+		<tool file="converters/tcf2lif.xml"/>
+		<tool file="common/wrap_text.xml"/>
+    </section>
+
 	
 
 	<section id="tokenizers" name="Tokenizers">
@@ -185,21 +176,11 @@
 		<tool file="stanford/vassar.tagger_2.1.0.xml"/>
 		<tool file="stanford/vassar.ner_2.1.0.xml"/>
 		<tool file="stanford/vassar.ner2_2.1.0.xml"/>
-		<!-- <tool file='stanford/brandeis.tokenizer.xml' />
-		<tool file='stanford/brandeis.splitter.xml' />-->
 		<tool file='stanford/brandeis.postagger.xml' />
 		<tool file='stanford/brandeis.namedentityrecognizer.xml' />
 		<tool file='stanford/brandeis.parser.xml' />
 		<tool file='stanford/brandeis.dependencyparser.xml' />
 		<tool file='stanford/brandeis.coref.xml' />
-		<!--
-		<tool file='dkpro/dkpro.stanford.coref.xml'/>
-		<tool file='dkpro/dkpro.stanford.namedentityrecognizer.xml'/>
-		<tool file='dkpro/dkpro.stanford.parser.xml'/>
-		<tool file='dkpro/dkpro.stanford.postagger.xml'/>
-		<tool file='dkpro/dkpro.stanford.splitter.xml'/>
-		<tool file='dkpro/dkpro.stanford.tokenizer.xml'/>
-		-->
 	</section>
 	<section id="gate" name="GATE Tools">
 		<tool file="gate/gate.tokenizer_2.3.0.xml"/>
@@ -218,13 +199,6 @@
 	  <tool file='opennlp/opennlp.postagger.xml' />
 	  <tool file='opennlp/opennlp.namedentityrecognizer.xml' />
 	  <tool file='opennlp/opennlp.parser.xml' />
-	  <!--
-		<tool file='dkpro/dkpro.opennlp.namedentityrecognizer.xml'/>
-		<tool file='dkpro/dkpro.opennlp.parser.xml'/>
-		<tool file='dkpro/dkpro.opennlp.postagger.xml'/>
-		<tool file='dkpro/dkpro.opennlp.splitter.xml'/>
-		<tool file='dkpro/dkpro.opennlp.tokenizer.xml'/>
-		-->
 	</section>
     <section id="lingpipe.tools" name="Lingpipe Tools">
 		<tool file="lingpipe/vassar.tokenizer_1.0.0.xml"/>
@@ -233,6 +207,8 @@
 		<tool file="lingpipe/vassar.ner_1.0.0.xml"/>
 		<tool file="lingpipe/cmu.dictionaryNER_1.0.0.xml"/>
     </section>
+
+    <!--
     <section id="dkpro" name="DKPro Core Tools">
 		<tool file='dkpro/dkpro.opennlp.namedentityrecognizer.xml'/>
 		<tool file='dkpro/dkpro.opennlp.parser.xml'/>
@@ -246,17 +222,6 @@
 		<tool file='dkpro/dkpro.stanford.splitter.xml'/>
 		<tool file='dkpro/dkpro.stanford.tokenizer.xml'/>
     </section>
-    <section id="weblicht.stanford" name="Weblicht Tools">
-    	<tool file="weblicht/stanford.tokenizer_1.0.0.xml"/>
-    	<tool file="weblicht/stanford.tagger_1.0.0.xml"/>
-    	<tool file="weblicht/stanford.ner_1.0.0.xml"/>
-    	<tool file="weblicht/stanford.parser_1.0.0.xml"/>
-		<tool file="weblicht/morph.adorner.xml"/>
-    	<tool file="weblicht/lif2tcf.xml"/>
-		<tool file="converters/tcf2lif.xml"/>
-		<tool file="common/wrap_text.xml"/>
-    </section>
-
     <section id="maching.learning" name="Machine Learning">
         <tool file="learning/classifier.xml"/>
         <tool file="learning/weka_classifier_smo.xml" />
@@ -269,7 +234,7 @@
      	<tool file="deiis/NGramAnnotator.xml"/>
     	<tool file="common/word_count.xml"/>
     </section>
-   
+   -->
 	<!--
     <section id="dbpedia" name="DBpedia Spotlight">
         <tool file="dbpedia/spotlight.xml"/>
@@ -299,18 +264,14 @@
 	<section id="kyoto.grid" name="Kyoto Node">
 		<tool file='kyoto/opennlp_postagger.xml'/>
 	</section>
-	-->
 	<section id="lapps.evaluation" name="Evaluation">
 
 		<tool file="oaqa/oaqa_evaluation.xml"/>
 		<tool file="oaqa/simple_oaqa.xml"/>
 		<tool file="ranking/svm_rank_learn.xml"/>
         <tool file="ranking/svm_rank_classify.xml"/>
-		<!--
-		<tool file="common/evaluation.xml"/>
-		<tool file="common/compare_annotations.xml"/>
-		-->
 	</section>
+	-->
 
 	<section id="misc" name="Miscellaneous">
 		<tool file="common/pretty_print.xml"/>
@@ -327,6 +288,8 @@
 		<tool file="common/wrap.xml"/>
         <tool file="common/history.xml"/>
 	</section>
+
+    <!--
 	<section id="develop" name="Development">
 		<tool file="develop/collect.xml"/>
 		<tool file="develop/WordFrequency.xml"/>
@@ -339,4 +302,5 @@
     <tool file="plotting/bar_chart.xml" />
     <tool file="plotting/boxplot.xml" />
   </section>
+  -->
 </toolbox>
