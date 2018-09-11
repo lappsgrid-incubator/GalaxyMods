@@ -212,7 +212,6 @@
 		<tool file="lingpipe/cmu.dictionaryNER_1.0.0.xml"/>
     </section>
 
-    <!--
     <section id="dkpro" name="DKPro Core Tools">
 		<tool file='dkpro/dkpro.opennlp.namedentityrecognizer.xml'/>
 		<tool file='dkpro/dkpro.opennlp.parser.xml'/>
@@ -234,6 +233,7 @@
         <tool file="learning/weka_classifier_j48.xml" />
     </section>
 
+    <!--
     <section id="deiis" name="Text Statistics">
      	<tool file="deiis/NGramAnnotator.xml"/>
     	<tool file="common/word_count.xml"/>
@@ -270,7 +270,6 @@
 	</section>
 	-->
 
-    <!--
 	<section id="lapps.evaluation" name="Evaluation">
 
 		<tool file="oaqa/oaqa_evaluation.xml"/>
@@ -278,7 +277,6 @@
 		<tool file="ranking/svm_rank_learn.xml"/>
         <tool file="ranking/svm_rank_classify.xml"/>
 	</section>
-    -->
 	<section id="misc" name="Miscellaneous">
 		<tool file="common/pretty_print.xml"/>
         <tool file="common/select.xml"/>
@@ -295,7 +293,6 @@
         <tool file="common/history.xml"/>
 	</section>
 
-    <!--
 	<section id="develop" name="Development">
 		<tool file="develop/collect.xml"/>
 		<tool file="develop/WordFrequency.xml"/>
@@ -308,5 +305,4 @@
     <tool file="plotting/bar_chart.xml" />
     <tool file="plotting/boxplot.xml" />
   </section>
-  -->
 </toolbox>
