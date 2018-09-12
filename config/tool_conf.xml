@@ -77,7 +77,9 @@
 		<tool file="converters/tcf2lif.xml"/>
 		<tool file="common/wrap_text.xml"/>
     </section>
-
+    <section id="lindat" name="Clarin Lindat">
+        <tool file="lindat/udpipe.xml"/>
+    </section>
 
     <!--
     <section id="cdc.fda" name="CDC/FDA">

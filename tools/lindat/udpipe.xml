@@ -1,0 +1,39 @@
+<tool id="lindat.udpipe" name="UDPipe" version="1.0.0">
+ <command>lsd __tool_directory__/udpipe.lsd $input $tools $lang $output
+ </command>
+ <inputs>
+     <param name="input" type="data" format="txt,lif" label="Input"/>
+  <!--
+    <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />
+  -->
+  <param name="tools" type="select">
+      <option value="t">Tokenizer</option>
+      <option value="tt">Tokenizer + Tagger</option>
+      <option value="ttp">Tokenizer + Tagger + Parser</option>
+  </param>
+     <param name="lang" type="select">
+         <option value="en">English</option>
+         <option value="cs">Czech</option>
+     </param>
+ </inputs>
+ <outputs>
+     <data format="lif" label="UDPiped" name="output"/>
+ </outputs>
+ <tests>
+ </tests>
+ <help>
+  <![CDATA[
+**What it Does**
+
+Sends the input document to the `UDPipe service <https://lindat.mff.cuni.cz/en/services#UDPipe>`_ at Clarin Lindat for tokenization, part of speech tagging, lemmatization, and dependency parsing.
+
+.. class:: infomark
+
+**License**
+
+The UDPipe service is free software available under the `Mozilla Public License 2.0 <https://www.mozilla.org/en-US/MPL/2.0/>`_ and the models are free for non-commercial use under the `Creative Commons BY-NC-SA <https://creativecommons.org/licenses/by-nc-sa/4.0/>`_ license.
+
+]]>
+
+ </help>
+</tool>
