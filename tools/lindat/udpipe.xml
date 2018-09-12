@@ -1,5 +1,5 @@
 <tool id="lindat.udpipe" name="UDPipe" version="1.0.0">
- <command>lsd __tool_directory__/udpipe.lsd $input $tools $lang $output
+ <command>lsd $__tool_directory__/udpipe.lsd $input $tools $lang $output
  </command>
  <inputs>
      <param name="input" type="data" format="txt,lif" label="Input"/>
