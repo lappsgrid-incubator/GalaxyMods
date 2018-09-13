@@ -1,5 +1,5 @@
 
-File input = new File(args[0[)
+File input = new File(args[0])
 String tools = args[1]
 String lang = args[2]
 File output = new File(args[3])
