@@ -7,9 +7,9 @@
     <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />
   -->
   <param name="tools" type="select">
-      <option value="t">Tokenizer</option>
-      <option value="tt">Tokenizer + Tagger</option>
-      <option value="ttp">Tokenizer + Tagger + Parser</option>
+      <option value="tokenizer">Tokenizer</option>
+      <option value="tagger">Tokenizer + Tagger</option>
+      <option value="parser">Tokenizer + Tagger + Parser</option>
   </param>
      <param name="lang" type="select">
          <option value="en">English</option>
