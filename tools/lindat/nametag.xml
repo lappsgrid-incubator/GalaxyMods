@@ -1,16 +1,23 @@
 <tool id="lindat.udpipe" name="UDPipe" version="1.0.0">
- <command>lsd $__tool_directory__/nametag.lsd $input $model $output
+ <command>lsd $__tool_directory__/udpipe.lsd $input $tools $lang $output
  </command>
  <inputs>
-     <param name="input" type="data" format="lif" label="Input"/>
-     <param name="model" type="select">
-         <option value="english-conll-140408">English CoNNL</option>
-         <option value="czech-cnec1.1-140304">Czech 1.1</option>
-         <option value="czech-cnec2.0-140304">Czech 2.0</option>
+     <param name="input" type="data" format="txt,lif" label="Input"/>
+  <!--
+    <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />
+  -->
+  <param name="tools" type="select">
+      <option value="t">Tokenizer</option>
+      <option value="tt">Tokenizer + Tagger</option>
+      <option value="ttp">Tokenizer + Tagger + Parser</option>
+  </param>
+     <param name="lang" type="select">
+         <option value="en">English</option>
+         <option value="cs">Czech</option>
      </param>
  </inputs>
  <outputs>
-     <data format="lif" label="NE Tagged" name="output"/>
+     <data format="lif" label="UDPiped" name="output"/>
  </outputs>
  <tests>
  </tests>

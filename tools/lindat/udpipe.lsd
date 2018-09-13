@@ -9,5 +9,5 @@ Data data = Serializer.parse(json)
 data.setParameter("tools", tools)
 data.setParameter("model", lang);
 
-ServiceClient service = new ServiceClient("http://services.lappsgrid.org/udpipe")
+ServiceClient service = new ServiceClient("http://services.lappsgrid.org/lindat/udpipe")
 output.text = service.execute(data.asJson())

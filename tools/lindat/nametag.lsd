@@ -1,0 +1,11 @@
+
+File input = new File(args[0[)
+String model = args[1]
+File output = new File(args[2])
+
+String json = input.text
+Data data = Serializer.parse(json)
+data.setParameter("model", model);
+
+ServiceClient service = new ServiceClient("http://services.lappsgrid.org/lindat/nametag")
+output.text = service.execute(data.asJson())
