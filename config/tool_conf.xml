@@ -79,6 +79,7 @@
     </section>
     <section id="lindat" name="Clarin Lindat">
         <tool file="lindat/udpipe.xml"/>
+        <tool file="lindat/nametag.xml"/>
     </section>
 
     <!--
