@@ -1,20 +1,34 @@
 <tool id="lindat.udpipe" name="UDPipe" version="1.0.0">
- <command>lsd $__tool_directory__/udpipe.lsd $input $tools $lang $output
+ <command>lsd $__tool_directory__/udpipe.lsd $input $tools
+     #if $selector.lang == "other":
+        $selector.iso
+     #else
+        #selector.lang
+     #end if
+     $output
  </command>
  <inputs>
      <param name="input" type="data" format="txt,lif" label="Input"/>
-  <!--
-    <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />
-  -->
-  <param name="tools" type="select">
-      <option value="tokenizer">Tokenizer</option>
-      <option value="tagger">Tokenizer + Tagger</option>
-      <option value="parser">Tokenizer + Tagger + Parser</option>
-  </param>
-     <param name="lang" type="select">
-         <option value="en">English</option>
-         <option value="cs">Czech</option>
-     </param>
+      <param name="tools" type="select">
+          <option value="tokenizer">Tokenizer</option>
+          <option value="tagger">Tokenizer + Tagger</option>
+          <option value="parser">Tokenizer + Tagger + Parser</option>
+      </param>
+     <conditional name="selector">
+         <param name="lang" type="select" label="Language Model">
+             <option value="ar">Arabic</option>
+             <option value="zh">Chinese</option>
+             <option value="cs">Czech</option>
+             <option value="en" selected="True">English</option>
+             <option value="fr">Frech</option>
+             <option value="de">German</option>
+             <option value="es">Spanish</option>
+             <option value="other">Other</option>
+         </param>
+            <when value="other">
+                <param name="iso" type="text" label="Language/model name or ISO code"/>
+            </when>
+        </conditional>
  </inputs>
  <outputs>
      <data format="lif" label="UDPiped" name="output"/>
@@ -26,6 +40,10 @@
 **What it Does**
 
 Sends the input document to the `UDPipe service <https://lindat.mff.cuni.cz/en/services#UDPipe>`_ at Clarin Lindat for tokenization, part of speech tagging, lemmatization, and dependency parsing.
+
+**Language Models**
+
+Use one of the predefined language models from the drop-down list. Or, select *other* and enter the model name, language name, or ISO language code in the text box.  Please refer to the `UDPipe API documentation <http://lindat.mff.cuni.cz/services/udpipe/api-reference.php#model_selection>`_ for a description of the language model selection algorithm.  The full list of language models is available `here <http://lindat.mff.cuni.cz/services/udpipe/api/models>`_.
 
 .. class:: infomark
 

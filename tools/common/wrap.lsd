@@ -1,8 +1,9 @@
 import static org.lappsgrid.discriminator.Discriminators.Uri
 
 String format = args[0]
-File input = new File(args[1])
-File output = new File(args[2])
+String lang = args[1]
+File input = new File(args[2])
+File output = new File(args[3])
 
 String type = Uri.TEXT
 def payload = input.text
@@ -14,6 +15,7 @@ else if (format == 'lif') {
 	type = Uri.LIF
 	def container = new Container()
 	container.text = payload
+	container.language = lang
 	payload = container
 }
 else if (format == 'xml') {
@@ -25,7 +27,7 @@ else if (format == 'gate') {
 else if (format == 'tcf') {
 	type = "http://vocab.lappsgrid.org/ns/media/xml#tcf"
 	payload = """<D-Spin xmlns="http://www.dspin.de/data" version="0.4">
-    <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="en">
+    <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="$lang">
         <tc:text xmlns:tc="http://www.dspin.de/data/textcorpus">$payload</tc:text>
     </TextCorpus>
 </D-Spin>""".toString()
