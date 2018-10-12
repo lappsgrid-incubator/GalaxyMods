@@ -3,7 +3,7 @@
      #if $selector.lang == "other":
         $selector.iso
      #else
-        #selector.lang
+        $selector.lang
      #end if
      $output
  </command>
