@@ -89,6 +89,7 @@
         <tool file="cdc/convert-lif.xml"/>
         <tool file="cdc/convert-xcas.xml"/>
     </section>
+
     <!--
     <section id="getbiotools" name="Biomed tools">
 
