@@ -19,8 +19,8 @@ from six.moves.urllib.request import urlopen
 
 from galaxy import util
 from galaxy.datatypes import sniff
+from galaxy.datatypes.binary import Binary
 from galaxy.datatypes.registry import Registry
-
 from galaxy.util import multi_byte
 from galaxy.util.checkers import check_binary, check_bz2, check_gzip, check_html, check_zip
 from galaxy.util.image_util import get_image_ext
@@ -90,7 +90,7 @@ def add_file(dataset, registry, json_file, output_path):
     check_content = dataset.get('check_content' , True)
     auto_decompress = dataset.get('auto_decompress', True)
     try:
-        dataset.file_type
+        ext = dataset.file_type
     except AttributeError:
         file_err('Unable to process uploaded file, missing file_type parameter.', dataset, json_file)
         return
@@ -398,33 +398,6 @@ def __main__():
         sys.exit(1)
 
     output_paths = parse_outputs(sys.argv[4:])
-
-    registry = Registry()
-    registry.load_datatypes(root_dir=sys.argv[1], config=sys.argv[2])
-
-    try:
-        datasets = __read_paramfile(sys.argv[3])
-    except (ValueError, AssertionError):
-        datasets = __read_old_paramfile(sys.argv[3])
-
-    metadata = []
-    for dataset in datasets:
-        dataset = util.bunch.Bunch(**safe_dict(dataset))
-        try:
-            output_path = output_paths[int(dataset.dataset_id)][0]
-        except Exception:
-            print('Output path for dataset %s not found on command line' % dataset.dataset_id, file=sys.stderr)
-            sys.exit(1)
-        try:
-            if dataset.type == 'composite':
-                files_path = output_paths[int(dataset.dataset_id)][1]
-                metadata.append(add_composite_file(dataset, output_path, files_path))
-            else:
-                metadata.append(add_file(dataset, registry, output_path))
-        except UploadProblemException as e:
-            metadata.append(file_err(e.message, dataset))
-    __write_job_metadata(metadata)
-
     json_file = open('galaxy.json', 'w')
 
     registry = Registry()
@@ -451,6 +424,7 @@ def __main__():
         os.remove(sys.argv[3])
     except:
         pass
+
 
 if __name__ == '__main__':
     __main__()

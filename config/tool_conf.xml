@@ -82,7 +82,6 @@
         <tool file="lindat/nametag.xml"/>
     </section>
 
-    <!--
     <section id="cdc.fda" name="CDC/FDA">
         <tool file="cdc/ctakes-clinical.xml"/>
         <tool file="cdc/ctakes-temporal.xml"/>
@@ -90,6 +89,7 @@
         <tool file="cdc/convert-lif.xml"/>
         <tool file="cdc/convert-xcas.xml"/>
     </section>
+    <!--
     <section id="getbiotools" name="Biomed tools">
 
 		<tool file="eurolan2017/BioTokenizer.xml"/>
