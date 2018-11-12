@@ -28,7 +28,7 @@ else if (type == 'ncbo') {
     service = "NcboService"
 }
 else {
-    System.err.println("Invalid service was specified in the wrapper XML file.)
+    System.err.println("Invalid service was specified in the wrapper XML file.")
 }
 
 String url = "http://${IP}:${port}/${name}/services/${service}"
