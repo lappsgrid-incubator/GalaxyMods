@@ -177,7 +177,11 @@
     <section id="rel-ext" name="Relation Extractors">
 		<tool file='reverb/brandeis.reverb.xml' />
 	</section>
-	
+
+    <section id="gost" name="GO Semantic Taggers">
+        <tool file="gost/semtagger.xml"/>
+    </section>
+
 	<section id="stanford" name="Stanford NLP Tools">
 		<tool file="stanford/vassar.tokenizer_2.1.0.xml"/>
 		<tool file="stanford/vassar.splitter_2.1.0.xml"/>

@@ -1,19 +1,19 @@
 <tool id="gost.semantic.tagger" name="GOST" version="1.0.0">
  <description>Gene Ontology Semantic Tagger</description>
- <command>/usr/lib/groovy/current/bin/groovy --cp $__tool_directory__ $__tool_directory__/semtagger.groovy $input $output</command>
- <!-- <command>java -classpath $__tool_directory__/semtagger.jar Main $input $output</command> -->
+ <command>groovy --classpath $__tool_directory__/lib/UcrelSemTaggerClient.jar:$__tool_directory__/lib/serialization-2.6.0.jar:$__tool_directory__/lib/discriminator-2.3.3.jar $__tool_directory__/semtagger.groovy $input $output</command>
  <inputs>
   <param format="lif" label="Input Document" name="input" type="data"/>
  </inputs>
  <outputs>
-  <data format="txt" label="Tagged Text" name="output">
-  </data>
+  <data format="lif" label="Tagged Text" name="output"/>
  </outputs>
  <help>
+
   <![CDATA[
 
 Gene Ontology Semantic Tagger
 
 ]]>
+
  </help>
 </tool>
