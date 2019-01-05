@@ -18,7 +18,7 @@ def tagger = new SemanticTaggerClient()
 
 def text = data.payload.text
 String tagged = tagger.tagEngText(text)
-println tagged
+//println tagged
 
 if (data.payload instanceof Map) {
     data.payload = new Container(data.payload)
