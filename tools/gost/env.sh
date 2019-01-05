@@ -1,0 +1,1 @@
+LIBS=./lib/UcrelSemTaggerClient.jar:./lib/discriminator-2.3.3.jar:./lib/groovy-2.5.3.jar:./lib/jackson-annotations-2.9.7.jar:./lib/jackson-core-2.9.7.jar:./lib/jackson-databind-2.9.7.jar:./lib/serialization-2.6.0.jar:

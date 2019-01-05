@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 
-source ./libs.sh
-echo $libs
-groovy -cp $libs semtagger.groovy $1 $2
+#source ./libs.sh
+#echo $libs
+java -cp .:lib/* semtagger $1 $2

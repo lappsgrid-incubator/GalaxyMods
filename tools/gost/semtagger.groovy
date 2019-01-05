@@ -1,6 +1,3 @@
-//@Grab("org.lappsgrid:serialization:2.6.0")
-//@Grab("org.lappsgrid:api:2.0.1")
-//@Grab("org.lappsgrid:discriminator:2.3.3")
 
 import ac.uk.lancs.ucrel.semtaggers.web.clients.SemanticTaggerClient;
 import groovy.json.*
@@ -21,7 +18,7 @@ def tagger = new SemanticTaggerClient()
 
 def text = data.payload.text
 String tagged = tagger.tagEngText(text)
-//println tagged
+println tagged
 
 if (data.payload instanceof Map) {
     data.payload = new Container(data.payload)
@@ -35,6 +32,7 @@ return
 
 Container process(Container container, String input) {
     View view = container.newView()
+    view.addContains(Uri.SEMANTIC_ROLE, this.class.name, "semantic role")
     int state = WAITING
     int count = 0
     input.eachLine { String line ->
