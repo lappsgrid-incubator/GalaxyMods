@@ -18,15 +18,13 @@ def tagger = new SemanticTaggerClient()
 
 def text = data.payload.text
 String tagged = tagger.tagEngText(text)
-//println tagged
 
 if (data.payload instanceof Map) {
     data.payload = new Container(data.payload)
 }
-//println data.asPrettyJson()
+
 data.payload = process(data.payload, tagged)
 String json = data.asPrettyJson()
-//println json
 output.text = json
 return
 
