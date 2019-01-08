@@ -1,0 +1,34 @@
+<tool id="masc.get" name=" Get document" version="2.0.0">
+  <!--<description>
+
+  </description>-->
+  <command>
+    $__tool_directory__/get.sh $key $output
+  </command>
+  <inputs>
+    <param label="Letter#" name="key" type="select">
+      <option value="1">Letter #1</option>
+      <option value="2">Letter #2</option>
+      <option value="3">Letter #3</option>
+      <option value="4">Letter #4</option>
+      <option value="5">Letter #5</option>
+      <option value="6">Letter #6</option>
+      <option value="7">Letter #7</option>
+    </param>
+  </inputs>
+  <outputs>
+    <data format="txt" label="Austen 1796 letter $key" name="output">
+    </data>
+  </outputs>
+    <help>
+      <![CDATA[
+
+      **What it does**  
+
+      Retrieves a single letter from Jane Austen's letters to her sister Cassandra Austen. 
+
+      **License**
+
+      ]]>
+    </help>
+  </tool>
