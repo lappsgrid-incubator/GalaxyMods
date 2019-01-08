@@ -1,9 +1,9 @@
-<tool id="masc.get" name=" Get document" version="2.0.0">
+<tool id="austen.get" name="Jane Austen letters" version="1.0.0">
   <!--<description>
 
   </description>-->
   <command>
-    $__tool_directory__/get.sh $key $output
+    bash $__tool_directory__/get.sh $key $output
   </command>
   <inputs>
     <param label="Letter#" name="key" type="select">
