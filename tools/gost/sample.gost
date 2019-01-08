@@ -1,0 +1,24 @@
+S_BEGIN	NULL	NULL	Z99	0	NULL
+This	this	DD1	Z8	0	ZC [Grammatical Item];
+is	be	VBZ	A3+ Z5	0	AK.01.g [State/condition]; AP.01.d [Identity]; ZC [Grammatical Item];
+a	a	AT1	Z5	0	ZC [Grammatical Item];
+test	test	NN1	P1 B3 X2.4	0	AB.12 [Laboratory/scientific biology]; AJ.02.c [Chemical tests]; BF.23 [Church government];
+.	PUNC	YSTP	PUNC	0	NULL
+S_END	NULL	NULL	Z99	0	NULL
+S_BEGIN	NULL	NULL	Z99	0	NULL
+This	this	DD1	Z8	0	ZC [Grammatical Item];
+is	be	VBZ	A3+ Z5	0	AK.01.g [State/condition]; AP.01.d [Identity]; ZC [Grammatical Item];
+another	another	DD1	A6.1- N5++	0	ZZ [Unrecognised]
+test	test	NN1	P1 B3 X2.4	0	AB.12 [Laboratory/scientific biology]; AJ.02.c [Chemical tests]; BF.23 [Church government];
+.	PUNC	YSTP	PUNC	0	NULL
+S_END	NULL	NULL	Z99	0	NULL
+S_BEGIN	NULL	NULL	Z99	0	NULL
+The	the	AT	Z5	0	ZC [Grammatical Item];
+test	test	NN1	P1 B3 X2.4	0	AJ.02.c [Chemical tests]; BF.23 [Church government]; AO.11.a.01 [Trial/test/testing];
+also	also	RR	N5++	0	AP.06.c.01 [Addition/supplementation]; AO.21 [Manner of action]; AP.01.d [Identity];
+includes	include	VVZ	A1.8+	0	AP.07.e.01 [Incorporation/inclusion]; AP.02.a.01 [Condition/state of being inclusive]; AL.05.c.04 [Enclosing/enclosure];
+a	a	AT1	Z5	0	ZC [Grammatical Item];
+third	third	MD	N4 N5 N1	0	AP.04 [Number];
+sentence	sentence	NN1	Q3 G2.1	0	AX.16.a.03 [Syntax]; BC.09.f.05 [Judging]; AR.17 [Intelligence, cleverness];
+.	PUNC	YSTP	PUNC	0	NULL
+S_END	NULL	NULL	Z99	0	NULL

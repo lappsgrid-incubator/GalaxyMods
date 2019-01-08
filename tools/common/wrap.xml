@@ -1,27 +1,72 @@
 <tool id="wrap.text" name="Wrap data" version="1.0.0">
     <description>in a Data container.</description>
-    <command>lsd $__tool_directory__/wrap.lsd $format $input $output</command>
+    <command>lsd $__tool_directory__/wrap.lsd $format
+        #if $selector.lang == "other":
+            $selector.iso_code
+        #else
+            $selector.lang
+        #end if
+        $input $output</command>
     <inputs>
         <param name="input" type="data" format="txt"/>
         <param name="format" type="select" label="New format">
             <option value="lif">Lapps Interchange Format (LIF)</option>
             <option value="tcf">Text Corpus Format (TCF)</option>
             <option value="txt">Plain Text (UTF-8)</option>
-            <option value="ldc">Gigaword/XML</option>
             <option value="gate">Gate/XML</option>
             <option value="xml">Generic XML</option>
+            <!--
+            <option value="ldc">Gigaword/XML</option>
+            -->
         </param>
+        <conditional name="selector">
+            <param name="lang" type="select" label="Language">
+                <option value="ar">Arabic</option>
+                <option value="zh">Chinese</option>
+                <option value="cs">Czech</option>
+                <option value="en" selected="True">English</option>
+                <option value="fr">Frech</option>
+                <option value="de">German</option>
+                <option value="es">Spanish</option>
+                <option value="other">Other</option>
+            </param>
+            <when value="other">
+                <param name="iso_code" type="text" label="2 letter ISO code"/>
+            </when>
+        </conditional>
     </inputs>
     <outputs>
         <data name="output" format="lif" label="Output">
 			<change_format>
 				<when input="format" value="tcf" format="tcf" />
+				<when input="format" value="txt" format="txt" />
+				<when input="format" value="gate" format="gate" />
+				<when input="format" value="xml" format="xml" />
 			</change_format>
         </data>
     </outputs>
+
     <help><![CDATA[
-    Any text files uploaded will typically need to be wrapped in a Data container before
-        they can be using in a LAPPS processing pipeline.
+**What it does**
+
+Wraps uploaded files or pasted data in a LAPPS Grid Interchange Format (LIF) container and specifies the datatype of the payload as LIF, TCF, or plain text.
+
+**Formats**
+
+* **Lapps Interchange Format (LIF)**: The ``discriminator`` will be set to `LIF <http://vocab.lappsgrid.org/ns/media/jsonld#lif>`_ and the ``payload`` will contain the JSON serialization of the a `Container <http://wiki.lappsgrid.org/org.lappsgrid.serialization/groovydoc/org/lappsgrid/serialization/lif/Container.html>`_ object.
+
+* **Text Corpus Format (TCF)**: The ``discriminator`` will be set to `TCF <http://vocab.lappsgrid.org/ns/media/xml#tcf>`_ and the ``payload`` will contain  TCF/XML with the text. This format is used with CLARIN tools.
+
+* **Plain Text**: The ``discriminator`` will be set to `Text <http://vocab.lappsgrid.org/ns/media/text>`_. and the ``payload`` will contain the text string.
+
+* **GATE/XML**: The ``discriminator`` will be set to `GATE <http://vocab.lappsgrid.org/ns/media/xml#gate>`_. and the ``payload`` will contain the GATE/XML string.
+
+* **text/xml**: The ``discriminator`` will be set to `XML <http://vocab.lappsgrid.org/ns/media/xml>`_. and the ``payload`` will contain the XML string.
+
+**License**
+
+The Text Wrapping Service is released under the `Apache 2.0 License <https://www.apache.org/licenses/LICENSE-2.0>`_.
+
     ]]>
     </help>
 </tool>

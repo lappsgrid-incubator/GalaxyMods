@@ -124,4 +124,7 @@
         <param name="debug" type="boolean" checked="false" label="Run in debug mode" truevalue="-output-debug-info" falsevalue="" />
 
     </inputs>
+    <outputs>
+        <data name='output' format='csv' />
+    </outputs>
 </tool>
