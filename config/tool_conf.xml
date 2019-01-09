@@ -1,12 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <toolbox>
-    <section id="getext" name="Get Data">
-		<tool file="data_source/upload.xml"/>
+  
+    	<section id="getext" name="Get Data">
+	<tool file="data_source/upload.xml"/>
+	<label text="MASC Corpus" id="masc_label"/>	
+	<tool file="masc/get.xml"/>
+	<tool file="masc/list.xml"/>
 
-		<label text="Manually Annotated SubCorpus" id="masc_label"/>
-		<tool file="masc/get.xml"/>
-		<tool file="masc/list.xml"/>
-        <tool file="masc/query.xml"/>
+	<!--
+	<tool file="masc/query.xml"/>
         <tool file="masc/create_collection.xml"/>
         <tool file="masc/query_collection.xml"/>
 
@@ -44,27 +46,30 @@
 
 		<label text="MISC" id="misc_label"/>
         <tool file="twitter/twitter-datasource.xml"/>
-
-	</section>
+	-->
 	
+	</section>
+
+	<!--
 	<section id="export" name="Export Data">
 		<tool file="eurolan2017/ExportLif.xml"/>
 		<tool file="eurolan2017/ExportGate.xml"/>
 		<tool file="pubannotation/post.xml"/>
-        <tool file="pubannotation/extract.xml"/>
-    </section>
-    
-    <section id="convert" name="Convert Formats">
+	        <tool file="pubannotation/extract.xml"/>
+	</section>
+	-->
+	
+    	<section id="convert" name="Convert Formats">
 		<tool file="common/wrap_text.xml"/>
 		<tool file="converters/tcf2lif.xml"/>
-    	<tool file="weblicht/lif2tcf.xml"/>
+    		<tool file="weblicht/lif2tcf.xml"/>
 		<tool file="converters/convert.gate2json_2.1.0.xml"/>
 		<tool file="converters/convert.json2gate_2.1.0.xml"/>
 		<tool file="converters/gigaword2lif.xml"/>
 		<tool file="pubannotation/convert.xml"/>
-        <tool file="pubannotation/convert-json.xml"/>
-        <tool file="cdc/convert-lif.xml"/>
-        <tool file="cdc/convert-xcas.xml"/>
+        	<tool file="pubannotation/convert-json.xml"/>
+        	<tool file="cdc/convert-lif.xml"/>
+        	<tool file="cdc/convert-xcas.xml"/>
 		<tool file="args/translate.xml"/>
 	</section>
 
@@ -87,19 +92,22 @@
 	</section>
     -->
 
-    <section id="weblicht.stanford" name="Weblicht Tools">
-    	<tool file="weblicht/stanford.tokenizer_1.0.0.xml"/>
-    	<tool file="weblicht/stanford.tagger_1.0.0.xml"/>
-    	<tool file="weblicht/stanford.ner_1.0.0.xml"/>
-    	<tool file="weblicht/stanford.parser_1.0.0.xml"/>
+    	<section id="weblicht.stanford" name="Weblicht Tools">
+    		<tool file="weblicht/stanford.tokenizer_1.0.0.xml"/>
+    		<tool file="weblicht/stanford.tagger_1.0.0.xml"/>
+    		<tool file="weblicht/stanford.ner_1.0.0.xml"/>
+	    	<tool file="weblicht/stanford.parser_1.0.0.xml"/>
 		<tool file="weblicht/morph.adorner.xml"/>
-    	<tool file="weblicht/lif2tcf.xml"/>
+	    	<tool file="weblicht/lif2tcf.xml"/>
 		<tool file="converters/tcf2lif.xml"/>
 		<tool file="common/wrap_text.xml"/>
-    </section>
+    	</section>
 
+	<section id="lindat" name="Clarin Lindat">
+        	<tool file="lindat/udpipe.xml"/>
+        	<tool file="lindat/nametag.xml"/>
+    	</section>
 	
-
 	<section id="tokenizers" name="Tokenizers">
 		<tool file="stanford/vassar.tokenizer_2.1.0.xml"/>
 		<!--		
@@ -112,6 +120,7 @@
 		<tool file='dkpro/dkpro.opennlp.tokenizer.xml'/> -->
 		<tool file="deiis/Tokenizer.xml"/>
 	</section>
+	
 	<section id="splitters" name="Sentence Splitters">
 		<tool file="stanford/vassar.splitter_2.1.0.xml"/>
 		<!--	
@@ -123,16 +132,18 @@
 		<!-- <tool file='dkpro/dkpro.stanford.splitter.xml'/>
 		<tool file='dkpro/dkpro.opennlp.splitter.xml'/> -->
 	</section>
+
 	<section id="taggers" name="Taggers">
 		<tool file="stanford/vassar.tagger_2.1.0.xml"/>
 		<tool file='stanford/brandeis.postagger.xml' />
 		<tool file="gate/gate.tagger_2.3.0.xml"/>
 		<tool file='opennlp/opennlp.postagger.xml' />
 		<tool file="lingpipe/vassar.tagger_1.0.0.xml"/>
-        <tool file="gost/semtagger.xml"/>
+        	<tool file="gost/semtagger.xml"/>
 		<!--<tool file='dkpro/dkpro.stanford.postagger.xml'/>
 		<tool file='dkpro/dkpro.opennlp.postagger.xml'/>-->
 	</section>
+	
 	<section id="ner" name="Named Entity Recognizers">
 		<tool file="stanford/vassar.ner_2.1.0.xml"/>
 		<tool file="stanford/vassar.ner2_2.1.0.xml"/>
@@ -145,9 +156,10 @@
 		<tool file="lingpipe/vassar.ner_1.0.0.xml"/>
 		<!-- tool file='dkpro/dkpro.stanford.namedentityrecognizer.xml'/>
 		<tool file='dkpro/dkpro.opennlp.namedentityrecognizer.xml'/>
-        <tool file="dbpedia/spotlight.xml"/>
-        <tool file="common/nerfix.xml"/>-->
+        	<tool file="dbpedia/spotlight.xml"/>
+        	<tool file="common/nerfix.xml"/>-->
 	</section>
+	
 	<section id="parsers" name="Parsers">
 		<tool file='stanford/brandeis.parser.xml' />
 		<tool file='stanford/brandeis.dependencyparser.xml' />
@@ -155,22 +167,23 @@
 		<!-- <tool file='dkpro/dkpro.stanford.parser.xml'/>
 		<tool file='dkpro/dkpro.opennlp.parser.xml'/>-->
 	</section>
+
 	<section id="chunkers" name="NP and VP Chunkers">
 		<tool file="gate/gate.npchunker_2.3.0.xml"/>
 		<tool file="gate/gate.vpchunker_2.3.0.xml"/>
 	</section>
 
-    <section id="coref" name="Coreference">
+   	<section id="coref" name="Coreference">
 		<tool file='stanford/brandeis.coref.xml' />
 		<!--
 		<tool file='dkpro/dkpro.stanford.coref.xml'/> -->
 	</section>
 	
-    <section id="rel-ext" name="Relation Extractors">
+    	<section id="rel-ext" name="Relation Extractors">
 		<tool file='reverb/brandeis.reverb.xml' />
 	</section>
 
-    <!--
+    	<!--
 	<section id="stanford" name="Stanford NLP Tools">
 		<tool file="stanford/vassar.tokenizer_2.1.0.xml"/>
 		<tool file="stanford/vassar.splitter_2.1.0.xml"/>
@@ -274,21 +287,27 @@
 
 	<section id="misc" name="Miscellaneous">
 		<tool file="common/pretty_print.xml"/>
-        <tool file="common/select.xml"/>
+        	<!--
+		<tool file="common/select.xml"/>
 		<tool file="common/filter.xml"/>
 		<tool file="common/simple_filter.xml"/>
 		<tool file="common/filter.xml"/>
-        <tool file="common/nerfix.xml"/>
+	        <tool file="common/nerfix.xml"/>
 		<tool file="common/rename.xml"/>
 		<tool file="common/rename_features.xml"/>
+		-->
 		<tool file="common/wrap_text.xml"/>
+		<!--
 		<tool file="common/masseuse.xml"/>
 		<tool file="common/sanitize.xml"/>
+		-->
 		<tool file="common/wrap.xml"/>
-        <tool file="common/history.xml"/>
+	        <!--
+		<tool file="common/history.xml"/>
+		-->
 	</section>
 
-    <!--
+    	<!--
 	<section id="develop" name="Development">
 		<tool file="develop/collect.xml"/>
 		<tool file="develop/WordFrequency.xml"/>
@@ -296,10 +315,11 @@
 		<tool file="develop/FilterStopwords.xml"/>
 	</section>
 
-  <section id="plots" name="Graph/Display Data">
+  	<section id="plots" name="Graph/Display Data">
 		<tool file="common/pretty_print.xml"/>
-    <tool file="plotting/bar_chart.xml" />
-    <tool file="plotting/boxplot.xml" />
-  </section>
-  -->
+    		<tool file="plotting/bar_chart.xml" />
+    		<tool file="plotting/boxplot.xml" />
+  	</section>
+  	-->
+
 </toolbox>
