@@ -6,6 +6,8 @@
 	<label text="MASC Corpus" id="masc_label"/>	
 	<tool file="masc/get.xml"/>
 	<tool file="masc/list.xml"/>
+	<label text="Austen Letters" id="austen_label"/>	
+	<tool file="austen/get.xml"/>
 
 	<!--
 	<tool file="masc/query.xml"/>

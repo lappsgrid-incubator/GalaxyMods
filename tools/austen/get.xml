@@ -17,7 +17,7 @@
     </param>
   </inputs>
   <outputs>
-    <data format="txt" label="Austen 1796 letter $key" name="output">
+    <data format="lif" label="Austen 1796 letter $key" name="output">
     </data>
   </outputs>
     <help>
