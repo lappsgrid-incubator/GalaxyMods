@@ -1,0 +1,36 @@
+//TODO This needs to be changed to the URL for the service that is actually deployed.
+
+IP="149.165.157.51"
+
+//String url = "http://localhost:8080/ctakes-clinical-1.0.0/services/CTakesClinicalService"
+
+String type = args[0]
+File input = new File(args[1])
+File output = new File(args[2])
+
+String port = ""
+String name = ""
+String serviceName = ""
+
+if (type == 'clinical') {
+    port = "8101"
+    name = "ctakes-clinical-1.0.0"
+    serviceName = 'CTakesClinicalService'
+}
+else if (type == 'temporal' || type == 'relation') {
+    port = "8102"
+    name = "ctakes-relations-1.0.0"
+    serviceName = "CTakesTemporalService"
+}
+else if (type == 'ncbo') {
+    port = "8103"
+    name = "ncbo-coding-1.0.0"
+    serviceName = "NcboService"
+}
+else {
+    System.err.println("Invalid service was specified in the wrapper XML file.")
+}
+
+String url = "http://${IP}:${port}/${name}/services/${serviceName}"
+ServiceClient service = new ServiceClient(url)
+output.text = service.execute(input.text)

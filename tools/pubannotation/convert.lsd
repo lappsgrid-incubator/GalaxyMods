@@ -34,6 +34,12 @@ container.views.each { view ->
         document.denotations.add(record)
     }
 }
+def metadata = container.metadata
+['target', 'sourceid', 'sourcedb', 'divid', 'section', 'source_url', 'project'].each { name ->
+    if (metadata[name]) {
+        document[name] = metadata[name]
+    }
+}
 
 output.text = new JsonBuilder(document).toPrettyString()
 

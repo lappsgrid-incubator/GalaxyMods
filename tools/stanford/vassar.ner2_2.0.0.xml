@@ -6,34 +6,35 @@
   invoke_ner2.lsd $model $input $output
  </command>
  <inputs>
-  <param format="lif" label="input" name="input" type="data">
-  </param>
+  <param format="lif" label="input" name="input" type="data"/>
   <param label="Model" name="model" type="select">
+   <option value="english.all.3class.distsim.crf.ser.gz">
+    All 3
+   </option>
+   <option value="english.conll.4class.distsim.crf.ser.gz">
+    CONLL 4
+   </option>
+   <option value="english.muc.7class.distsim.crf.ser.gz">
+    MUC 7
+   </option>
+   <option value="english.nowiki.3class.distsim.crf.ser.gz">
+    Nowiki 3
+   </option>
   </param>
-  <option value="english.all.3class.distsim.crf.ser.gz">
-   All 3
-  </option>
-  <option value="english.conll.4class.distsim.crf.ser.gz">
-   CONLL 4
-  </option>
-  <option value="english.muc.7class.distsim.crf.ser.gz">
-   MUC 7
-  </option>
-  <option value="english.nowiki.3class.distsim.crf.ser.gz">
-   Nowiki 3
-  </option>
  </inputs>
  <outputs>
   <data format="lif" name="output">
   </data>
  </outputs>
  <help>
-  <![
-CDATA[Stanford Named Entity Recognizer
+  <![CDATA[
 
-License
--------
+ Stanford Named Entity Recognizer
 
-Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.]]>
+**License**
+
+Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.
+
+]]>
  </help>
 </tool>

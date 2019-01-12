@@ -1,8 +1,5 @@
-<tool id="bionlp.reference.query.collection" name="Query Reference Collection" version="1.0.0">
+<tool id="bionlp.reference.query.collection" name="Create a data collection of Reference Corpus documents matching a query" version="1.0.0">
  <command>lsd $__tool_directory__/query_collection.lsd $query $type $start $end</command>
- <description>
-  Create a data collection from documents that match the query.
- </description>
  <inputs>
   <param label="Query" name="query" type="text"/>
   <param name="type" type="select">
@@ -25,8 +22,7 @@
 
 Creates a dataset collection of all documents that contain the "query" string as part of their document id.
 
-Description
------------
+**Description**
 
 Includes Token, Token+pos, enju dependency parses annotated as Relation (with categories modOf, arg1Of, arg2Of, and arg3Of) in one view; and event annotations, named entity annotations for Proteins, Relations between events and proteins (themeOf, causeOf, locationOf, equivalentTo), and Modification (Negation, Speculation), for 14 full paper articles about NFκB proteins in another.
 

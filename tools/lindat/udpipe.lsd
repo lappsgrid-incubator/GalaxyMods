@@ -1,0 +1,13 @@
+
+File input = new File(args[0])
+String tools = args[1]
+String lang = args[2]
+File output = new File(args[3])
+
+String json = input.text
+Data data = Serializer.parse(json)
+data.setParameter("tools", tools)
+data.setParameter("model", lang);
+
+ServiceClient service = new ServiceClient("http://services.lappsgrid.org/lindat/udpipe")
+output.text = service.execute(data.asJson())

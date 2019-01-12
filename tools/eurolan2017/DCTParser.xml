@@ -9,8 +9,8 @@
   </outputs>
   <help><![CDATA[
   
-HELP
-====
+**What it does**
+
 
 Tries to determine the Document Creation Time (DCT) as this will be required to resolve relative times such as "tomorrow" or "last week".
 

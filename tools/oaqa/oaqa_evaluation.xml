@@ -13,8 +13,27 @@
     <data name="output" format="html" label="Evaluation"/>
   </outputs>
   <help>
-Performs evaluation comparing the test data to gold standard data.
+**What it does**
+  
+Performs evaluation comparing user-specified annotations in test data to gold standard annotations.
 
-The evaluation will be performed on the annotations in the last view in each document.
+.. class:: warningmark
+
+The evaluation is performed on the annotations in the last view in each document.
+
+**Required annotations**
+
+* Annotations of the type specified in the tool configuration panel, with the specified feature type.
+
+**Generated Annotations**
+
+* None
+
+.. class:: infomark
+
+Tne evaluator generates an HTML document providing precision, recall, and f-score, together with an item-by-item comparison of the two documents. 
+The HTML document is displayed in the main window (click on the "eye" icon) and/or can be downloaded by 
+clicking on the file (download) icon in the tool's history window.
+
   </help>
 </tool>

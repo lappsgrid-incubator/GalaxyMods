@@ -1,7 +1,4 @@
-<tool id="bionlp.coref.query" name="Query Coref" version="1.0.0">
- <description>
-  Lists all keys that match the query.
- </description>
+<tool id="bionlp.coref.query" name="List CoRef Corpus keys matching a query" version="1.0.0">
  <command>lsd $__tool_directory__/query.lsd $query $output
  </command>
  <inputs>
@@ -17,9 +14,7 @@
   
  Returns a list of the documents whose key (document ID) contains the given query string. 
  
-Description
------------
- 
+**Description** 
 Includes annotations for anaphors bound by protein or event references, produced semi-automatically. 338 anaphora structures are annotated for 218 anaphor expressions, which are bound by 320 antecedents.
  
   ]]>

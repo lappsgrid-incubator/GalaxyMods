@@ -19,7 +19,7 @@
         <data name='output' format='lif'/>
     </outputs>
     <help><![CDATA[
-Calculates the score for each windows based on the algorithms selected. If more than one
+Calculates the score for each window based on the algorithms selected. If more than one
 algorithm is selected use the *weight* field for each algorithm to bias some algorithms
 over the others.  It is up to the user to ensure that the weights for all of the 
 selected algorithms add up to one.

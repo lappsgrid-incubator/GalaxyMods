@@ -42,6 +42,7 @@
   <help>
 **What it does**
 
+
 This tool builds a bar chart on one or more columns. Suppose you have dataset like this one::
 
   Gene1	10	15

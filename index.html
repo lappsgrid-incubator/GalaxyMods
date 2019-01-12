@@ -1,159 +1,105 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="style/base.css" type="text/css" />
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style/base.css" type="text/css" />
     <style type="text/css">
 
-.page-header { color: #fff; text-align: center; background-color: #159957; background-image: linear-gradient(120deg, #0A4758, #1286AB); font-family: Callibri, sans-serif}
+        html { font-size: 14px; }
+
+.page-header { margin: 0 0 0.2rem 0; color: #fff; text-align: center; background-color: #159957; background-image: linear-gradient(120deg, #0A4758, #1286AB); font-family: Callibri, sans-serif}
 @media screen and (min-width: 64em) { .page-header { /* padding: 5rem 6rem; */ padding: 3rem 3rem; } }
 @media screen and (min-width: 42em) and (max-width: 64em) { .page-header { padding: 3rem 4rem; } }
 @media screen and (max-width: 42em) { .page-header { padding: 2rem 1rem; } }
 
-.project-name { margin-top: 0; margin-bottom: 0.1rem; }
-@media screen and (min-width: 64em) { .project-name { font-size: 3.25rem; } }
+.project-name { margin-top: 0; margin-bottom: 0.1rem; font-size: 4.25rem;}
+/*@media screen and (min-width: 64em) { .project-name { font-size: 10rem; } }
 @media screen and (min-width: 42em) and (max-width: 64em) { .project-name { font-size: 2.25rem; } }
-@media screen and (max-width: 42em) { .project-name { font-size: 1.75rem; } }
+@media screen and (max-width: 42em) { .project-name { font-size: 3.5rem; } } */
 
-.project-tagline { margin-bottom: 2rem; font-weight: normal; opacity: 0.7; }
-@media screen and (min-width: 64em) { .project-tagline { font-size: 1.25rem; } }
+.project-tagline { margin-bottom: 2rem; font-weight: normal; opacity: 0.7; font-size: 2rem}
+/*@media screen and (min-width: 64em) { .project-tagline { font-size: 2.25rem; } }
 @media screen and (min-width: 42em) and (max-width: 64em) { .project-tagline { font-size: 1.15rem; } }
-@media screen and (max-width: 42em) { .project-tagline { font-size: 1rem; } }
+@media screen and (max-width: 42em) { .project-tagline { font-size: 1rem; } } */
 
-.font-basic {font-family: Callibri, sans-serif; }
-.font-basic-ref {font-family: Callibri, sans-serif; font-size: .75rem}
+.font-basic {font-family: Callibri, sans-serif; font-size: 1rem; }
+.font-basic-ref {font-family: Callibri, sans-serif; font-size: 0.8rem; }
 
+.twitter {
+    text-align: center;
+    padding-bottom: 5px;
+}
     </style>
-
-
-
-
-
-</head>
-<body>
-    <div class="document">
+    </head>
+    <body style="margin: 0">
         <section class="page-header">
-      <h1 class="project-name">The Language Applications Grid</h1>
-      <h2 class="project-tagline">An open framework for interoperable NLP web services</h2>    
-    </section>
-    
-
-
-    <!--
-        <div class="lappsmessage">
-            <img src="images/logo2.png" alt="LAPPS Grid Logo" width="100%"/><br/>          
+            <h1 class="project-name">The Language Applications Grid</h1>
+            <h2 class="project-tagline">An open framework for interoperable NLP web services</h2>
+        </section>
+        <div class="container">
+            <p class="text-center">
+                <a href="https://twitter.com/lappsgrid" class="twitter-follow-button" data-show-count="false">Follow us</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </p>
         </div>
-        <div class="panel panel-danger">
-            <div class="panel-heading">
-                <h1 class="panel-title">LAPPS  Grid Evolution</h1>
-            </div>
-            <div class="panel-body">
-                The LAPPS Grid is currently under rapid development. We have recently entered into collaborations with the 
-                <a href="langrid.org">Language Grid</a> and other federated grids in Asia, as well as CLARIN's <a href="http://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page>Weblicht</a>
-                and <a href="https://lindat.mff.cuni.cz/repository/xmlui/">LINDAT/CLARIN</a> to provide access from within the LAPPS Grid to the hundreds of  tools and resources they provide.
-                We are also routinely adding new tools and resources contributed by colleagues to the LAPPS Grid. As a result you 
-            </div>
-        </div>
-        -->
-        <div class="panel panel-info">
-            <div class="panel-body font-basic">
-                <p>Welcome to the LAPPS Grid Galaxy instance. Through this Galaxy instance you can:</p>
-                <ol>
-                    <li>Fetch documents from language corpora and data from lexicons and other language resources.</li>
-                    <li>Create and apply workflows using tools drawn from several major NLP projects and platforms. The LAPPS Grid ensures interoperability among tools from different sources.
-                    <li>Evaluate the performance of tools in alternative workflows to determine the most effective configuration.
-                    <li>Visualize results in a variety of charts and graphs.
-                    <li><font color="red">COMING SOON:</font> Access hundreds of tools and resources available from the <a target="_blank" class="reference" href="langrid.org">Language Grid</a> and other federated grids in Asia, as well as EU CLARIN's <a href="http://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page>Weblicht</a>
-                and <a target="_blank" class="reference" href="https://lindat.mff.cuni.cz/repository/xmlui/">LINDAT/CLARIN</a>.
-                    </li>
-                </ol>
+        <div class="container">
+            <div class="card">
+                <div class="card-body font-basic">
+                    <p class="card-text">Welcome to the LAPPS Grid Galaxy instance. Through this Galaxy instance you can:</p>
+                    <ol>
+                        <li>Fetch documents from language corpora and data from lexicons and other language resources.</li>
+                        <li>Create and apply workflows using tools drawn from several major NLP projects and platforms. The LAPPS Grid ensures interoperability among tools from different sources.
+                        <li>Evaluate the performance of tools in alternative workflows to determine the most effective configuration.
+                        <li>Visualize results in a variety of charts and graphs.
+                        <li><font color="red">COMING SOON:</font> Access hundreds of tools and resources available from the <a target="_blank" class="reference" href="langrid.org">Language Grid</a> and other federated grids in Asia, as well as EU CLARIN's <a href="http://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/Main_Page>Weblicht</a>
+                    and <a target="_blank" class="reference" href="https://lindat.mff.cuni.cz/repository/xmlui/">LINDAT/CLARIN</a>.
+                        </li>
+                    </ol>
+                </div>
             </div>
         </div>
-        <!--
-        <div class="panel panel-info">
-            <div class="panel-heading"><img src="lapps-logo.png" alt="LAPPS Logo"/></div>
-            <div class="panel-body">
-                <img src="lapps-logo.png" alt="LAPPS Logo"/><br/>
-            <p>Welcome to the LAPPS Grid Galaxy instance. Through this Galaxy instance you can:</p>
-            <ol>
-            	<li>Fetch documents from the MASC or Gigaword corpora.</li>
-            	<li>Create processing pipelines with tools from:
-            		<ol>
-            			<li>GATE</li>
-            			<li>Apache OpenNLP</li>
-            			<li>Stanford NLP</li>
-            		</ol>
-            	</li>
-            </ol>
-            </div>
-
-        </div>
-        -->
-        <!--
-        <div class="panel panel-info">
-        	<div class="panel-heading">
-        		<h1 class="panel-title">Simple Tutorial</h1>
-        	</div>
-        	<div class="panel-body">
-        		<p>If you have a good understanding of how Galaxy works you can run the
-        		following tools in order:</p>
-        		<ol>
-        			<li>Get data -> MASC</li>
-        			<li>From the GATE menu ->
-        				<ol>
-        					<li>Tokenizer</li>
-        					<li>Sentence Splitter</li>
-        					<li>Part of speech tagger</li>
-        				</ol>
-        			</li>
-        			<li>From the History panel select ->
-        				<ol>
-        					<li>Edit attributes</li>
-        					<li>Convert Format (there is only one converter, so just run it)</li>
-        				</ol>        				
-        			</li>
-        			<li>Tools -> Word Count</li>
-        			<li>Expand the output select the <em>Visualize</em> icon and then <em>Charts</em></li>
-        			<li>Click the <tt>Add Data</tt> and select <tt>Column: 1</tt>, <tt>Column: 1</tt>,
-        			and <tt>Column: 2</tt> respectively.</li>
-        			<li>Click the <tt>Draw</tt> button to marvel at the simple word count histogram ;-)</li>
-        		</ol>
-        	</div>
-        </div>
-    
-        <div class="panel panel-warning">
-        	<div class="panel-heading">
-        		<h1 class="panel-title"></h1>
-        	</div>
-        	<div class="panel-body">
-				<p>While the LAPPS Grid ensures that the inputs to a processing tool use
-				the correct file format, it does not currently ensure the document contains the required
-				annotation types (e.g. part of speech taggers typically require
-				the input document to contain <tt>Token</tt> annotations.</p>
-        	</div>
-        </div>
-            -->
         <br/>
-        <center>
-        <a href="https://twitter.com/lappsgrid" class="twitter-follow-button" data-show-count="false">Follow us</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </center>
-        <hr/>
-        <div class="font-basic-ref">
-        <a target="_blank" class="reference" href="http://lappsgrid.org/">The Language Applications (LAPPS) Grid</a> is an open platform for research and development involving any aspect of natural language processing.  
-        The LAPPS Grid team</a> includes collaborators from the 
-        <a target="_blank" class="reference" href="http://www.cs.vassar.edu">Department of Computer Science</a> at <a target="_blank" class="reference" href="http://www.vassar.edu">Vassar College</a>, the
-        <a target="_blank" class="reference" href="http://www.cs.brandeis.edu">Department of Computer Science</a> at <a target="_blank" class="reference" href="http://www.brandeis.edu">Brandeis University</a>, the
-        <a target="_blank" class="reference" href="http://www.lti.cmu.edu">Language Technology Institute</a> at <a target="_blank" class="reference" href="http://www.cmu.edu">Carnegie Mellon University</a>, and the 
-        <a target="_blank" class="reference" href="http://www.ldc.upenn.edu">Linguistic Data Consortium</a> at the <a target="_blank" class="reference" href="http://www.upenn.edu">University of Pennsylvania</a>. 
-        The <a target="_blank" class="reference" href="http://lappsgrid.org/">LAPPS Grid Project</a> is supported by the <a target="_blank" class="reference" href="http://www.nsf.gov">U.S. National Science Foundation</a> and the 
-        <a target="_blank" class="reference" href="http://mellon.org">Mellon Foundation</a>.
-        <hr/>
-        <a target="_blank" class="reference" href="http://galaxyproject.org/">Galaxy</a> is an open, web-based platform for data intensive biomedical research.  The <a target="_blank" class="reference" href="http://wiki.galaxyproject.org/GalaxyTeam">Galaxy team</a> is a part of <a target="_blank" class="reference" href="http://www.bx.psu.edu">BX</a> at <a target="_blank" class="reference" href="http://www.psu.edu">Penn State</a>, and the <a target="_blank" class="reference" href="http://www.biology.emory.edu/">Biology</a> and <a target="_blank" class="reference" href="http://www.mathcs.emory.edu/">Mathematics and Computer Science</a> departments at <a target="_blank" class="reference" href="http://www.emory.edu/">Emory University</a>.  The <a target="_blank" class="reference" href="http://galaxyproject.org/">Galaxy Project</a> is supported in part by <a target="_blank" class="reference" href="http://www.genome.gov">NHGRI</a>, <a target="_blank" class="reference" href="http://www.nsf.gov">NSF</a>, <a target="_blank" class="reference" href="http://www.huck.psu.edu">The Huck Institutes of the Life Sciences</a>, <a target="_blank" class="reference" href="http://www.ics.psu.edu">The Institute for CyberScience at Penn State</a>, and <a target="_blank" class="reference" href="http://www.emory.edu/">Emory University</a>.</p>
-       </div> 
-       <hr/>
+        <div class="container">
+            <div class="card">
+
+                <div class="card-body font-basic">
+                    <h1 class="card-title">Notice</h1>
+                    <p>By using any data or services provided via the LAPPS Grid or any Federated Grid (collectively 'Grids'), you are agreeing to all provisions contained in the license agreements and terms of use associated with those data and services and with the Grids themselves.</p>
+                    <p>Please see the individual tools for any license restrictions that may apply.</p>
+                </div>
+            </div>
+        </div>
         <br/>
-        
-    </div>
-</body>
+        <div class="container">
+            <div class="card">
+                <div class="card-body font-basic">
+                    <h2 class="card-title">Acknowledgements</h2>
+                    <p>
+                        <a target="_blank" class="reference" href="http://lappsgrid.org/">The Language Applications (LAPPS) Grid</a> is an open platform for research and development involving any aspect of natural language processing.
+                        The LAPPS Grid team</a> includes collaborators from the
+                        <a target="_blank" class="reference" href="http://www.cs.vassar.edu">Department of Computer Science</a> at <a target="_blank" class="reference" href="http://www.vassar.edu">Vassar College</a>, the
+                        <a target="_blank" class="reference" href="http://www.cs.brandeis.edu">Department of Computer Science</a> at <a target="_blank" class="reference" href="http://www.brandeis.edu">Brandeis University</a>, the
+                        <a target="_blank" class="reference" href="http://www.lti.cmu.edu">Language Technology Institute</a> at <a target="_blank" class="reference" href="http://www.cmu.edu">Carnegie Mellon University</a>, and the
+                        <a target="_blank" class="reference" href="http://www.ldc.upenn.edu">Linguistic Data Consortium</a> at the <a target="_blank" class="reference" href="http://www.upenn.edu">University of Pennsylvania</a>.
+                        The <a target="_blank" class="reference" href="http://lappsgrid.org/">LAPPS Grid Project</a> is supported by the <a target="_blank" class="reference" href="http://www.nsf.gov">U.S. National Science Foundation</a> and the
+                        <a target="_blank" class="reference" href="http://mellon.org">Mellon Foundation</a>.
+                    </p>
+                    <hr/>
+                    <p>
+                        <a target="_blank" class="reference" href="http://galaxyproject.org/">
+                        Galaxy</a> is an open platform for supporting data intensive
+                        research. Galaxy is developed by <a target="_blank" class="reference" href="https://galaxyproject.org/galaxy-team/">The Galaxy Team</a>
+                        with the support of  <a target="_blank" class="reference" href="https://github.com/galaxyproject/galaxy/blob/dev/CONTRIBUTORS.md">many contributors</a>.
+                    </p>
+                    <footer>
+                        The <a target="_blank" class="reference" href="http://galaxyproject.org/">Galaxy Project</a>
+                        is supported in part by <a target="_blank" class="reference" href="http://www.genome.gov">NHGRI</a>,
+                        <a target="_blank" class="reference" href="http://www.nsf.gov">NSF</a>,
+                        <a target="_blank" class="reference" href="http://www.huck.psu.edu">The Huck Institutes of the Life Sciences</a>,
+                        <a target="_blank" class="reference" href="http://www.ics.psu.edu">The Institute for CyberScience at Penn State</a>,
+                        and <a target="_blank" class="reference" href="http://www.jhu.edu/">Johns Hopkins University</a>.
+                    </footer>
+                </div>
+           </div>
+        </div>
+    </body>
 </html>

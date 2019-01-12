@@ -13,17 +13,17 @@
         <data name="output" format="lif" label="NGrams"/>
     </outputs>
     <help><![CDATA[
-HELP
-====
+**What it does**
 
-Required Annotations
---------------------
+Generates ngrams (unigrams, bigrams, or trigrams) from a text.
 
-* http://vocab.lappsgrid.org/Token
+**Required Annotations**
+
+* `Token <http://vocab.lappsgrid.org/Token>`_ (LIF)
 
 
-Generated Annotations
----------------------
+**Generated Annotations**
+
 
 * http://deiis.lti.cs.cmu.edu/Unigram
 * http://deiis.lti.cs.cmu.edu/Bigram

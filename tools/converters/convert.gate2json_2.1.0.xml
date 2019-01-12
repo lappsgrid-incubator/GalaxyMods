@@ -1,5 +1,5 @@
 <tool id='local.convert.gate2json_2.1.0' name='GateToLif v2.1.0' version='2.1.0'>
-  <description>Converts GATE documents to the LAPPS JSON/LD format.</description>
+  <description>Convert GATE documents to the LAPPS JSON/LD format.</description>
     <!--
   <command interpreter='lsd'>../common/invoke_vassar.lsd convert.gate2json_2.0.0 $input $pretty $output</command>
   -->
@@ -11,5 +11,10 @@
   <outputs>
     <data name='output' format='lif' />
   </outputs>
-  <help>Converts GATE documents to the LAPPS JSON/LD format.</help>
+  <help><![CDATA[
+**What it does**  
+  
+Converts  documents in `General Architecture for Text Engineering (GATE) <https://gate.ac.uk/sale/tao/splitch5.html#x8-1000005.5.2>`_ format to `LIF <http://wiki.lappsgrid.org/org.lappsgrid.serialization/groovydoc/org/lappsgrid/serialization/lif/Container.html>`_.
+]]>
+</help>
 </tool>

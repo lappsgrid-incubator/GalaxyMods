@@ -48,6 +48,7 @@ Set<String> count(Container container) {
 }
 
 /**
+
 Map<String,Counter> count(Container container) {
 	Map<String,Counter> counts = new HashMap<String,Counter>()
 	container.views.each { View view ->
