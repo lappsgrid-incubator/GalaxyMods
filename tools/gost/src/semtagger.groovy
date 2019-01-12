@@ -31,6 +31,7 @@ return
 Container process(Container container, String input) {
     View view = container.newView()
     view.addContains(Uri.SEMANTIC_ROLE, this.class.name, "semantic role")
+    view.addContains(Uri.POS, this.class.name, "tokens")
     int state = WAITING
     int count = 0
     input.eachLine { String line ->

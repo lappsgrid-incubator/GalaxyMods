@@ -3,6 +3,7 @@
 String lappsjson = new File(args[0]).text
 
 if (!lappsjson.trim().startsWith("{")) {
+    println "bailing early"
     println lappsjson
     return
 }
@@ -44,6 +45,7 @@ bratdsl = """{
     def isTagger = %.has(lastView.metadata.contains,  "Token#pos")
     def isRelation = %.has(lastView.metadata.contains,  "Relation")
     def isEvent = %.has(lastView.metadata.contains.toString().toLowerCase(),  "event") 
+    def isSemTag = %.has(lastView.metadata.contains.toString().toLowerCase(), "SemanticRole"
 
     def lastViewAnns = lastView.annotations
     if (lastViewAnns == null) return
@@ -58,7 +60,7 @@ bratdsl = """{
     }
 
     if (isDepParser) {
-        def dependencies = lastViewAnns.select{%.has(&."@type", "DependencyStructure")}.features.dependencies.flatten()
+        def dependencies = lastViewAnns.select{%.has(&."@type", "Dependency")}.features.dependencies.flatten()
         targetRelations = lastViewAnns.select{ &.id in dependencies}.foreach {
             [&.id, %.toUpper(&.label), [["Governor", &.features.governor], ["Dependent", &.features.dependent]]]
         }
@@ -101,6 +103,14 @@ bratdsl = """{
         foundAnyHigherLevelAnn = true
     }
 
+    if (isSemTag) {
+           targetEntities += lastViewAnns.select{ %.has(&."@type", "SemanticRole")}
+           .unique{ &.start + " " + &.end }.foreach {
+                            [&.id, %.toUpper(&.features.semtag), [[&.start.toInteger(), &.end.toInteger()]]]
+           }
+        foundAnyHigherLevelAnn = true
+    }
+
     if (!foundAnyHigherLevelAnn) {
     //if (isTagger) {
         targetEntities += lastViewAnns.select{&.features != null && &.features.pos != null}.unique{ &.start + " " + &.end }.foreach {
@@ -137,4 +147,7 @@ String password = ""
 
 String url = "http://eldrad.cs-i.brandeis.edu:8282/json2json/0.3.3/services/Json2JsonWS?wsdl"
 ServiceClient client = new ServiceClient(url, username, password)
-println client.execute(builder.toString())
+String json = builder.toString()
+json = client.execute(json)
+//new File('builder.json').text = json
+println json
