@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <!DOCTYPE HTML>
 <%
 ########################################################################################################################
@@ -90,9 +91,9 @@ root = h.url_for( '/' )
             '${root}static/plugins/visualizations/brat/static/js/viz.js'
         );
         var webFontURLs = [
-            '${root}static/plugins/visualizations/brat/static/fonts/Astloch-Bold.ttf',
-            '${root}static/plugins/visualizations/brat/static/fonts/PT_Sans-Caption-Web-Regular.ttf',
-            '${root}static/plugins/visualizations/brat/static/fonts/Liberation_Sans-Regular.ttf'
+            ##  '${root}static/plugins/visualizations/brat/static/fonts/Astloch-Bold.ttf',
+            ##  '${root}static/plugins/visualizations/brat/static/fonts/PT_Sans-Caption-Web-Regular.ttf',
+            ##  '${root}static/plugins/visualizations/brat/static/fonts/Liberation_Sans-Regular.ttf'
         ];
 
         var getTextAreaValue = function (textareaId) {
@@ -315,23 +316,9 @@ root = h.url_for( '/' )
     <table align="center" class="table table-bordered table-striped responsive-utilities" align="center" style="width:800px">
         <tr><th>Tool Output</th></tr>
         <tr><td>
-        <textarea id="lappsjson">${lappsjson}</textarea>
+        <textarea id="lappsjson">${lappsjson.decode('utf-8')}</textarea>
         </td></tr>
     </table>
-
-
-
-<!--
-    <textarea>${hda}</textarea>
-    <textarea>${hda.datatype}</textarea>
-    <textarea>${hda.get_raw_data()}</textarea>
-    <textarea>${hda.name}</textarea>
-    <textarea>${hda.dataset}</textarea>
-    <textarea>${hda.dataset.file_name}</textarea>
-    <textarea>${hda.dataset.object_store}</textarea>
-    <textarea>${hda.dataset.object_store.config}</textarea>
-    <textarea>${os.getcwd()}</textarea>
--->
 
 <footer>
     <hr />
