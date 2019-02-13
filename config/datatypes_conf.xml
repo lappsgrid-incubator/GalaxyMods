@@ -35,6 +35,7 @@
         <sniffer type="lappsgrid.datatypes.lapps:Lapps"/>
         <sniffer type="lappsgrid.datatypes.lapps:LappsJson"/>
         <sniffer type="lappsgrid.datatypes.lapps:Uima"/>
+        <sniffer type="lappsgrid.datatypes.lapps:PubAnn"/>
     </sniffers>
     <build_sites>
         <!--
