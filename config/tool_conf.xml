@@ -74,7 +74,12 @@
 		<tool file="eurolan2017/BioTokenizer.xml"/>
 		<tool file="eurolan2017/GeneTagger.xml"/>
 		<tool file="eurolan2017/AbnerTagger.xml"/>
-		<!-- <tool file="eurolan2017/TimeML.xml"/> -->
+        <tool file="cdc/ctakes-clinical.xml"/>
+        <tool file="cdc/ctakes-temporal.xml"/>
+<!--    <tool file="cdc/ncbo-coding.xml"/> 
+        <tool file="cdc/convert-lif.xml"/>
+        <tool file="cdc/convert-xcas.xml"/>
+		<tool file="eurolan2017/TimeML.xml"/> -->
 	</section>
 
 	<!--
@@ -230,13 +235,7 @@
         <tool file="lindat/udpipe.xml"/>
         <tool file="lindat/nametag.xml"/>
     </section>
-    <section id="cdc.fda" name="CDC/FDA">
-        <tool file="cdc/ctakes-clinical.xml"/>
-        <tool file="cdc/ctakes-temporal.xml"/>
-        <tool file="cdc/ncbo-coding.xml"/>
-        <tool file="cdc/convert-lif.xml"/>
-        <tool file="cdc/convert-xcas.xml"/>
-    </section>
+    
 
 
     <label text="Other" id="other_section_label"/>
