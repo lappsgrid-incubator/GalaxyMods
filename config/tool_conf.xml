@@ -70,7 +70,7 @@
 	</section>
 
     <label text="Our Partners" id="partners_section_label"/>
-    <section id="weblicht.stanford" name="Weblicht Tools">
+    <section id="weblicht.stanford" name="Weblicht">
     	<tool file="weblicht/stanford.tokenizer_1.0.0.xml"/>
     	<tool file="weblicht/stanford.tagger_1.0.0.xml"/>
     	<tool file="weblicht/stanford.ner_1.0.0.xml"/>
