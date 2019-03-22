@@ -15,6 +15,7 @@ Gene Ontology Semantic Tagger (GOST)
 =====================================
 
 **What it does** 
+Performs entity identification and semantic markup with detailed semantic categories in biomedical texts, using a set of over `200 semantic labels <http://ucrel.lancs.ac.uk/usas/semtags.txt>`_ .
 
 
 
