@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <toolbox>
+    <label text="Data" id="data_section_label"/>
     <section id="getext" name="Get Data">
 		<tool file="data_source/upload.xml"/>
 
@@ -76,18 +77,18 @@
         <tool file="cdc/convert-xcas.xml"/>
     </section>
 -->
+
     <section id="getbiotools" name="Biomed tools">
 		<tool file="eurolan2017/BioTokenizer.xml"/>
 		<tool file="eurolan2017/GeneTagger.xml"/>
 		<tool file="eurolan2017/AbnerTagger.xml"/>
-		<tool file="eurolan2017/TimeML.xml"/>
-	</section>
+		<tool file="eurolan2017/BioTokenize	</section>
 
-	<!--
+<!--
 	<section id="example-pipelines" name="Example Applications">
 		<tool file="eurolan2017/BioASQ.xml"/>
 	</section>
-	-->
+-->
 	<section id="getclinicaltools" name="CLinical data tools">
 		<tool file="cdc/ctakes-clinical.xml"/>
         <tool file="cdc/ctakes-temporal.xml"/>
@@ -168,12 +169,27 @@
     <section id="rel-ext" name="Relation Extractors">
 		<tool file='reverb/brandeis.reverb.xml' />
 	</section>
+	
+	   <section id="time" name="Time and Events">
+		<tool file="eurolan2017/TimeML.xml"/>
+		<tool file="eurolan2017/HeidelTime.xml"/>
+    </section>
 
-    <section id="gost" name="Semantic Taggers">
+	
+	<section id="gost" name="Semantic Taggers">
         <tool file="gost/semtagger.xml"/>
     </section>
 
-	<section id="stanford" name="Stanford NLP Tools">
+    <section id="maching.learning" name="Machine Learning">
+        <tool file="learning/classifier.xml"/>
+        <tool file="learning/weka_classifier_smo.xml" />
+        <tool file="learning/weka_classifier_naivebayes.xml" />
+        <tool file="learning/weka_classifier_logistic.xml" />
+        <tool file="learning/weka_classifier_j48.xml" />
+    </section>
+
+    <label text="Tools by Development Group" id="groups_section_label"/>
+	<section id="stanford" name="Stanford NLP">
 		<tool file="stanford/vassar.tokenizer_2.1.0.xml"/>
 		<tool file="stanford/vassar.splitter_2.1.0.xml"/>
 		<tool file="stanford/vassar.tagger_2.1.0.xml"/>
@@ -185,7 +201,7 @@
 		<tool file='stanford/brandeis.dependencyparser.xml' />
 		<tool file='stanford/brandeis.coref.xml' />
 	</section>
-	<section id="gate" name="GATE Tools">
+	<section id="gate" name="GATE">
 		<tool file="gate/gate.tokenizer_2.3.0.xml"/>
 		<tool file="gate/gate.splitter_2.3.0.xml"/>
 		<tool file="gate/gate.tagger_2.3.0.xml"/>
@@ -196,14 +212,14 @@
 		<tool file="converters/convert.gate2json_2.1.0.xml"/>
 		<tool file="converters/convert.json2gate_2.1.0.xml"/>
 	</section>
-	<section id='opennlp.tools' name='Apache OpenNLP Tools'>
+	<section id='opennlp.tools' name='Apache OpenNLP'>
 	  <tool file='opennlp/opennlp.tokenizer.xml' />
 	  <tool file='opennlp/opennlp.splitter.xml' />
 	  <tool file='opennlp/opennlp.postagger.xml' />
 	  <tool file='opennlp/opennlp.namedentityrecognizer.xml' />
 	  <tool file='opennlp/opennlp.parser.xml' />
 	</section>
-    <section id="lingpipe.tools" name="Lingpipe Tools">
+    <section id="lingpipe.tools" name="Lingpipe">
 		<tool file="lingpipe/vassar.tokenizer_1.0.0.xml"/>
 		<tool file="lingpipe/vassar.splitter_1.0.0.xml"/>
 		<tool file="lingpipe/vassar.tagger_1.0.0.xml"/>
@@ -224,14 +240,22 @@
 		<tool file='dkpro/dkpro.stanford.splitter.xml'/>
 		<tool file='dkpro/dkpro.stanford.tokenizer.xml'/>
     </section>
-    <section id="maching.learning" name="Machine Learning">
-        <tool file="learning/classifier.xml"/>
-        <tool file="learning/weka_classifier_smo.xml" />
-        <tool file="learning/weka_classifier_naivebayes.xml" />
-        <tool file="learning/weka_classifier_logistic.xml" />
-        <tool file="learning/weka_classifier_j48.xml" />
-    </section>
 
+    <section id="weblicht.stanford" name="Weblicht">
+    	<tool file="weblicht/stanford.tokenizer_1.0.0.xml"/>
+    	<tool file="weblicht/stanford.tagger_1.0.0.xml"/>
+    	<tool file="weblicht/stanford.ner_1.0.0.xml"/>
+    	<tool file="weblicht/stanford.parser_1.0.0.xml"/>
+		<tool file="weblicht/morph.adorner.xml"/>
+    	<tool file="weblicht/lif2tcf.xml"/>
+		<tool file="converters/tcf2lif.xml"/>
+		<tool file="common/wrap.xml"/>
+    </section>
+    <section id="lindat" name="Clarin Lindat">
+        <tool file="lindat/udpipe.xml"/>
+        <tool file="lindat/nametag.xml"/>
+    </section>
+    
 <section id="weblicht.stanford" name="CLARIN/Weblicht Tools">
     	<tool file="weblicht/stanford.tokenizer_1.0.0.xml"/>
     	<tool file="weblicht/stanford.tagger_1.0.0.xml"/>

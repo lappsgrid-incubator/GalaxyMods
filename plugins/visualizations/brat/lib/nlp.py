@@ -55,6 +55,8 @@ relation_types = [ {
 relation_types_index = dict()
 relation_types_index['Coreference'] = relation_types[0]
 
+log = list()
+
 def load_entity_types():
     base_path = os.getcwd() + '../mods/plugins/visualizations/brat/lib/brat_types.py'
     with open(base_path) as src:
@@ -177,14 +179,19 @@ def createDependency(annotation):
     relation.append([ ['Governor', features['governor']], [ 'Dependent', features['dependent']] ])
     return relation
 
+
 def getLabel(annotation):
     type = annotation['@type']
     if type == Uri.NE:
         return annotation['features']['category']
-    if type == Uri.TOKEN:
+    if is_token(type):
         return annotation['features']['pos']
     if type == Uri.MARKABLE:
+        if annotation['label'] != None:
+            return annotation['label']
         return 'Markable'
+    if type == 'Tagger' and 'type' in annotation['features']:
+        return annotation['features']['type']
     if annotation['label'] != None:
         return annotation['label']
     return 'Entity'
@@ -226,6 +233,13 @@ def processGenericRelations(annotations):
             relations.append(relation)
     return relations
 
+def is_token(type):
+    return type in [Uri.TOKEN, Uri.POS, 'Token', 'Token#pos']
+
+def is_viewable(a):
+    type = a['@type']
+    return is_token(type) or type in [ Uri.NE, Uri.MARKABLE, 'Tagger' ]
+
 def brat(lappsJson):
     docData = {}
     data = json.loads(lappsJson)
@@ -234,10 +248,10 @@ def brat(lappsJson):
     annotations = view['annotations']
     docData['text'] = container['text']['@value']
     # object['entities'] = [ createEntity(a, list) for a in annotations ]
-    entities = [ createEntity(a) for a in annotations if a['@type'] == Uri.TOKEN and 'pos' in a['features'] ]
-    ne = [ createEntity(a) for a in annotations if a['@type'] == Uri.NE ]
-    markables = [ createEntity(a) for a in annotations if a['@type'] == Uri.MARKABLE ]
-    docData['entities'] = entities + ne + markables
+    entities = [createEntity(a) for a in annotations if is_viewable(a)]
+    # ne = [ createEntity(a) for a in annotations if a['@type'] == Uri.NE ]
+    # markables = [ createEntity(a) for a in annotations if a['@type'] == Uri.MARKABLE ]
+    docData['entities'] = entities
 
     dependency_parse = processDependencies(annotations)
     constituency_parse = processPhraseStructure(annotations)
@@ -251,11 +265,13 @@ def brat(lappsJson):
     
     return {
         'annotations': json.dumps(docData),
-        'config': json.dumps(collData)
+        'config': json.dumps(collData),
     }
 
 if __name__ == '__main__':
-    with open('/Users/suderman/Workspaces/IntelliJ/Services/brat/src/test/resources/stanford-dep.lif') as json_file:
+    # with open('/Users/suderman/Workspaces/IntelliJ/Services/brat/src/test/resources/stanford-dep.lif') as json_file:
+    #     brat_data = brat(json_file.read())
+    with open('/Users/suderman/Desktop/tokens_pos.lif') as json_file:
         brat_data = brat(json_file.read())
 
     print json.dumps(brat_data, indent=4)
