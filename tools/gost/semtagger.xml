@@ -1,5 +1,5 @@
 <tool id="gost.semantic.tagger" name="GOST" version="1.0.0">
- <description>USAS Semantic Tagger</description>
+ <description>GOST Semantic Tagger</description>
  <command>cd $__tool_directory__ &amp;&amp; java -cp .:lib/* semtagger $input $output</command>
  <inputs>
   <param format="lif" label="Input Document" name="input" type="data"/>
@@ -11,11 +11,10 @@
 
   <![CDATA[
 
-UCREL Semantic Analysis System (USAS)
+Gene Ontology Semantic Tagger (GOST)
 =====================================
 
 **What it does** 
-Annotates English text with detailed semantic categories, using a set of over `200 semantic labels <http://ucrel.lancs.ac.uk/usas/semtags.txt>`_ .
 
 
 
@@ -30,7 +29,7 @@ Annotates English text with detailed semantic categories, using a set of over `2
 
 **License**
 
-USAS is licensed under the `Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License <http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US>`_
+GOST is licensed under the `Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License <http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US>`_
 
 ]]>
 

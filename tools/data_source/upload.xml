@@ -1,12 +1,17 @@
 <?xml version="1.0"?>
 
-<tool name="Upload File" id="upload1" version="1.1.6" workflow_compatible="false" profile="16.04">
+<tool name="Upload Text" id="lapps.upload" version="1.0.0" workflow_compatible="false">
   <description>
-    from your computer  
+    from your computer or paste text
   </description>
   <action module="galaxy.tools.actions.upload" class="UploadToolAction"/>
-  <command>
-    python '$__tool_directory__/upload.py' $GALAXY_ROOT_DIR $GALAXY_DATATYPES_CONF_FILE $paramfile
+    <!--
+  <requirements>
+      <requirement type="package">samtools</requirement>
+  </requirements>
+  -->
+  <command interpreter="python">
+      upload.py $GALAXY_ROOT_DIR $GALAXY_DATATYPES_CONF_FILE $paramfile
     #set $outnum = 0
     #while $varExists('output%i' % $outnum):
         #set $output = $getVar('output%i' % $outnum)
@@ -20,47 +25,50 @@
     #end while
   </command>
   <inputs nginx_upload="true">
-    <param name="file_type" type="select" label="File Format" help="Which format? See help below">
+    <param name="file_type" type="select" label="My File Format" help="Which format? See help below">
+        <option value="txt">Plain text</option>
+        <option value="lif">JSON/LIF</option>
+        <option value="gate">Gate/XML</option>
+        <!--
       <options from_parameter="tool.app.datatypes_registry.upload_file_formats" transform_lines="[ &quot;%s%s%s&quot; % ( line, self.separator, line ) for line in obj ]">
         <column name="value" index="1"/>
         <column name="name" index="0"/>
         <filter type="sort_by" column="0"/>
         <filter type="add_value" name="Auto-detect" value="auto" index="0"/>
       </options>
+      -->
     </param>
-    <param name="file_count" type="hidden" value="auto" />
+      <param name="file" type="file" label="Choose file"/>
+    <param name="async_datasets" type="hidden" value="None"/>
     <upload_dataset name="files" title="Specify Files for Dataset" file_type_name="file_type" metadata_ref="files_metadata">
         <param name="file_data" type="file" size="30" label="File" ajax-upload="true" help="TIP: Due to browser limitations, uploading files larger than 2GB is guaranteed to fail.  To upload large files, use the URL method (below) or FTP (if enabled by the site administrator).">
+        <validator type="expression" message="You will need to reselect the file you specified (%s)." substitute_value_in_message="True">not ( ( isinstance( value, unicode ) or isinstance( value, str ) ) and value != "" )</validator> <!-- use validator to post message to user about needing to reselect the file, since most browsers won't accept the value attribute for file inputs -->
       </param>
-      <param name="url_paste" type="text" area="true" size="5x35" label="URL/Text" help="Here you may specify a list of URLs (one per line) or paste the contents of a file."/> 
+      <param name="url_paste" type="text" area="true" size="5x35" label="URL/Text" help="Here you may specify a list of URLs (one per line) or paste the contents of a file."/>
       <param name="ftp_files" type="ftpfile" label="Files uploaded via FTP"/>
       <!-- Swap the following parameter for the select one that follows to
            enable the to_posix_lines option in the Web GUI. See Bitbucket
            Pull Request 171 for more information. -->
       <param name="uuid" type="hidden" required="False" />
       <param name="to_posix_lines" type="hidden" value="Yes" />
-      <param name="auto_decompress" type="hidden" value="Yes" />
-      <!-- allow per-file override of dbkey -->
-      <param name="file_type" type="hidden" value="" />
-      <param name="dbkey" type="hidden" value="" />
-
       <!--
-      <param name="to_posix_lines" type="select" display="checkboxes" multiple="True" label="Convert universal line endings to Posix line endings" help="Turn this option off if you upload a gzip, bz2 or zip archive which contains a binary file." value="Yes"> 
+      <param name="to_posix_lines" type="select" display="checkboxes" multiple="True" label="Convert universal line endings to Posix line endings" help="Turn this option off if you upload a gzip, bz2 or zip archive which contains a binary file." value="Yes">
         <option value="Yes" selected="true">Yes</option>
       </param>
       -->
-      <param name="space_to_tab" type="select" display="checkboxes" multiple="True" label="Convert spaces to tabs" help="Use this option if you are entering intervals by hand."> 
+      <param name="space_to_tab" type="select" display="checkboxes" multiple="True" label="Convert spaces to tabs" help="Use this option if you are entering intervals by hand.">
         <option value="Yes">Yes</option>
       </param>
       <param name="NAME" type="hidden" help="Name for dataset in upload"></param>
     </upload_dataset>
-    <param name="dbkey" type="genomebuild" label="Genome" />
-    <conditional name="files_metadata" value_from="self:app.datatypes_registry.get_upload_metadata_params" value_ref="file_type" value_ref_in_group="False" />
+    <!-- <param name="dbkey" type="genomebuild" label="Genome" /> -->
+    <conditional name="files_metadata" title="Specify metadata" value_from="self:app.datatypes_registry.get_upload_metadata_params" value_ref="file_type" value_ref_in_group="False" />
     <!-- <param name="other_dbkey" type="text" label="Or user-defined Genome" /> -->
   </inputs>
   <help>
   
 **Auto-detect**
+
 
 The system will attempt to detect Axt, Fasta, Fastqsolexa, Gff, Gff3, Html, Lav, Maf, Tabular, Wiggle, Bed and Interval (Bed with headers) formats. If your file is not detected properly as one of the known formats, it most likely means that it has some format problems (e.g., different number of columns on different rows). You can still coerce the system to set your data to the format you think it should be.  You can also upload compressed files, which will automatically be decompressed. 
 
@@ -68,11 +76,13 @@ The system will attempt to detect Axt, Fasta, Fastqsolexa, Gff, Gff3, Html, Lav,
 
 **Ab1**
 
+
 A binary sequence file in 'ab1' format with a '.ab1' file extension.  You must manually select this 'File Format' when uploading the file.
 
 -----
 
 **Axt**
+
 
 blastz pairwise alignment format.  Each alignment block in an axt file contains three lines: a summary line and 2 sequence lines.  Blocks are separated from one another by blank lines.  The summary line contains chromosomal position and size information about the alignment. It consists of 9 required fields.
 
@@ -80,11 +90,13 @@ blastz pairwise alignment format.  Each alignment block in an axt file contains 
 
 **Bam**
 
+
 A binary file compressed in the BGZF format with a '.bam' file extension.
 
 -----
 
 **Bed**
+
 
 * Tab delimited format (tabular)
 * Does not require header line
@@ -115,6 +127,7 @@ A binary file compressed in the BGZF format with a '.bam' file extension.
 
 **Fasta**
 
+
 A sequence in FASTA format consists of a single-line description, followed by lines of sequence data.  The first character of the description line is a greater-than (">") symbol in the first column.  All lines should be shorter than 80 characters::
 
     >sequence1
@@ -127,6 +140,7 @@ A sequence in FASTA format consists of a single-line description, followed by li
 -----
 
 **FastqSolexa**
+
 
 FastqSolexa is the Illumina (Solexa) variant of the Fastq format, which stores sequences and quality scores in a single file::
 
@@ -154,17 +168,20 @@ Or::
 
 **Gff**
 
+
 GFF lines have nine required fields that must be tab-separated.
 
 -----
 
 **Gff3**
 
+
 The GFF3 format addresses the most common extensions to GFF, while preserving backward compatibility with previous formats.
 
 -----
 
 **Interval (Genomic Intervals)**
+
 
 - Tab delimited format (tabular)
 - File must start with definition line in the following format (columns may be in any order).::
@@ -186,11 +203,13 @@ The GFF3 format addresses the most common extensions to GFF, while preserving ba
 
 **Lav**
 
+
 Lav is the primary output format for BLASTZ.  The first line of a .lav file begins with #:lav..
 
 -----
 
 **MAF**
+
 
 TBA and multiz multiple alignment format.  The first line of a .maf file begins with ##maf. This word is followed by white-space-separated "variable=value" pairs. There should be no white space surrounding the "=".
 
@@ -198,11 +217,13 @@ TBA and multiz multiple alignment format.  The first line of a .maf file begins 
 
 **Scf**
 
+
 A binary sequence file in 'scf' format with a '.scf' file extension.  You must manually select this 'File Format' when uploading the file.
 
 -----
 
 **Sff**
+
 
 A binary file in 'Standard Flowgram Format' with a '.sff' file extension.
 
@@ -210,11 +231,13 @@ A binary file in 'Standard Flowgram Format' with a '.sff' file extension.
 
 **Tabular (tab delimited)**
 
+
 Any data in tab delimited format (tabular)
 
 -----
 
 **Table (delimiter-separated)**
+
 
 Any delimiter-separated tabular data (CSV or TSV).
 
@@ -222,11 +245,13 @@ Any delimiter-separated tabular data (CSV or TSV).
 
 **Wig**
 
+
 The wiggle format is line-oriented.  Wiggle data is preceded by a track definition line, which adds a number of options for controlling the default display of this track.
 
 -----
 
 **Other text type**
+
 
 Any text file
 
