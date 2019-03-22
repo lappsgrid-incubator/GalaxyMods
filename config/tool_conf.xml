@@ -78,6 +78,8 @@
     </section>
 -->
 
+  <label text="NLP Tools" id="nlptools_section_label"/>
+
     <section id="getbiotools" name="Biomed tools">
 		<tool file="eurolan2017/BioTokenizer.xml"/>
 		<tool file="eurolan2017/GeneTagger.xml"/>
