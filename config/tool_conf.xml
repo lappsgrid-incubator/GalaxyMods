@@ -258,21 +258,6 @@
         <tool file="lindat/nametag.xml"/>
     </section>
     
-<section id="weblicht.stanford" name="CLARIN/Weblicht Tools">
-    	<tool file="weblicht/stanford.tokenizer_1.0.0.xml"/>
-    	<tool file="weblicht/stanford.tagger_1.0.0.xml"/>
-    	<tool file="weblicht/stanford.ner_1.0.0.xml"/>
-    	<tool file="weblicht/stanford.parser_1.0.0.xml"/>
-		<tool file="weblicht/morph.adorner.xml"/>
-    	<tool file="weblicht/lif2tcf.xml"/>
-		<tool file="converters/tcf2lif.xml"/>
-		<tool file="common/wrap.xml"/>
-    </section>
-    <section id="lindat" name="CLINDAT/CLARIN Tools">
-        <tool file="lindat/udpipe.xml"/>
-        <tool file="lindat/nametag.xml"/>
-    </section>
-
     <!--
     <section id="deiis" name="Text Statistics">
      	<tool file="deiis/NGramAnnotator.xml"/>
