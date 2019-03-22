@@ -84,7 +84,7 @@
 		<tool file="eurolan2017/BioTokenizer.xml"/>
 		<tool file="eurolan2017/GeneTagger.xml"/>
 		<tool file="eurolan2017/AbnerTagger.xml"/>
-		<tool file="eurolan2017/BioTokenize/>
+		<tool file="eurolan2017/BioTokenizer.xml"/>
 		<tool file="gost/semtagger.xml"/>
 	</section>
 
