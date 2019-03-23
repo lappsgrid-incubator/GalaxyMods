@@ -1,5 +1,5 @@
 <tool id="gost.semantic.tagger" name="GOST" version="1.0.0">
- <description>GOST Semantic Tagger</description>
+ <description>Semantic Tagger</description>
  <command>cd $__tool_directory__ &amp;&amp; java -cp .:lib/* semtagger $input $output</command>
  <inputs>
   <param format="lif" label="Input Document" name="input" type="data"/>

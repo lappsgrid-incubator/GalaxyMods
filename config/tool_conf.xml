@@ -93,7 +93,7 @@
 		<tool file="eurolan2017/BioASQ.xml"/>
 	</section>
 -->
-	<section id="getclinicaltools" name="CLinical data tools">
+	<section id="getclinicaltools" name="Clinical data tools">
 		<tool file="cdc/ctakes-clinical.xml"/>
         <tool file="cdc/ctakes-temporal.xml"/>
         <tool file="cdc/ncbo-coding.xml"/>
@@ -296,7 +296,7 @@
 		<tool file='kyoto/opennlp_postagger.xml'/>
 	</section>
 	-->
-
+  <label text="Others" id="other_section_label"/>
 	<section id="lapps.evaluation" name="Evaluation">
 
 		<tool file="oaqa/oaqa_evaluation.xml"/>
