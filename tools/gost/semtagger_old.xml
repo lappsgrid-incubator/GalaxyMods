@@ -1,11 +1,11 @@
 <tool id="gost.semantic.tagger" name="GOST" version="1.0.0">
  <description>Semantic Tagger</description>
- <command>$__tool_directory__/gost.lsd $input $output</command>
+ <command>cd $__tool_directory__ &amp;&amp; java -cp .:lib/* semtagger $input $output</command>
  <inputs>
-  <param format="lif,text" label="Input Document" name="input" type="data"/>
+  <param format="lif" label="Input Document" name="input" type="data"/>
  </inputs>
  <outputs>
-  <data format="lif" label="Semantic Tags" name="output"/>
+  <data format="lif" label="Tagged Text" name="output"/>
  </outputs>
  <help>
 
@@ -16,6 +16,8 @@ Gene Ontology Semantic Tagger (GOST)
 
 **What it does** 
 Performs entity identification and semantic markup with detailed semantic categories in biomedical texts, using a set of over `200 semantic labels <http://ucrel.lancs.ac.uk/usas/semtags.txt>`_ .
+
+
 
 
 **Required annotations**
@@ -36,7 +38,7 @@ GOST is licensed under the `Creative Commons Attribution-NonCommercial-ShareAlik
     <citations>
         <citation type="bibtex">
             <![CDATA[
-@InProceedings{PIAO16.257,    s
+@InProceedings{PIAO16.257,
   author = {Scott Piao and Paul Rayson and Dawn Archer and Francesca Bianchi and Carmen Dayrell and Mahmoud El-Haj and Ricardo-María Jiménez and Dawn Knight and Michal Křen and Laura Löfberg and Rao Muhammad Adeel Nawab and Jawad Shafi and Phoey Lee Teh and Olga Mudraya},
   title = {Lexical Coverage Evaluation of Large-scale Multilingual Semantic Lexicons for Twelve Languages},
   booktitle = {Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC 2016)},
