@@ -1,11 +1,11 @@
 <tool id="gost.semantic.tagger" name="GOST" version="1.0.0">
  <description>Semantic Tagger</description>
- <command>cd $__tool_directory__ &amp;&amp; java -cp .:lib/* semtagger $input $output</command>
+ <command>$__tool_directory__/gost.lsd $input $output</command>
  <inputs>
-  <param format="lif" label="Input Document" name="input" type="data"/>
+  <param format="lif,text" label="Input Document" name="input" type="data"/>
  </inputs>
  <outputs>
-  <data format="lif" label="Tagged Text" name="output"/>
+  <data format="lif" label="Semantic Tags" name="output"/>
  </outputs>
  <help>
 
@@ -16,8 +16,6 @@ Gene Ontology Semantic Tagger (GOST)
 
 **What it does** 
 Performs entity identification and semantic markup with detailed semantic categories in biomedical texts, using a set of over `200 semantic labels <http://ucrel.lancs.ac.uk/usas/semtags.txt>`_ .
-
-
 
 
 **Required annotations**
