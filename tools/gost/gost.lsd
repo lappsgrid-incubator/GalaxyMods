@@ -115,6 +115,13 @@ response.body.eachLine { String line ->
             a.features['pos'] = parts[2]
             List<String> tags = parts[3].tokenize()
             a.features['semtag'] = tags
+            a.features['mwe'] = parts[4]
+            //a.features['tags'] = makeTags(parts[5])
+
+            a.start = text.indexOf(word, index)
+            a.end = a.start + word.length()
+            index = a.end
+
             Annotation ne = null
             tags.each { tag ->
                 if (tag.startsWith('GO:')) {
@@ -125,6 +132,8 @@ response.body.eachLine { String line ->
                         }
                         ne = neView.newAnnotation()
                         ne.id = "goner-${nerid++}"
+                        ne.start = a.start
+                        ne.end = a.end
                         ne.atType = Uri.NE
                         ne.features.category = 'GENE'
                         ne.features.ontologyIds = []
@@ -133,12 +142,6 @@ response.body.eachLine { String line ->
                     ne.features.ontologyIds << tag
                 }
             }
-            a.features['mwe'] = parts[4]
-            //a.features['tags'] = makeTags(parts[5])
-
-            a.start = text.indexOf(word, index)
-            a.end = a.start + word.length()
-            index = a.end
         }
     }
 }
