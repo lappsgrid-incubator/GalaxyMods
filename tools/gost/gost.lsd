@@ -86,9 +86,14 @@ view.addContains(Uri.TOKEN, 'GOST', "token")
 view.addContains(Uri.POS, 'GOST', "pos")
 view.addContains(Uri.LEMMA, 'GOST', 'lemma')
 view.addContains(Uri.TOKEN + "#semtag", 'GOST', "Semantic tag")
+
+View neView = null
+
 int state = WAITING
 int count = 0
 int index = 0
+int nerid = 0
+boolean go = false
 
 response.body.eachLine { String line ->
     if (state == WAITING) {
@@ -109,7 +114,27 @@ response.body.eachLine { String line ->
             a.features['word'] = word
             a.features['lemma'] = parts[1]
             a.features['pos'] = parts[2]
-            a.features['semtag'] = parts[3].tokenize()
+            List<String> tags = parts[3].tokenize()
+            a.features['semtag'] = tags
+            Annotation ne = null
+            tags.each { tag ->
+                if (tag.startsWith('GO:')) {
+                    go = true
+                    if (ne == null) {
+                        if (neView == null) {
+                            neView = container.newView()
+                            neView.addContains(Uri.NE, 'GOST', 'gene')
+                        }
+                        ne = neView.newAnnotation()
+                        ne.id = "goner-${nerid++}"
+                        ne.atType = Uri.NE
+                        ne.features.category = 'GENE'
+                        ne.features.ontologyIds = []
+                        ne.features.targets = [ "${view.id}:${a.id}".toString() ]
+                    }
+                    ne.features.ontologyIds << tag
+                }
+            }
             a.features['mwe'] = parts[4]
             //a.features['tags'] = makeTags(parts[5])
 
@@ -119,8 +144,11 @@ response.body.eachLine { String line ->
         }
     }
 }
+if (go) {
+    view.addContains(Uri.NE, 'GOST', "gene ontology")
+}
 
-output.text = new DataContainer(container).asJson()
+output.text = new DataContainer(container).asPrettyJson()
 
 List makeTags(String input) {
     return input.tokenize(';').collect { makeTag(it.trim()) }
