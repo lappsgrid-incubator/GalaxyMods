@@ -93,7 +93,6 @@ int state = WAITING
 int count = 0
 int index = 0
 int nerid = 0
-boolean go = false
 
 response.body.eachLine { String line ->
     if (state == WAITING) {
@@ -119,7 +118,6 @@ response.body.eachLine { String line ->
             Annotation ne = null
             tags.each { tag ->
                 if (tag.startsWith('GO:')) {
-                    go = true
                     if (ne == null) {
                         if (neView == null) {
                             neView = container.newView()
@@ -143,9 +141,6 @@ response.body.eachLine { String line ->
             index = a.end
         }
     }
-}
-if (go) {
-    view.addContains(Uri.NE, 'GOST', "gene ontology")
 }
 
 output.text = new DataContainer(container).asPrettyJson()
