@@ -42,6 +42,7 @@ Map post(String text) {
         }
     }
 
+    // Read the response from the connection.
     response.status = connection.responseCode
     response.encoding = connection.contentEncoding
     response.contentType = connection.contentType
@@ -52,7 +53,6 @@ Map post(String text) {
     else {
         response.body = connection.inputStream.text
     }
-    //println "Returning response: ${response.status}"
     return response
 }
 
@@ -113,6 +113,7 @@ response.body.eachLine { String line ->
             a.features['word'] = word
             a.features['lemma'] = parts[1]
             a.features['pos'] = parts[2]
+            // Save the list of tags for processing below.
             List<String> tags = parts[3].tokenize()
             a.features['semtag'] = tags
             a.features['mwe'] = parts[4]
@@ -122,6 +123,7 @@ response.body.eachLine { String line ->
             a.end = a.start + word.length()
             index = a.end
 
+            // Now check if we have any GO annotations
             Annotation ne = null
             tags.each { tag ->
                 if (tag.startsWith('GO:')) {
@@ -146,7 +148,7 @@ response.body.eachLine { String line ->
     }
 }
 
-output.text = new DataContainer(container).asPrettyJson()
+output.text = new Data(Uri.LIF, container).asPrettyJson()
 
 List makeTags(String input) {
     return input.tokenize(';').collect { makeTag(it.trim()) }
