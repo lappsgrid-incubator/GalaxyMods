@@ -27,13 +27,14 @@ This tool is a release candidate and should not be used in production as it **wi
 
 Performs entity identification and semantic markup with detailed semantic categories in biomedical texts, using a set of over `200 semantic labels from <http://ucrel.lancs.ac.uk/usas/semtags.txt>`_  as well as entites and processes from the `Gene Ontology <http://geneontology.org>`_.
 
+
 **Required annotations**
 
 * None
 
 **Generated Annotations**
 
-The Beta GO Semantic Tagger produces `Token <http://vocab.lappsgrid.org/Token>`_ annotations with `part of speech <http://vocab.lappsgrid.org/Token#pos>`_ and `lemmas <http://vocab.lappsgrid.org/Token#lemma>`_. In addition the beta tagger will annotate entites found in the `Gene Ontoloty <https:/geneontology.org>`_ with one of:
+The beta GO Semantic Tagger produces `Token <http://vocab.lappsgrid.org/Token>`_ annotations with `part of speech <http://vocab.lappsgrid.org/Token#pos>`_ and `lemmas <http://vocab.lappsgrid.org/Token#lemma>`_. In addition the tagger will annotate entites found in the `Gene Ontoloty <https:/geneontology.org>`_ with one of:
 
 #. `Lookup <http://vocab.lappsgrid.org/Lookup>`_
 #. `NamedEntity <http://vocab.lappsgrid.org/NamedEntity>`_
