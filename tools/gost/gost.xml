@@ -1,0 +1,77 @@
+<tool id="go.semantic.tagger" name="GOST (Beta)" version="1.0.0">
+ <description>Semantic Tagger</description>
+ <command>lsd $__tool_directory__/gost.lsd $input $type $output</command>
+ <inputs>
+  <param format="lif,text" label="Input Document" name="input" type="data"/>
+     <param name="type" label="Annotation Type" type="select">
+         <option value="tag">http://vocab.lappsgrid.org/SemanticTag</option>
+         <option value="lookup">http://vocab.lappsgrid.org/Lookup</option>
+         <option value="ne">http://vocab.lappsgrid.org/NamedEntity</option>
+     </param>
+ </inputs>
+ <outputs>
+  <data format="lif" label="Semantic Tags" name="output"/>
+ </outputs>
+ <help>
+
+  <![CDATA[
+
+Gene Ontology Semantic Tagger (GOST)
+=====================================
+
+**NOTE**
+
+This tool is a release candidate and should not be used in production as it **will** go away.
+
+**What it does**
+
+Performs entity identification and semantic markup with detailed semantic categories in biomedical texts, using a set of over `200 semantic labels from <http://ucrel.lancs.ac.uk/usas/semtags.txt>`_  as well as entites and processes from the `Gene Ontology <http://geneontology.org>`_.
+
+**Required annotations**
+
+* None
+
+**Generated Annotations**
+
+The Beta GO Semantic Tagger produces `Token <http://vocab.lappsgrid.org/Token>`_ annotations with `part of speech <http://vocab.lappsgrid.org/Token#pos>`_ and `lemmas <http://vocab.lappsgrid.org/Token#lemma>`_. In addition the beta tagger will annotate entites found in the `Gene Ontoloty <https:/geneontology.org>`_ with one of:
+
+#. `Lookup <http://vocab.lappsgrid.org/Lookup>`_
+#. `NamedEntity <http://vocab.lappsgrid.org/NamedEntity>`_
+#. `SemanticTag <http://vocab.lappsgrid.org/SemanticTag>`_
+
+**Notes**
+
+* The `SemanticTag <http://vocab.lappsgrid.org/SemanticTag>`_ type is a new experimental annotation type. So new that the link likely doesn't work.
+* Each entity tagged will contain a :code:`@tags` feature with a list of the GO id values, names, and namespaces.
+* A single annotation is created to span a multi-word expression.  The :code:`@targets` feature will contain the IDs of the tokens in the expression, and :code:`@mwe` will contains a list of the words (surface strings) in the expression.
+* The annotation types and features are for comment and discussion only.  Many of the features included (:code:`tags`, :code:`mwe`) are for logging and debugging purposes during development and may be renamed or go away entirely.
+
+
+**License**
+
+GOST is licensed under the `Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License <http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US>`_
+
+]]>
+
+ </help>
+    <citations>
+        <citation type="bibtex">
+            <![CDATA[
+@inproceedings{Elhaj(2018bioNlp),
+   title = "Profiling Medical Journal Articles Using a Gene Ontology Semantic Tagger",
+   author = "El-Haj, Mahmoud  and
+     Rayson, Paul  and
+     Piao, Scott  and
+     Knight, Jo",
+   booktitle = "Proceedings of the 11th Language Resources and Evaluation Conference",
+   month = may,
+   year = "2018",
+   address = "Miyazaki, Japan",
+   publisher = "European Language Resource Association",
+   url = "https://www.aclweb.org/anthology/L18-1726",
+}
+   ]]>
+
+        </citation>
+    </citations>
+</tool>

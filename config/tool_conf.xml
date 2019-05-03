@@ -132,6 +132,7 @@
 		<tool file='opennlp/opennlp.postagger.xml' />
 		<tool file="lingpipe/vassar.tagger_1.0.0.xml"/>
         <tool file="gost/semtagger.xml"/>
+        <tool file="gost/gost.xml"/>
 		<!--<tool file='dkpro/dkpro.stanford.postagger.xml'/>
 		<tool file='dkpro/dkpro.opennlp.postagger.xml'/>-->
 	</section>

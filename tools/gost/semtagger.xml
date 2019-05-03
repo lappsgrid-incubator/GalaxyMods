@@ -1,6 +1,6 @@
 <tool id="gost.semantic.tagger" name="GOST" version="1.0.0">
  <description>Semantic Tagger</description>
- <command>$__tool_directory__/gost.lsd $input $output</command>
+ <command>$__tool_directory__/semtagger.lsd $input $output</command>
  <inputs>
   <param format="lif,text" label="Input Document" name="input" type="data"/>
  </inputs>
