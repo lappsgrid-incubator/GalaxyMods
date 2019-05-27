@@ -2,6 +2,7 @@ import static org.lappsgrid.discriminator.Discriminators.Uri
 
 File input = new File(args[0])
 String type = args[1]
+File output = new File(args[2])
 
 DataContainer data = Serializer.parse(input.text, DataContainer)
 Container container = data.payload
