@@ -85,7 +85,6 @@
 		<tool file="eurolan2017/GeneTagger.xml"/>
 		<tool file="eurolan2017/AbnerTagger.xml"/>
 		<tool file="eurolan2017/BioTokenizer.xml"/>
-        <tool file="gost/semtagger.xml"/>
         <tool file="gost/gost.xml"/>
 	</section>
 
@@ -181,7 +180,6 @@
 
 	
 	<section id="semtaggers" name="Semantic Taggers">
-        <tool file="gost/semtagger.xml"/>
         <tool file="gost/gost.xml"/>
     </section>
 
