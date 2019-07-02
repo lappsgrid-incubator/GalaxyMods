@@ -85,7 +85,7 @@
 		<tool file="eurolan2017/GeneTagger.xml"/>
 		<tool file="eurolan2017/AbnerTagger.xml"/>
 		<tool file="eurolan2017/BioTokenizer.xml"/>
-		<tool file="gost/semtagger.xml"/>
+        <tool file="gost/gost.xml"/>
 	</section>
 
 <!--
@@ -131,7 +131,6 @@
 		<tool file="gate/gate.tagger_2.3.0.xml"/>
 		<tool file='opennlp/opennlp.postagger.xml' />
 		<tool file="lingpipe/vassar.tagger_1.0.0.xml"/>
-        <tool file="gost/semtagger.xml"/>
 		<!--<tool file='dkpro/dkpro.stanford.postagger.xml'/>
 		<tool file='dkpro/dkpro.opennlp.postagger.xml'/>-->
 	</section>
@@ -180,8 +179,8 @@
     </section>
 
 	
-	<section id="gost" name="Semantic Taggers">
-        <tool file="gost/semtagger.xml"/>
+	<section id="semtaggers" name="Semantic Taggers">
+        <tool file="gost/gost.xml"/>
     </section>
 
     <section id="maching.learning" name="Machine Learning">
