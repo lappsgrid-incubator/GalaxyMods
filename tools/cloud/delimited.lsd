@@ -6,4 +6,7 @@ String pass = "tester"
 String url = "http://129.114.17.83:8083/delimited-soap-1.0.0-SNAPSHOT/services/Delimited"
 
 ServiceClient client = new ServiceClient(url, user, pass)
-output.text = client.execute(input)
+String json = client.execute(input.text)
+Data data = Serializer.parse(json)
+output.text = data.payload
+
