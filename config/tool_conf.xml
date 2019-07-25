@@ -205,6 +205,11 @@
 		<tool file='stanford/brandeis.parser.xml' />
 		<tool file='stanford/brandeis.dependencyparser.xml' />
 		<tool file='stanford/brandeis.coref.xml' />
+        <tool file="stanford/jetstream.tokenizer_2.1.0.xml"/>
+        <tool file="stanford/jetstream.splitter_2.1.0.xml"/>
+        <tool file="stanford/jetstream.tagger_2.1.0.xml"/>
+        <tool file="stanford/jetstream.ner_2.1.0.xml"/>
+
 	</section>
 	<section id="gate" name="GATE">
 		<tool file="gate/gate.tokenizer_2.3.0.xml"/>
@@ -327,6 +332,12 @@
 		<tool file="develop/stopwords.xml"/>
 		<tool file="develop/FilterStopwords.xml"/>
 	</section>
+
+    <section id="cloud" name="Cloud (Jetstream)">
+        <tool file="cloud/delimited.xml"/>
+        <tool file="cloud/opennlp-ner.xml"/>
+        <tool file="cloud/stanford-ner.xml"/>
+    </section>
 
   <section id="plots" name="Graph/Display Data">
 		<tool file="common/pretty_print.xml"/>

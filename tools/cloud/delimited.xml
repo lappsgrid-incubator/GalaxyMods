@@ -1,0 +1,42 @@
+<tool id="cloud.nlp.format.delimited" name="TSV Generator" version="1.0.0">
+ <description>generate delimited (tab/comma) data files.</description>
+ <command>lsd $__tool_directory__/delimited.lsd $input $output</command>
+ <inputs>
+  <param format="lif,text" label="Input Document" name="input" type="data"/>
+ </inputs>
+ <outputs>
+  <data format="tsv" label="TSV File" name="output"/>
+ </outputs>
+ <help>
+
+  <![CDATA[
+
+Delimited File Generator
+=====================================
+
+
+**What it does**
+
+Generates TAB or COMMA delimited files that can be used in machine learning applications.
+
+**Required annotations**
+
+#. `Token <http://vocab.lappsgrid.org/Token>`_
+#. `POS <http://vocab.lappsgrid.org/Token#pos>`_
+#. `NamedEntity <http://vocab.lappsgrid.org/NamedEntity>`_
+
+**Generated Annotations**
+
+# None.
+
+
+**Notes**
+
+
+**License**
+
+
+]]>
+
+ </help>
+</tool>
