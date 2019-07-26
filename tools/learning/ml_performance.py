@@ -30,9 +30,9 @@ def main(infile_input, infile_output, outfile):
     f.write("\n")
     f.write("Confusion Matrix:\n\n")
     f.write(str(c_matrix))
+    f.write("\n")
     f.close()
 
-    print(c_matrix)
     '''
     data = [
         go.Heatmap(
