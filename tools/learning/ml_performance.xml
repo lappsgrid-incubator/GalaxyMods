@@ -9,8 +9,9 @@
     <version_command>echo $version</version_command>
     <command detect_errors="aggressive"><![CDATA[
     python '$__tool_directory__/ml_performance.py'
-        -i '$infile_input'
-        -j '$infile_output'
+        -t '$infile_input'
+        -p '$infile_output'
+        -o '$outfile'
 ]]>
     </command>
     <inputs>
@@ -19,10 +20,14 @@
     </inputs>
 
     <outputs>
+        <!--
         <data name="output_confusion" format="html" from_work_dir="output_confusion.html" label="Confusion matrix of tabular data on ${on_string}"/>
         <data name="output_prf" format="html" from_work_dir="output_prf.html" label="Precision, recall and f-score of tabular data on ${on_string}"/>
+        -->
+        <data name="outfile" format="txt" label="Confusion Matix and PRF for ${on_string}"/>
     </outputs>
-    
+
+    <!--
     <tests>
         <test>
             <param name="infile_input" value="binary_test_label.tabular" ftype="tabular"/>
@@ -60,6 +65,7 @@
         </test>
         
     </tests>
+    -->
     <help><![CDATA[
 **What it does**
 

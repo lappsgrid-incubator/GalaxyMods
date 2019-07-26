@@ -7,7 +7,7 @@ from sklearn.metrics import confusion_matrix, precision_recall_fscore_support,cl
 from sklearn.preprocessing import label_binarize
 
 
-def main(infile_input, infile_output):
+def main(infile_input, infile_output, outfile):
     """
     Produce an interactive confusion matrix (heatmap), precision, recall, fscore
     Args:
@@ -22,9 +22,18 @@ def main(infile_input, infile_output):
     axis_labels = list(set(true_labels))
     c_matrix = confusion_matrix(true_labels, predicted_labels)
 
-    print(classification_report(true_labels, predicted_labels))
-    print("Confusion matrix:\n\n",c_matrix)
-    
+    #print(classification_report(true_labels, predicted_labels))
+    #print("Confusion matrix:\n\n",c_matrix)
+
+    f = open(outfile, "w")
+    f.write(classification_report(true_labels, predicted_labels))
+    f.write("\n")
+    f.write("Confusion Matrix:\n\n")
+    f.write(str(c_matrix))
+    f.close()
+
+    print(c_matrix)
+    '''
     data = [
         go.Heatmap(
             z=c_matrix,
@@ -76,13 +85,14 @@ def main(infile_input, infile_output):
     data_prf = [trace_precision, trace_recall, trace_fscore]
     fig_prf = go.Figure(data=data_prf, layout=layout_prf)
     plotly.offline.plot(fig_prf, filename="output_prf.html", auto_open=False)
-
+    '''
 
 if __name__ == "__main__":
     aparser = argparse.ArgumentParser()
-    aparser.add_argument("-i", "--input", dest="infile_input", required=True)
-    aparser.add_argument("-j", "--output", dest="infile_output", required=True)
+    aparser.add_argument("-t", "--true", dest="infile_true", required=True)
+    aparser.add_argument("-p", "--predicted", dest="infile_predicted", required=True)
+    aparser.add_argument("-o", "--output", dest="outfile", required=True)
     args = aparser.parse_args()
-    main(args.infile_input, args.infile_output)
+    main(args.infile_true, args.infile_predicted,args.outfile)
 
 
