@@ -186,6 +186,7 @@
 
     <section id="maching.learning" name="Machine Learning">
         <tool file="learning/ml_performance.xml" />
+        <tool file="learning/train_test_split.xml" />
         <tool file="learning/classifier.xml"/>
         <tool file="learning/weka_classifier_smo.xml" />
         <tool file="learning/weka_classifier_naivebayes.xml" />
