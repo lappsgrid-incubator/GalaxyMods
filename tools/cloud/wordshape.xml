@@ -1,6 +1,6 @@
 <tool id="cloud.nlp.wordshap" name="WordShape Annotator" version="1.0.0">
  <description>add a shape feature to tokens with </description>
- <command>lsd $__tool_directory__/delimited.lsd $input $output</command>
+ <command>lsd $__tool_directory__/wordshape.lsd $input $output</command>
  <inputs>
   <param format="lif" label="Input Document" name="input" type="data"/>
  </inputs>

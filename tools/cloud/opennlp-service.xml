@@ -23,7 +23,7 @@
   <![CDATA[
 **What it does**  
   
-Generates
+**Generates**
 
 =================== ==================== =====================
 Service             Required Annotations Generated Annotations
@@ -35,6 +35,7 @@ Tagger (perceptron) Token                Token#pos
 Lemmatizer          Token                Token#lemma
 Named Entities      Token#pos            NamedEntity
 =================== ==================== =====================
+
 
 **License**
 
