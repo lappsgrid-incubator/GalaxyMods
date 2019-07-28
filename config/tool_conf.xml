@@ -336,8 +336,10 @@
 
     <section id="cloud" name="Cloud (Jetstream)">
         <tool file="cloud/delimited.xml"/>
-        <tool file="cloud/opennlp-ner.xml"/>
-        <tool file="cloud/stanford-ner.xml"/>
+        <tool file="cloud/wordshape.xml"/>
+        <tool file="cloud/opennlp.xml"/>
+        <tool file="cloud/opennlp-service.xml"/>
+        <tool file="cloud/stanford.xml"/>
     </section>
 
   <section id="plots" name="Graph/Display Data">

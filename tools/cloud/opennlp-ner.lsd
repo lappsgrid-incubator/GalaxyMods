@@ -1,9 +1,0 @@
-
-File input = new File(args[0])
-File output = new File(args[1])
-
-String url = "http://vassar.lappsgrid.org/invoker/anc:opennlp.cloud.ner_pipeline_1.0.0"
-String user = "tester"
-
-ServiceClient client = new ServiceClient(url, user, user)
-output.text = client.execute(input.text)
