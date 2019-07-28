@@ -25,12 +25,12 @@ Generates
 
 =================== ==================== =============================================
 Service             Required Annotations Generated Annotations
-------------------- -------------------- ---------------------------------------------
+=================== ==================== =============================================
 Segmenter           None                 Token, Sentence
 Tagger              None                 Token#pos, Sentence
 Lemmatizer          None                 Token#pos, Token#lemma, Sentence
 Named Entities      Token#pos            Token#pos, Token#lemma, Sentence, NamedEntity
-------------------- -------------------- ---------------------------------------------
+=================== ==================== =============================================
 
 **License**
 

@@ -27,14 +27,14 @@ Generates
 
 =================== ==================== =====================
 Service             Required Annotations Generated Annotations
-------------------- -------------------- ---------------------
+=================== ==================== =====================
 Splitter            None                 Sentence
 Tokenizer           Sentence             Token
 Tagger (maxent)     Token                Token#pos
 Tagger (perceptron) Token                Token#pos
 Lemmatizer          Token                Token#lemma
 Named Entities      Token#pos            NamedEntity
-------------------- -------------------- ---------------------
+=================== ==================== =====================
 
 **License**
 
