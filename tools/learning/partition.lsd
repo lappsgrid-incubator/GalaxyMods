@@ -1,0 +1,15 @@
+File indir = new File(args[0])
+String percent = args[1]
+File train = new File(args[2])
+File test = new File(args[3])
+
+if (!indir.exists()) {
+    println "Input directory does not exist."
+    return
+}
+
+String s = "${indir.path}\n${percent}\n${train.path}\n${test.path}"
+train.text = s
+test.text = s
+println "Done"
+

@@ -335,6 +335,7 @@
 	</section>
 
     <section id="cloud" name="Cloud (Jetstream)">
+        <tool file="learning/partition.xml"/>
         <tool file="cloud/delimited.xml"/>
         <tool file="cloud/wordshape.xml"/>
         <tool file="cloud/opennlp.xml"/>
