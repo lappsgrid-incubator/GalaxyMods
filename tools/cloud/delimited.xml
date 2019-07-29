@@ -5,7 +5,7 @@
   <param format="lif" label="Input Document" name="input" type="data"/>
  </inputs>
  <outputs>
-  <data format="tsv" label="TSV File" name="output"/>
+  <data format="tabular" label="TSV File" name="output"/>
  </outputs>
  <help>
 
