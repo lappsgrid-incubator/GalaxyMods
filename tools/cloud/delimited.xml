@@ -5,7 +5,7 @@
   <param format="lif" label="Input Document" name="input" type="data"/>
  </inputs>
  <outputs>
-  <data format="tsv" label="TSV File for $" name="output"/>
+  <data format="tsv" label="TSV File" name="output"/>
  </outputs>
  <help>
 
@@ -13,7 +13,6 @@
 
 Delimited File Generator
 =====================================
-
 
 **What it does**
 
