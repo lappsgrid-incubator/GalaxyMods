@@ -44,7 +44,7 @@ lines[start..end].each { line ->
         File file = new File(dir, id)
         file.text = get(id, type)
         ++count
-    }|
+    }
 }
 println "Wrote $count files to ${dir.path}"
 return
