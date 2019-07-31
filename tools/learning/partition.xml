@@ -1,16 +1,19 @@
 <tool id="ml.partition" name="Split data into training and test sets" version="1.0.0">
     <description>of tabular data</description>
     <version_command>echo $version</version_command>
-    <command>lsd $__tool_directory__/partition.lsd $infile $train_pct $train_data $test_data
+    <command>lsd $__tool_directory__/partition.lsd $has_header $shuffle $infile $train_pct $train_data $test_data
     </command>
     <inputs>
-        <param name="infile" type="data_collection" collection_type="list" format="tsv,tabular,lif" label="Select input data file :" help="Input data is a matrix (tabular) where each column is a feature and the last column contains the (true or original) class labels."/>
-        <param name="train_pct" type="integer" min="1" max="99" value="90" label="Indicate the percentage split for the training data :" help="Training percentage indicates the percentage of the data to include in the the training set (and by extension, the test set)."/>
+        <!-- <param name="infile" type="data_collection" collection_type="list" format="tsv,tabular" label="Select input data file :" help="Input data is a matrix (tabular) where each column is a feature and the last column contains the (true or original) class labels."/> -->
+        <param name="infile" type="data" format="tsv,tabular" label="Select input data file :" help="Input data is a matrix (tabular) where each column is a feature and the last column contains the (true or original) class labels."/>
+        <param name="train_pct" type="float" min="0.01" max="0.99" value="0.90" label="Indicate the percentage split for the training data :" help="Training percentage indicates the percentage of the data to include in the the training set (and by extension, the test set)."/>
+        <param name="has_header" type="boolean" checked="true" truevalue="yes" falsevalue="no" label="Does the input contain a header row?"/>
+        <param name="shuffle" type="boolean" checked="true" truevalue="yes" falsevalue="no" label="Random selection"/>
     </inputs>
 
     <outputs>
-        <data name="train_data" format="tsv" label="Training dataset"/>
-        <data name="test_data" format="tsv" label="Test dataset"/>
+        <data name="train_data" format="tabular" label="Training dataset"/>
+        <data name="test_data" format="tabular" label="Test dataset"/>
     </outputs>
 
  <!--   <tests>
@@ -64,9 +67,7 @@
     <help><![CDATA[
 **What it does**
 
-
 Splits a data collection of tabular files into a training set and a test set (data collections). The user indicates the percent of the input to include in the training set.
-
 
     ]]>
     </help>

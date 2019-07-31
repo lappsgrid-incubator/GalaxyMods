@@ -1,15 +1,28 @@
-File indir = new File(args[0])
-String percent = args[1]
-File train = new File(args[2])
-File test = new File(args[3])
+String has_header = args[0]
+String shuffle = args[1]
+File infile = new File(args[2])
+Float percent = args[3] as Float
+File train = new File(args[4])
+File test = new File(args[5])
 
-if (!indir.exists()) {
-    println "Input directory does not exist."
+String header = null
+List<String> lines = infile.readLines()
+if (has_header == "yes") {
+    header = lines.remove(0)
+}
+if (shuffle == "yes") {
+    Collections.shuffle(lines)
+}
+if (percent > 1.0) {
+    percent = percent / 100.0f
+}
+int cutoff = (lines.size() * percent).intValue()
+
+if (header != null) {
+    train.text = header + '\n' + lines[0..cutoff-1].join('\n')
+    test.text = header + '\n' + lines[cutoff..-1].join('\n')
     return
 }
-
-String s = "${indir.path}\n${percent}\n${train.path}\n${test.path}"
-train.text = s
-test.text = s
-println "Done"
+train.text = lines[0..cutoff-1].join('\n')
+test.text = lines[cutoff..-1].join('\n')
 
