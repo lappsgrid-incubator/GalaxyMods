@@ -1,5 +1,5 @@
-<tool id="train_test_split" name="Split data into training and test sets" version="0.1">
-    <description>of tabular data</description>
+<tool id="train_test_split" name="Split data" version="0.1">
+    <description>ointo train and test sets</description>
     <requirements>
         <requirement type="package" version="0.22.0">pandas</requirement>
         <requirement type="package" version="0.19.1">scikit-learn</requirement>
@@ -13,13 +13,13 @@
 ]]>
     </command>
     <inputs>
-        <param name="infile" type="data_collection" format="tabular" label="Select input data file :" help="Input data is a matrix (tabular) where each column is a feature and the last column contains the (true or original) class labels."/>
-        <param name="train_pct" type="float" value="90" label="Indicate the percentage split for the training data :" help="Training percentage indicates the percentage of the data to include in the the training set (and by extension, the test set)."/>
+        <param name="infile" type="data" format="tabular" label="Select input data file :" help="Input data is a matrix (tabular) where each column is a feature and the last column contains the (true or original) class labels."/>
+        <param name="train_pct" type="float" value="0.9" label="Indicate the percentage split for the training data :" help="Training percentage indicates the percentage of the data to include in the the training set (and by extension, the test set)."/>
     </inputs>
 
     <outputs>
-        <data name="train_data" format="tsv" from_work_dir="train_data.tsv" label="Training dataset"/>
-        <data name="test_data" format="tsv" from_work_dir="test_data.tsv" label="Test dataset"/>
+        <data name="train_data" format="tabular" from_work_dir="train_data.tsv" label="Training dataset"/>
+        <data name="test_data" format="tabular" from_work_dir="test_data.tsv" label="Test dataset"/>
     </outputs>
     
  <!--   <tests>
