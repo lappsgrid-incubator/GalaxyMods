@@ -329,6 +329,8 @@
 	</section>
 
 	<section id="develop" name="Development">
+        <tool file="develop/dictionary.xml"/>
+        <tool file="develop/feature_extraction.xml"/>
 		<tool file="develop/collect.xml"/>
 		<tool file="develop/WordFrequency.xml"/>
 		<tool file="develop/stopwords.xml"/>
