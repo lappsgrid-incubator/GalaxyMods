@@ -1,0 +1,14 @@
+<tool id='convert.gate2json_2.1.0' name='GateToLif v2.1.0' version='2.1.0'>
+  <description>Converts GATE/XML documents to the LAPPS JSON/LD format.</description>
+  <requirements>
+      <requirement type="package" version="2.2.3">java-lsd</requirement>
+  </requirements>
+  <command>lsd $__tool_directory__/invoke.lsd convert.gate2json_2.1.0 $input true $output</command>
+  <inputs>
+    <param name='input' type='data' format='gate' label='Gate Input' />
+  </inputs>
+  <outputs>
+    <data name='output' format='lif' />
+  </outputs>
+  <help>Converts GATE documents to the LAPPS JSON/LD format.</help>
+</tool>

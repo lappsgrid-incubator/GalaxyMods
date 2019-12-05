@@ -1,0 +1,23 @@
+<tool id="nlp.dictionary.create" name="Create Word Dictionary" version="1.0.0">
+  <description>for use with the TSV Feature Extractor</description>
+  <command>
+    <![CDATA[
+
+    #for $f in $input_list#
+        echo $f >> $output ;
+    #end for
+    lsd $__tool_directory__/dictionary.lsd $output
+    ]]>
+
+  </command>
+  <inputs>
+    <param name="input_list" type="data" format="data" label="Collection of files to collapse into single dataset" help="" optional="false" multiple="true" />
+  </inputs>
+  <outputs>
+    <data name="output" format="txt" label="Dictionary"></data>
+  </outputs>
+  <help>
+  </help>
+  <citations>
+  </citations>
+</tool>

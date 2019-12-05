@@ -12,10 +12,6 @@
 
 Splits text into simple tokens such as numbers, punctuation, and words using `GATE's ANNIE tokenizer <https://gate.ac.uk/sale/tao/splitch6.html#x9-1230006.2>`_.
 
-**Required Annotations**
-
-* Sentences in GATE XML format (will automatically convert from LIF)
-
 **Generated Annotations**
 
 * Token annotations in `GATE XML format <https://gate.ac.uk/sale/tao/splitch5.html#x8-1000005.5.2>`_.

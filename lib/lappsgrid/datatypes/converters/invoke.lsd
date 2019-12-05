@@ -1,0 +1,13 @@
+String service = args[0]
+String input = args[1]
+boolean prettyPrint = args[2] as Boolean
+String output = args[3]
+String username = "tester"
+String password = "tester"
+
+String url = "http://vassar.lappsgrid.org/invoker/anc:${service}"
+ServiceClient client = new ServiceClient(url, username, password)
+String json = new File(input).text
+json = client.execute(json)
+println json
+new File(output).text = json

@@ -1,0 +1,33 @@
+<tool id="lindat.nametag" name="NameTag" version="1.0.0">
+ <command>lsd $__tool_directory__/nametag.lsd $input $model $output
+ </command>
+ <inputs>
+     <param name="input" type="data" format="lif" label="Input"/>
+     <param name="model" type="select">
+         <option value="english-conll-140408">English CoNNL</option>
+         <option value="czech-cnec1.1-140304">Czech 1.1</option>
+         <option value="czech-cnec2.0-140304">Czech 2.0</option>
+     </param>
+ </inputs>
+ <outputs>
+     <data format="lif" label="NE Tagged" name="output"/>
+ </outputs>
+ <tests>
+ </tests>
+ <help>
+  <![CDATA[
+
+**What it Does**
+
+Sends the input document to the Lindat `NameTag service <https://lindat.mff.cuni.cz/en/services#NameTag>`_ at Clarin Lindat for named entity tagging.
+
+.. class:: infomark
+
+**License**
+
+The NameTag service is free software available under the `Mozilla Public License 2.0 <https://www.mozilla.org/en-US/MPL/2.0/>`_ and the models are free for non-commercial use under the `Creative Commons BY-NC-SA <https://creativecommons.org/licenses/by-nc-sa/4.0/>`_ license.
+
+]]>
+
+ </help>
+</tool>

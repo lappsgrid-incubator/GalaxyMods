@@ -1,0 +1,47 @@
+<tool id="cloud.nlp.wordshap" name="WordShape Annotator" version="1.0.0">
+ <description>add a shape feature to tokens with </description>
+ <command>lsd $__tool_directory__/wordshape.lsd $input $output</command>
+ <inputs>
+  <param format="lif" label="Input Document" name="input" type="data"/>
+ </inputs>
+ <outputs>
+  <data format="lif" label="WordShape for ${on_string}" name="output"/>
+ </outputs>
+ <help>
+
+  <![CDATA[
+
+WordShape Annotator
+=====================================
+
+
+**What it does**
+
+Adds shape features to each Token.  Feature values are:
+
+* lower
+* upper
+* mixed
+* capitalized
+* punct
+
+**Required annotations**
+
+#. `Token <http://vocab.lappsgrid.org/Token>`_
+
+**Generated Annotations**
+
+#. `Token#shape <http://vocab.lappsgrid.org/Token#shape>`_
+
+
+**Notes**
+
+
+**License**
+
+Apache 2.0
+
+]]>
+
+ </help>
+</tool>

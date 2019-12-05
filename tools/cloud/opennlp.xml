@@ -1,0 +1,44 @@
+<tool id="cloud.nlp.opennlp.pipeline" name="OpenNLP Pipelines" version="1.0.0">
+
+ <command>
+  lsd $__tool_directory__/opennlp.lsd $type $input $output
+ </command>
+ <inputs>
+     <param type="select" name="type" label="Pipeline Type">
+         <option value="maxent">Part of Speech</option>
+         <option value="lemmatizer">Lemmatization</option>
+         <option value="ner">Named Entites</option>
+     </param>
+  <param format="lif" label="input" name="input" type="data">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="lif" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[
+**What it does**  
+  
+Generates part of speech, lemmas, and/or named entity annotations (Person, Organization, Location) using the `Apache OpenNLP Named Entity Recognizer <https://opennlp.apache.org>`_
+
+**Required annotations**
+
+* None.
+
+**Generated Annotations**
+
+# `Token <http://vocab.lappsgrid.org/Token>`_ (alwasy)
+# `Part of speech <http://vocab.lappsgrid.org/Token#pos>`_ (always)
+# `Lemmas <http://vocab.lappsgrid.org/Token#lemma>`_ (optional)
+# `Named Entity <http://vocab.lappsgrid.org/NamedEntity>`_ (optional)
+
+Each pipeline service will contain all of the annotations from the previous pipelines. For example the *Lemmas* pipeline will produce tokens and part of speech in additions to the lemmas. The *Named Entity* pipeline will produce tokens, part of speech, lemmas and named entity annotations.
+
+**License**
+
+Apache OpenNLP is a project of the Apache Foundation and is released under the `Apache 2.0 <https://www.apache.org/licenses/LICENSE-2.0>`_ license.
+
+]]>
+ </help>
+</tool>

@@ -1,0 +1,1947 @@
+{
+  "discriminator" : "http://vocab.lappsgrid.org/ns/media/jsonld#lif",
+  "payload" : {
+    "@context" : "http://vocab.lappsgrid.org/context-1.0.0.jsonld",
+    "metadata" : { },
+    "text" : {
+      "@value" : "A 33 year-old man with past medical history significant for dizziness/fainting spells received the following vaccines on 10 March 2010: VAX1 (lot number not reported); and VAX2 (lot number not reported either). Ten days after vaccination, he developed shortness of breath and chest pain and was subsequently diagnosed with myocarditis. On Day 20 (30 March 2010) post vaccination, the following tests were performed: an electrocardiogram which was reported to be normal and troponin I levels were measured and found to be 12.3 ng/ml (abnormal). Patient died on 02 April 2010. COD: heart failure. List of documents held by sender: None.",
+      "@language" : "en"
+    },
+    "views" : [ {
+      "id" : "v1",
+      "metadata" : {
+        "timestamp" : "2019-01-05T00:12:15.981Z[UTC]",
+        "contains" : {
+          "http://vocab.lappsgrid.org/SemanticRole" : {
+            "producer" : "semtagger",
+            "type" : "semantic role"
+          }
+        }
+      },
+      "annotations" : [ {
+        "id" : "SR-1",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "A",
+          "lemma" : "a",
+          "pos" : "ZZ1",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-2",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "33",
+          "lemma" : "33",
+          "pos" : "MC",
+          "semtag" : "N1 T1.2 T3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04",
+            "labels" : [ "Number" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-3",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "year-old",
+          "lemma" : "year-old",
+          "pos" : "JJ",
+          "semtag" : "T3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AB.03",
+            "labels" : [ "Age" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-4",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "man",
+          "lemma" : "man",
+          "pos" : "NN1",
+          "semtag" : "S2.2m",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AD.03.a",
+            "labels" : [ "Man" ]
+          }, {
+            "tag" : "AD.03.a",
+            "labels" : [ "Man" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-5",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "with",
+          "lemma" : "with",
+          "pos" : "IW",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-6",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "past",
+          "lemma" : "past",
+          "pos" : "JJ",
+          "semtag" : "T1.1.1",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AM.08.c",
+            "labels" : [ "The past" ]
+          }, {
+            "tag" : "AM.08.c",
+            "labels" : [ "The past" ]
+          }, {
+            "tag" : "AM.08.c",
+            "labels" : [ "The past" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-7",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "medical",
+          "lemma" : "medical",
+          "pos" : "JJ",
+          "semtag" : "B2-",
+          "mwe" : "1:2:1",
+          "tags" : [ {
+            "tag" : "AC.02.b",
+            "labels" : [ "Art/science of medicine" ]
+          }, {
+            "tag" : "AC.02",
+            "labels" : [ "Healing/cure" ]
+          }, {
+            "tag" : "AC.01.a",
+            "labels" : [ "Ill-health in external/visible body parts" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-8",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "history",
+          "lemma" : "history",
+          "pos" : "NN1",
+          "semtag" : "B2-",
+          "mwe" : "1:2:2",
+          "tags" : [ {
+            "tag" : "AM.08.c.04",
+            "labels" : [ "History/knowledge about the past" ]
+          }, {
+            "tag" : "BG.06.a.04",
+            "labels" : [ "Historical record/chronicle" ]
+          }, {
+            "tag" : "BK.06.g.03.a",
+            "labels" : [ "Historical narrative" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-9",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "significant",
+          "lemma" : "significant",
+          "pos" : "JJ",
+          "semtag" : "A11.1+ N5+",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04.u",
+            "labels" : [ "Probability/statistics" ]
+          }, {
+            "tag" : "AP.04.k",
+            "labels" : [ "Mathematical number/quantity" ]
+          }, {
+            "tag" : "AR.29",
+            "labels" : [ "Meaning" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-10",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "for",
+          "lemma" : "for",
+          "pos" : "IF",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-11",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "dizziness/fainting",
+          "lemma" : "dizziness/fainting",
+          "pos" : "NN1",
+          "semtag" : "Z99",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "04.10",
+            "labels" : [ "][" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-12",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "spells",
+          "lemma" : "spell",
+          "pos" : "NN2",
+          "semtag" : "T1.3 S9",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AM",
+            "labels" : [ "Time" ]
+          }, {
+            "tag" : "AA.11",
+            "labels" : [ "Atmosphere", "weather" ]
+          }, {
+            "tag" : "AO.21.b",
+            "labels" : [ "Effort/exertion" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-13",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "received",
+          "lemma" : "receive",
+          "pos" : "VVD",
+          "semtag" : "A9+ S5+",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AW.06.b",
+            "labels" : [ "Receiving" ]
+          }, {
+            "tag" : "BF.24.h.03",
+            "labels" : [ "Communion" ]
+          }, {
+            "tag" : "BK.02.f.01",
+            "labels" : [ "Visiting" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-14",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "the",
+          "lemma" : "the",
+          "pos" : "AT",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-15",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "following",
+          "lemma" : "following",
+          "pos" : "JJ",
+          "semtag" : "N4",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AN.03.d.02",
+            "labels" : [ "Following behind" ]
+          }, {
+            "tag" : "AA.04.g",
+            "labels" : [ "Flowing water" ]
+          }, {
+            "tag" : "AK.03.f",
+            "labels" : [ "Effect/result/consequence" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-16",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "vaccines",
+          "lemma" : "vaccine",
+          "pos" : "NN2",
+          "semtag" : "B3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AC.02.e",
+            "labels" : [ "Medicines/physic" ]
+          }, {
+            "tag" : "AC.02.e",
+            "labels" : [ "Medicines/physic" ]
+          }, {
+            "tag" : "AC.02.d.04",
+            "labels" : [ "Anaesthetization/pain-killing" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-17",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "on",
+          "lemma" : "on",
+          "pos" : "II",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-18",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "10",
+          "lemma" : "10",
+          "pos" : "MC",
+          "semtag" : "N1 T1.2 T3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04",
+            "labels" : [ "Number" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-19",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "March",
+          "lemma" : "march",
+          "pos" : "NPM1",
+          "semtag" : "T1.3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AM.04.b",
+            "labels" : [ "A month/calendar month" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-20",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "2010",
+          "lemma" : "2010",
+          "pos" : "MC",
+          "semtag" : "N1 T1.2 T3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04",
+            "labels" : [ "Number" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-21",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ":",
+          "lemma" : "PUNC",
+          "pos" : "YCOL",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-22",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "VAX1",
+          "lemma" : "vax1",
+          "pos" : "FO",
+          "semtag" : "N1 N3.3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "04.10",
+            "labels" : [ "][" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-23",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "(",
+          "lemma" : "PUNC",
+          "pos" : "YBL",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-24",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "lot",
+          "lemma" : "lot",
+          "pos" : "NN1",
+          "semtag" : "N5 S5+ A3+",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AV.01.b.01",
+            "labels" : [ "Fate", "destiny" ]
+          }, {
+            "tag" : "BJ.01.l.01",
+            "labels" : [ "Article(s) to be sold" ]
+          }, {
+            "tag" : "AW.01.a",
+            "labels" : [ "Possessions" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-25",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "number",
+          "lemma" : "number",
+          "pos" : "NN1",
+          "semtag" : "N5 N1 Q1.3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04",
+            "labels" : [ "Number" ]
+          }, {
+            "tag" : "AL.05.v",
+            "labels" : [ "Arrangement/fact of being arranged" ]
+          }, {
+            "tag" : "AP.04.l",
+            "labels" : [ "Mathematical notation/symbol" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-26",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "not",
+          "lemma" : "not",
+          "pos" : "XX",
+          "semtag" : "Z6",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZD",
+            "labels" : [ "Negative" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-27",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "reported",
+          "lemma" : "report",
+          "pos" : "VVN",
+          "semtag" : "Q2.2",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "BG.05.d",
+            "labels" : [ "Reporting" ]
+          }, {
+            "tag" : "BG.11",
+            "labels" : [ "Journalism" ]
+          }, {
+            "tag" : "BH.06",
+            "labels" : [ "Arrival" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-28",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ")",
+          "lemma" : "PUNC",
+          "pos" : "YBR",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-29",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ";",
+          "lemma" : "PUNC",
+          "pos" : "YSCOL",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-30",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "and",
+          "lemma" : "and",
+          "pos" : "CC",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-31",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "VAX2",
+          "lemma" : "vax2",
+          "pos" : "FO",
+          "semtag" : "N1 N3.3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "04.10",
+            "labels" : [ "][" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-32",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "(",
+          "lemma" : "PUNC",
+          "pos" : "YBL",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-33",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "lot",
+          "lemma" : "lot",
+          "pos" : "NN1",
+          "semtag" : "N5 S5+ A3+",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AV.01.b.01",
+            "labels" : [ "Fate", "destiny" ]
+          }, {
+            "tag" : "BJ.01.l.01",
+            "labels" : [ "Article(s) to be sold" ]
+          }, {
+            "tag" : "AW.01.a",
+            "labels" : [ "Possessions" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-34",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "number",
+          "lemma" : "number",
+          "pos" : "NN1",
+          "semtag" : "N5 N1 Q1.3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04",
+            "labels" : [ "Number" ]
+          }, {
+            "tag" : "AL.05.v",
+            "labels" : [ "Arrangement/fact of being arranged" ]
+          }, {
+            "tag" : "AP.04.l",
+            "labels" : [ "Mathematical notation/symbol" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-35",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "not",
+          "lemma" : "not",
+          "pos" : "XX",
+          "semtag" : "Z6",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZD",
+            "labels" : [ "Negative" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-36",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "reported",
+          "lemma" : "report",
+          "pos" : "VVN",
+          "semtag" : "Q2.2",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "BG.05.d",
+            "labels" : [ "Reporting" ]
+          }, {
+            "tag" : "BG.11",
+            "labels" : [ "Journalism" ]
+          }, {
+            "tag" : "BH.06",
+            "labels" : [ "Arrival" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-37",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "either",
+          "lemma" : "either",
+          "pos" : "RR",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-38",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ")",
+          "lemma" : "PUNC",
+          "pos" : "YBR",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-39",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ".",
+          "lemma" : "PUNC",
+          "pos" : "YSTP",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-40",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "Ten",
+          "lemma" : "ten",
+          "pos" : "MC",
+          "semtag" : "N1 T1.2 T3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04",
+            "labels" : [ "Number" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-41",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "days",
+          "lemma" : "day",
+          "pos" : "NNT2",
+          "semtag" : "T1.3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AM.05.a",
+            "labels" : [ "Day/day-time" ]
+          }, {
+            "tag" : "AM.04.d",
+            "labels" : [ "A day/twenty-four hours" ]
+          }, {
+            "tag" : "AM.05.a",
+            "labels" : [ "Day/day-time" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-42",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "after",
+          "lemma" : "after",
+          "pos" : "II",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-43",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "vaccination",
+          "lemma" : "vaccination",
+          "pos" : "NN1",
+          "semtag" : "B3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AC.02.d.04",
+            "labels" : [ "Anaesthetization/pain-killing" ]
+          }, {
+            "tag" : "AC.02.d.04",
+            "labels" : [ "Anaesthetization/pain-killing" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-44",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ",",
+          "lemma" : "PUNC",
+          "pos" : "YCOM",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-45",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "he",
+          "lemma" : "he",
+          "pos" : "PPHS1",
+          "semtag" : "Z8m",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZF",
+            "labels" : [ "Pronoun" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-46",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "developed",
+          "lemma" : "develop",
+          "pos" : "VVD",
+          "semtag" : "A2.1+ T2+ A5.1+/A2.1",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AK.02",
+            "labels" : [ "Creation" ]
+          }, {
+            "tag" : "AO.17.a",
+            "labels" : [ "Advancement/progress" ]
+          }, {
+            "tag" : "BK.05.i.06",
+            "labels" : [ "Photographic processes" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-47",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "shortness",
+          "lemma" : "shortness",
+          "pos" : "NN1",
+          "semtag" : "T1.3- N3.7- N3.3-",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AB.17.c",
+            "labels" : [ "Bodily height" ]
+          }, {
+            "tag" : "AL.02.d.03",
+            "labels" : [ "Longitudinal extent" ]
+          }, {
+            "tag" : "AM.02.b",
+            "labels" : [ "Shortness/brevity in time" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-48",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "of",
+          "lemma" : "of",
+          "pos" : "IO",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-49",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "breath",
+          "lemma" : "breath",
+          "pos" : "NN1",
+          "semtag" : "B1 N5-@",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AB.17.q.01",
+            "labels" : [ "Breathing" ]
+          }, {
+            "tag" : "AO.09.a",
+            "labels" : [ "Temporary cessation of activity/operation" ]
+          }, {
+            "tag" : "AM.02.b.01",
+            "labels" : [ "Swift movement of time" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-50",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "and",
+          "lemma" : "and",
+          "pos" : "CC",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-51",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "chest",
+          "lemma" : "chest",
+          "pos" : "NN1",
+          "semtag" : "B1 O2",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AB.17.e.03.c",
+            "labels" : [ "Front of body" ]
+          }, {
+            "tag" : "AB.17.l",
+            "labels" : [ "Internal organs" ]
+          }, {
+            "tag" : "BI.11.x.03",
+            "labels" : [ "Box" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-52",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "pain",
+          "lemma" : "pain",
+          "pos" : "NN1",
+          "semtag" : "B2- E2- E4.1-",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AC.01.f",
+            "labels" : [ "Pain" ]
+          }, {
+            "tag" : "AU.14",
+            "labels" : [ "Suffering" ]
+          }, {
+            "tag" : "AC.01.f.01",
+            "labels" : [ "Types of pain" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-53",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "and",
+          "lemma" : "and",
+          "pos" : "CC",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-54",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "was",
+          "lemma" : "be",
+          "pos" : "VBDZ",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AK.01.g",
+            "labels" : [ "State/condition" ]
+          }, {
+            "tag" : "AP.01.d",
+            "labels" : [ "Identity" ]
+          }, {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-55",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "subsequently",
+          "lemma" : "subsequently",
+          "pos" : "RR",
+          "semtag" : "N4",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AM.08.d",
+            "labels" : [ "The future/time to come" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-56",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "diagnosed",
+          "lemma" : "diagnose",
+          "pos" : "VVN",
+          "semtag" : "B3 X2.4",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AC.02.c",
+            "labels" : [ "Diagnosis/prognosis" ]
+          }, {
+            "tag" : "AS.09",
+            "labels" : [ "Discernment", "discrimination" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-57",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "with",
+          "lemma" : "with",
+          "pos" : "IW",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-58",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "myocarditis",
+          "lemma" : "myocarditis",
+          "pos" : "NN1",
+          "semtag" : "Z99",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AC.01.b.10",
+            "labels" : [ "Disorders of circulatory system" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-59",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ".",
+          "lemma" : "PUNC",
+          "pos" : "YSTP",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-60",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "On",
+          "lemma" : "on",
+          "pos" : "II",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-61",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "Day",
+          "lemma" : "day",
+          "pos" : "NP1",
+          "semtag" : "T1.3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "04.10",
+            "labels" : [ "][" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-62",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "20",
+          "lemma" : "20",
+          "pos" : "MC",
+          "semtag" : "N1 T1.2 T3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04",
+            "labels" : [ "Number" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-63",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "(",
+          "lemma" : "PUNC",
+          "pos" : "YBL",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-64",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "30",
+          "lemma" : "30",
+          "pos" : "MC",
+          "semtag" : "N1 T1.2 T3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04",
+            "labels" : [ "Number" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-65",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "March",
+          "lemma" : "march",
+          "pos" : "NPM1",
+          "semtag" : "T1.3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AM.04.b",
+            "labels" : [ "A month/calendar month" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-66",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "2010",
+          "lemma" : "2010",
+          "pos" : "MC",
+          "semtag" : "N1 T1.2 T3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04",
+            "labels" : [ "Number" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-67",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ")",
+          "lemma" : "PUNC",
+          "pos" : "YBR",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-68",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "post",
+          "lemma" : "post",
+          "pos" : "NN1",
+          "semtag" : "Q1.2 O2 I3.1",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "BG.13.d",
+            "labels" : [ "Postal services" ]
+          }, {
+            "tag" : "BJ.01.k.05",
+            "labels" : [ "A centre of commerce" ]
+          }, {
+            "tag" : "AL.05.i",
+            "labels" : [ "Support" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-69",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "vaccination",
+          "lemma" : "vaccination",
+          "pos" : "NN1",
+          "semtag" : "B3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AC.02.d.04",
+            "labels" : [ "Anaesthetization/pain-killing" ]
+          }, {
+            "tag" : "AC.02.d.04",
+            "labels" : [ "Anaesthetization/pain-killing" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-70",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ",",
+          "lemma" : "PUNC",
+          "pos" : "YCOM",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-71",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "the",
+          "lemma" : "the",
+          "pos" : "AT",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-72",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "following",
+          "lemma" : "following",
+          "pos" : "JJ",
+          "semtag" : "N4",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AN.03.d.02",
+            "labels" : [ "Following behind" ]
+          }, {
+            "tag" : "AA.04.g",
+            "labels" : [ "Flowing water" ]
+          }, {
+            "tag" : "AK.03.f",
+            "labels" : [ "Effect/result/consequence" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-73",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "tests",
+          "lemma" : "test",
+          "pos" : "NN2",
+          "semtag" : "P1 B3 X2.4",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AJ.02.c",
+            "labels" : [ "Chemical tests" ]
+          }, {
+            "tag" : "BF.23",
+            "labels" : [ "Church government" ]
+          }, {
+            "tag" : "AO.11.a.01",
+            "labels" : [ "Trial/test/testing" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-74",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "were",
+          "lemma" : "be",
+          "pos" : "VBDR",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AK.01.g",
+            "labels" : [ "State/condition" ]
+          }, {
+            "tag" : "AP.01.d",
+            "labels" : [ "Identity" ]
+          }, {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-75",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "performed",
+          "lemma" : "perform",
+          "pos" : "VVN",
+          "semtag" : "A1.1.1 K4 X9.2+",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "BK.04.f",
+            "labels" : [ "Performing music" ]
+          }, {
+            "tag" : "AK.02",
+            "labels" : [ "Creation" ]
+          }, {
+            "tag" : "AK.03",
+            "labels" : [ "Cause" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-76",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ":",
+          "lemma" : "PUNC",
+          "pos" : "YCOL",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-77",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "an",
+          "lemma" : "an",
+          "pos" : "AT1",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-78",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "electrocardiogram",
+          "lemma" : "electrocardiogram",
+          "pos" : "NN1",
+          "semtag" : "Z99",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AC.02.c.03",
+            "labels" : [ "Specific measuring/recording for purpose of diagnosis" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-79",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "which",
+          "lemma" : "which",
+          "pos" : "DDQ",
+          "semtag" : "Z8",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.01",
+            "labels" : [ "Relation/relationship" ]
+          }, {
+            "tag" : "ZF",
+            "labels" : [ "Pronoun" ]
+          }, {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-80",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "was",
+          "lemma" : "be",
+          "pos" : "VBDZ",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AK.01.g",
+            "labels" : [ "State/condition" ]
+          }, {
+            "tag" : "AP.01.d",
+            "labels" : [ "Identity" ]
+          }, {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-81",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "reported",
+          "lemma" : "report",
+          "pos" : "VVN",
+          "semtag" : "Q2.2",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "BG.05.d",
+            "labels" : [ "Reporting" ]
+          }, {
+            "tag" : "BG.11",
+            "labels" : [ "Journalism" ]
+          }, {
+            "tag" : "BH.06",
+            "labels" : [ "Arrival" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-82",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "to",
+          "lemma" : "to",
+          "pos" : "TO",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-83",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "be",
+          "lemma" : "be",
+          "pos" : "VBI",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AK.01.g",
+            "labels" : [ "State/condition" ]
+          }, {
+            "tag" : "AP.01.d",
+            "labels" : [ "Identity" ]
+          }, {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-84",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "normal",
+          "lemma" : "normal",
+          "pos" : "JJ",
+          "semtag" : "A6.2+",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04.u",
+            "labels" : [ "Probability/statistics" ]
+          }, {
+            "tag" : "AO.22.b",
+            "labels" : [ "Customary/habitual mode of behaviour" ]
+          }, {
+            "tag" : "AA.06.a",
+            "labels" : [ "Structural features of the Earth" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-85",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "and",
+          "lemma" : "and",
+          "pos" : "CC",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-86",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "troponin",
+          "lemma" : "troponin",
+          "pos" : "NN1",
+          "semtag" : "Z99",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "04.10",
+            "labels" : [ "][" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-87",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "I",
+          "lemma" : "i",
+          "pos" : "ZZ1",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-88",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "levels",
+          "lemma" : "level",
+          "pos" : "NN2",
+          "semtag" : "N3.7 N5 S5+",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AA.03.g",
+            "labels" : [ "Level land" ]
+          }, {
+            "tag" : "AP.06",
+            "labels" : [ "Quantity" ]
+          }, {
+            "tag" : "AZ.06.f.02",
+            "labels" : [ "Parts of building" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-89",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "were",
+          "lemma" : "be",
+          "pos" : "VBDR",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AK.01.g",
+            "labels" : [ "State/condition" ]
+          }, {
+            "tag" : "AP.01.d",
+            "labels" : [ "Identity" ]
+          }, {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-90",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "measured",
+          "lemma" : "measure",
+          "pos" : "VVN",
+          "semtag" : "N3.1",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04.p",
+            "labels" : [ "Arithmetic/algebraic operations" ]
+          }, {
+            "tag" : "AP.05",
+            "labels" : [ "Measurement" ]
+          }, {
+            "tag" : "AL.02.d",
+            "labels" : [ "Measurable spatial extent" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-91",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "and",
+          "lemma" : "and",
+          "pos" : "CC",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-92",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "found",
+          "lemma" : "find",
+          "pos" : "VVN",
+          "semtag" : "A10+ X2.1 X6+.1",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AK.01.g",
+            "labels" : [ "State/condition" ]
+          }, {
+            "tag" : "AO.11.b.01",
+            "labels" : [ "Finding/discovery" ]
+          }, {
+            "tag" : "AO.11.b.01",
+            "labels" : [ "Finding/discovery" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-93",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "to",
+          "lemma" : "to",
+          "pos" : "TO",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-94",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "be",
+          "lemma" : "be",
+          "pos" : "VBI",
+          "semtag" : "A3+ Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AK.01.g",
+            "labels" : [ "State/condition" ]
+          }, {
+            "tag" : "AP.01.d",
+            "labels" : [ "Identity" ]
+          }, {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-95",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "12.3",
+          "lemma" : "12.3",
+          "pos" : "MC",
+          "semtag" : "N1 T1.2 T3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04",
+            "labels" : [ "Number" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-96",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "ng/ml",
+          "lemma" : "ng/ml",
+          "pos" : "FU",
+          "semtag" : "Z99",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "04.10",
+            "labels" : [ "][" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-97",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "(",
+          "lemma" : "PUNC",
+          "pos" : "YBL",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-98",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "abnormal",
+          "lemma" : "abnormal",
+          "pos" : "JJ",
+          "semtag" : "A6.2-",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.03.b.02.a",
+            "labels" : [ "Unconformity", "abnormality" ]
+          }, {
+            "tag" : "AO.22.a",
+            "labels" : [ "A standard of conduct" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-99",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ")",
+          "lemma" : "PUNC",
+          "pos" : "YBR",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-100",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ".",
+          "lemma" : "PUNC",
+          "pos" : "YSTP",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-101",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "Patient",
+          "lemma" : "patient",
+          "pos" : "NN1",
+          "semtag" : "B2-/S2mf",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AC.02.h",
+            "labels" : [ "Patient" ]
+          }, {
+            "tag" : "AC.02.h",
+            "labels" : [ "Patient" ]
+          }, {
+            "tag" : "AU.07.a",
+            "labels" : [ "Patience" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-102",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "died",
+          "lemma" : "die",
+          "pos" : "VVD",
+          "semtag" : "L1- T2-",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AB.18",
+            "labels" : [ "Death" ]
+          }, {
+            "tag" : "AB.18",
+            "labels" : [ "Death" ]
+          }, {
+            "tag" : "BF.21.a",
+            "labels" : [ "Soul" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-103",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "on",
+          "lemma" : "on",
+          "pos" : "II",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-104",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "02",
+          "lemma" : "02",
+          "pos" : "MC",
+          "semtag" : "N1 T1.2 T3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04",
+            "labels" : [ "Number" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-105",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "April",
+          "lemma" : "april",
+          "pos" : "NPM1",
+          "semtag" : "T1.3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AM.04.b",
+            "labels" : [ "A month/calendar month" ]
+          }, {
+            "tag" : "AB.03",
+            "labels" : [ "Age" ]
+          }, {
+            "tag" : "AM.11.a",
+            "labels" : [ "Changeableness" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-106",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "2010",
+          "lemma" : "2010",
+          "pos" : "MC",
+          "semtag" : "N1 T1.2 T3",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AP.04",
+            "labels" : [ "Number" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-107",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ".",
+          "lemma" : "PUNC",
+          "pos" : "YSTP",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-108",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "COD",
+          "lemma" : "cod",
+          "pos" : "NN",
+          "semtag" : "F1 L2mfnc",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AG.01.d.07",
+            "labels" : [ "Seafood" ]
+          }, {
+            "tag" : "AE.10.f",
+            "labels" : [ "Order Gadiformes (cod)" ]
+          }, {
+            "tag" : "AE.10.f",
+            "labels" : [ "Order Gadiformes (cod)" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-109",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ":",
+          "lemma" : "PUNC",
+          "pos" : "YCOL",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-110",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "heart",
+          "lemma" : "heart",
+          "pos" : "NN1",
+          "semtag" : "B2-",
+          "mwe" : "2:2:1",
+          "tags" : [ {
+            "tag" : "AB.17.r.02",
+            "labels" : [ "Heart" ]
+          }, {
+            "tag" : "AR.02",
+            "labels" : [ "Spirituality", "soul" ]
+          }, {
+            "tag" : "AF.10",
+            "labels" : [ "Part of plant" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-111",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "failure",
+          "lemma" : "failure",
+          "pos" : "NN1",
+          "semtag" : "B2-",
+          "mwe" : "2:2:2",
+          "tags" : [ {
+            "tag" : "AO.20",
+            "labels" : [ "Failure/lack of success" ]
+          }, {
+            "tag" : "AK.04",
+            "labels" : [ "Present events" ]
+          }, {
+            "tag" : "BJ.01.y.02.c",
+            "labels" : [ "Financial loss" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-112",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ".",
+          "lemma" : "PUNC",
+          "pos" : "YSTP",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-113",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "List",
+          "lemma" : "list",
+          "pos" : "NN1",
+          "semtag" : "Q1.2 N4 M4",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "BG.06.b",
+            "labels" : [ "List" ]
+          }, {
+            "tag" : "AP.04.v.04",
+            "labels" : [ "Data" ]
+          }, {
+            "tag" : "BG.06.b",
+            "labels" : [ "List" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-114",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "of",
+          "lemma" : "of",
+          "pos" : "IO",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-115",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "documents",
+          "lemma" : "document",
+          "pos" : "NN2",
+          "semtag" : "Q1.2 X2.2+ Y2",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AS.05.d",
+            "labels" : [ "Proof" ]
+          }, {
+            "tag" : "AS.05.a",
+            "labels" : [ "Attestation", "witness", "evidence" ]
+          }, {
+            "tag" : "BE.02.d",
+            "labels" : [ "Means of teaching" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-116",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "held",
+          "lemma" : "hold",
+          "pos" : "VVN",
+          "semtag" : "M2 A1.1.1 A9+",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "AO.10.b.01",
+            "labels" : [ "Abstaining/refraining from action" ]
+          }, {
+            "tag" : "AM.11.e.01",
+            "labels" : [ "Lasting quality", "permanence" ]
+          }, {
+            "tag" : "AR.38",
+            "labels" : [ "Truth", "validity", "correctness" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-117",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "by",
+          "lemma" : "by",
+          "pos" : "II",
+          "semtag" : "Z5",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZC",
+            "labels" : [ "Grammatical Item" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-118",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "sender",
+          "lemma" : "sender",
+          "pos" : "NN1",
+          "semtag" : "M2/S2mf",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "BH.11",
+            "labels" : [ "Transport" ]
+          }, {
+            "tag" : "AN.06",
+            "labels" : [ "Transference" ]
+          }, {
+            "tag" : "BG.04.e",
+            "labels" : [ "Signalling" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-119",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ":",
+          "lemma" : "PUNC",
+          "pos" : "YCOL",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      }, {
+        "id" : "SR-120",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : "None",
+          "lemma" : "none",
+          "pos" : "PN",
+          "semtag" : "Z6/Z8c",
+          "mwe" : "0",
+          "tags" : [ {
+            "tag" : "ZD",
+            "labels" : [ "Negative" ]
+          } ]
+        }
+      }, {
+        "id" : "SR-121",
+        "@type" : "http://vocab.lappsgrid.org/SemanticRole",
+        "features" : {
+          "word" : ".",
+          "lemma" : "PUNC",
+          "pos" : "YSTP",
+          "semtag" : "PUNC",
+          "mwe" : "0",
+          "tags" : [ { } ]
+        }
+      } ]
+    } ]
+  },
+  "parameters" : { }
+}

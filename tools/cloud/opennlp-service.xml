@@ -1,0 +1,47 @@
+<tool id="cloud.nlp.opennlp" name="OpenNLP Services" version="1.0.0">
+
+ <command>
+  lsd $__tool_directory__/opennlp-service.lsd $type $input $output
+ </command>
+ <inputs>
+     <param type="select" label="Type" name="type">
+         <option value="splitter">Sentence Splitter</option>
+         <option value="tokenizer">Tokenizer</option>
+         <option value="maxent">POS Tagger (maxent)</option>
+         <option value="perceptron">POS Tagger (perceptron)</option>
+         <option value="lemmatizer">Lemmatizer</option>
+         <option value="ner">Named Entity Recognizer</option>
+     </param>
+  <param format="lif" label="input" name="input" type="data">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="lif" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[
+**What it does**  
+  
+**Generates**
+
+=================== ==================== =====================
+Service             Required Annotations Generated Annotations
+=================== ==================== =====================
+Splitter            None                 Sentence
+Tokenizer           Sentence             Token
+Tagger (maxent)     Token                Token#pos
+Tagger (perceptron) Token                Token#pos
+Lemmatizer          Token                Token#lemma
+Named Entities      Token#pos            NamedEntity
+=================== ==================== =====================
+
+
+**License**
+
+Apache OpenNLP is a project of the Apache Foundation and is released under the `Apache 2.0 <https://www.apache.org/licenses/LICENSE-2.0>`_ license.
+
+]]>
+
+ </help>
+</tool>

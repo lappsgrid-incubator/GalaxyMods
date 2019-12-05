@@ -1,0 +1,9 @@
+File input = new File(args[0])
+String type = args[1]
+File output = new File(args[2])
+
+WebService service = new ServiceClient("http://vassar.lappsgrid.org/invoker/anc:gost_1.0.0-SNAPSHOT", "tester", "tester")
+Data data = Serializer.parse(input.text)
+data.setParameter("type", type)
+
+output.text = service.execute(data.asJson())

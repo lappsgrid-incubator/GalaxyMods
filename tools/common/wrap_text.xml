@@ -1,6 +1,6 @@
 <tool id="wrap.text.service" name="Wrap data" version="1.0.0">
     <description>as a LIF Data object.</description>
-    <command>lsd $__tool_directory__/wrap_text.lsd $format $input $output</command>
+    <command>lsd $__tool_directory__/wrap_text.lsd $format $selector.lang $selector.iso $input $output</command>
     <inputs>
         <param name="input" type="data" format="txt"/>
         <param name="format" type="select" label="New Format">
@@ -8,6 +8,21 @@
             <option value="wrap.tcf_1.0.0">Text Corpus Format (TCF)</option>
             <option value="wrap.text_1.0.0">Plain Text (UTF-8)</option>
         </param>
+        <conditional name="selector">
+            <param name="lang" type="select" label="Language">
+                <option value="ar">Arabic</option>
+                <option value="zh">Chinese</option>
+                <option value="cs">Czech</option>
+                <option value="en" selected="True">English</option>
+                <option value="fr">Frech</option>
+                <option value="de">German</option>
+                <option value="es">Spanish</option>
+                <option value="other">Other</option>
+            </param>
+            <when value="other">
+                <param name="iso" type="text" label="2 letter ISO code"/>
+            </when>
+        </conditional>
     </inputs>
     <outputs>
         <data name="output" format="lif" label="Output">

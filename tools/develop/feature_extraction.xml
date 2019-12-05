@@ -1,0 +1,20 @@
+<tool id="nlp.feature.extractor" name="Extract Named Entity Features" version="1.0.0">
+  <description>to Tabular data files.</description>
+  <command>
+    <![CDATA[
+    lsd $__tool_directory__/feature_extraction.lsd $dictionary $input $output
+    ]]>
+
+  </command>
+  <inputs>
+      <param name="dictionary" type="data" format="txt" optional="false"/>
+    <param name="input" type="data" format="lif" label="Input" help="" optional="false" multiple="false" />
+  </inputs>
+  <outputs>
+    <data name="output" format="tabular" label="Tabular Data"></data>
+  </outputs>
+  <help>
+  </help>
+  <citations>
+  </citations>
+</tool>
