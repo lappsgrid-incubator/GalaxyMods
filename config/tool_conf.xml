@@ -68,18 +68,7 @@
         <tool file="cdc/convert-xcas.xml"/>
 		<tool file="args/translate.xml"/>
 	</section>
-    
- <!-->   <section id="cdc.fda" name="CDC/FDA">
-        <tool file="cdc/ctakes-clinical.xml"/>
-        <tool file="cdc/ctakes-temporal.xml"/>
-        <tool file="cdc/ncbo-coding.xml"/>
-        <tool file="cdc/convert-lif.xml"/>
-        <tool file="cdc/convert-xcas.xml"/>
-    </section>
--->
-
-  <label text="NLP Tools" id="nlptools_section_label"/>
-
+    <label text="NLP Tools" id="nlptools_section_label"/>
     <section id="getbiotools" name="Biomed tools">
 		<tool file="eurolan2017/BioTokenizer.xml"/>
 		<tool file="eurolan2017/GeneTagger.xml"/>
@@ -173,8 +162,7 @@
     <section id="rel-ext" name="Relation Extractors">
 		<tool file='reverb/brandeis.reverb.xml' />
 	</section>
-	
-	   <section id="time" name="Time and Events">
+    <section id="time" name="Time and Events">
 		<tool file="eurolan2017/TimeML.xml"/>
 		<tool file="eurolan2017/HeidelTime.xml"/>
     </section>
@@ -211,7 +199,6 @@
         <tool file="stanford/jetstream.splitter_2.1.0.xml"/>
         <tool file="stanford/jetstream.tagger_2.1.0.xml"/>
         <tool file="stanford/jetstream.ner_2.1.0.xml"/>
-
 	</section>
 	<section id="gate" name="GATE">
 		<tool file="gate/gate.tokenizer_2.3.0.xml"/>
@@ -327,7 +314,6 @@
 		<tool file="common/wrap.xml"/>
         <tool file="common/history.xml"/>
 	</section>
-
 	<section id="develop" name="Development">
         <tool file="develop/dictionary.xml"/>
         <tool file="develop/feature_extraction.xml"/>
