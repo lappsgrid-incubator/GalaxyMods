@@ -21,7 +21,7 @@ uwsgi:
   # The address and port on which to listen.  By default, only listen to
   # localhost (galaxy will not be accessible over the network).  Use
   # ':8080' to listen on all available network interfaces.
-  http: 127.0.0.1:8080
+  http: :8000
 
   # By default uWSGI allocates a very small buffer (4096 bytes) for the
   # headers of each request. If you start receiving "invalid request
@@ -713,7 +713,8 @@ galaxy:
   # The URL of the page to display in Galaxy's middle pane when loaded.
   # This can be an absolute or relative URL.
   #welcome_url: /static/welcome.html
-
+  welcome_url: /static/index.html
+  
   # The URL linked by the "Galaxy/brand" text.
   #logo_url: /
   logo_url: http://www.lappsgrid.org
