@@ -1,0 +1,59 @@
+<tool id="gost.semantic.tagger" name="GOST" version="1.0.0">
+ <description>Semantic Tagger</description>
+ <command>cd $__tool_directory__ &amp;&amp; java -cp .:lib/* semtagger $input $output</command>
+ <inputs>
+  <param format="lif" label="Input Document" name="input" type="data"/>
+ </inputs>
+ <outputs>
+  <data format="lif" label="Tagged Text" name="output"/>
+ </outputs>
+ <help>
+
+  <![CDATA[
+
+Gene Ontology Semantic Tagger (GOST)
+=====================================
+
+**What it does** 
+Performs entity identification and semantic markup with detailed semantic categories in biomedical texts, using a set of over `200 semantic labels <http://ucrel.lancs.ac.uk/usas/semtags.txt>`_ .
+
+
+
+
+**Required annotations**
+
+* None
+
+**Generated Annotations**
+
+* A LIF document with a new view containing `SemanticRole <http://vocab.lappsgrid.org/SemanticRole.html>`_ annotations 
+
+**License**
+
+GOST is licensed under the `Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License <http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US>`_
+
+]]>
+
+ </help>
+    <citations>
+        <citation type="bibtex">
+            <![CDATA[
+@InProceedings{PIAO16.257,
+  author = {Scott Piao and Paul Rayson and Dawn Archer and Francesca Bianchi and Carmen Dayrell and Mahmoud El-Haj and Ricardo-María Jiménez and Dawn Knight and Michal Křen and Laura Löfberg and Rao Muhammad Adeel Nawab and Jawad Shafi and Phoey Lee Teh and Olga Mudraya},
+  title = {Lexical Coverage Evaluation of Large-scale Multilingual Semantic Lexicons for Twelve Languages},
+  booktitle = {Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC 2016)},
+  year = {2016},
+  month = {may},
+  date = {23-28},
+  location = {Portorož, Slovenia},
+  editor = {Nicoletta Calzolari (Conference Chair) and Khalid Choukri and Thierry Declerck and Sara Goggi and Marko Grobelnik and Bente Maegaard and Joseph Mariani and Helene Mazo and Asuncion Moreno and Jan Odijk and Stelios Piperidis},
+  publisher = {European Language Resources Association (ELRA)},
+  address = {Paris, France},
+  isbn = {978-2-9517408-9-1},
+  language = {english}
+ }
+   ]]>
+
+        </citation>
+    </citations>
+</tool>

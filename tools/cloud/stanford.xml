@@ -1,0 +1,40 @@
+<tool id="cloud.nlp.stanford.pipeline" name="Stanford Pipelines" version="1.0.0">
+
+ <command>
+  lsd $__tool_directory__/stanford.lsd $type $input $output
+ </command>
+ <inputs>
+     <param type="select" label="Type" name="type">
+         <option value="segmenter">Sentence+Token</option>
+         <option value="tagger">All of the above + POS</option>
+         <option value="lemmatizer">All of the above + lemmas</option>
+         <option value="ner">All of the above + named entities</option>
+     </param>
+  <param format="lif" label="input" name="input" type="data">
+  </param>
+ </inputs>
+ <outputs>
+  <data format="lif" name="output">
+  </data>
+ </outputs>
+ <help>
+  <![CDATA[
+**What it does**  
+  
+Generates
+
+=================== ==================== =============================================
+Service             Required Annotations Generated Annotations
+=================== ==================== =============================================
+Segmenter           None                 Token, Sentence
+Tagger              None                 Token#pos, Sentence
+Lemmatizer          None                 Token#pos, Token#lemma, Sentence
+Named Entities      Token#pos            Token#pos, Token#lemma, Sentence, NamedEntity
+=================== ==================== =============================================
+
+**License**
+
+Stanford CoreNLP is licensed under `the GNU General Public License <https://stanfordnlp.github.io/CoreNLP/#license>`_.
+]]>
+ </help>
+</tool>

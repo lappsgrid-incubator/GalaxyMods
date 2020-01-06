@@ -1,19 +1,56 @@
 <tool id="gost.semantic.tagger" name="GOST" version="1.0.0">
- <description>Gene Ontology Semantic Tagger</description>
- <command>/usr/lib/groovy/current/bin/groovy --cp $__tool_directory__ $__tool_directory__/semtagger.groovy $input $output</command>
- <!-- <command>java -classpath $__tool_directory__/semtagger.jar Main $input $output</command> -->
+ <description>Semantic Tagger</description>
+ <command>$__tool_directory__/semtagger.lsd $input $output</command>
  <inputs>
-  <param format="lif" label="Input Document" name="input" type="data"/>
+  <param format="lif,text" label="Input Document" name="input" type="data"/>
  </inputs>
  <outputs>
-  <data format="txt" label="Tagged Text" name="output">
-  </data>
+  <data format="lif" label="Semantic Tags" name="output"/>
  </outputs>
  <help>
+
   <![CDATA[
 
-Gene Ontology Semantic Tagger
+Gene Ontology Semantic Tagger (GOST)
+=====================================
+
+**What it does** 
+Performs entity identification and semantic markup with detailed semantic categories in biomedical texts, using a set of over `200 semantic labels <http://ucrel.lancs.ac.uk/usas/semtags.txt>` as well as types from the `Gene Ontology <http://geneontology.org>`_ .
+
+
+**Required annotations**
+
+* None
+
+**Generated Annotations**
+
+* A LIF document with a new view containing `SemanticRole <http://vocab.lappsgrid.org/SemanticRole.html>`_ annotations 
+
+**License**
+
+GOST is licensed under the `Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License <http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US>`_
 
 ]]>
+
  </help>
+    <citations>
+        <citation type="bibtex">
+            <![CDATA[
+@inproceedings{Elhaj(2018bioNlp),
+   title = "Profiling Medical Journal Articles Using a Gene Ontology Semantic Tagger",
+   author = "El-Haj, Mahmoud  and
+     Rayson, Paul  and
+     Piao, Scott  and
+     Knight, Jo",
+   booktitle = "Proceedings of the 11th Language Resources and Evaluation Conference",
+   month = may,
+   year = "2018",
+   address = "Miyazaki, Japan",
+   publisher = "European Language Resource Association",
+   url = "https://www.aclweb.org/anthology/L18-1726",
+}
+   ]]>
+
+        </citation>
+    </citations>
 </tool>

@@ -1,0 +1,60 @@
+File input = new File(args[0])
+
+Set<String> dictionary = new HashSet<String>()
+['upper', 'lower', 'mixed', 'capitalized', 'punct'].each { dictionary.add(it) }
+input.eachLine { String path ->
+    File file = new File(path)
+    if (file.exists()) {
+        //println "Processing ${file.path}"
+        Data data = Serializer.parse(file.text)
+        Container container = new Container(data.payload)
+        ['id', 'docId', 'docID'].each { String id ->
+            if (container.metadata[id]) {
+                dictionary.put(container.metadata[id])
+            }
+        }
+        List<Annotation> annotations = find(container, Uri.TOKEN)
+        annotations.each { Annotation token ->
+            String value = word(container, token)
+            dictionary.add(value)
+            if (token.features.pos) {
+                dictionary.add(token.features.pos)
+            }
+            if (token.features.lemma) {
+                dictionary.add(token.features.lemma)
+            }
+        }
+        annotations = find(container, Uri.NE)
+        annotations.each { Annotation entity ->
+            if (entity.features.category) {
+                dictionary.add(entity.features.category)
+            }
+            else if (entity.label) {
+                dictionary.add(entity.label)
+            }
+        }
+    }
+}
+println "Writing dictionary. Size: ${dictionary.size()}"
+input.withWriter("UTF-8") { writer ->
+    dictionary.sort().each { String word ->
+        writer.writeLine(word)
+    }
+}
+
+List<Annotation> find(Container container, String type) {
+    List<View> views = container.findViewsThatContain(type)
+    if (views.size() == 0) {
+        return []
+    }
+    return views[-1].findByAtType(type)
+}
+
+String word(Container container, Annotation a) {
+    if (a.features.word) {
+        return a.features.word
+    }
+    int start = a.start.intValue()
+    int end = a.end.intValue()
+    return container.text.substring(start, end)
+}

@@ -1,5 +1,5 @@
 <tool id='lapps.tools.select' name='Select Annotations' version='1.0.0'>
-  <description>Move select annotations to the last view</description>
+  <description>Create a new container with selected annotations</description>
   <command interpreter='lsd'>select.lsd $input $type $output</command>
   <inputs>
       <param name="input" type="data" format="lif,json" label="Input"/>
@@ -14,6 +14,6 @@
   <outputs>
     <data name='output' format='lif'/>
   </outputs>
-  <help>Renames the annotations in the last view in the document.
+  <help>Creates a new container with just the view that contains the given type. All annotations in the view are preserved.  If no view contains annotations of the given type then a copy of the container is created.
   </help>
 </tool>

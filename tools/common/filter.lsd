@@ -44,7 +44,7 @@ if (view.metadata.contains == null) {
 }
 view.metadata.contains[type] = contains
 
-data = new DataContainer(container)
+data = new Data(Uri.LIF, container)
 if (pretty) {
 	output.text = data.asPrettyJson()
 }

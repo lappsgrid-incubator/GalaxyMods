@@ -2,7 +2,7 @@
 
 <tool name="Upload Text" id="lapps.upload" version="1.0.0" workflow_compatible="false">
   <description>
-    from your computer
+    from your computer or paste text
   </description>
   <action module="galaxy.tools.actions.upload" class="UploadToolAction"/>
     <!--
