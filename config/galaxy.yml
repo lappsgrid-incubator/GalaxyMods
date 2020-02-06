@@ -1243,6 +1243,8 @@ galaxy:
   # For more information, see: https://docs.galaxyproject.org/en/master/
   # admin/special_topics/apache.html
   #use_remote_user: false
+  use_remote_user: True
+  remote_user_maildomain: lappsgrid.org
 
   # If use_remote_user is enabled and your external authentication
   # method just returns bare usernames, set a default mail domain to be
