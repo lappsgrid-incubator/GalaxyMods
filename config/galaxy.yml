@@ -111,7 +111,10 @@ galaxy:
   # many options which are explained in detail in the config file
   # documentation.
   #database_connection: 'sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE'
-  database_connection: postgresql://galaxy:N8BsZU4MoOtfPrhp6k7Yexvm@localhost/galaxy
+
+  #database_connection: postgresql://galaxy:N8BsZU4MoOtfPrhp6k7Yexvm@localhost/galaxy
+  database_connection: postgresql://galaxy:0btaSJkgv9gQiN341v6i6bcc@localhost/galaxy
+
   # If the server logs errors about not having enough database pool
   # connections, you will want to increase these values, or consider
   # running more Galaxy processes.
@@ -827,6 +830,7 @@ galaxy:
   # Set this to True to inform Galaxy that mod_xsendfile is enabled
   # upstream.
   #apache_xsendfile: false
+  #apache_xsendfile: true
 
   # The same download handling can be done by nginx using X-Accel-
   # Redirect.  This should be set to the path defined in the nginx
@@ -1266,7 +1270,7 @@ galaxy:
   # server, and Galaxy is required. If anyone other than the Galaxy user
   # is using the server, then apache/nginx should pass a value in the
   # header 'GX_SECRET' that is identical to the one below.
-  #remote_user_secret: USING THE DEFAULT IS NOT SECURE!
+  remote_user_secret: 7bf712c3b6b9a538af58ab23f1167ecc30d1f752c05aa948ef957accf6572e99
 
   # If use_remote_user is enabled, you can set this to a URL that will
   # log your users out.
