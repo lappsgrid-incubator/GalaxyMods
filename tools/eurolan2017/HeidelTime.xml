@@ -1,6 +1,7 @@
 <tool id='gate.heidel_1.0.0' name='HeidelTime' version='1.0.0'>
   <description>Generate time annotations</description>
-  <command>lsd $__tool_directory__/time.lsd HeidelTime $input $output</command>
+    <!-- Note the typo in the name of the HeidelTime service. This will be fixed in a future release. -->
+  <command>lsd $__tool_directory__/time.lsd HeidleTime $input $output</command>
   <inputs>
     <param name='input' type='data' format='gate' />
   </inputs>
