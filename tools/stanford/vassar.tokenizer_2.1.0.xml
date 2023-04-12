@@ -1,6 +1,6 @@
 <tool id="stanford.tokenizer_2.1.0" name="Stanford Tokenizer" version="1.0.0">
  <command interpreter="lsd">
-  ../common/invoke_vassar.lsd stanford.tokenizer_2.1.0-SNAPSHOT $input $output
+  ../common/invoke_jetstream.lsd StanfordServices/2.1.0/services/Tokenizer $input $output
  </command>
  <inputs>
   <param format="lif" label="input" name="input" type="data">

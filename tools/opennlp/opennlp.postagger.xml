@@ -1,6 +1,6 @@
 <tool id="opennlp.postagger" name="OpenNLP Part-of-Speech Tagger" version="2.0.3">
  <command interpreter="lsd">
-  ../common/invoke_brandeis.lsd opennlp.postagger_2.0.3 $input $output
+  ../common/invoke_jetstream.lsd opennlp-web-service/2.1.0/services/POSTagger $input $output
  </command>
  <inputs>
   <param format="json,lif" label="input" name="input" type="data">

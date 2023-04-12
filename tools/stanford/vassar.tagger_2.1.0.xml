@@ -1,7 +1,7 @@
 <tool id="stanford.tagger_2.1.0" name="Stanford Part-of-Speech Tagger" version="1.0.0">
  
  <command interpreter="lsd">
-  ../common/invoke_vassar.lsd stanford.tagger_2.1.0-SNAPSHOT $input $output
+  ../common/invoke_jetstream.lsd StanfordServices/2.1.0/services/Tagger $input $output
  </command>
  <inputs>
   <param format="lif" label="input" name="input" type="data">

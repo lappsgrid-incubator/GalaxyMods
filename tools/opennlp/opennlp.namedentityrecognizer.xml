@@ -1,6 +1,6 @@
 <tool id="opennlp.namedentityrecognizer" name="OpenNLP Named Entity Recognizer" version="2.0.3">
  <command interpreter="lsd">
-  ../common/invoke_brandeis.lsd opennlp.namedentityrecognizer_2.0.3 $input $output
+  ../common/invoke_jetstream.lsd opennlp-web-service/2.1.0/services/NamedEntityRecognizer $input $output
  </command>
  <inputs>
   <param format="lif" label="input" name="input" type="data">

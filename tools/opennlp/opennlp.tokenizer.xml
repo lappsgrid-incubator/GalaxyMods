@@ -1,6 +1,6 @@
 <tool id="opennlp.tokenizer" name="OpenNLP Tokenizer" version="2.0.3">
  <command interpreter="lsd">
-  ../common/invoke_brandeis.lsd opennlp.tokenizer_2.0.3 $input $output
+  ../common/invoke_jetstream.lsd opennlp-web-service/2.1.0/services/Tokenizer $input $output
  </command>
  <inputs>
   <param format="lif,json" label="input" name="input" type="data">

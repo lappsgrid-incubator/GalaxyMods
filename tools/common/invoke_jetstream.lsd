@@ -1,6 +1,6 @@
 #!/usr/bin/env lsd
 
-String base = "http://localhost:8080/StanfordServices/2.1.0-SNAPSHOT/services"
+String base = "http://services:5050"
 
 String username = "tester"
 String password = "tester"

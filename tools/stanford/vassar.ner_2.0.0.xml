@@ -3,7 +3,7 @@
   Stanford Named Entity Recognizer (Vassar)
  </description>
  <command interpreter="lsd">
-  ../common/invoke_vassar.lsd stanford.ner_2.0.0 $input $output
+  ../common/invoke_jetstream.lsd StanfordServices/2.1.0/services/NamedEntityRecognizer $input $output
  </command>
  <inputs>
   <param format="lif" label="input" name="input" type="data">

@@ -3,7 +3,7 @@
   (standalone) Identify and extract binary relations from unannotated text
  </description>
  <command interpreter="lsd">
-  ../common/invoke_brandeis.lsd reverb.relationextractor_1.0.1 $input $output
+  ../common/invoke_jetstream.lsd reverb-web-service/1.0.2/services/RelationExtractor $input $output
  </command>
  <inputs>
   <param format="lif" label="input" name="input" type="data">

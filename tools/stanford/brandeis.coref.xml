@@ -3,7 +3,7 @@
    (standalone) Generates coreference information for unannotated text
  </description>
  <command interpreter="lsd">
-  ../common/invoke_brandeis.lsd stanfordnlp.coref_2.0.4 $input $output
+  ../common/invoke_jetstream.lsd stanfordnlp-web-service/2.1.1/services/Coreference $input $output
  </command>
  <inputs>
   <param format="lif" label="input" name="input" type="data">

@@ -3,7 +3,7 @@
    (standalone) Generate a constituency parse of unannotated text
  </description>
  <command interpreter="lsd">
-  ../common/invoke_brandeis.lsd stanfordnlp.parser_2.0.4 $input $output
+  ../common/invoke_jetstream.lsd stanfordnlp-web-service/2.1.1/services/Parser $input $output
  </command>
  <inputs>
   <param format="lif" label="input" name="input" type="data">
