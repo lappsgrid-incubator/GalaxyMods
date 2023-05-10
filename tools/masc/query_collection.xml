@@ -14,10 +14,10 @@
   <param max="392" name="end" type="integer" value="392">
   </param>
   <param name="type" type="select">
-   <option value="anc:masc.text_2.2.0">
+   <option value="MascTextSource">
     Text
    </option>
-   <option value="anc:masc.json_2.2.0">
+   <option value="MascLifSource">
     Gold Annotations
    </option>
   </param>

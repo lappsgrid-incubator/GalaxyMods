@@ -12,10 +12,10 @@
     <param name="input" type="data" format="txt" label="Index List" help="List of MASC document ID values." />
   -->
   <param name="type" type="select">
-   <option value="anc:masc.text_2.2.0">
+   <option value="MascTextSource">
     Text
    </option>
-   <option value="anc:masc.json_2.2.0">
+   <option value="MascLifSource">
     Gold Annotations
    </option>
   </param>
